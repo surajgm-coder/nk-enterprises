@@ -110,3 +110,30 @@ body {
   height: 2px;
   background: var(--bronze);
 }
+/* FOOTER */
+.site-footer {
+  background: #ffffff;
+}
+
+.footer-line {
+  height: 3px;
+  background: #8b5a2b;
+}
+
+.footer-content {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #3b2a1f;
+}
+
+.footer-social a {
+  margin-left: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #8b5a2b;
+}
