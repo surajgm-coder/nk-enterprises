@@ -13,8 +13,7 @@ This repository contains the website source code for NK Enterprises.
 ## Workflow
 
 - Code is written and stored in GitHub
-- Project is cloned into VS Code
-- WordPress runs the theme locally or on hosting
+
 
 ## Status
 Under development
