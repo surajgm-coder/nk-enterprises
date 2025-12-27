@@ -202,3 +202,28 @@
 .feature-cta span {
   color: #c28a4b;
 }
+/* STATS SECTION */
+.stats-section {
+  background: linear-gradient(to right, #3b2416, #5a3822);
+  padding: 60px 0;
+}
+
+.stats-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  font-size: 14px;
+  color: #e0cdb8;
+  letter-spacing: 0.5px;
+}
