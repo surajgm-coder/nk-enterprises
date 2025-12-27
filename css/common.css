@@ -36,8 +36,9 @@ body {
 /* HEADER */
 .main-header {
   background: #ffffff;
-  padding: 12px 0;
+  padding: 18px 0 20px;
 }
+
 
 .header-container {
   width: 90%;
