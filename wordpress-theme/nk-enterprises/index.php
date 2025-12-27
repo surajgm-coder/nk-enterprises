@@ -4,7 +4,7 @@
 <section class="hero">
 
   <!-- SLIDE 1 -->
-  <div class="slide active" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero1.jpg');">
+  <div class="slide active" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero1.png');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>
@@ -23,7 +23,7 @@
   </div>
 
   <!-- SLIDE 2 -->
-  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero2.jpg');">
+  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero2.png');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>
@@ -42,7 +42,7 @@
   </div>
 
   <!-- SLIDE 3 -->
-  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero3.jpg');">
+  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero3.png');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>
@@ -61,7 +61,7 @@
   </div>
 
   <!-- SLIDE 4 -->
-  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero4.jpg');">
+  <div class="slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/home/hero4.png');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>
