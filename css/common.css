@@ -270,3 +270,56 @@ body {
   cursor: pointer;
   color: #3b2a1f;
 }
+/* =========================
+   MOBILE & TABLET NAVIGATION
+   ========================= */
+
+@media (max-width: 991px) {
+
+  /* HEADER ALIGNMENT */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* SHOW TOGGLE BUTTON */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* HIDE NAVIGATION BY DEFAULT */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    display: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    z-index: 999;
+  }
+
+  /* STACK MENU ITEMS */
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  /* WHEN MENU IS OPEN */
+  .main-nav.active {
+    display: block;
+  }
+}
