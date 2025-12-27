@@ -465,15 +465,6 @@
   padding: 40px 8%;
   background: url("../images/home/industrial.png") center/cover no-repeat;
 }
-
-/* Brown overlay */
-.wcu-stats::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(59, 42, 31, 0.88);
-}
-
 /* Text above overlay */
 .wcu-stats .stat {
   position: relative;
