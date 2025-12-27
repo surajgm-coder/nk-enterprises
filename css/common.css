@@ -137,3 +137,44 @@ body {
   font-weight: bold;
   color: #8b5a2b;
 }
+/* ================= RESPONSIVE : HEADER & FOOTER ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contact {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+
+  .header-contact {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .btn-quote {
+    margin-top: 8px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
