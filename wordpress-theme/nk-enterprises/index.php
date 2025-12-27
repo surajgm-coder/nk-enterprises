@@ -78,6 +78,18 @@
       </div>
     </div>
   </div>
+  <!-- SLIDER CONTROLS -->
+  <div class="slider-arrows">
+    <span class="arrow prev">&#10094;</span>
+    <span class="arrow next">&#10095;</span>
+  </div>
+
+  <div class="slider-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+    <span class="dot" data-slide="3"></span>
+  </div>
 
 </section>
 
