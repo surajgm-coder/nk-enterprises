@@ -221,3 +221,114 @@
 .cta ul li {
   margin-bottom: 8px;
 }
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* ---------- Tablets (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .hero-content {
+    left: 5%;
+    max-width: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+
+/* ---------- Mobile (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  /* WELCOME */
+  .welcome-section h2 {
+    font-size: 26px;
+  }
+
+  /* ABOUT SPLIT */
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .about-overlay {
+    position: relative;
+  }
+
+  /* FEATURES */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STATS */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* CTA */
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ---------- Small Mobile (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
