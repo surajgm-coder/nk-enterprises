@@ -351,3 +351,97 @@
     text-align: center;
   }
 }
+/* =========================
+   HOME PAGE – CTA SECTION
+========================= */
+
+.cta-section {
+  width: 100%;
+}
+
+/* TOP CREAM STRIP */
+.cta-top {
+  background: url("../images/cta-cream.png") center/cover no-repeat;
+  padding: 30px 0;
+}
+
+.cta-top-inner {
+  width: 90%;
+  margin: auto;
+}
+
+.cta-top img {
+  height: 55px;
+}
+
+.cta-top p {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #5a4638;
+}
+
+/* WOODEN HEADING STRIP */
+.cta-heading-strip {
+  background: url("../images/cta-wooden-strip.png") center/cover no-repeat;
+  padding: 22px 0;
+}
+
+.cta-headings {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.cta-headings .divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255,255,255,0.4);
+}
+
+/* CTA CONTENT */
+.cta-content {
+  background: url("../images/cta-cream.png") center/cover no-repeat;
+  padding: 50px 0;
+}
+
+.cta-grid {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.cta-col ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.cta-col ul li {
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.cta-col ul li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: var(--bronze);
+  font-size: 10px;
+  top: 4px;
+}
+
+.about-text {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-text {
+  font-size: 13.5px;
+  margin-bottom: 18px;
+}
