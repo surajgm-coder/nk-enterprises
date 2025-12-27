@@ -108,8 +108,9 @@
 /* ==============================
    FEATURES SECTION
 ================================ */
+/* FEATURES SECTION */
 .features-section {
-  padding: 90px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 
@@ -117,123 +118,94 @@
   width: 90%;
   margin: auto;
   display: flex;
-  gap: 60px;
   align-items: center;
+  gap: 60px;
 }
 
-/* ==============================
-   LEFT CONTENT
-================================ */
+/* LEFT */
 .features-left {
-  flex: 1;
+  flex: 1.2;
 }
 
 .features-left h2 {
   font-size: 34px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: #3b2a1f;
-  font-weight: 700;
 }
 
 .features-left p {
-  font-size: 15.5px;
-  line-height: 1.75;
-  margin-bottom: 36px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 35px;
   color: #5a4636;
 }
 
-/* FEATURE CARDS */
 .features-list {
   display: flex;
-  gap: 28px;
+  gap: 25px;
 }
 
 .feature-item {
-  background: #f8f4ef;
+  background: #f7f3ef;
   padding: 30px 22px;
   border-radius: 10px;
   text-align: center;
   flex: 1;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
 }
 
-.feature-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-/* ICON (FIXED & PREMIUM) */
 .feature-icon {
   width: 60px;
   height: 60px;
   background: linear-gradient(to bottom, #9c6233, #6f421f);
+  color: #f5e6d2;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin: 0 auto 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin: 0 auto 15px;
 }
 
-.feature-icon i {
-  font-size: 26px;
-  color: #f3e6d6; /* gold/cream icon */
-}
-
-/* TEXT */
 .feature-item h4 {
-  font-size: 16.5px;
+  font-size: 16px;
   margin-bottom: 10px;
   color: #3b2a1f;
-  font-weight: 600;
 }
 
 .feature-item p {
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 14px;
   color: #6b5544;
 }
 
-/* ==============================
-   RIGHT IMAGE + CTA
-================================ */
+/* RIGHT IMAGE */
 .features-right {
-  flex: 1;
+  flex: 0.9;
   position: relative;
 }
 
 .features-right img {
   width: 100%;
   border-radius: 10px;
-  display: block;
 }
 
 /* CTA OVER IMAGE */
 .feature-cta {
   position: absolute;
-  bottom: 28px;
-  left: 28px;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.45)
-  );
-  color: #ffffff;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.65);
   padding: 22px 26px;
   border-radius: 8px;
-  max-width: 75%;
+  color: #fff;
 }
 
 .feature-cta h3 {
   font-size: 22px;
-  margin-bottom: 14px;
-  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .feature-cta span {
   color: #c28a4b;
-  font-weight: 600;
 }
 
 /* STATS SECTION */
