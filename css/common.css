@@ -258,3 +258,15 @@ body {
     text-align: center;
   }
 }
+/* =========================
+   MOBILE NAV TOGGLE BUTTON
+   ========================= */
+
+.nav-toggle {
+  display: none;           /* hidden on desktop */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3b2a1f;
+}
