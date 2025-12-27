@@ -21,9 +21,17 @@ body {
 
 /* TOP STRIP */
 .top-strip {
-  height: 8px;
-  background: linear-gradient(to right, #7a4a21, #a66a3f);
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    #5a3215,
+    #8b5a2b,
+    #b07a45,
+    #8b5a2b,
+    #5a3215
+  );
 }
+
 
 /* HEADER */
 .main-header {
