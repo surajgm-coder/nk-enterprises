@@ -81,3 +81,27 @@
   font-weight: bold;
   border-radius: 4px;
 }
+/* ABOUT INTRO */
+.about-intro {
+  background: #f7f3ef;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-intro h2 {
+  font-size: 36px;
+  color: #3b2a1f;
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5a4636;
+  margin-bottom: 30px;
+}
