@@ -255,3 +255,99 @@
   color: #5a4636;
   margin-bottom: 30px;
 }
+/* ================= RESPONSIVE : HOME PAGE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .hero-content {
+    max-width: 500px;
+    margin-left: 6%;
+  }
+
+  .features-container {
+    flex-direction: column;
+  }
+
+  .features-list {
+    flex-direction: column;
+  }
+
+  .stats-container {
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* ABOUT */
+  .about-intro h2 {
+    font-size: 28px;
+  }
+
+  /* FEATURES */
+  .features-left h2 {
+    font-size: 26px;
+  }
+
+  .feature-cta {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  /* STATS */
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .stat-item h3 {
+    font-size: 30px;
+  }
+
+  /* CTA */
+  .final-cta h2 {
+    font-size: 28px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
