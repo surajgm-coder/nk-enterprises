@@ -382,7 +382,7 @@
 
 /* WOODEN HEADING STRIP */
 .cta-heading-strip {
-  background: url("../images/cta-wooden-strip.png") center/cover no-repeat;
+  background: url("../images/home/cta-wooden-strip.png") center/cover no-repeat;
   padding: 22px 0;
 }
 
@@ -404,7 +404,7 @@
 
 /* CTA CONTENT */
 .cta-content {
-  background: url("../images/cta-cream.png") center/cover no-repeat;
+  background: url("../images/home/cta-cream.png") center/cover no-repeat;
   padding: 50px 0;
 }
 
