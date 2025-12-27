@@ -445,3 +445,100 @@
   font-size: 13.5px;
   margin-bottom: 18px;
 }
+/* ==============================
+   WHY CHOOSE US – FULL SECTION
+================================ */
+
+/* WRAPPER */
+.why-choose-wrapper {
+  width: 100%;
+}
+
+/* ==============================
+   TOP: STATS STRIP
+================================ */
+.wcu-stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  padding: 40px 8%;
+  background: url("../images/home/industrial.png") center/cover no-repeat;
+}
+
+/* Brown overlay */
+.wcu-stats::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 42, 31, 0.88);
+}
+
+/* Text above overlay */
+.wcu-stats .stat {
+  position: relative;
+  z-index: 1;
+}
+
+.wcu-stats h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.wcu-stats p {
+  color: #e6d6c4;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ==============================
+   CREAM BACKGROUND AREA
+================================ */
+.wcu-cream {
+  background: url("../images/home/cta-cream.png") center/cover no-repeat;
+  padding: 60px 6% 70px;
+  text-align: center;
+}
+
+/* HEADING */
+.wcu-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2a1f;
+  margin-bottom: 40px;
+}
+
+/* ==============================
+   IMAGE CARDS
+================================ */
+.wcu-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.wcu-card {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  padding: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wcu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+.wcu-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.wcu-card p {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #3b2a1f;
+  font-size: 14px;
+}
