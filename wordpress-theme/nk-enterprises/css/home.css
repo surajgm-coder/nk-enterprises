@@ -1,0 +1,41 @@
+.hero {
+  height: 80vh;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  color: white;
+  max-width: 500px;
+}
+
+.hero-text h1 span {
+  color: #c58a44;
+}
+
+.btn {
+  background: #7a4a21;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+}
