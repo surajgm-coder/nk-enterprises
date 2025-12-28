@@ -21,7 +21,7 @@
 /* HEADER WRAPPER */
 .header-wrapper {
   position: relative;
-  padding-left: 170px; /* space for logo */
+  padding-left: 140px; /* space for logo */
 }
 
 /* LOGO — TRUE FULL HEADER ALIGNMENT */
@@ -30,7 +30,7 @@
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
-  height: 120px; /* main bar + nav bar */
+  height: 98px; /* main bar + nav bar */
   display: flex;
   align-items: center;
 }
@@ -42,7 +42,7 @@
 
 /* MAIN BAR */
 .main-bar {
-  height: 60px;
+  height: 58px;
   border-bottom: 1px solid var(--cream);
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@
 
 /* NAV BAR */
 .nav-bar {
-  height: 60px;
+  height: 58px;
   border-bottom: 1px solid var(--cream);
   display: flex;
   align-items: center;
