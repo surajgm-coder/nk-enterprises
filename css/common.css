@@ -41,9 +41,8 @@ body {
 }
 
 /* =========================
-   HEADER
+   HEADER (DESKTOP)
 ========================= */
-/* ================= HEADER ================= */
 .main-header {
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -58,6 +57,7 @@ body {
   grid-template-rows: auto auto;
   align-items: center;
   row-gap: 8px;
+  position: relative; /* needed for mobile dropdown */
 }
 
 /* LOGO – SPANS BOTH ROWS */
@@ -81,7 +81,7 @@ body {
 }
 
 .header-top-right span {
-  color: #3b2a1f;
+  color: var(--dark-brown);
 }
 
 /* CTA */
@@ -111,17 +111,26 @@ body {
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;
-  color: #3b2a1f;
+  color: var(--dark-brown);
 }
 
 .main-nav a.active {
-  color: #8b5a2b;
+  color: var(--bronze);
 }
 
-/* NAV DIVIDER */
-.nav-divider {
-  height: 2px;
-  background: var(--bronze);
+/* ================= HEADER MENU (DESKTOP SAFE) ================= */
+.header-menu {
+  display: contents; /* invisible wrapper on desktop */
+}
+
+/* MOBILE TOGGLE (DESKTOP HIDDEN) */
+.nav-toggle {
+  display: none;
+  position: relative;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* =========================
@@ -144,60 +153,12 @@ body {
   justify-content: space-between;
 }
 
-/* LEFT */
-.footer-left {
-  white-space: nowrap;
-}
-
-/* CENTER */
-.footer-center {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-center a {
-  color: #d6d6d6;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-center span {
-  color: #bfbfbf;
-}
-
-.footer-center a:hover {
-  color: #8b5a2b;
-}
-
-/* RIGHT */
-.footer-right {
-  display: flex;
-  gap: 14px;
-}
-
-.footer-right a {
-  color: #d6d6d6;
-  font-size: 15px;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-right a:hover {
-  color: #8b5a2b;
-  transform: translateY(-2px);
-}
-/* Desktop: make header-menu invisible to layout */
-.header-menu {
-  display: contents;
-}
-.header-container {
-  position: relative;
-}
-
-/* ================= MOBILE HEADER (COMMON FOR ALL PAGES) ================= */
+/* =========================
+   MOBILE HEADER (ONLY MOBILE)
+========================= */
 @media (max-width: 991px) {
 
-  /* Hide desktop header elements */
+  /* Hide desktop elements */
   .header-top-right,
   .main-nav {
     display: none;
@@ -207,13 +168,9 @@ body {
   .nav-toggle {
     display: block;
     font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    justify-self: end;
   }
 
-  /* Mobile dropdown wrapper */
+  /* Dropdown wrapper */
   .header-menu {
     display: none;
     position: absolute;
@@ -222,10 +179,9 @@ body {
     width: 100%;
     background: #ffffff;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    z-index: 999;
+    z-index: 1000;
   }
 
-  /* Toggle open */
   .header-menu.active {
     display: block;
   }
@@ -237,6 +193,7 @@ body {
 
   .header-menu .main-nav ul {
     flex-direction: column;
+    gap: 0;
   }
 
   .header-menu .main-nav a {
@@ -261,4 +218,3 @@ body {
     text-align: center;
   }
 }
-
