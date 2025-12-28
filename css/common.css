@@ -265,70 +265,59 @@ body {
    CTA + FOOTER — MOBILE FINAL (STABLE)
    DOES NOT AFFECT DESKTOP
 ====================================== */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
-  /* ================= CTA SECTION ================= */
+   /* ===== CTA SECTION ===== */
   .cta-section {
     text-align: center;
   }
 
-  .cta-top-inner {
-    text-align: center;
-    padding: 16px 10px;
+  .cta-heading-strip {
+    overflow-x: auto;
   }
 
-  .cta-top-inner img {
-    max-width: 140px;
-    height: auto;
-    margin-bottom: 6px;
-  }
-
-  .cta-heading-strip .cta-headings {
+  .cta-headings {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 14px;
+    font-size: 13px;
+    padding: 10px;
   }
 
-  .cta-heading-strip .divider {
+  .cta-headings .divider {
     display: none;
+  }
+
+  .cta-content {
+    padding: 20px 15px;
   }
 
   .cta-grid {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 28px;
   }
 
   .cta-col {
     width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
   .cta-col ul {
     padding-left: 0;
-    margin-bottom: 12px;
+    list-style-position: inside;
   }
 
-  .cta-col li {
-    list-show: none;
-    margin-bottom: 6px;
+  .cta-col ul li {
+    text-align: center;
   }
 
   .cta-col .btn-quote {
-    display: block;
-    width: 85%;
+    display: inline-block;
     margin: 14px auto 0;
-    text-align: center;
   }
-
-  .cta-col .about-text,
-  .cta-col .contact-text {
-    text-align: center;
-    line-height: 1.6;
-  }
-
   /* ================= FOOTER (MOBILE FIXED) ================= */
   .site-footer {
     text-align: center;
