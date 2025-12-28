@@ -118,27 +118,6 @@ body {
   color: #8b5a2b;
 }
 
-/* ================= MOBILE ================= */
-.nav-toggle {
-  display: none;
-}
-
-@media (max-width: 991px) {
-  .header-top-right,
-  .main-nav {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    justify-self: end;
-  }
-}
-
 /* NAV DIVIDER */
 .nav-divider {
   height: 2px;
@@ -207,18 +186,26 @@ body {
   color: #8b5a2b;
   transform: translateY(-2px);
 }
-
-/* =========================
-   MOBILE & TABLET NAVIGATION
-========================= */
+/* ================= MOBILE HEADER (COMMON FOR ALL PAGES) ================= */
 @media (max-width: 991px) {
 
-  /* SHOW TOGGLE */
-  .nav-toggle {
-    display: block;
+  /* Hide desktop header elements */
+  .header-top-right,
+  .main-nav {
+    display: none;
   }
 
-  /* HIDE MENU BY DEFAULT */
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    justify-self: end;
+  }
+
+  /* Mobile dropdown wrapper */
   .header-menu {
     display: none;
     position: absolute;
@@ -226,45 +213,44 @@ body {
     left: 0;
     width: 100%;
     background: #ffffff;
-    flex-direction: column;
-    padding: 25px 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     z-index: 999;
   }
 
-  /* OPEN STATE */
+  /* Toggle open */
   .header-menu.active {
-    display: flex;
-  }
-
-  /* STACK NAV */
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .main-nav li {
-    border-bottom: 1px solid #eeeeee;
-  }
-
-  .main-nav a {
     display: block;
+  }
+
+  /* Mobile nav */
+  .header-menu .main-nav {
+    display: block;
+  }
+
+  .header-menu .main-nav ul {
+    flex-direction: column;
+  }
+
+  .header-menu .main-nav a {
     padding: 14px;
+    display: block;
     text-align: center;
     font-size: 15px;
+    font-weight: 600;
   }
 
-  /* STACK CONTACT */
-  .header-contact {
+  /* Mobile contact + CTA */
+  .header-menu .header-top-right {
+    display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-    text-align: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
   }
 
-  /* CTA FULL WIDTH */
-  .btn-quote {
-    width: 100%;
+  .header-menu .btn-quote {
+    width: 90%;
     text-align: center;
   }
 }
+
