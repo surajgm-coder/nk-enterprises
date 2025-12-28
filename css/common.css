@@ -280,3 +280,50 @@ html, body {
     text-align: center;
   }
 }
+/* ================= FINAL NAV FIX ================= */
+
+/* MAKE NAV TEXT BOLD */
+.nav-menu a {
+  font-weight: 600;          /* BOLD TEXT */
+}
+
+/* REMOVE ALL HORIZONTAL LINES COMPLETELY */
+.nav-menu a::before,
+.nav-menu a:hover::before,
+.nav-menu a.active::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* REMOVE ANY BORDER THAT MAY LOOK LIKE A LINE */
+.nav-menu,
+.nav-bar,
+.nav-menu a {
+  border-bottom: none !important;
+}
+
+/* REMOVE HOVER EFFECT COMPLETELY */
+.nav-menu a:hover {
+  text-decoration: none !important;
+}
+
+/* KEEP ONLY VERTICAL ACTIVE LINE */
+.nav-menu a::after {
+  content: none;
+}
+
+.nav-menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 2px;
+  height: 10px;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+
+/* ACTIVE COLOR */
+.nav-menu a.active {
+  color: var(--gold);
+}
