@@ -261,13 +261,13 @@ body {
     text-align: center;
   }
 }
-/* ======================================
-   CTA + FOOTER — MOBILE FINAL (STABLE)
-   DOES NOT AFFECT DESKTOP
-====================================== */
+/* ===============================
+   CTA + FOOTER MOBILE FIX
+   DO NOT AFFECT DESKTOP
+================================ */
 @media (max-width: 768px) {
 
-   /* ===== CTA SECTION ===== */
+  /* ===== CTA SECTION ===== */
   .cta-section {
     text-align: center;
   }
@@ -318,41 +318,31 @@ body {
     display: inline-block;
     margin: 14px auto 0;
   }
-  /* ================= FOOTER (MOBILE FIXED) ================= */
+
+  /* ===== FOOTER ===== */
   .site-footer {
     text-align: center;
   }
 
   .footer-inner {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 14px;
   }
 
-  .footer-left {
-    width: 100%;
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
 
   .footer-center {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .footer-center span {
-    display: none; /* remove | divider on mobile */
+    gap: 8px;
   }
 
   .footer-right {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .footer-right a {
-    font-size: 18px;
+    margin-top: 6px;
   }
 }
