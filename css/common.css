@@ -153,6 +153,49 @@ body {
   justify-content: space-between;
 }
 
+/* LEFT */
+.footer-left {
+  white-space: nowrap;
+}
+
+/* CENTER */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-center a {
+  color: #d6d6d6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center span {
+  color: #bfbfbf;
+}
+
+.footer-center a:hover {
+  color: #8b5a2b;
+}
+
+/* RIGHT */
+.footer-right {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-right a {
+  color: #d6d6d6;
+  font-size: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: #8b5a2b;
+  transform: translateY(-2px);
+}
+
 /* =========================
    MOBILE HEADER (ONLY MOBILE)
 ========================= */
