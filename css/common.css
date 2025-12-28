@@ -228,7 +228,6 @@ body {
   color: var(--bronze);
   transform: translateY(-2px);
 }
-
 /* =========================
    MOBILE & TABLET NAVIGATION
 ========================= */
@@ -239,21 +238,23 @@ body {
     display: block;
   }
 
-  /* HIDE NAV BY DEFAULT */
-  .main-nav {
+  /* HIDE MENU BY DEFAULT */
+  .header-menu {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: #ffffff;
-    display: none;
+    flex-direction: column;
+    padding: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     z-index: 999;
   }
 
   /* OPEN STATE */
-  .main-nav.active {
-    display: block;
+  .header-menu.active {
+    display: flex;
   }
 
   /* STACK NAV ITEMS */
@@ -274,10 +275,18 @@ body {
     font-size: 15px;
   }
 
-  /* HIDE HEADER CONTACT ON MOBILE */
+  /* STACK CONTACT BELOW NAV */
   .header-contact {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+    text-align: center;
   }
-}
 
+  /* FULL WIDTH CTA */
+  .btn-quote {
+    width: 100%;
+    text-align: center;
+  }
 }
