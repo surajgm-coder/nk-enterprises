@@ -1,277 +1,48 @@
 /* =========================
-   RESET & BASE
+   CONTACT HERO SECTION
 ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: #f8f5f2;
-  color: #333;
-}
-
-/* =========================
-   PAGE HEADER (IF USED)
-========================= */
-.page-header {
-  background: url("../images/contact-banner.jpg") center/cover no-repeat;
+.contact-hero {
+  width: 100%;
   height: 260px;
+  background: url("../images/contact/contect-hero.png") center right / cover no-repeat;
   position: relative;
 }
 
-.page-header .overlay {
-  background: rgba(0,0,0,0.45);
+/* soft light overlay like reference */
+.contact-hero-overlay {
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 60px;
-  color: #fff;
-}
-
-.page-header h1 {
-  font-size: 42px;
-  color: #d4af37;
-}
-
-.page-header p {
-  margin-top: 6px;
-  font-size: 15px;
-}
-
-/* =========================
-   CONTACT SECTION
-========================= */
-.contact-section {
-  padding: 60px 0;
-}
-
-.contact-section .container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* =========================
-   LEFT INFO GRID
-========================= */
-.contact-info {
-  width: 45%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.info-box {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.info-box h3 {
-  font-size: 17px;
-  color: #7a4a22;
-  margin-bottom: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.88),
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.15)
+  );
   display: flex;
   align-items: center;
 }
 
-.info-box i {
-  color: #c28a3a;
-  margin-right: 8px;
-  font-size: 16px;
+/* text alignment */
+.contact-hero-content {
+  max-width: 1200px;
+  padding: 0 40px;
+  width: 100%;
 }
 
-.info-box p {
+/* heading */
+.contact-hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4a2e1a; /* dark brown */
+  margin-bottom: 6px;
+}
+
+/* breadcrumb */
+.contact-hero-content p {
   font-size: 14px;
-  line-height: 1.6;
-}
-
-.info-box button {
-  margin-top: 12px;
-  padding: 8px 14px;
-  background: linear-gradient(#b87333, #7a4a22);
-  border: none;
-  color: #ffffff;
-  font-size: 13px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.info-box button:hover {
-  opacity: 0.9;
-}
-
-/* =========================
-   SOCIAL ICONS
-========================= */
-.social .icons {
-  margin-top: 10px;
-}
-
-.social .icons i {
-  margin-right: 12px;
-  font-size: 18px;
-  color: #b87333;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.social .icons i:hover {
   color: #7a4a22;
 }
 
-/* =========================
-   CONTACT FORM
-========================= */
-.contact-form {
-  width: 55%;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.contact-form h2 {
-  font-size: 22px;
-  color: #7a4a22;
-  margin-bottom: 20px;
-}
-
-.contact-form .row {
-  display: flex;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.contact-form textarea {
-  height: 110px;
-  resize: none;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #b87333;
-}
-
-.contact-form button {
-  width: 160px;
-  padding: 10px;
-  background: linear-gradient(#b87333, #7a4a22);
-  color: #ffffff;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.contact-form button:hover {
-  opacity: 0.9;
-}
-
-/* =========================
-   MAP SECTION
-========================= */
-.map-section iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-  margin-top: 40px;
-}
-
-/* =========================
-   QUOTE BUTTON
-========================= */
-.quote-btn {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.quote-btn button {
-  padding: 14px 30px;
-  background: linear-gradient(#b87333, #7a4a22);
-  color: #ffffff;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.quote-btn button:hover {
-  opacity: 0.9;
-}
-
-/* =========================
-   CTA STRIP
-========================= */
-.cta-strip {
-  background: url("../images/wood-bg.jpg") center/cover no-repeat;
-  color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.cta-strip h2 {
-  color: #d4af37;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.cta-strip p {
-  font-size: 15px;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-
-  .contact-section .container {
-    flex-direction: column;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form .row {
-    flex-direction: column;
-  }
-
-  .page-header .overlay {
-    padding-left: 20px;
-  }
-
-  .page-header h1 {
-    font-size: 32px;
-  }
+.contact-hero-content p span {
+  margin: 0 6px;
 }
