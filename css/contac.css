@@ -46,3 +46,151 @@
 .contact-hero-content p span {
   margin: 0 6px;
 }
+/* =========================
+   CONTACT DETAILS SECTION
+========================= */
+.contact-details {
+  padding: 60px 0;
+  background: #f8f5f2;
+}
+
+/* layout */
+.contact-details .container {
+  display: flex;
+  gap: 40px;
+}
+
+/* LEFT */
+.contact-left {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info-card h4 {
+  font-size: 16px;
+  color: #7a4a22;
+  margin-bottom: 10px;
+}
+
+.info-card i {
+  color: #b87333;
+  margin-right: 6px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: linear-gradient(#b87333, #7a4a22);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+/* SOCIAL */
+.social-icons i {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #b87333;
+  cursor: pointer;
+}
+
+/* RIGHT FORM */
+.contact-right {
+  width: 50%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-right h3 {
+  color: #7a4a22;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background: linear-gradient(#b87333, #7a4a22);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+/* MAP */
+.contact-map iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+  margin-top: 40px;
+}
+
+/* QUOTE BUTTON */
+.quote-center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.quote-btn-main {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(#b87333, #7a4a22);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-details .container {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .contact-left {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
