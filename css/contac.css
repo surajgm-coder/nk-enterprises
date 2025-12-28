@@ -198,3 +198,95 @@
     flex-direction: column;
   }
 }
+/* =========================
+   BROWN CTA STRIP
+========================= */
+.contact-cta {
+  background: url("../images/contact/contact-cta-bg.png") center / cover no-repeat;
+}
+
+.contact-cta-overlay {
+  background: rgba(74, 46, 26, 0.88); /* dark brown */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-cta-overlay h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-cta-overlay p {
+  color: #f2e7d9; /* cream */
+  font-size: 14px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   CREAM INFO COLUMNS
+========================= */
+.contact-info-columns {
+  background: #f5efe7;
+  padding: 45px 0;
+}
+
+.contact-info-columns .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.info-col h4 {
+  font-size: 15px;
+  color: #7a4a22;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+/* small brown square like reference */
+.info-col h4::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #b87333;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.info-col ul {
+  list-style: none;
+}
+
+.info-col ul li {
+  font-size: 14px;
+  color: #4a2e1a;
+  margin-bottom: 8px;
+}
+
+.info-col p {
+  font-size: 14px;
+  color: #4a2e1a;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+
+  .contact-info-columns .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info-col h4::before {
+    display: none;
+  }
+
+  .contact-cta-overlay h2 {
+    font-size: 20px;
+  }
+}
