@@ -261,151 +261,54 @@ body {
     text-align: center;
   }
 }
-/* ================= FOOTER MOBILE FIX ================= */
+/* ======================================
+   CTA + FOOTER — MOBILE FINAL (STABLE)
+   DOES NOT AFFECT DESKTOP
+====================================== */
 @media (max-width: 991px) {
 
-  /* Stack footer columns */
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 22px;
-  }
-
-  /* Each footer column full width */
-  .footer-inner > div {
-    width: 100%;
-  }
-
-  /* Logo & text center */
-  .footer-logo,
-  .footer-left {
+  /* ================= CTA SECTION ================= */
+  .cta-section {
     text-align: center;
   }
 
-  /* Lists spacing */
-  .footer-inner ul {
-    padding-left: 0;
+  /* Top logo strip */
+  .cta-top-inner {
+    text-align: center;
+    padding: 16px 10px;
   }
 
-  .footer-inner li {
-    list-style: none;
+  .cta-top-inner img {
+    max-width: 140px;
+    height: auto;
     margin-bottom: 6px;
   }
 
-  /* Buttons centered */
-  .footer-inner .btn-quote,
-  .footer-inner .btn,
-  .footer-inner a.btn {
-    margin: 10px auto;
-    display: inline-block;
-    width: 85%;
-    text-align: center;
-  }
-
-  /* Contact section spacing */
-  .footer-inner .contact-info {
-    line-height: 1.6;
-  }
-
-  /* Bottom copyright strip */
-  .footer-bottom,
-  .footer-copyright {
-    text-align: center;
-    padding: 12px 10px;
-    font-size: 12px;
-  }
-}
-/* ================= MOBILE FOOTER – FINAL FIX ================= */
-@media (max-width: 991px) {
-
-  /* Force footer columns to stack */
-  .site-footer .footer-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 26px;
-  }
-
-  /* Each footer section full width */
-  .site-footer .footer-inner > * {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Remove multi-column layouts */
-  .site-footer .footer-inner ul,
-  .site-footer .footer-inner .footer-col,
-  .site-footer .footer-inner .footer-column {
-    column-count: 1 !important;
-    text-align: center;
-  }
-
-  /* List cleanup */
-  .site-footer ul {
-    padding-left: 0;
-  }
-
-  .site-footer li {
-    list-style: none;
-    margin-bottom: 8px;
-  }
-
-  /* Buttons centered */
-  .site-footer .btn,
-  .site-footer .btn-quote,
-  .site-footer a.btn {
-    display: inline-block;
-    width: 80%;
-    margin: 10px auto;
-    text-align: center;
-  }
-
-  /* Contact text spacing */
-  .site-footer p,
-  .site-footer span {
-    line-height: 1.6;
-  }
-
-  /* Bottom copyright */
-  .site-footer .footer-bottom,
-  .site-footer .copyright {
-    text-align: center;
-    font-size: 12px;
-    padding: 12px 10px;
-  }
-}
-/* ================= CTA SECTION – MOBILE FIX ================= */
-@media (max-width: 991px) {
-
-  /* Stack heading strip text */
+  /* Heading strip */
   .cta-heading-strip .cta-headings {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    text-align: center;
+    gap: 8px;
+    padding: 12px;
   }
 
   .cta-heading-strip .divider {
     display: none;
   }
 
-  /* Stack CTA grid */
+  /* CTA grid stack */
   .cta-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
   }
 
-  /* Each column full width */
   .cta-col {
-    width: 100% !important;
+    width: 100%;
     text-align: center;
   }
 
-  /* Lists center aligned */
   .cta-col ul {
     padding-left: 0;
     margin-bottom: 12px;
@@ -416,29 +319,55 @@ body {
     margin-bottom: 6px;
   }
 
-  /* Buttons centered */
   .cta-col .btn-quote {
     display: inline-block;
-    width: 80%;
-    margin: 10px auto 0;
+    width: 85%;
+    margin: 12px auto 0;
     text-align: center;
   }
 
-  /* About text spacing */
   .cta-col .about-text,
   .cta-col .contact-text {
     text-align: center;
     line-height: 1.6;
   }
 
-  /* Top logo strip alignment */
-  .cta-top-inner {
+  /* ================= FOOTER ================= */
+  .site-footer {
     text-align: center;
   }
 
-  .cta-top-inner img {
-    max-width: 140px;
-    height: auto;
-    margin-bottom: 6px;
+  .site-footer .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .site-footer .footer-inner > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .site-footer a {
+    text-align: center;
+  }
+
+  .site-footer p,
+  .site-footer span {
+    line-height: 1.6;
   }
 }
