@@ -15,55 +15,50 @@
 
 <body>
 
-<header class="site-header">
+<!-- TOP BRONZE STRIP -->
+<div class="top-strip"></div>
 
-  <!-- TOP GOLDEN BAR -->
-  <div class="top-golden-bar"></div>
-
-  <div class="header-wrapper">
+<!-- HEADER -->
+<header class="main-header">
+  <div class="header-container">
 
     <!-- LOGO -->
-    <div class="site-logo">
+    <div class="logo">
       <img src="images/logo.png" alt="NK Enterprises">
     </div>
 
-    <!-- MAIN BAR -->
-    <div class="main-bar">
-      <div class="bar-inner">
+    <!-- MOBILE TOGGLE -->
+    <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
 
-        <span class="contact-item">
-          <a href="mailto:support@nkenters.com">
-            <i class="fa-solid fa-envelope"></i>
-            support@nkenters.com
-          </a>
-        </span>
+    <!-- HEADER MENU (NAV + CONTACT) -->
+    <div class="header-menu">
 
-        <span class="contact-item">
-          <a href="tel:+916372352301">
-            <i class="fa-solid fa-phone"></i>
-            +91 63723 52301 / +91 96995 40314
-          </a>
-        </span>
-
-        <a href="#" class="cta-btn">GET A QUOTE</a>
-
-      </div>
-    </div>
-
-    <!-- NAV BAR -->
-    <div class="nav-bar">
-      <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+      <!-- NAVIGATION -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
       </nav>
-    </div>
 
+      <!-- CONTACT + CTA -->
+      <div class="header-contact">
+        <span class="email">support@nkenters.com</span>
+        <span class="phone">+91 63723 52301 | +91 96995 40314</span>
+        <a href="contact.html" class="btn-quote">GET A QUOTE</a>
+      </div>
+
+    </div>
   </div>
 </header>
+
+<!-- NAV DIVIDER -->
+<div class="nav-divider"></div>
+
 <!-- HERO SECTION -->
 <section class="hero">
 
@@ -246,9 +241,9 @@ as per approved drawings and material specifications.
 </p>
 
 <p class="contact-text">
- Bhiwandi, Maharashtra<br>
- +91 63723 52301 / +91 96995 40314<br>
- support@nkenters.com
+📍 Bhiwandi, Maharashtra<br>
+📞 +91 63723 52301 / +91 96995 40314<br>
+✉ support@nkenters.com
 </p>
 
 <a href="contact.html" class="btn-quote">GET A QUOTE</a>
@@ -258,6 +253,7 @@ as per approved drawings and material specifications.
 </div>
 
 </section>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -281,6 +277,6 @@ as per approved drawings and material specifications.
   </div>
 </footer>
 
-<script src="js/slider.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
