@@ -1,3 +1,6 @@
+/* =========================
+   RESET & BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +13,11 @@ body {
   color: #333;
 }
 
-/* PAGE HEADER */
+/* =========================
+   PAGE HEADER (IF USED)
+========================= */
 .page-header {
-  background: url("images/contact-banner.jpg") center/cover no-repeat;
+  background: url("../images/contact-banner.jpg") center/cover no-repeat;
   height: 260px;
   position: relative;
 }
@@ -34,21 +39,25 @@ body {
 
 .page-header p {
   margin-top: 6px;
+  font-size: 15px;
 }
 
-/* CONTACT SECTION */
+/* =========================
+   CONTACT SECTION
+========================= */
 .contact-section {
-  padding: 60px 40px;
+  padding: 60px 0;
 }
 
-.container {
+.contact-section .container {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+  align-items: flex-start;
 }
 
-/* INFO BOXES */
+/* =========================
+   LEFT INFO GRID
+========================= */
 .contact-info {
   width: 45%;
   display: grid;
@@ -57,20 +66,35 @@ body {
 }
 
 .info-box {
-  background: #fff;
+  background: #ffffff;
   padding: 22px;
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .info-box h3 {
+  font-size: 17px;
   color: #7a4a22;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .info-box i {
   color: #c28a3a;
-  margin-right: 6px;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.info-box p {
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .info-box button {
@@ -78,27 +102,48 @@ body {
   padding: 8px 14px;
   background: linear-gradient(#b87333, #7a4a22);
   border: none;
-  color: #fff;
+  color: #ffffff;
+  font-size: 13px;
   cursor: pointer;
+  border-radius: 3px;
+}
+
+.info-box button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.social .icons {
+  margin-top: 10px;
 }
 
 .social .icons i {
-  margin-right: 10px;
+  margin-right: 12px;
   font-size: 18px;
   color: #b87333;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* FORM */
+.social .icons i:hover {
+  color: #7a4a22;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
 .contact-form {
   width: 55%;
-  background: #fff;
+  background: #ffffff;
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .contact-form h2 {
+  font-size: 22px;
   color: #7a4a22;
   margin-bottom: 20px;
 }
@@ -112,26 +157,43 @@ body {
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px 12px;
   margin-bottom: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .contact-form textarea {
-  height: 100px;
+  height: 110px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #b87333;
 }
 
 .contact-form button {
   width: 160px;
   padding: 10px;
   background: linear-gradient(#b87333, #7a4a22);
-  color: #fff;
+  color: #ffffff;
   border: none;
+  font-size: 14px;
   cursor: pointer;
+  border-radius: 3px;
 }
 
-/* MAP */
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   MAP SECTION
+========================= */
 .map-section iframe {
   width: 100%;
   height: 350px;
@@ -139,7 +201,9 @@ body {
   margin-top: 40px;
 }
 
-/* CTA */
+/* =========================
+   QUOTE BUTTON
+========================= */
 .quote-btn {
   text-align: center;
   margin: 40px 0;
@@ -148,27 +212,45 @@ body {
 .quote-btn button {
   padding: 14px 30px;
   background: linear-gradient(#b87333, #7a4a22);
-  color: #fff;
+  color: #ffffff;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
+.quote-btn button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   CTA STRIP
+========================= */
 .cta-strip {
-  background: url("images/wood-bg.jpg") center/cover no-repeat;
-  color: #fff;
-  padding: 40px;
+  background: url("../images/wood-bg.jpg") center/cover no-repeat;
+  color: #ffffff;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .cta-strip h2 {
   color: #d4af37;
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
-/* RESPONSIVE */
-@media(max-width: 900px) {
-  .container {
+.cta-strip p {
+  font-size: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+
+  .contact-section .container {
     flex-direction: column;
   }
 
@@ -179,5 +261,17 @@ body {
 
   .contact-info {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .page-header .overlay {
+    padding-left: 20px;
+  }
+
+  .page-header h1 {
+    font-size: 32px;
   }
 }
