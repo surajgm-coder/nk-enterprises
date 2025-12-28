@@ -150,27 +150,33 @@
 }
 
 /* =========================
-   CTA STRIP
+   CTA STRIP (WOODEN)
 ========================= */
 .contact-cta {
-  background: url("../images/contact/contact-cta-bg.png") center / cover no-repeat;
+  background: url("../images/wooden-strip.png") repeat-x center;
+  background-size: cover;
 }
 
 .contact-cta-overlay {
-  background: rgba(59,42,31,0.88);
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .contact-cta-overlay h2 {
-  color: #fff;
-  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 
 .contact-cta-overlay p {
   color: #f2e7d9;
   font-size: 14px;
+  max-width: 900px;
+  margin: auto;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+
 
 /* =========================
    4 COLUMN SECTION
