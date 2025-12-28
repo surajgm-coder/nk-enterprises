@@ -376,3 +376,69 @@ body {
     padding: 12px 10px;
   }
 }
+/* ================= CTA SECTION – MOBILE FIX ================= */
+@media (max-width: 991px) {
+
+  /* Stack heading strip text */
+  .cta-heading-strip .cta-headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .cta-heading-strip .divider {
+    display: none;
+  }
+
+  /* Stack CTA grid */
+  .cta-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px;
+  }
+
+  /* Each column full width */
+  .cta-col {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Lists center aligned */
+  .cta-col ul {
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .cta-col li {
+    list-style: none;
+    margin-bottom: 6px;
+  }
+
+  /* Buttons centered */
+  .cta-col .btn-quote {
+    display: inline-block;
+    width: 80%;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+
+  /* About text spacing */
+  .cta-col .about-text,
+  .cta-col .contact-text {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Top logo strip alignment */
+  .cta-top-inner {
+    text-align: center;
+  }
+
+  .cta-top-inner img {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 6px;
+  }
+}
