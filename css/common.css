@@ -1,25 +1,33 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* COLORS */
+/* =========================
+   COLORS
+========================= */
 :root {
   --bronze: #8b5a2b;
   --dark-brown: #3b2a1f;
   --light-bg: #ffffff;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--dark-brown);
-  background: #fff;
+  background: #ffffff;
 }
 
-/* TOP STRIP */
+/* =========================
+   TOP STRIP
+========================= */
 .top-strip {
   height: 10px;
   background: linear-gradient(
@@ -32,12 +40,15 @@ body {
   );
 }
 
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .main-header {
   background: #ffffff;
   padding: 18px 0 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000;
 }
 
 .header-container {
@@ -53,7 +64,21 @@ body {
   height: 68px;
 }
 
-/* CONTACT */
+/* =========================
+   NAV TOGGLE BUTTON
+========================= */
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-brown);
+}
+
+/* =========================
+   HEADER CONTACT
+========================= */
 .header-contact {
   display: flex;
   align-items: center;
@@ -71,15 +96,16 @@ body {
   font-weight: 600;
 }
 
-.header-contact .email,
-.header-contact .phone {
+.header-contact span {
   color: var(--dark-brown);
 }
 
-/* CTA BUTTON */
+/* =========================
+   CTA BUTTON
+========================= */
 .btn-quote {
   background: linear-gradient(to bottom, #a66a3a, #6f421f);
-  color: #fff;
+  color: #ffffff;
   padding: 11px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -96,11 +122,9 @@ body {
   transform: translateY(-1px);
 }
 
-/* NAVIGATION */
-.main-nav {
-  background: #ffffff;
-}
-
+/* =========================
+   NAVIGATION
+========================= */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -134,22 +158,22 @@ body {
 .main-nav a.active::after {
   width: 100%;
 }
+
 .main-nav a.active {
   color: #6f421f;
 }
 
-/* DIVIDER */
+/* NAV DIVIDER */
 .nav-divider {
   height: 2px;
   background: var(--bronze);
 }
-/* FOOTER */
+
 /* =========================
    FOOTER
 ========================= */
-
 .site-footer {
-  background-image: url("../images/wooden-strip.png");
+  background-image: url("../images/home/wooden-strip.png");
   background-repeat: repeat-x;
   background-size: cover;
   color: #d6d6d6;
@@ -165,12 +189,10 @@ body {
   justify-content: space-between;
 }
 
-/* LEFT */
 .footer-left {
   white-space: nowrap;
 }
 
-/* CENTER */
 .footer-center {
   display: flex;
   align-items: center;
@@ -188,10 +210,9 @@ body {
 }
 
 .footer-center a:hover {
-  color: #8b5a2b;
+  color: var(--bronze);
 }
 
-/* RIGHT */
 .footer-right {
   display: flex;
   gap: 14px;
@@ -204,21 +225,21 @@ body {
 }
 
 .footer-right a:hover {
-  color: #8b5a2b;
+  color: var(--bronze);
   transform: translateY(-2px);
 }
 
-/* ===============================
-   MOBILE & TABLET HEADER ONLY
-   =============================== */
-@media (max-width: 768px) {
+/* =========================
+   MOBILE & TABLET NAVIGATION
+========================= */
+@media (max-width: 991px) {
 
-  /* Show toggle */
+  /* SHOW TOGGLE */
   .nav-toggle {
-    display: flex;
+    display: block;
   }
 
-  /* Hide desktop menu */
+  /* HIDE MENU BY DEFAULT */
   .header-menu {
     display: none;
     position: absolute;
@@ -232,94 +253,39 @@ body {
     z-index: 999;
   }
 
-  /* Open state */
+  /* OPEN STATE */
   .header-menu.active {
     display: flex;
   }
 
-  /* Stack navigation */
-  .main-nav {
-    flex-direction: column;
-    gap: 18px;
-    text-align: center;
-  }
-
-  /* Stack contact info */
-  .header-contact {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  /* CTA full width */
-  .btn-quote {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* =========================
-   MOBILE NAV TOGGLE BUTTON
-   ========================= */
-
-.nav-toggle {
-  display: none;           /* hidden on desktop */
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #3b2a1f;
-}
-/* =========================
-   MOBILE & TABLET NAVIGATION
-   ========================= */
-
-@media (max-width: 991px) {
-
-  /* HEADER ALIGNMENT */
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* SHOW TOGGLE BUTTON */
-  .nav-toggle {
-    display: block;
-  }
-
-  /* HIDE NAVIGATION BY DEFAULT */
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    display: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    z-index: 999;
-  }
-
-  /* STACK MENU ITEMS */
+  /* STACK NAV */
   .main-nav ul {
     flex-direction: column;
     gap: 0;
-    padding: 0;
   }
 
   .main-nav li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
   }
 
   .main-nav a {
     display: block;
-    padding: 15px;
+    padding: 14px;
     text-align: center;
     font-size: 15px;
   }
 
-  /* WHEN MENU IS OPEN */
-  .main-nav.active {
-    display: block;
+  /* STACK CONTACT */
+  .header-contact {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  /* CTA FULL WIDTH */
+  .btn-quote {
+    width: 100%;
+    text-align: center;
   }
 }
