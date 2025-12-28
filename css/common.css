@@ -316,3 +316,63 @@ body {
     font-size: 12px;
   }
 }
+/* ================= MOBILE FOOTER – FINAL FIX ================= */
+@media (max-width: 991px) {
+
+  /* Force footer columns to stack */
+  .site-footer .footer-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 26px;
+  }
+
+  /* Each footer section full width */
+  .site-footer .footer-inner > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove multi-column layouts */
+  .site-footer .footer-inner ul,
+  .site-footer .footer-inner .footer-col,
+  .site-footer .footer-inner .footer-column {
+    column-count: 1 !important;
+    text-align: center;
+  }
+
+  /* List cleanup */
+  .site-footer ul {
+    padding-left: 0;
+  }
+
+  .site-footer li {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  /* Buttons centered */
+  .site-footer .btn,
+  .site-footer .btn-quote,
+  .site-footer a.btn {
+    display: inline-block;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Contact text spacing */
+  .site-footer p,
+  .site-footer span {
+    line-height: 1.6;
+  }
+
+  /* Bottom copyright */
+  .site-footer .footer-bottom,
+  .site-footer .copyright {
+    text-align: center;
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+}
