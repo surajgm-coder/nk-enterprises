@@ -272,7 +272,6 @@ body {
     text-align: center;
   }
 
-  /* Top logo strip */
   .cta-top-inner {
     text-align: center;
     padding: 16px 10px;
@@ -284,7 +283,6 @@ body {
     margin-bottom: 6px;
   }
 
-  /* Heading strip */
   .cta-heading-strip .cta-headings {
     display: flex;
     flex-direction: column;
@@ -297,7 +295,6 @@ body {
     display: none;
   }
 
-  /* CTA grid stack */
   .cta-grid {
     display: flex;
     flex-direction: column;
@@ -315,14 +312,14 @@ body {
   }
 
   .cta-col li {
-    list-style: none;
+    list-show: none;
     margin-bottom: 6px;
   }
 
   .cta-col .btn-quote {
-    display: inline-block;
+    display: block;
     width: 85%;
-    margin: 12px auto 0;
+    margin: 14px auto 0;
     text-align: center;
   }
 
@@ -332,50 +329,7 @@ body {
     line-height: 1.6;
   }
 
-  /* ================= FOOTER ================= */
-  .site-footer {
-    text-align: center;
-  }
-
-  .site-footer .footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-
-  .site-footer .footer-inner > * {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
-
-  .footer-right {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .site-footer a {
-    text-align: center;
-  }
-
-  .site-footer p,
-  .site-footer span {
-    line-height: 1.6;
-  }
-}
-/* ===============================
-   FOOTER – MOBILE CENTER FIX
-================================ */
-@media (max-width: 768px) {
-
+  /* ================= FOOTER (MOBILE FIXED) ================= */
   .site-footer {
     text-align: center;
   }
@@ -384,22 +338,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 14px;
   }
 
   .footer-left {
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
 
   .footer-center {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
+    gap: 10px;
   }
 
   .footer-center span {
@@ -409,10 +360,7 @@ body {
   .footer-right {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 16px;
-    width: 100%;
-    margin-top: 4px;
   }
 
   .footer-right a {
