@@ -14,7 +14,7 @@
 
 /* TOP GOLD BAR (THICKER) */
 .top-golden-bar {
-  height: 7px;
+  height: 9px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
@@ -136,6 +136,13 @@
 
 .nav-menu a.active {
   color: var(--gold);
+}
+/* BOTTOM GOLDEN LINE */
+.site-header::after {
+  content: "";
+  display: block;
+  height: 6px; /* same as top */
+  background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
 
