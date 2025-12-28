@@ -1,18 +1,10 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --gold: #8b5a2b;
-  --gold-light: #e9dccf;
-  --cream: #f8f3ee;
+  --cream: #efe3d6;
   --dark: #3b2a1f;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .site-header {
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -20,28 +12,34 @@
 
 /* TOP GOLD LINE */
 .top-gold-line {
-  height: 5px;
+  height: 4px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
-/* MAIN BAR */
+/* ================= MAIN BAR ================= */
 .main-bar {
-  background: #fff;
-  border-bottom: 1px solid var(--gold-light);
+  border-bottom: 1px solid var(--cream);
 }
 
 .header-wrap {
   max-width: 1200px;
   margin: auto;
-  padding: 12px 30px;
+  height: 70px;                     /* SAME AS NAV */
+  padding: 0 30px;
   display: flex;
-  align-items: center;
+  align-items: center;              /* FIX LOGO ALIGNMENT */
   justify-content: space-between;
 }
 
 /* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .logo img {
-  height: 58px;
+  height: 50px;                     /* VISUALLY CENTERED */
 }
 
 /* CONTACT BAR */
@@ -64,20 +62,20 @@
   font-weight: 600;
 }
 
-/* NAV BAR */
+/* ================= NAV BAR ================= */
 .nav-bar {
-  background: #fff;
-  border-bottom: 2px solid var(--gold);
+  border-bottom: 1px solid var(--cream);   /* CREAM SEPARATOR */
 }
 
-/* NAV MENU */
 .nav-menu {
   max-width: 1200px;
   margin: auto;
-  padding: 14px 30px;
+  height: 70px;                            /* SAME AS MAIN BAR */
+  padding: 0 30px;
   display: flex;
-  justify-content: center;
-  gap: 34px;
+  align-items: center;
+  justify-content: center;                 /* TRUE CENTER */
+  gap: 36px;
 }
 
 /* NAV LINKS */
@@ -86,48 +84,46 @@
   color: var(--dark);
   font-size: 15px;
   position: relative;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 }
 
-/* HORIZONTAL UNDERLINE */
-.nav-menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gold);
-  transition: 0.25s;
-}
-
-/* VERTICAL TICK */
+/* UNDERLINE ANIMATION (HOVER + ACTIVE) */
 .nav-menu a::before {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -6px;
-  width: 2px;
-  height: 0;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
   background: var(--gold);
-  transform: translateX(-50%);
-  transition: 0.25s;
-}
-
-/* ACTIVE & HOVER */
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-  width: 100%;
+  transition: width 0.25s ease;
 }
 
 .nav-menu a:hover::before,
 .nav-menu a.active::before {
-  height: 6px;
+  width: 100%;
+}
+
+/* VERTICAL ACTIVE INDICATOR ONLY */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 2px;
+  height: 0;
+  background: var(--gold);
+  transform: translateX(-50%);
+}
+
+.nav-menu a.active::after {
+  height: 8px;
 }
 
 .nav-menu a.active {
   color: var(--gold);
 }
+
 
 /* =========================
    FOOTER
