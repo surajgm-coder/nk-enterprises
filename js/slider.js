@@ -4,20 +4,30 @@ document.addEventListener("DOMContentLoaded", function () {
      MOBILE NAV TOGGLE
   ========================== */
   const toggle = document.querySelector(".nav-toggle");
-  const menu = document.querySelector(".header-menu");
+  const nav = document.querySelector(".main-nav");
 
-  if (toggle && menu) {
+  if (toggle && nav) {
     toggle.addEventListener("click", function () {
-      menu.classList.toggle("active");
+      nav.classList.toggle("active");
     });
   }
-let slides = document.querySelectorAll('.hero-slide');
-let index = 0;
 
-function showSlide() {
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[index].classList.add('active');
-  index = (index + 1) % slides.length;
-}
+  /* ==========================
+     HERO SLIDER
+  ========================== */
+  const slides = document.querySelectorAll(".hero-slide");
+  let index = 0;
 
-setInterval(showSlide, 4000);
+  function showSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    index = (index + 1) % slides.length;
+  }
+
+  // Start with first slide
+  if (slides.length > 0) {
+    showSlide();
+    setInterval(showSlide, 4000);
+  }
+
+});
