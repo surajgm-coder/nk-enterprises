@@ -348,3 +348,41 @@ body {
     text-align: center;
   }
 }
+ /* ================= FOOTER (MOBILE FIXED) ================= */
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-center span {
+    display: none; /* remove | divider on mobile */
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-right a {
+    font-size: 18px;
+  }
+}
