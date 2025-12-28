@@ -22,18 +22,13 @@ html, body {
 /* ================= TOP GOLDEN BAR ================= */
 .top-golden-bar {
   height: 9px;
-  background: linear-gradient(
-    to right,
-    #5a3215,
-    #b07a45,
-    #5a3215
-  );
+  background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
 /* ================= HEADER WRAPPER ================= */
 .header-wrapper {
   position: relative;
-  padding-left: 140px; /* space reserved for logo */
+  padding-left: 140px; /* logo space */
 }
 
 /* ================= LOGO ================= */
@@ -65,7 +60,7 @@ html, body {
   margin: auto;
   padding: 0 30px;
   display: flex;
-  justify-content: flex-end; /* RIGHT aligned content */
+  justify-content: flex-end;
   align-items: center;
   gap: 18px;
 }
@@ -89,7 +84,7 @@ html, body {
   font-size: 14px;
 }
 
-/* ================= CTA BUTTON ================= */
+/* ================= CTA ================= */
 .cta-btn {
   background: linear-gradient(#a66a3a, var(--gold-dark));
   color: #ffffff;
@@ -98,7 +93,6 @@ html, body {
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
-  margin-left: 8px;
   white-space: nowrap;
 }
 
@@ -120,32 +114,29 @@ html, body {
 .nav-menu a {
   position: relative;
   font-size: 15px;
-  font-weight: 700; /* BOLD */
+  font-weight: 700;
   color: var(--dark);
   text-decoration: none;
-  padding-bottom: 6px;
+  line-height: 1.3;
 }
 
-/* ❌ REMOVE ALL HOVER EFFECTS */
-.nav-menu a:hover,
-.nav-menu a:hover::before,
-.nav-menu a:hover::after {
+/* ❌ NO HOVER / NO UNDERLINE */
+.nav-menu a:hover {
   text-decoration: none;
-  content: none !important;
-  display: none !important;
 }
 
-/* ❌ REMOVE ANY HORIZONTAL LINE */
+/* ❌ REMOVE ANY HORIZONTAL LINE SOURCE */
 .nav-menu a::before {
-  display: none !important;
+  content: none;
+  display: none;
 }
 
-/* ❌ REMOVE ANY BORDERS/SHADOWS */
+/* ❌ REMOVE BORDERS / SHADOWS */
 .nav-bar,
 .nav-menu,
 .nav-menu a {
-  border: none !important;
-  box-shadow: none !important;
+  border: none;
+  box-shadow: none;
 }
 
 /* ✅ ONLY VERTICAL ACTIVE INDICATOR */
@@ -153,9 +144,9 @@ html, body {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -8px;
+  bottom: -14px;          /* safely outside text */
   width: 2px;
-  height: 12px;
+  height: 14px;
   background: var(--gold);
   transform: translateX(-50%);
 }
@@ -165,18 +156,14 @@ html, body {
   color: var(--gold);
 }
 
-/* ================= BOTTOM GOLDEN BAR ================= */
+/* ================= BOTTOM GOLD BAR ================= */
 .site-header::after {
   content: "";
   display: block;
   height: 6px;
-  background: linear-gradient(
-    to right,
-    #5a3215,
-    #b07a45,
-    #5a3215
-  );
+  background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
+
 
 /* =========================
    FOOTER
