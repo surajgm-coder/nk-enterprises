@@ -1,39 +1,39 @@
-/* ================= RESET ================= */
+:root {
+  --gold: #8b5a2b;
+  --gold-dark: #6f421f;
+  --cream: #efe3d6;
+  --dark: #3b2a1f;
+}
+
+/* REMOVE GAP ABOVE HEADER */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* ================= COLORS ================= */
-:root {
-  --gold: #8b5a2b;
-  --gold-dark: #6f421f;
-  --cream: #efe3d6;
-  --text-dark: #3b2a1f;
-}
-
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header {
-  font-family: Arial, Helvetica, sans-serif;
   background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
-/* TOP GOLDEN BAR (NO GAP ABOVE) */
+/* TOP GOLD BAR */
 .top-golden-bar {
-  height: 8px;
+  height: 9px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
 /* HEADER WRAPPER */
 .header-wrapper {
   position: relative;
-  padding-left: 150px; /* logo space */
+  padding-left: 140px; /* logo space */
 }
 
 /* LOGO */
 .site-logo {
   position: absolute;
-  left: 20px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
   height: 90px;
@@ -42,55 +42,63 @@ html, body {
 }
 
 .site-logo img {
-  height: 100%;
+  height: 95%;
   display: block;
 }
 
 /* ================= MAIN BAR ================= */
 .main-bar {
-  height: 56px;
+  height: 55px;
   display: flex;
   align-items: center;
 }
 
+/* RIGHT ALIGN CONTENT */
 .bar-inner {
   max-width: 1200px;
   width: 100%;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;
   display: flex;
-  justify-content: flex-end; /* RIGHT ALIGN */
+  justify-content: flex-end;
   align-items: center;
   gap: 18px;
 }
 
 /* CONTACT */
-.contact-item a {
+.contact-item {
   font-size: 13px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-item a {
   color: var(--gold);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-item i {
   color: var(--gold);
-  margin-right: 6px;
+  font-size: 14px;
 }
 
 /* CTA */
 .cta-btn {
+  margin-left: 10px;
   background: linear-gradient(#a66a3a, var(--gold-dark));
   color: #fff;
-  padding: 7px 16px;
+  padding: 8px 18px;
   border-radius: 5px;
   font-size: 12px;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* ================= NAV BAR ================= */
 .nav-bar {
-  height: 56px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,24 +107,26 @@ html, body {
 /* NAV MENU */
 .nav-menu {
   display: flex;
-  gap: 34px;
+  gap: 36px;
 }
 
 /* NAV LINKS */
 .nav-menu a {
-  position: relative;
   text-decoration: none;
+  color: var(--dark);
   font-size: 15px;
-  color: var(--text-dark);
+  position: relative;
   padding-bottom: 6px;
 }
 
 /* ❌ REMOVE ALL HOVER EFFECTS */
-.nav-menu a:hover {
-  text-decoration: none;
+.nav-menu a:hover,
+.nav-menu a:hover::before,
+.nav-menu a:hover::after {
+  all: unset;
 }
 
-/* ❌ NO HORIZONTAL LINE */
+/* ❌ REMOVE HORIZONTAL LINE COMPLETELY */
 .nav-menu a::before {
   display: none !important;
 }
@@ -137,11 +147,11 @@ html, body {
   color: var(--gold);
 }
 
-/* ================= BOTTOM GOLD LINE ================= */
+/* BOTTOM GOLD BAR */
 .site-header::after {
   content: "";
   display: block;
-  height: 8px;
+  height: 6px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
