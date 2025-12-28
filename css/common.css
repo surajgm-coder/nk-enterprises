@@ -186,6 +186,14 @@ body {
   color: #8b5a2b;
   transform: translateY(-2px);
 }
+/* Desktop: make header-menu invisible to layout */
+.header-menu {
+  display: contents;
+}
+.header-container {
+  position: relative;
+}
+
 /* ================= MOBILE HEADER (COMMON FOR ALL PAGES) ================= */
 @media (max-width: 991px) {
 
