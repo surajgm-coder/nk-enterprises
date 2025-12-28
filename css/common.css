@@ -5,49 +5,39 @@
   box-sizing: border-box;
 }
 
-/* COLORS */
 :root {
   --bronze: #8b5a2b;
   --dark: #3b2a1f;
 }
 
-/* BODY */
-body {
+/* HEADER */
+.main-header {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark);
+  background: #fff;
 }
 
-/* SHARED CONTAINER */
-.header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-}
-
-/* =========================
-   TOP BAR
-========================= */
+/* ================= TOP BAR ================= */
 .top-bar {
   height: 42px;
   border-bottom: 2px solid var(--bronze);
 }
 
-.top-only {
+.top-inner {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  display: flex;
   justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
 }
 
 .header-contact {
   display: flex;
-  align-items: center;
   gap: 18px;
+  align-items: center;
   font-size: 13px;
   white-space: nowrap;
-}
-
-.header-contact .phone {
-  font-weight: 600;
 }
 
 /* CTA */
@@ -56,49 +46,45 @@ body {
   color: #fff;
   padding: 7px 16px;
   border-radius: 5px;
-  text-decoration: none;
   font-size: 12px;
+  text-decoration: none;
   font-weight: 600;
 }
 
-/* =========================
-   LOGO + NAV AREA
-========================= */
-.logo-nav-wrap {
+/* ================= NAV AREA ================= */
+.nav-area {
   height: 68px;
   border-bottom: 6px solid #5a3a1e;
+  position: relative;
 }
 
-.logo-nav-wrap .header-container {
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
   height: 100%;
   position: relative;
 }
 
-/* LOGO — FULL HEADER HEIGHT */
+/* LOGO FULL HEIGHT */
 .logo {
   position: absolute;
   left: 30px;
-  height: 110px; /* top bar + nav bar */
-  top: -42px;
+  top: -42px;               /* pull into top bar */
+  height: 110px;            /* 42 + 68 */
   display: flex;
   align-items: center;
 }
 
 .logo img {
   height: 100%;
-  max-height: 110px;
 }
 
-/* =========================
-   NAVIGATION (CENTERED)
-========================= */
+/* ================= NAV CENTER ================= */
 .main-nav {
-  margin: auto;
-}
-
-.main-nav ul {
-  list-style: none;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 32px;
 }
 
@@ -111,7 +97,7 @@ body {
   padding-bottom: 6px;
 }
 
-/* ACTIVE / HOVER */
+/* ACTIVE UNDERLINE */
 .main-nav a::after {
   content: "";
   position: absolute;
