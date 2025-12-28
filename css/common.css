@@ -261,3 +261,58 @@ body {
     text-align: center;
   }
 }
+/* ================= FOOTER MOBILE FIX ================= */
+@media (max-width: 991px) {
+
+  /* Stack footer columns */
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  /* Each footer column full width */
+  .footer-inner > div {
+    width: 100%;
+  }
+
+  /* Logo & text center */
+  .footer-logo,
+  .footer-left {
+    text-align: center;
+  }
+
+  /* Lists spacing */
+  .footer-inner ul {
+    padding-left: 0;
+  }
+
+  .footer-inner li {
+    list-style: none;
+    margin-bottom: 6px;
+  }
+
+  /* Buttons centered */
+  .footer-inner .btn-quote,
+  .footer-inner .btn,
+  .footer-inner a.btn {
+    margin: 10px auto;
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+  }
+
+  /* Contact section spacing */
+  .footer-inner .contact-info {
+    line-height: 1.6;
+  }
+
+  /* Bottom copyright strip */
+  .footer-bottom,
+  .footer-copyright {
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+}
