@@ -173,7 +173,7 @@ body {
    FOOTER
 ========================= */
 .site-footer {
-  background-image: url("../images/home/wooden-strip.png");
+  background-image: url("../images/headerfooter-woodenstrip.png");
   background-repeat: repeat-x;
   background-size: cover;
   color: #d6d6d6;
@@ -189,10 +189,12 @@ body {
   justify-content: space-between;
 }
 
+/* LEFT */
 .footer-left {
   white-space: nowrap;
 }
 
+/* CENTER */
 .footer-center {
   display: flex;
   align-items: center;
@@ -210,9 +212,10 @@ body {
 }
 
 .footer-center a:hover {
-  color: var(--bronze);
+  color: #8b5a2b;
 }
 
+/* RIGHT */
 .footer-right {
   display: flex;
   gap: 14px;
@@ -225,9 +228,10 @@ body {
 }
 
 .footer-right a:hover {
-  color: var(--bronze);
+  color: #8b5a2b;
   transform: translateY(-2px);
 }
+
 /* =========================
    MOBILE & TABLET NAVIGATION
 ========================= */
