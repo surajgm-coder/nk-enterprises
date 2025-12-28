@@ -1,70 +1,54 @@
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
-.container{max-width:1200px;margin:auto;padding:0 20px}
-
 /* =========================
-   CONTACT HERO SECTION
+   CONTACT HERO
 ========================= */
 .contact-hero {
-  width: 100%;
   height: 260px;
   background: url("../images/contact/contect-hero.png") center right / cover no-repeat;
-  position: relative;
 }
 
-/* soft light overlay like reference */
 .contact-hero-overlay {
-  width: 100%;
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(255,255,255,0.88),
-    rgba(255,255,255,0.55),
-    rgba(255,255,255,0.15)
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.2)
   );
   display: flex;
   align-items: center;
 }
 
-/* text alignment */
 .contact-hero-content {
   max-width: 1200px;
-  padding: 0 40px;
-  width: 100%;
+  padding: 0 20px;
+  margin: auto;
 }
 
-/* heading */
 .contact-hero-content h1 {
   font-size: 42px;
-  font-weight: 700;
-  color: #4a2e1a; /* dark brown */
+  color: #3b2a1f;
   margin-bottom: 6px;
 }
 
-/* breadcrumb */
 .contact-hero-content p {
   font-size: 14px;
-  color: #7a4a22;
+  color: #8b5a2b;
 }
 
-.contact-hero-content p span {
-  margin: 0 6px;
-}
 /* =========================
-   CONTACT DETAILS SECTION
+   CONTACT DETAILS
 ========================= */
 .contact-details {
   padding: 60px 0;
-  background: #f8f5f2;
+  background: #ffffff;
 }
 
-/* layout */
 .contact-details .container {
   display: flex;
   gap: 40px;
 }
 
-/* LEFT */
+/* LEFT CARDS */
 .contact-left {
   width: 50%;
   display: grid;
@@ -73,7 +57,7 @@
 }
 
 .info-card {
-  background: #ffffff;
+  background: #fff;
   padding: 22px;
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -81,12 +65,11 @@
 
 .info-card h4 {
   font-size: 16px;
-  color: #7a4a22;
+  color: #8b5a2b;
   margin-bottom: 10px;
 }
 
 .info-card i {
-  color: #b87333;
   margin-right: 6px;
 }
 
@@ -97,34 +80,34 @@
 
 .card-btn {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 10px;
   padding: 8px 14px;
-  background: linear-gradient(#b87333, #7a4a22);
+  background: linear-gradient(#a66a3a, #6f421f);
   color: #fff;
-  text-decoration: none;
   font-size: 13px;
-  border-radius: 3px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 /* SOCIAL */
 .social-icons i {
   margin-right: 10px;
   font-size: 16px;
-  color: #b87333;
+  color: #8b5a2b;
   cursor: pointer;
 }
 
 /* RIGHT FORM */
 .contact-right {
   width: 50%;
-  background: #ffffff;
+  background: #fff;
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .contact-right h3 {
-  color: #7a4a22;
+  color: #8b5a2b;
   margin-bottom: 20px;
 }
 
@@ -133,9 +116,9 @@
   gap: 12px;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.contact-right input,
+.contact-right select,
+.contact-right textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 14px;
@@ -143,19 +126,22 @@
   border-radius: 4px;
 }
 
-.contact-form textarea {
+.contact-right textarea {
   height: 100px;
 }
 
-.contact-form button {
-  background: linear-gradient(#b87333, #7a4a22);
+.contact-right button {
+  background: linear-gradient(#a66a3a, #6f421f);
   color: #fff;
-  border: none;
   padding: 10px 22px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-/* MAP */
+/* =========================
+   MAP
+========================= */
 .contact-map iframe {
   width: 100%;
   height: 320px;
@@ -163,23 +149,60 @@
   margin-top: 40px;
 }
 
-/* QUOTE BUTTON */
-.quote-center {
+/* =========================
+   CTA STRIP
+========================= */
+.contact-cta {
+  background: url("../images/contact/contact-cta-bg.png") center / cover no-repeat;
+}
+
+.contact-cta-overlay {
+  background: rgba(59,42,31,0.88);
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 30px;
 }
 
-.quote-btn-main {
-  display: inline-block;
-  padding: 14px 30px;
-  background: linear-gradient(#b87333, #7a4a22);
+.contact-cta-overlay h2 {
   color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 4px;
+  margin-bottom: 6px;
 }
 
-/* RESPONSIVE */
+.contact-cta-overlay p {
+  color: #f2e7d9;
+  font-size: 14px;
+}
+
+/* =========================
+   4 COLUMN SECTION
+========================= */
+.contact-info-columns {
+  background: #f5efe7;
+  padding: 50px 0;
+}
+
+.contact-info-columns .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.info-col h4 {
+  color: #8b5a2b;
+  margin-bottom: 14px;
+}
+
+.info-col ul {
+  list-style: none;
+}
+
+.info-col ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .contact-details .container {
     flex-direction: column;
@@ -197,96 +220,13 @@
   .form-row {
     flex-direction: column;
   }
-}
-/* =========================
-   BROWN CTA STRIP
-========================= */
-.contact-cta {
-  background: url("../images/contact/contact-cta-bg.png") center / cover no-repeat;
-}
-
-.contact-cta-overlay {
-  background: rgba(74, 46, 26, 0.88); /* dark brown */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.contact-cta-overlay h2 {
-  color: #ffffff;
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.contact-cta-overlay p {
-  color: #f2e7d9; /* cream */
-  font-size: 14px;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-/* =========================
-   CREAM INFO COLUMNS
-========================= */
-.contact-info-columns {
-  background: #f5efe7;
-  padding: 45px 0;
-}
-
-.contact-info-columns .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.info-col h4 {
-  font-size: 15px;
-  color: #7a4a22;
-  margin-bottom: 14px;
-  position: relative;
-}
-
-/* small brown square like reference */
-.info-col h4::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: #b87333;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.info-col ul {
-  list-style: none;
-}
-
-.info-col ul li {
-  font-size: 14px;
-  color: #4a2e1a;
-  margin-bottom: 8px;
-}
-
-.info-col p {
-  font-size: 14px;
-  color: #4a2e1a;
-  line-height: 1.6;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
 
   .contact-info-columns .container {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .info-col h4::before {
-    display: none;
-  }
-
-  .contact-cta-overlay h2 {
-    font-size: 20px;
+  .contact-hero-content h1 {
+    font-size: 30px;
   }
 }
