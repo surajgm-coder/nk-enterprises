@@ -1,3 +1,10 @@
+/* ================= RESET ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= COLORS ================= */
 :root {
   --gold: #8b5a2b;
   --gold-dark: #6f421f;
@@ -5,78 +12,76 @@
   --dark: #3b2a1f;
 }
 
-/* REMOVE GAP ABOVE HEADER */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* HEADER */
+/* ================= HEADER ================= */
 .site-header {
-  background: #fff;
+  background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
 }
 
-/* TOP GOLD BAR */
+/* ================= TOP GOLDEN BAR ================= */
 .top-golden-bar {
   height: 9px;
-  background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
+  background: linear-gradient(
+    to right,
+    #5a3215,
+    #b07a45,
+    #5a3215
+  );
 }
 
-/* HEADER WRAPPER */
+/* ================= HEADER WRAPPER ================= */
 .header-wrapper {
   position: relative;
-  padding-left: 140px; /* logo space */
+  padding-left: 140px; /* space reserved for logo */
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
 .site-logo {
   position: absolute;
-  left: 30px;
+  left: 25px;
   top: 50%;
   transform: translateY(-50%);
-  height: 90px;
+  height: 88px;
   display: flex;
   align-items: center;
 }
 
 .site-logo img {
-  height: 95%;
+  height: 100%;
   display: block;
 }
 
 /* ================= MAIN BAR ================= */
 .main-bar {
-  height: 55px;
+  height: 56px;
   display: flex;
   align-items: center;
 }
 
-/* RIGHT ALIGN CONTENT */
 .bar-inner {
   max-width: 1200px;
   width: 100%;
   margin: auto;
   padding: 0 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* RIGHT aligned content */
   align-items: center;
   gap: 18px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 .contact-item {
-  font-size: 13px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .contact-item a {
+  font-size: 13px;
+  font-weight: 600;
   color: var(--gold);
   text-decoration: none;
-  font-weight: 500;
 }
 
 .contact-item i {
@@ -84,38 +89,40 @@ html, body {
   font-size: 14px;
 }
 
-/* CTA */
+/* ================= CTA BUTTON ================= */
 .cta-btn {
-  margin-left: 10px;
   background: linear-gradient(#a66a3a, var(--gold-dark));
-  color: #fff;
-  padding: 8px 18px;
+  color: #ffffff;
+  padding: 7px 16px;
   border-radius: 5px;
   font-size: 12px;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
+  margin-left: 8px;
+  white-space: nowrap;
 }
 
 /* ================= NAV BAR ================= */
 .nav-bar {
-  height: 58px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* NAV MENU */
+/* ================= NAV MENU ================= */
 .nav-menu {
   display: flex;
   gap: 36px;
 }
 
-/* NAV LINKS */
+/* ================= NAV LINKS ================= */
 .nav-menu a {
-  text-decoration: none;
-  color: var(--dark);
-  font-size: 15px;
   position: relative;
+  font-size: 15px;
+  font-weight: 700; /* BOLD */
+  color: var(--dark);
+  text-decoration: none;
   padding-bottom: 6px;
 }
 
@@ -123,12 +130,22 @@ html, body {
 .nav-menu a:hover,
 .nav-menu a:hover::before,
 .nav-menu a:hover::after {
-  all: unset;
+  text-decoration: none;
+  content: none !important;
+  display: none !important;
 }
 
-/* ❌ REMOVE HORIZONTAL LINE COMPLETELY */
+/* ❌ REMOVE ANY HORIZONTAL LINE */
 .nav-menu a::before {
   display: none !important;
+}
+
+/* ❌ REMOVE ANY BORDERS/SHADOWS */
+.nav-bar,
+.nav-menu,
+.nav-menu a {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* ✅ ONLY VERTICAL ACTIVE INDICATOR */
@@ -136,23 +153,29 @@ html, body {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -6px;
+  bottom: -8px;
   width: 2px;
-  height: 8px;
+  height: 12px;
   background: var(--gold);
   transform: translateX(-50%);
 }
 
+/* ACTIVE COLOR */
 .nav-menu a.active {
   color: var(--gold);
 }
 
-/* BOTTOM GOLD BAR */
+/* ================= BOTTOM GOLDEN BAR ================= */
 .site-header::after {
   content: "";
   display: block;
   height: 6px;
-  background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
+  background: linear-gradient(
+    to right,
+    #5a3215,
+    #b07a45,
+    #5a3215
+  );
 }
 
 /* =========================
