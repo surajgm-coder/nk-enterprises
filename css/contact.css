@@ -176,35 +176,63 @@
   margin: auto;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
-
-
 /* =========================
-   4 COLUMN SECTION
+   4 COLUMN SECTION – BULLET STYLE
 ========================= */
 .contact-info-columns {
   background: #f5efe7;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .contact-info-columns .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 40px;
 }
 
+/* COLUMN HEADING */
 .info-col h4 {
   color: #8b5a2b;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
+/* LIST RESET */
 .info-col ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* BULLET ITEMS */
 .info-col ul li {
+  position: relative;
+  padding-left: 18px;
   font-size: 14px;
+  color: #3b2a1f;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* CUSTOM BULLET */
+.info-col ul li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 8px;
+  color: #8b5a2b;
+}
+
+/* CONTACT TEXT */
+.info-col p {
+  font-size: 14px;
+  color: #3b2a1f;
+  line-height: 1.6;
   margin-bottom: 8px;
 }
+
 
 /* =========================
    RESPONSIVE
