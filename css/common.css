@@ -239,28 +239,27 @@ body {
     display: block;
   }
 
-  /* HIDE MENU BY DEFAULT */
-  .header-menu {
-    display: none;
+  /* HIDE NAV BY DEFAULT */
+  .main-nav {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: #ffffff;
-    flex-direction: column;
-    padding: 25px 20px;
+    display: none;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     z-index: 999;
   }
 
   /* OPEN STATE */
-  .header-menu.active {
-    display: flex;
+  .main-nav.active {
+    display: block;
   }
 
-  /* STACK NAV */
+  /* STACK NAV ITEMS */
   .main-nav ul {
     flex-direction: column;
+    padding: 0;
     gap: 0;
   }
 
@@ -275,17 +274,10 @@ body {
     font-size: 15px;
   }
 
-  /* STACK CONTACT */
+  /* HIDE HEADER CONTACT ON MOBILE */
   .header-contact {
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-    text-align: center;
+    display: none;
   }
+}
 
-  /* CTA FULL WIDTH */
-  .btn-quote {
-    width: 100%;
-    text-align: center;
-  }
 }
