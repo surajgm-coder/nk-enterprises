@@ -229,4 +229,22 @@
   .contact-hero-content h1 {
     font-size: 30px;
   }
+/* =========================
+   QUOTE BUTTON
+========================= */
+.quote-center {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.quote-btn-main {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(#a66a3a, #6f421f);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+}
 
