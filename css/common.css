@@ -4,19 +4,24 @@
   --dark: #3b2a1f;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header {
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TOP GOLD LINE */
-.top-gold-line {
-  height: 4px;
+/* TOP GOLDEN BAR (THICKER) */
+.top-golden-bar {
+  height: 6px; /* thicker than bottom line */
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
-/* ================= MAIN BAR ================= */
+/* HEADER BODY */
+.header-body {
+  position: relative;
+}
+
+/* MAIN BAR */
 .main-bar {
   border-bottom: 1px solid var(--cream);
 }
@@ -24,14 +29,14 @@
 .header-wrap {
   max-width: 1200px;
   margin: auto;
-  height: 70px;                     /* SAME AS NAV */
+  height: 70px;
   padding: 0 30px;
   display: flex;
-  align-items: center;              /* FIX LOGO ALIGNMENT */
+  align-items: center; /* key for vertical centering */
   justify-content: space-between;
 }
 
-/* LOGO */
+/* LOGO — FULL HEADER ALIGNMENT */
 .logo {
   display: flex;
   align-items: center;
@@ -39,14 +44,15 @@
 }
 
 .logo img {
-  height: 50px;                     /* VISUALLY CENTERED */
+  height: 52px;
+  display: block;
 }
 
 /* CONTACT BAR */
 .contact-bar {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   font-size: 13px;
   color: var(--dark);
 }
@@ -62,19 +68,20 @@
   font-weight: 600;
 }
 
-/* ================= NAV BAR ================= */
+/* NAV BAR */
 .nav-bar {
-  border-bottom: 1px solid var(--cream);   /* CREAM SEPARATOR */
+  border-bottom: 1px solid var(--cream); /* thinner than top */
 }
 
+/* NAV MENU */
 .nav-menu {
   max-width: 1200px;
   margin: auto;
-  height: 70px;                            /* SAME AS MAIN BAR */
+  height: 70px;
   padding: 0 30px;
   display: flex;
   align-items: center;
-  justify-content: center;                 /* TRUE CENTER */
+  justify-content: center;
   gap: 36px;
 }
 
@@ -87,7 +94,7 @@
   padding-bottom: 8px;
 }
 
-/* UNDERLINE ANIMATION (HOVER + ACTIVE) */
+/* UNDERLINE (SIMPLE) */
 .nav-menu a::before {
   content: "";
   position: absolute;
@@ -99,12 +106,11 @@
   transition: width 0.25s ease;
 }
 
-.nav-menu a:hover::before,
 .nav-menu a.active::before {
   width: 100%;
 }
 
-/* VERTICAL ACTIVE INDICATOR ONLY */
+/* VERTICAL ACTIVE INDICATOR */
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -123,7 +129,6 @@
 .nav-menu a.active {
   color: var(--gold);
 }
-
 
 /* =========================
    FOOTER
