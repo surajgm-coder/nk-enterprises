@@ -1,96 +1,96 @@
+/* ================= RESET ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= COLORS ================= */
 :root {
   --gold: #8b5a2b;
   --gold-dark: #6f421f;
   --cream: #efe3d6;
-  --dark: #3b2a1f;
+  --text-dark: #3b2a1f;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .site-header {
-  background: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  position: relative;
+  background: #fff;
 }
 
-/* TOP GOLD BAR (THICKER) */
+/* TOP GOLDEN BAR (NO GAP ABOVE) */
 .top-golden-bar {
-  height: 9px;
+  height: 8px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
 
 /* HEADER WRAPPER */
 .header-wrapper {
   position: relative;
-  padding-left: 140px; /* space for logo */
+  padding-left: 150px; /* logo space */
 }
 
-/* LOGO — TRUE FULL HEADER ALIGNMENT */
+/* LOGO */
 .site-logo {
   position: absolute;
-  left: 30px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  height: 90px; /* main bar + nav bar */
+  height: 90px;
   display: flex;
   align-items: center;
 }
 
 .site-logo img {
-  height: 95%;
+  height: 100%;
   display: block;
 }
 
-/* MAIN BAR */
+/* ================= MAIN BAR ================= */
 .main-bar {
-  height: 55px;
-  border-bottom: 1px solid var(--cream);
+  height: 56px;
   display: flex;
   align-items: center;
 }
 
 .bar-inner {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 0 30px;
+  padding: 0 20px;
   display: flex;
+  justify-content: flex-end; /* RIGHT ALIGN */
   align-items: center;
   gap: 18px;
 }
 
-.right-align {
-  justify-content: flex-end;
-}
-
 /* CONTACT */
-.contact-item {
+.contact-item a {
   font-size: 13px;
-  color: var(--dark);
-  display: flex;
-  align-items: right;
-  gap: 6px;
+  font-weight: 500;
+  color: var(--gold);
+  text-decoration: none;
 }
 
-.icon {
+.contact-item i {
   color: var(--gold);
-  font-size: 14px;
+  margin-right: 6px;
 }
 
 /* CTA */
 .cta-btn {
-  margin-left: 10px;
   background: linear-gradient(#a66a3a, var(--gold-dark));
   color: #fff;
-  padding: 8px 18px;
+  padding: 7px 16px;
   border-radius: 5px;
   font-size: 12px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* NAV BAR */
+/* ================= NAV BAR ================= */
 .nav-bar {
-  height: 58px;
-  border-bottom: 1px solid var(--cream);
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,30 +99,29 @@
 /* NAV MENU */
 .nav-menu {
   display: flex;
-  gap: 36px;
+  gap: 34px;
 }
 
 /* NAV LINKS */
 .nav-menu a {
-  text-decoration: none;
-  color: var(--dark);
-  font-size: 15px;
   position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--text-dark);
   padding-bottom: 6px;
 }
 
-/* UNDERLINE (ACTIVE ONLY) */
-.nav-menu a.active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
-  width: 100%;
-  height: 2px;
-  background: var(--gold);
+/* ❌ REMOVE ALL HOVER EFFECTS */
+.nav-menu a:hover {
+  text-decoration: none;
 }
 
-/* VERTICAL ACTIVE INDICATOR */
+/* ❌ NO HORIZONTAL LINE */
+.nav-menu a::before {
+  display: none !important;
+}
+
+/* ✅ ONLY VERTICAL ACTIVE INDICATOR */
 .nav-menu a.active::after {
   content: "";
   position: absolute;
@@ -137,14 +136,14 @@
 .nav-menu a.active {
   color: var(--gold);
 }
-/* BOTTOM GOLDEN LINE */
+
+/* ================= BOTTOM GOLD LINE ================= */
 .site-header::after {
   content: "";
   display: block;
-  height: 6px; /* same as top */
+  height: 8px;
   background: linear-gradient(to right, #5a3215, #b07a45, #5a3215);
 }
-
 
 /* =========================
    FOOTER
