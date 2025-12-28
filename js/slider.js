@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ==========================
-     MOBILE NAV TOGGLE
+     MOBILE NAV TOGGLE (FIXED)
   ========================== */
   const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".main-nav");
+  const menu = document.querySelector(".header-menu");
 
-  if (toggle && nav) {
+  if (toggle && menu) {
     toggle.addEventListener("click", function () {
-      nav.classList.toggle("active");
+      menu.classList.toggle("active");
     });
   }
 
