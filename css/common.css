@@ -262,41 +262,57 @@ body {
   }
 }
 /* ===============================
-   CTA + FOOTER MOBILE FIX
-   DO NOT AFFECT DESKTOP
+   CTA SECTION – MOBILE FIX
+   SAFE | STABLE | DESKTOP SAFE
 ================================ */
 @media (max-width: 768px) {
 
-  /* ===== CTA SECTION ===== */
+  /* CTA wrapper */
   .cta-section {
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Top logo strip */
+  .cta-top-inner {
+    padding: 18px 12px;
     text-align: center;
   }
 
+  .cta-top-inner img {
+    max-width: 140px;
+    margin: 0 auto 6px;
+    display: block;
+  }
+
+  /* Heading strip */
   .cta-heading-strip {
-    overflow-x: auto;
+    overflow: hidden; /* IMPORTANT */
   }
 
   .cta-headings {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 14px;
-    font-size: 13px;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 10px;
+    font-size: 14px;
+    text-align: center;
   }
 
   .cta-headings .divider {
     display: none;
   }
 
+  /* Content area */
   .cta-content {
-    padding: 20px 15px;
+    padding: 24px 16px;
   }
 
   .cta-grid {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 30px;
   }
 
   .cta-col {
@@ -307,42 +323,28 @@ body {
 
   .cta-col ul {
     padding-left: 0;
-    list-style-position: inside;
+    list-style: none;
+    margin-bottom: 12px;
   }
 
   .cta-col ul li {
-    text-align: center;
+    margin-bottom: 6px;
+    font-size: 14px;
   }
 
+  .cta-col .about-text,
+  .cta-col .contact-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* Buttons */
   .cta-col .btn-quote {
-    display: inline-block;
-    margin: 14px auto 0;
-  }
-
-  /* ===== FOOTER ===== */
-  .site-footer {
+    display: block;
+    width: 90%;
+    max-width: 320px;
+    margin: 12px auto 0;
     text-align: center;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-center {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .footer-right {
-    margin-top: 6px;
   }
 }
