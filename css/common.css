@@ -36,13 +36,13 @@
 }
 
 .site-logo img {
-  height: 100%;
+  height: 95%;
   display: block;
 }
 
 /* MAIN BAR */
 .main-bar {
-  height: 58px;
+  height: 55px;
   border-bottom: 1px solid var(--cream);
   display: flex;
   align-items: center;
