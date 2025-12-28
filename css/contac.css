@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f8f5f2;
+  color: #333;
+}
+
+/* PAGE HEADER */
+.page-header {
+  background: url("images/contact-banner.jpg") center/cover no-repeat;
+  height: 260px;
+  position: relative;
+}
+
+.page-header .overlay {
+  background: rgba(0,0,0,0.45);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  color: #fff;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  color: #d4af37;
+}
+
+.page-header p {
+  margin-top: 6px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 60px 40px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* INFO BOXES */
+.contact-info {
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-box {
+  background: #fff;
+  padding: 22px;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info-box h3 {
+  color: #7a4a22;
+  margin-bottom: 10px;
+}
+
+.info-box i {
+  color: #c28a3a;
+  margin-right: 6px;
+}
+
+.info-box button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: linear-gradient(#b87333, #7a4a22);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.social .icons i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #b87333;
+  cursor: pointer;
+}
+
+/* FORM */
+.contact-form {
+  width: 55%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  color: #7a4a22;
+  margin-bottom: 20px;
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  width: 160px;
+  padding: 10px;
+  background: linear-gradient(#b87333, #7a4a22);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* MAP */
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  margin-top: 40px;
+}
+
+/* CTA */
+.quote-btn {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.quote-btn button {
+  padding: 14px 30px;
+  background: linear-gradient(#b87333, #7a4a22);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta-strip {
+  background: url("images/wood-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.cta-strip h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
