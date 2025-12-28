@@ -1,5 +1,5 @@
 /* =========================
-   RESET & BASE
+   RESET
 ========================= */
 * {
   margin: 0;
@@ -7,35 +7,29 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #3b2a1f;
-  background: #ffffff;
-}
-
 /* =========================
-   COLOR VARIABLES
+   COLORS
 ========================= */
 :root {
   --bronze: #8b5a2b;
   --dark-brown: #3b2a1f;
-  --cream: #f5efe7;
+  --light-bg: #ffffff;
 }
 
 /* =========================
-   CONTAINER
+   BODY
 ========================= */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark-brown);
+  background: #ffffff;
 }
 
 /* =========================
    TOP STRIP
 ========================= */
 .top-strip {
-  height: 8px;
+  height: 10px;
   background: linear-gradient(
     to right,
     #5a3215,
@@ -47,13 +41,14 @@ body {
 }
 
 /* =========================
-   HEADER
+   HEADER (DESKTOP)
 ========================= */
 .main-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* GRID CONTAINER */
 .header-container {
   width: 90%;
   margin: auto;
@@ -61,41 +56,38 @@ body {
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto;
   align-items: center;
-  row-gap: 6px;
-  position: relative;
+  row-gap: 8px;
+  position: relative; /* needed for mobile dropdown */
 }
 
-/* LOGO */
+/* LOGO – SPANS BOTH ROWS */
 .logo {
   grid-row: 1 / span 2;
 }
 
 .logo img {
-  max-height: 68px;
-  width: auto;
+  height: 68px;
 }
 
-/* =========================
-   HEADER TOP RIGHT
-========================= */
+/* ================= ROW 1 : CONTACT ================= */
 .header-top-right {
   grid-column: 2 / 4;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 18px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 13.5px;
+  font-weight: 700;
 }
 
 .header-top-right span {
   color: var(--dark-brown);
 }
 
-/* CTA BUTTON */
+/* CTA */
 .btn-quote {
   background: linear-gradient(to bottom, #a66a3a, #6f421f);
-  color: #ffffff;
+  color: #fff;
   padding: 9px 18px;
   border-radius: 6px;
   font-size: 12px;
@@ -103,9 +95,7 @@ body {
   text-decoration: none;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* ================= ROW 2 : NAV ================= */
 .main-nav {
   grid-column: 2 / 4;
   justify-self: center;
@@ -117,10 +107,6 @@ body {
   gap: 34px;
 }
 
-.main-nav li {
-  list-style: none;
-}
-
 .main-nav a {
   text-decoration: none;
   font-size: 15px;
@@ -128,26 +114,22 @@ body {
   color: var(--dark-brown);
 }
 
-.main-nav a:hover,
 .main-nav a.active {
   color: var(--bronze);
 }
 
-/* =========================
-   HEADER MENU WRAPPER
-========================= */
+/* ================= HEADER MENU (DESKTOP SAFE) ================= */
 .header-menu {
-  display: contents;
+  display: contents; /* invisible wrapper on desktop */
 }
 
-/* =========================
-   MOBILE TOGGLE
-========================= */
+/* MOBILE TOGGLE (DESKTOP HIDDEN) */
 .nav-toggle {
   display: none;
+  position: relative;
+  z-index: 1001;
   background: none;
   border: none;
-  font-size: 26px;
   cursor: pointer;
 }
 
@@ -155,7 +137,9 @@ body {
    FOOTER
 ========================= */
 .site-footer {
-  background: #3b2314;
+  background-image: url("../images/wooden-strip.png");
+  background-repeat: repeat-x;
+  background-size: cover;
   color: #d6d6d6;
   font-size: 13px;
 }
@@ -169,20 +153,33 @@ body {
   justify-content: space-between;
 }
 
+/* LEFT */
+.footer-left {
+  white-space: nowrap;
+}
+
+/* CENTER */
 .footer-center {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
 .footer-center a {
   color: #d6d6d6;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center span {
+  color: #bfbfbf;
 }
 
 .footer-center a:hover {
-  color: var(--bronze);
+  color: #8b5a2b;
 }
 
+/* RIGHT */
 .footer-right {
   display: flex;
   gap: 14px;
@@ -191,25 +188,32 @@ body {
 .footer-right a {
   color: #d6d6d6;
   font-size: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: #8b5a2b;
+  transform: translateY(-2px);
 }
 
 /* =========================
-   MOBILE HEADER
+   MOBILE HEADER (ONLY MOBILE)
 ========================= */
 @media (max-width: 991px) {
 
-  .header-top-right {
-    display: none;
-  }
-
+  /* Hide desktop elements */
+  .header-top-right,
   .main-nav {
     display: none;
   }
 
+  /* Show hamburger */
   .nav-toggle {
     display: block;
+    font-size: 26px;
   }
 
+  /* Dropdown wrapper */
   .header-menu {
     display: none;
     position: absolute;
@@ -225,6 +229,7 @@ body {
     display: block;
   }
 
+  /* Mobile nav */
   .header-menu .main-nav {
     display: block;
   }
@@ -239,29 +244,20 @@ body {
     display: block;
     text-align: center;
     font-size: 15px;
+    font-weight: 600;
   }
 
+  /* Mobile contact + CTA */
   .header-menu .header-top-right {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 14px;
   }
-}
 
-/* =========================
-   MOBILE FOOTER
-========================= */
-@media (max-width: 768px) {
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 14px;
+  .header-menu .btn-quote {
+    width: 90%;
     text-align: center;
-  }
-
-  .footer-center {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
