@@ -1,1 +1,116 @@
+/* HERO */
+.services-hero {
+  background: url("../images/services/services-hero.jpg") center right / cover no-repeat;
+}
+
+.inner-hero {
+  height: 260px;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.45);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 42px;
+}
+
+.hero-overlay p {
+  color: #e0c097;
+  margin-top: 6px;
+}
+
+/* INTRO */
+.services-intro {
+  padding: 70px 0;
+  background: #faf7f3;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.services-intro h2 {
+  color: #6b3f1d;
+}
+
+.services-intro h4 {
+  color: #8b5a2b;
+  margin: 10px 0 20px;
+}
+
+/* SERVICES LIST */
+.services-list {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card h4 {
+  color: #6b3f1d;
+  margin-bottom: 15px;
+}
+
+.service-card ul {
+  list-style: none;
+}
+
+.service-card ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* WHY CHOOSE */
+.why-choose {
+  background: #f5efe7;
+  padding: 70px 0;
+}
+
+.check-list {
+  list-style: none;
+}
+
+.check-list li {
+  margin-bottom: 10px;
+}
+
+.certifications {
+  text-align: center;
+}
+
+.cert-box {
+  border: 2px solid #c9a063;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* CTA */
+.cta-section {
+  background: #6b3f1d;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
 
