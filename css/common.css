@@ -1,36 +1,24 @@
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   ROOT COLORS
-========================= */
 :root {
   --gold: #c89b5c;
   --bronze: #b07a45;
-  --dark-brown: #3b2a1f;
-  --wood-dark: #5e2f0f;
+  --dark: #3b2a1f;
+  --wood-dark: #4a240c;
   --wood-mid: #8b5a2b;
-  --cream: #f4efe9;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: var(--dark-brown);
+  color: var(--dark);
 }
 
-/* =========================
-   TOP STRIP
-========================= */
+/* TOP STRIP */
 .top-strip {
   height: 10px;
   background: linear-gradient(
@@ -43,22 +31,18 @@ body {
   );
 }
 
-/* =========================
-   MAIN HEADER
-========================= */
+/* HEADER BACKGROUND */
 .main-header {
   background: linear-gradient(
-    to right,
-    #f6efe6,
-    #efe4d6,
-    #f6efe6
+    to bottom,
+    #efe3d4 0%,
+    #f8f2ea 45%,
+    #efe3d4 100%
   );
   border-bottom: 1px solid var(--gold);
 }
 
-/* =========================
-   HEADER GRID
-========================= */
+/* GRID */
 .header-container {
   width: 90%;
   max-width: 1300px;
@@ -67,96 +51,74 @@ body {
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto auto;
   align-items: center;
-  row-gap: 8px;
   padding: 18px 0;
+  row-gap: 10px;
 }
 
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 .logo {
   grid-row: 1 / span 2;
 }
 
 .logo img {
   height: 78px;
-  display: block;
 }
 
-/* =========================
-   CONTACT INFO
-========================= */
+/* CONTACT */
 .header-top-right {
-  grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
   font-size: 13.5px;
   font-weight: 600;
+  margin-top: 6px;
 }
 
 .header-top-right span {
   display: flex;
   align-items: center;
   gap: 6px;
-  line-height: 1.6;
 }
 
 .header-top-right i {
   color: var(--bronze);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 900;
 }
 
-.header-top-right .sep {
+.sep {
   color: var(--gold);
   margin: 0 8px;
 }
 
-/* =========================
-   CTA BUTTON
-========================= */
-.header-cta {
-  grid-column: 3 / 4;
-  grid-row: 1;
-  align-self: center;
-}
-
+/* CTA */
 .btn-quote {
-  display: inline-block;
+  background: linear-gradient(to bottom, #e0b15a, #9a5a24);
   padding: 11px 26px;
-  background: linear-gradient(
-    to bottom,
-    #e0b15a,
-    #9a5a24
-  );
-  color: #ffffff;
-  font-size: 13px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
   font-weight: 700;
   letter-spacing: 1px;
-  border-radius: 6px;
   border: 1px solid #7a4318;
-  text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* =========================
-   NAV STRIP
-========================= */
+/* NAV STRIP */
 .nav-strip {
   grid-column: 1 / -1;
-  margin-top: 10px;
   background: linear-gradient(
     to bottom,
     var(--wood-dark),
     var(--wood-mid),
     var(--wood-dark)
   );
+  margin-top: 10px;
+  position: relative;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAV */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -165,7 +127,6 @@ body {
 .main-nav ul {
   list-style: none;
   display: flex;
-  align-items: center;
 }
 
 .main-nav li {
@@ -174,14 +135,14 @@ body {
 
 .main-nav a {
   display: block;
-  padding: 14px 26px;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 16px 26px 12px;
   color: #f5e6d2;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-/* separators */
+/* SEPARATORS */
 .main-nav li:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -192,18 +153,74 @@ body {
   background: var(--gold);
 }
 
-/* active underline */
+/* ACTIVE UNDERLINE */
 .main-nav a.active::after {
   content: "";
   position: absolute;
   left: 30%;
-  bottom: 0;
+  bottom: -2px;
   width: 40%;
   height: 4px;
   background: var(--gold);
   border-radius: 2px;
 }
 
+/* MOBILE */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+
+  .header-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo {
+    grid-row: auto;
+  }
+
+  .header-top-right {
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .main-nav li::after {
+    display: none;
+  }
+
+  .main-nav a {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .main-nav a.active::after {
+    display: none;
+  }
+}
 
 /* =========================
    FOOTER
