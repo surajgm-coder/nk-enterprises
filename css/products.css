@@ -1,0 +1,115 @@
+/* =========================
+   PRODUCTS HERO
+========================= */
+.products-hero {
+  background: url("../images/products/products-hero.jpg") center/cover no-repeat;
+  padding: 90px 0;
+  color: #fff;
+  position: relative;
+}
+
+.products-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.products-hero .container {
+  position: relative;
+}
+
+.products-hero h1 {
+  font-size: 42px;
+  color: #c48a45;
+}
+
+/* =========================
+   INTRO
+========================= */
+.products-intro {
+  padding: 60px 0 30px;
+  background: #f7f2ed;
+}
+
+.products-intro h2 {
+  color: #6b3f1d;
+}
+
+/* =========================
+   FILTER
+========================= */
+.product-filter {
+  padding: 20px 0 40px;
+  background: #f7f2ed;
+}
+
+.product-filter button {
+  padding: 8px 18px;
+  border: 1px solid #c48a45;
+  background: transparent;
+  color: #6b3f1d;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.product-filter .active {
+  background: #c48a45;
+  color: #fff;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+.products-grid {
+  background: #f7f2ed;
+  padding-bottom: 70px;
+}
+
+.products-grid .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h4 {
+  margin: 15px 0 10px;
+  color: #4a2c16;
+}
+
+.price {
+  display: block;
+  color: #c48a45;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(#d09a5b, #a86a2d);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* =========================
+   CTA
+========================= */
+.products-cta {
+  background: url("../images/wooden-strip.png") center/cover no-repeat;
+  padding: 70px 0;
+  color: #fff;
+}
