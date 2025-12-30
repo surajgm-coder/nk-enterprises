@@ -8,24 +8,6 @@
 }
 
 /* =========================
-   COLORS
-========================= */
-:root {
-  --bronze: #8b5a2b;
-  --dark-brown: #3b2a1f;
-  --light-bg: #ffffff;
-}
-
-/* =========================
-   BODY
-========================= */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark-brown);
-  background: #ffffff;
-}
-
-/* =========================
    PREMIUM COLOR PALETTE
 ========================= */
 :root {
