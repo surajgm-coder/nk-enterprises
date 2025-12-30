@@ -1,8 +1,7 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ==========================
-     MOBILE NAV TOGGLE
+     MOBILE NAV TOGGLE (FIXED)
   ========================== */
   const toggle = document.querySelector(".nav-toggle");
   const menu = document.querySelector(".header-menu");
@@ -10,21 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toggle && menu) {
     toggle.addEventListener("click", function () {
       menu.classList.toggle("active");
-    });
-  }
-
-  /* ==========================
-     HEADER FIX + FADE ON SCROLL
-  ========================== */
-  const header = document.querySelector(".main-header");
-
-  if (header) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
     });
   }
 
@@ -40,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     index = (index + 1) % slides.length;
   }
 
+  // Start with first slide
   if (slides.length > 0) {
     showSlide();
     setInterval(showSlide, 4000);
   }
 
 });
-</script>
