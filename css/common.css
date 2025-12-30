@@ -200,35 +200,6 @@ body {
   background: var(--cream);
   transition: box-shadow 0.35s ease, backdrop-filter 0.35s ease;
 }
-
-/* Scroll effect */
-.site-header-wrap.scrolled {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-  backdrop-filter: blur(6px);
-}
-
-/* Shrink main header on scroll */
-.site-header-wrap.scrolled .header-container {
-  padding: 6px 0;
-}
-
-/* Optional: slightly fade top bar on scroll */
-.site-header-wrap.scrolled .top-info-bar {
-  opacity: 0.95;
-}
-
-/* =========================
-   CONTENT OFFSET (IMPORTANT)
-========================= */
-.hero-section {
-  padding-top: 145px;
-}
-
-/* If page has no hero */
-.page-content {
-  padding-top: 145px;
-}
-
 /* =========================
    FOOTER
 ========================= */
