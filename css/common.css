@@ -189,6 +189,42 @@ body {
   cursor: pointer;
   color: var(--espresso);
 }
+/* =========================
+   FIXED HEADER
+========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+
+  transition: 
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* HEADER INNER SPACING */
+.site-header .header-inner {
+  padding: 16px 0;
+  transition: padding 0.35s ease;
+}
+
+/* SCROLL STATE */
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* SHRINK EFFECT */
+.site-header.scrolled .header-inner {
+  padding: 10px 0;
+}
 
 /* =========================
    FOOTER
