@@ -8,16 +8,12 @@
 }
 
 /* =========================
-   ROOT COLORS
+   COLORS
 ========================= */
 :root {
-  --gold: #c89b5c;
-  --bronze: #b07a45;
+  --bronze: #8b5a2b;
   --dark-brown: #3b2a1f;
-  --wood-dark: #4a240c;
-  --wood-mid: #8b5a2b;
-  --cream-dark: #efe3d4;
-  --cream-light: #f8f2ea;
+  --light-bg: #ffffff;
 }
 
 /* =========================
@@ -25,8 +21,8 @@
 ========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
   color: var(--dark-brown);
+  background: #ffffff;
 }
 
 /* =========================
@@ -36,200 +32,106 @@ body {
   height: 10px;
   background: linear-gradient(
     to right,
-    #3b1f0f,
-    var(--wood-mid),
-    var(--gold),
-    var(--wood-mid),
-    #3b1f0f
+    #5a3215,
+    #8b5a2b,
+    #b07a45,
+    #8b5a2b,
+    #5a3215
   );
 }
 
 /* =========================
-   HEADER MAIN
+   HEADER (DESKTOP)
 ========================= */
-.header-main {
-  background: linear-gradient(
-    to bottom,
-    var(--cream-dark) 0%,
-    var(--cream-light) 45%,
-    var(--cream-dark) 100%
-  );
-  border-bottom: 1px solid var(--gold);
+.main-header {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.header-inner {
+/* GRID CONTAINER */
+.header-container {
   width: 90%;
-  max-width: 1300px;
   margin: auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
   align-items: center;
-  padding: 18px 0;
+  row-gap: 8px;
+  position: relative; /* needed for mobile dropdown */
 }
 
-/* =========================
-   LOGO
-========================= */
-.header-logo img {
-  height: 78px;
-  display: block;
+/* LOGO – SPANS BOTH ROWS */
+.logo {
+  grid-row: 1 / span 2;
 }
 
-/* =========================
-   CONTACT INFO
-========================= */
-.header-contact {
+.logo img {
+  height: 68px;
+}
+
+/* ================= ROW 1 : CONTACT ================= */
+.header-top-right {
+  grid-column: 2 / 4;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
   font-size: 13.5px;
-  font-weight: 600;
-}
-
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.contact-row i {
-  color: var(--bronze);
-  font-size: 15px;
-  font-weight: 900;
-}
-
-.sep {
-  color: var(--gold);
-  margin: 0 8px;
-}
-
-/* =========================
-   CTA BUTTON
-========================= */
-.btn-header {
-  background: linear-gradient(to bottom, #e0b15a, #9a5a24);
-  padding: 11px 26px;
-  border-radius: 6px;
-  color: #fff;
-  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
+}
+
+.header-top-right span {
+  color: var(--dark-brown);
+}
+
+/* CTA */
+.btn-quote {
+  background: linear-gradient(to bottom, #a66a3a, #6f421f);
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid #7a4318;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* =========================
-   NAV BAR
-========================= */
-.nav-bar {
-  background: linear-gradient(
-    to bottom,
-    var(--wood-dark),
-    var(--wood-mid),
-    var(--wood-dark)
-  );
-  position: relative;
-}
-
+/* ================= ROW 2 : NAV ================= */
 .main-nav {
-  display: flex;
-  justify-content: center;
+  grid-column: 2 / 4;
+  justify-self: center;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-}
-
-.main-nav li {
-  position: relative;
+  gap: 34px;
 }
 
 .main-nav a {
-  display: block;
-  padding: 16px 26px 12px;
-  color: #f5e6d2;
-  font-size: 15px;
-  font-weight: 600;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-brown);
 }
 
-/* MENU SEPARATORS */
-.main-nav li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 30%;
-  height: 40%;
-  width: 1px;
-  background: var(--gold);
+.main-nav a.active {
+  color: var(--bronze);
 }
 
-/* ACTIVE UNDERLINE */
-.main-nav a.active::after {
-  content: "";
-  position: absolute;
-  left: 30%;
-  bottom: -2px;
-  width: 40%;
-  height: 4px;
-  background: var(--gold);
-  border-radius: 2px;
+/* ================= HEADER MENU (DESKTOP SAFE) ================= */
+.header-menu {
+  display: contents; /* invisible wrapper on desktop */
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE TOGGLE (DESKTOP HIDDEN) */
 .nav-toggle {
   display: none;
+  position: relative;
+  z-index: 1001;
   background: none;
   border: none;
-  font-size: 22px;
-  color: #ffffff;
-  position: absolute;
-  left: 15px;
-  top: 10px;
   cursor: pointer;
 }
-
-@media (max-width: 991px) {
-
-  .header-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .header-contact {
-    align-items: center;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .main-nav.active {
-    display: block;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-  }
-
-  .main-nav li::after {
-    display: none;
-  }
-
-  .main-nav a.active::after {
-    display: none;
-  }
-}
-
 
 /* =========================
    FOOTER
