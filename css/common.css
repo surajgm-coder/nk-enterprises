@@ -1,87 +1,99 @@
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   ROOT COLORS
+========================= */
 :root {
   --gold: #c89b5c;
   --bronze: #b07a45;
-  --dark: #3b2a1f;
+  --dark-brown: #3b2a1f;
   --wood-dark: #4a240c;
   --wood-mid: #8b5a2b;
+  --cream-dark: #efe3d4;
+  --cream-light: #f8f2ea;
 }
 
+/* =========================
+   BODY
+========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: var(--dark);
+  color: var(--dark-brown);
 }
 
-/* TOP STRIP */
+/* =========================
+   TOP STRIP
+========================= */
 .top-strip {
   height: 10px;
   background: linear-gradient(
     to right,
     #3b1f0f,
-    #8b5a2b,
-    #c89b5c,
-    #8b5a2b,
+    var(--wood-mid),
+    var(--gold),
+    var(--wood-mid),
     #3b1f0f
   );
 }
 
-/* HEADER BACKGROUND */
-.main-header {
+/* =========================
+   HEADER MAIN
+========================= */
+.header-main {
   background: linear-gradient(
     to bottom,
-    #efe3d4 0%,
-    #f8f2ea 45%,
-    #efe3d4 100%
+    var(--cream-dark) 0%,
+    var(--cream-light) 45%,
+    var(--cream-dark) 100%
   );
   border-bottom: 1px solid var(--gold);
 }
 
-/* GRID */
-.header-container {
+.header-inner {
   width: 90%;
   max-width: 1300px;
   margin: auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto;
   align-items: center;
   padding: 18px 0;
-  row-gap: 10px;
 }
 
-/* LOGO */
-.logo {
-  grid-row: 1 / span 2;
-}
-
-.logo img {
+/* =========================
+   LOGO
+========================= */
+.header-logo img {
   height: 78px;
+  display: block;
 }
 
-/* CONTACT */
-.header-top-right {
+/* =========================
+   CONTACT INFO
+========================= */
+.header-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
   font-size: 13.5px;
   font-weight: 600;
-  margin-top: 6px;
 }
 
-.header-top-right span {
+.contact-row {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.header-top-right i {
+.contact-row i {
   color: var(--bronze);
   font-size: 15px;
   font-weight: 900;
@@ -92,33 +104,35 @@ body {
   margin: 0 8px;
 }
 
-/* CTA */
-.btn-quote {
+/* =========================
+   CTA BUTTON
+========================= */
+.btn-header {
   background: linear-gradient(to bottom, #e0b15a, #9a5a24);
   padding: 11px 26px;
   border-radius: 6px;
   color: #fff;
-  text-decoration: none;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-decoration: none;
   border: 1px solid #7a4318;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* NAV STRIP */
-.nav-strip {
-  grid-column: 1 / -1;
+/* =========================
+   NAV BAR
+========================= */
+.nav-bar {
   background: linear-gradient(
     to bottom,
     var(--wood-dark),
     var(--wood-mid),
     var(--wood-dark)
   );
-  margin-top: 10px;
   position: relative;
 }
 
-/* NAV */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -137,12 +151,12 @@ body {
   display: block;
   padding: 16px 26px 12px;
   color: #f5e6d2;
-  text-decoration: none;
   font-size: 15px;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* SEPARATORS */
+/* MENU SEPARATORS */
 .main-nav li:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -165,13 +179,15 @@ body {
   border-radius: 2px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 22px;
-  color: #fff;
+  color: #ffffff;
   position: absolute;
   left: 15px;
   top: 10px;
@@ -180,16 +196,12 @@ body {
 
 @media (max-width: 991px) {
 
-  .header-container {
+  .header-inner {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .logo {
-    grid-row: auto;
-  }
-
-  .header-top-right {
+  .header-contact {
     align-items: center;
   }
 
@@ -213,14 +225,11 @@ body {
     display: none;
   }
 
-  .main-nav a {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
   .main-nav a.active::after {
     display: none;
   }
 }
+
 
 /* =========================
    FOOTER
