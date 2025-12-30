@@ -26,112 +26,164 @@ body {
 }
 
 /* =========================
-   TOP STRIP
+   PREMIUM COLOR PALETTE
 ========================= */
-.top-strip {
-  height: 10px;
-  background: linear-gradient(
-    to right,
-    #5a3215,
-    #8b5a2b,
-    #b07a45,
-    #8b5a2b,
-    #5a3215
-  );
+:root {
+  --gold: #b08a57;
+  --gold-soft: #d2b48c;
+  --espresso: #2b1d14;
+  --cream: #faf7f3;
 }
 
 /* =========================
-   HEADER (DESKTOP)
+   TOP INFO BAR
 ========================= */
-.main-header {
-  background: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+.top-info-bar {
+  background: linear-gradient(
+    to right,
+    #2b1d14,
+    #3b2a1f,
+    #2b1d14
+  );
+  font-size: 12.5px;
 }
 
-/* GRID CONTAINER */
+.info-container {
+  width: 90%;
+  margin: auto;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-left {
+  display: flex;
+  gap: 22px;
+  color: var(--gold-soft);
+}
+
+.info-left i {
+  color: var(--gold);
+  margin-right: 6px;
+}
+
+/* =========================
+   CTA BUTTON (PREMIUM)
+========================= */
+.btn-quote {
+  background: linear-gradient(to bottom, #b08a57, #6f421f);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   MAIN HEADER
+========================= */
+.main-header {
+  background: var(--cream);
+}
+
 .header-container {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto;
+  display: flex;
   align-items: center;
-  row-gap: 8px;
-  position: relative; /* needed for mobile dropdown */
+  justify-content: space-between;
+  padding: 18px 0;
 }
 
-/* LOGO – SPANS BOTH ROWS */
+/* =========================
+   LOGO AREA
+========================= */
 .logo {
-  grid-row: 1 / span 2;
+  position: relative;
+  padding: 8px 0;
 }
 
 .logo img {
-  height: 68px;
+  height: 76px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
 }
 
-/* ================= ROW 1 : CONTACT ================= */
-.header-top-right {
-  grid-column: 2 / 4;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 18px;
-  font-size: 13.5px;
-  font-weight: 700;
+.logo-underline {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), transparent);
 }
 
-.header-top-right span {
-  color: var(--dark-brown);
-}
-
-/* CTA */
-.btn-quote {
-  background: linear-gradient(to bottom, #a66a3a, #6f421f);
-  color: #fff;
-  padding: 9px 18px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-/* ================= ROW 2 : NAV ================= */
-.main-nav {
-  grid-column: 2 / 4;
-  justify-self: center;
-}
-
+/* =========================
+   NAVIGATION
+========================= */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 34px;
+  gap: 42px;
 }
 
 .main-nav a {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--dark-brown);
-}
-
-.main-nav a.active {
-  color: var(--bronze);
-}
-
-/* ================= HEADER MENU (DESKTOP SAFE) ================= */
-.header-menu {
-  display: contents; /* invisible wrapper on desktop */
-}
-
-/* MOBILE TOGGLE (DESKTOP HIDDEN) */
-.nav-toggle {
-  display: none;
   position: relative;
-  z-index: 1001;
-  background: none;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--espresso);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
+
+/* Hover underline animation */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), var(--gold-soft));
+  transition: all 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--gold);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   GOLD DIVIDER
+========================= */
+.nav-divider {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold),
+    var(--gold-soft),
+    var(--gold),
+    transparent
+  );
+}
+
 
 /* =========================
    FOOTER
