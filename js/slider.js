@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ==========================
      HEADER FIX + FADE ON SCROLL
   ========================== */
-  const header = document.querySelector(".site-header");
+  const header = document.querySelector(".main-header");
 
   if (header) {
     window.addEventListener("scroll", function () {
