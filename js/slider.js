@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-/* ==========================
+  /* ==========================
      MOBILE NAV TOGGLE (FIXED)
   ========================== */
   const toggle = document.querySelector(".nav-toggle");
-  const menu = document.querySelector(".header-menu");
+  const menu = document.querySelector(".main-nav");
 
   if (toggle && menu) {
     toggle.addEventListener("click", function () {
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     index = (index + 1) % slides.length;
   }
 
-  // Start with first slide
   if (slides.length > 0) {
     showSlide();
     setInterval(showSlide, 4000);
