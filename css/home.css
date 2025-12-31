@@ -90,14 +90,12 @@
 
 .about-intro h2 {
   font-size: 36px;
-  color: #3b2a1f;
   margin-bottom: 20px;
 }
 
 .about-intro p {
   font-size: 16px;
   line-height: 1.8;
-  color: #5a4636;
   margin-bottom: 30px;
 }
 
@@ -106,7 +104,6 @@
 ========================= */
 .features-section {
   padding: 80px 0;
-  background: #ffffff;
 }
 
 .features-container {
@@ -125,14 +122,12 @@
 .features-left h2 {
   font-size: 34px;
   margin-bottom: 18px;
-  color: #3b2a1f;
 }
 
 .features-left p {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 35px;
-  color: #5a4636;
 }
 
 .features-list {
@@ -153,7 +148,6 @@
   height: 60px;
   background: linear-gradient(to bottom, #9c6233, #6f421f);
   color: #f5e6d2;
-  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,12 +158,10 @@
 .feature-item h4 {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #3b2a1f;
 }
 
 .feature-item p {
   font-size: 14px;
-  color: #6b5544;
 }
 
 /* RIGHT */
@@ -183,7 +175,7 @@
   border-radius: 10px;
 }
 
-/* CTA OVER IMAGE */
+/* CTA OVER IMAGE (DESKTOP ONLY) */
 .feature-cta {
   position: absolute;
   bottom: 30px;
@@ -217,13 +209,11 @@
 .wcu-stats h3 {
   color: #ffffff;
   font-size: 32px;
-  font-weight: 700;
 }
 
 .wcu-stats p {
   color: #e6d6c4;
   font-size: 13px;
-  margin-top: 6px;
 }
 
 /* =========================
@@ -237,8 +227,6 @@
 
 .wcu-heading {
   font-size: 28px;
-  font-weight: 700;
-  color: #3b2a1f;
   margin-bottom: 40px;
 }
 
@@ -253,12 +241,6 @@
   border-radius: 6px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   padding: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.wcu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
 }
 
 .wcu-card img {
@@ -269,206 +251,12 @@
 .wcu-card p {
   margin-top: 12px;
   font-weight: 600;
-  color: #3b2a1f;
   font-size: 14px;
 }
 
 /* =========================
    CTA SECTION
 ========================= */
-
 .cta-section {
   width: 100%;
-}
-
-/* TOP CREAM STRIP */
-.cta-top {
-  background: #f6efe7;
-  padding: 30px 0;
-}
-
-.cta-top-inner {
-  width: 90%;
-  margin: auto;
-}
-
-.cta-top img {
-  height: 55px;
-}
-
-.cta-top p {
-  font-size: 13px;
-  margin-top: 5px;
-  color: #5a4638;
-}
-
-/* WOODEN STRIP (NO OVERLAY) */
-.cta-heading-strip {
-  background: url("../images/wooden-strip.png") center/cover no-repeat;
-  padding: 22px 0;
-}
-
-.cta-headings {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-}
-
-.cta-headings .divider {
-  width: 1px;
-  height: 22px;
-  background: rgba(255,255,255,0.4);
-}
-
-/* CTA CONTENT */
-.cta-content {
-  background: #f6efe7;
-  padding: 70px 0;
-}
-
-.cta-grid {
-  width: 90%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
-}
-
-/* CARD */
-.cta-card {
-  background: #ffffff;
-  padding: 38px 28px;
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-  margin-top: -20px;
-}
-
-/* ICON */
-.cta-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #8b5a2b, #b87333);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 30px;
-  margin-bottom: 22px;
-}
-
-/* LIST */
-.cta-card ul {
-  list-style: none;
-  margin-bottom: 26px;
-}
-
-.cta-card ul li {
-  font-size: 14px;
-  margin-bottom: 11px;
-  padding-left: 18px;
-  position: relative;
-}
-
-.cta-card ul li::before {
-  content: "■";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  font-size: 9px;
-  color: #b87333;
-}
-
-/* TEXT */
-.about-text {
-  font-size: 14px;
-  margin-bottom: 18px;
-}
-
-.contact-text {
-  font-size: 13.5px;
-  line-height: 1.6;
-}
-
-.contact-text i {
-  color: #b87333;
-  margin-right: 6px;
-}
-
-/* BUTTON */
-.cta-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #b87333, #8b5a2b);
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .features-container {
-    flex-direction: column;
-  }
-
-  .features-list {
-    flex-direction: column;
-  }
-
-  .wcu-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-  .hero {
-    height: 85vh;
-  }
-
-  .hero-content {
-    margin: 0 5%;
-  }
-
-  .hero-content h1 {
-    font-size: 34px;
-  }
-
-  .features-left h2 {
-    font-size: 26px;
-  }
-
-  .feature-cta {
-    position: relative;
-    margin-top: 15px;
-  }
-
-  .wcu-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .wcu-cards {
-    grid-template-columns: 1fr;
-  }
 }
