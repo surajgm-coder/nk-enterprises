@@ -407,3 +407,47 @@ body {
     font-size: 18px;
   }
 }
+@media (max-width: 768px) {
+
+  /* FEATURES SECTION */
+  .features-section {
+    padding: 50px 0;
+  }
+
+  .features-container {
+    gap: 30px;
+  }
+
+  /* STACK FEATURE CARDS */
+  .features-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .feature-item {
+    padding: 20px 18px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  /* ICON LEFT, CONTENT RIGHT */
+  .feature-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .feature-item h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .feature-item p {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+}
