@@ -9,21 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (toggle && menu) {
     toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
+      const isOpen = menu.classList.toggle("active");
 
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !expanded);
-
-      // Toggle icon
-      toggleIcon.textContent = menu.classList.contains("active") ? "✕" : "☰";
+      toggle.setAttribute("aria-expanded", isOpen);
+      if (toggleIcon) {
+        toggleIcon.textContent = isOpen ? "✕" : "☰";
+      }
     });
 
-    // Close menu when clicking a link
+    // Close menu when clicking any nav link
     menu.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         menu.classList.remove("active");
-        toggleIcon.textContent = "☰";
         toggle.setAttribute("aria-expanded", "false");
+        if (toggleIcon) {
+          toggleIcon.textContent = "☰";
+        }
       });
     });
   }
