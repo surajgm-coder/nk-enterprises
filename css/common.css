@@ -421,3 +421,53 @@ body {
     line-height: 1.5;
   }
 }
+/* ==================================================
+   CTA SECTION – MOBILE FIX (GLOBAL)
+   Applies to ALL pages
+================================================== */
+
+@media (max-width: 991px) {
+
+  /* Stack CTA cards */
+  .cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* Remove desktop overlap */
+  .cta-card {
+    margin-top: 0;
+    padding: 28px 22px;
+  }
+
+  /* Resize & center icon */
+  .cta-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Improve text readability */
+  .cta-card ul li {
+    font-size: 14px;
+  }
+
+  /* Full-width CTA button */
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Wooden heading strip fix */
+  .cta-headings {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .cta-headings .divider {
+    display: none;
+  }
+}
