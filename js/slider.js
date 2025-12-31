@@ -1,14 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ==========================
-     MOBILE NAV TOGGLE (FIXED)
+     MOBILE NAV TOGGLE
   ========================== */
   const toggle = document.querySelector(".nav-toggle");
   const menu = document.querySelector(".main-nav");
+  const toggleIcon = document.querySelector(".hamburger");
 
   if (toggle && menu) {
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener("click", () => {
       menu.classList.toggle("active");
+
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !expanded);
+
+      // Toggle icon
+      toggleIcon.textContent = menu.classList.contains("active") ? "✕" : "☰";
+    });
+
+    // Close menu when clicking a link
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        toggleIcon.textContent = "☰";
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
