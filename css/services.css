@@ -2,7 +2,7 @@
    SERVICES HERO
 ========================= */
 .services-hero {
-  background: url("../images/services/services-hero.jpg") center / cover no-repeat;
+  background: url("../images/services/services-hero.png") center / cover no-repeat;
   height: 260px;
 }
 
