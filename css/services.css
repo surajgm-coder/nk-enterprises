@@ -43,10 +43,6 @@
   margin: auto;
 }
 
-.services-intro h2 {
-  max-width: 820px;
-}
-
 .subtitle {
   max-width: 720px;
   margin: 15px 0 30px;
@@ -76,9 +72,8 @@
 
 /* CARD */
 .service-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 6px;
-  overflow: hidden;
   text-align: center;
   box-shadow: 0 8px 22px rgba(0,0,0,0.08);
   display: flex;
@@ -146,3 +141,4 @@
     columns: 1;
   }
 }
+
