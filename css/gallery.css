@@ -1,58 +1,52 @@
-/* ==================================================
-   GALLERY PAGE STYLES
-   (Aligned with Home / About / Services)
-================================================== */
-
 /* =========================
-   PAGE HEADER / INTRO
+   GALLERY INTRO SECTION
 ========================= */
-.gallery-page {
-  background: #ffffff;
+
+.gallery-content {
   padding: 70px 0;
+  background: #ffffff;
 }
 
-.gallery-page .container {
+.gallery-content .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* BREADCRUMB */
-.gallery-breadcrumb {
-  font-size: 13px;
-  color: #8b5a2b;
-  margin-bottom: 10px;
-}
-
-/* MAIN TITLE */
-.gallery-page h1 {
+/* PAGE TITLE */
+.gallery-content h1 {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 16px;
   color: #3b2a1f;
+  margin-bottom: 8px;
 }
 
-/* INTRO TEXT */
-.gallery-intro {
-  max-width: 900px;
+/* BREADCRUMB */
+.gallery-content .breadcrumb {
+  font-size: 13px;
+  color: #8b5a2b;
+  margin-bottom: 20px;
+}
+
+/* INTRO PARAGRAPH */
+.gallery-content p {
   font-size: 15px;
   line-height: 1.8;
   color: #444;
-  margin-bottom: 30px;
+  max-width: 900px;
+  margin-bottom: 14px;
 }
 
-/* =========================
-   SECTION HEADINGS
-========================= */
-.gallery-section-title {
+/* SECTION HEADINGS */
+.gallery-content h2 {
   font-size: 22px;
   font-weight: 600;
   color: #6f421f;
-  margin: 40px 0 16px;
+  margin: 40px 0 14px;
   position: relative;
 }
 
-.gallery-section-title::after {
+.gallery-content h2::after {
   content: "";
   width: 50px;
   height: 3px;
@@ -61,16 +55,14 @@
   margin-top: 6px;
 }
 
-/* =========================
-   TEXT LISTS (SHOWCASE / QUALITY)
-========================= */
-.gallery-list {
+/* LIST STYLING */
+.gallery-content ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 25px;
 }
 
-.gallery-list li {
+.gallery-content ul li {
   position: relative;
   padding-left: 20px;
   font-size: 14.5px;
@@ -79,14 +71,13 @@
   line-height: 1.6;
 }
 
-.gallery-list li::before {
+.gallery-content ul li::before {
   content: "■";
   position: absolute;
   left: 0;
   top: 6px;
   font-size: 8px;
   color: #b87333;
-}
 
 /* =========================
    FILTER TAGS
