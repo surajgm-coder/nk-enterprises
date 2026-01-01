@@ -1,6 +1,6 @@
 /* ==================================================
    HOME PAGE STYLES ONLY
-   (Structure aligned with About / Services / Contact)
+   (Common layout handled in common.css)
 ================================================== */
 
 /* =========================
@@ -41,19 +41,15 @@
   align-items: center;
 }
 
-/* HERO STRUCTURE FIX */
+/* CONTENT (ALIGNMENT FIX ONLY) */
 .hero-content {
+  max-width: 620px;
   width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
 }
 
-.hero-content-inner {
-  max-width: 620px;
-}
-
-/* HERO TEXT */
 .hero-content h1 {
   font-size: 52px;
   line-height: 1.1;
@@ -77,17 +73,25 @@
   gap: 16px;
 }
 
+.btn-primary {
+  background: linear-gradient(to bottom, #9c6233, #6f421f);
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
 /* =========================
    ABOUT INTRO
 ========================= */
 .about-intro {
   background: #f7f3ef;
-  padding: 80px 0;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .about-container {
-  width: 90%;
   max-width: 900px;
   margin: auto;
 }
@@ -101,7 +105,6 @@
 
 .features-container {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
@@ -119,18 +122,57 @@
   position: relative;
 }
 
+.features-right img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CTA OVER IMAGE */
+.feature-cta {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0,0,0,0.65);
+  padding: 22px 26px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.feature-cta h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.feature-cta span {
+  color: #c28a4b;
+}
+
 /* =========================
    WHY CHOOSE US – STATS
 ========================= */
 .wcu-stats {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   padding: 40px 0;
   background: url("../images/home/industrial.png") center/cover no-repeat;
+}
+
+.wcu-stats > * {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.wcu-stats h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.wcu-stats p {
+  color: #e6d6c4;
+  font-size: 13px;
 }
 
 /* =========================
@@ -142,16 +184,43 @@
   text-align: center;
 }
 
-.wcu-cream-inner {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.wcu-heading {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .wcu-cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
+}
+
+.wcu-card {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  padding: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wcu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+.wcu-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.wcu-card p {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /* =========================
@@ -169,7 +238,6 @@
 
 .cta-top-inner {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -181,7 +249,6 @@
 
 .cta-headings {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -196,7 +263,6 @@
 
 .cta-grid {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -204,7 +270,7 @@
 }
 
 /* =========================
-   RESPONSIVE (STRUCTURE ONLY)
+   RESPONSIVE (HOME ONLY)
 ========================= */
 @media (max-width: 1024px) {
 
@@ -231,6 +297,13 @@
   .hero-content h1 {
     font-size: 34px;
     line-height: 1.25;
+  }
+
+  .feature-cta {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 15px;
   }
 
   .wcu-stats {
