@@ -1,13 +1,15 @@
-/* =========================
-   SERVICES HERO
-========================= */
+/* ==================================================
+   SERVICES PAGE – ALIGNED WITH HOME
+================================================== */
+
+/* HERO */
 .services-hero {
   background: url("../images/services/services-hero.png") center / cover no-repeat;
   height: 260px;
 }
 
 .services-hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   height: 100%;
   display: flex;
   align-items: center;
@@ -22,7 +24,6 @@
 .services-hero h1 {
   color: #fff;
   font-size: 36px;
-  margin-bottom: 6px;
 }
 
 .services-hero p {
@@ -30,11 +31,9 @@
   font-size: 14px;
 }
 
-/* =========================
-   INTRO SECTION
-========================= */
+/* INTRO */
 .services-intro {
-  padding: 70px 0 80px;
+  padding: 80px 0;
   background: #f7efe7;
 }
 
@@ -50,7 +49,7 @@
 
 .subtitle {
   max-width: 720px;
-  margin: 14px 0 30px;
+  margin: 15px 0 30px;
   color: #555;
 }
 
@@ -60,11 +59,9 @@
   flex-wrap: wrap;
 }
 
-/* =========================
-   SERVICES GRID
-========================= */
+/* SERVICES GRID */
 .services-grid {
-  padding: 80px 0 60px;
+  padding: 80px 0;
   background: #ffffff;
 }
 
@@ -77,13 +74,13 @@
   gap: 30px;
 }
 
-/* SERVICE CARD */
+/* CARD */
 .service-card {
   background: #ffffff;
   border-radius: 6px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
 }
@@ -116,12 +113,10 @@
   text-decoration: none;
 }
 
-/* =========================
-   WHY CHOOSE
-========================= */
+/* WHY CHOOSE */
 .why-choose {
   background: #f7efe7;
-  padding: 70px 0;
+  padding: 80px 0;
 }
 
 .why-choose .container {
@@ -137,11 +132,8 @@
   columns: 2;
 }
 
-/* =========================
-   RESPONSIVE (ALIGN WITH common.css)
-========================= */
+/* RESPONSIVE */
 @media (max-width: 991px) {
-
   .services-grid .container {
     grid-template-columns: 1fr;
   }
