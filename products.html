@@ -5,17 +5,24 @@
   <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- FULL FIXED HEADER WRAPPER -->
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
 <div class="site-header-wrap">
 
   <!-- TOP INFO BAR -->
@@ -37,20 +44,22 @@
 
       <!-- LOGO -->
       <div class="logo">
-        <img src="images/logo.png" alt="NK Enterprises">
+        <img src="images/logo.png" alt="NK Enterprises Logo">
         <span class="logo-underline"></span>
       </div>
 
       <!-- MOBILE TOGGLE -->
-      <button class="nav-toggle" aria-label="Toggle Menu">☰</button>
+      <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span class="hamburger">☰</span>
+      </button>
 
       <!-- NAVIGATION -->
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -61,9 +70,6 @@
   </header>
 
 </div>
-
-<!-- GOLD DIVIDER -->
-<div class="nav-divider"></div>
   
 <!-- =========================
    PRODUCTS HERO
