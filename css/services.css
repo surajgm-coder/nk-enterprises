@@ -114,31 +114,3 @@
   columns: 2;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1200px) {
-  .services-grid .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 991px) {
-  .services-grid .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-choose .container {
-    grid-template-columns: 1fr;
-  }
-
-  .industries {
-    columns: 1;
-  }
-}
-
-@media (max-width: 576px) {
-  .services-grid .container {
-    grid-template-columns: 1fr;
-  }
-}
