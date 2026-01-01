@@ -1,12 +1,11 @@
 /* ==================================================
-   ABOUT PAGE STYLES ONLY
+   ABOUT PAGE – ALIGNED WITH HOME
 ================================================== */
 
 /* PAGE HERO */
 .page-hero {
-  background: url("../images/about/about-hero.png") center/cover no-repeat;
+  background: url("../images/about/about-hero.png") center / cover no-repeat;
   height: 260px;
-  position: relative;
 }
 
 .page-hero-overlay {
@@ -18,6 +17,7 @@
 
 .page-hero-content {
   width: 90%;
+  max-width: 1200px;
   margin: auto;
   color: #ffffff;
 }
@@ -38,6 +38,13 @@
   background: #faf7f3;
 }
 
+.about-intro .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CONTENT */
 .about-content h2 {
   margin-bottom: 18px;
 }
@@ -48,6 +55,7 @@
   margin-bottom: 14px;
 }
 
+/* IMAGE */
 .about-image img {
   width: 100%;
   border-radius: 10px;
@@ -59,6 +67,13 @@
   background: #ffffff;
 }
 
+.about-why .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CHECK LIST */
 .check-list {
   list-style: none;
 }
@@ -108,11 +123,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
-
-  .page-hero-content h1 {
-    font-size: 32px;
-  }
-
   .about-highlights {
     grid-template-columns: 1fr;
   }
