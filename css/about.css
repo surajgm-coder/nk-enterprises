@@ -4,7 +4,7 @@
 
 /* PAGE HERO */
 .page-hero {
-  background: url("../images/about/about-hero.jpg") center/cover no-repeat;
+  background: url("../images/about/about-hero.png") center/cover no-repeat;
   height: 260px;
   position: relative;
 }
