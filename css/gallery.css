@@ -1,52 +1,58 @@
-/* =========================
-   GALLERY INTRO SECTION
-========================= */
+/* ==================================================
+   GALLERY PAGE STYLES
+   (Aligned with Home / About / Services)
+================================================== */
 
-.gallery-content {
-  padding: 70px 0;
+/* =========================
+   PAGE HEADER / INTRO
+========================= */
+.gallery-page {
   background: #ffffff;
+  padding: 70px 0;
 }
 
-.gallery-content .container {
+.gallery-page .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* PAGE TITLE */
-.gallery-content h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #3b2a1f;
-  margin-bottom: 8px;
-}
-
 /* BREADCRUMB */
-.gallery-content .breadcrumb {
+.gallery-breadcrumb {
   font-size: 13px;
   color: #8b5a2b;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-/* INTRO PARAGRAPH */
-.gallery-content p {
+/* MAIN TITLE */
+.gallery-page h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #3b2a1f;
+}
+
+/* INTRO TEXT */
+.gallery-intro {
+  max-width: 900px;
   font-size: 15px;
   line-height: 1.8;
   color: #444;
-  max-width: 900px;
-  margin-bottom: 14px;
+  margin-bottom: 30px;
 }
 
-/* SECTION HEADINGS */
-.gallery-content h2 {
+/* =========================
+   SECTION HEADINGS
+========================= */
+.gallery-section-title {
   font-size: 22px;
   font-weight: 600;
   color: #6f421f;
-  margin: 40px 0 14px;
+  margin: 40px 0 16px;
   position: relative;
 }
 
-.gallery-content h2::after {
+.gallery-section-title::after {
   content: "";
   width: 50px;
   height: 3px;
@@ -55,14 +61,16 @@
   margin-top: 6px;
 }
 
-/* LIST STYLING */
-.gallery-content ul {
+/* =========================
+   TEXT LISTS (SHOWCASE / QUALITY)
+========================= */
+.gallery-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 25px;
+  margin: 0 0 30px;
 }
 
-.gallery-content ul li {
+.gallery-list li {
   position: relative;
   padding-left: 20px;
   font-size: 14.5px;
@@ -71,13 +79,14 @@
   line-height: 1.6;
 }
 
-.gallery-content ul li::before {
+.gallery-list li::before {
   content: "■";
   position: absolute;
   left: 0;
   top: 6px;
   font-size: 8px;
   color: #b87333;
+}
 
 /* =========================
    FILTER TAGS
@@ -234,4 +243,3 @@
     justify-content: center;
   }
 }
-
