@@ -1,58 +1,4 @@
-/* =========================
-   SERVICES HERO
-========================= */
-.services-hero {
-  background: url("../images/services/services-hero.png") center right / cover no-repeat;
-  height: 260px;
-  position: relative;
-}
-
-.services-hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.services-hero h1 {
-  color: #fff;
-  font-size: 36px;
-  margin-bottom: 6px;
-}
-
-.services-hero p {
-  color: #e0e0e0;
-  font-size: 14px;
-}
-
-/* =========================
-   INTRO SECTION
-========================= */
-.services-intro {
-  background: #f7efe7;
-  padding: 60px 0;
-}
-
-.services-intro h2 {
-  color: var(--bronze);
-  max-width: 720px;
-}
-
-.subtitle {
-  max-width: 650px;
-  margin: 15px 0 30px;
-  color: #555;
-}
-
-.intro-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* =========================
-   SERVICES GRID
-========================= */
+/* SERVICES GRID */
 .services-grid {
   padding: 60px 0;
   background: #ffffff;
@@ -64,6 +10,7 @@
   gap: 30px;
 }
 
+/* SERVICE CARD */
 .service-card {
   background: #fff;
   border-radius: 6px;
@@ -75,7 +22,6 @@
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
 }
 
 .service-card img {
@@ -92,84 +38,15 @@
 .service-card p {
   font-size: 14px;
   padding: 0 16px 20px;
-  line-height: 1.6;
 }
 
 .card-btn {
-  display: inline-block;
-  margin-bottom: 22px;
   background: var(--bronze);
   color: #fff;
   padding: 9px 20px;
   border-radius: 4px;
-  text-decoration: none;
   font-size: 13px;
-  transition: background 0.3s ease;
-}
-
-.card-btn:hover {
-  background: #6f421f;
-}
-
-/* =========================
-   WHY CHOOSE US
-========================= */
-.why-choose {
-  background: #f7efe7;
-  padding: 60px 0;
-}
-
-.why-choose .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.why-choose ul {
-  list-style: square;
-  padding-left: 18px;
-  margin: 20px 0;
-}
-
-.industries {
-  columns: 2;
-  column-gap: 40px;
-}
-
-/* =========================
-   SERVICES CTA
-========================= */
-.services-cta {
-  background: url("../images/wood-texture.png") center / cover;
-  padding: 60px 0;
-  color: #fff;
-}
-
-.services-cta .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-/* =========================
-   MOBILE ADJUSTMENTS
-========================= */
-@media (max-width: 991px) {
-
-  .services-hero {
-    height: 220px;
-  }
-
-  .services-hero h1 {
-    font-size: 30px;
-  }
-
-  .why-choose .container,
-  .services-cta .container {
-    grid-template-columns: 1fr;
-  }
-
-  .industries {
-    columns: 1;
-  }
+  text-decoration: none;
+  margin-bottom: 22px;
+  display: inline-block;
 }
