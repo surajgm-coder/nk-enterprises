@@ -1,3 +1,6 @@
+/* =========================
+   SERVICES HERO
+========================= */
 .services-hero {
   background: url("../images/services/services-hero.png") center right / cover no-repeat;
   height: 260px;
@@ -5,7 +8,7 @@
 }
 
 .services-hero-overlay {
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   height: 100%;
   display: flex;
   align-items: center;
@@ -14,21 +17,25 @@
 .services-hero h1 {
   color: #fff;
   font-size: 36px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .services-hero p {
-  color: #ddd;
+  color: #e0e0e0;
+  font-size: 14px;
 }
 
+/* =========================
+   INTRO SECTION
+========================= */
 .services-intro {
   background: #f7efe7;
   padding: 60px 0;
 }
 
 .services-intro h2 {
-  color: #6b3e1e;
-  max-width: 700px;
+  color: var(--bronze);
+  max-width: 720px;
 }
 
 .subtitle {
@@ -40,27 +47,15 @@
 .intro-actions {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
-.btn-primary {
-  background: linear-gradient(#b8742a, #8b5a2b);
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.btn-outline {
-  border: 2px solid #8b5a2b;
-  color: #8b5a2b;
-  padding: 10px 22px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
+/* =========================
+   SERVICES GRID
+========================= */
 .services-grid {
   padding: 60px 0;
-  background: #fff;
+  background: #ffffff;
 }
 
 .services-grid .container {
@@ -71,10 +66,16 @@
 
 .service-card {
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   border-radius: 6px;
   overflow: hidden;
   text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
 }
 
 .service-card img {
@@ -84,25 +85,35 @@
 }
 
 .service-card h3 {
-  color: #6b3e1e;
-  margin: 15px 0 10px;
+  color: var(--bronze);
+  margin: 18px 0 10px;
 }
 
 .service-card p {
   font-size: 14px;
-  padding: 0 15px 20px;
+  padding: 0 16px 20px;
+  line-height: 1.6;
 }
 
 .card-btn {
   display: inline-block;
-  margin-bottom: 20px;
-  background: #8b5a2b;
+  margin-bottom: 22px;
+  background: var(--bronze);
   color: #fff;
-  padding: 8px 18px;
+  padding: 9px 20px;
   border-radius: 4px;
   text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s ease;
 }
 
+.card-btn:hover {
+  background: #6f421f;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
 .why-choose {
   background: #f7efe7;
   padding: 60px 0;
@@ -120,6 +131,14 @@
   margin: 20px 0;
 }
 
+.industries {
+  columns: 2;
+  column-gap: 40px;
+}
+
+/* =========================
+   SERVICES CTA
+========================= */
 .services-cta {
   background: url("../images/wood-texture.png") center / cover;
   padding: 60px 0;
@@ -132,3 +151,25 @@
   gap: 40px;
 }
 
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+@media (max-width: 991px) {
+
+  .services-hero {
+    height: 220px;
+  }
+
+  .services-hero h1 {
+    font-size: 30px;
+  }
+
+  .why-choose .container,
+  .services-cta .container {
+    grid-template-columns: 1fr;
+  }
+
+  .industries {
+    columns: 1;
+  }
+}
