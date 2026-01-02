@@ -334,7 +334,7 @@
    CTA SECTION
 ========================= */
 
-.cta-section {
+cta-section {
   width: 100%;
 }
 
@@ -344,51 +344,39 @@
   padding: 30px 0;
 }
 
-/* GRID-LIKE FLEX */
+/* GRID LAYOUT */
 .cta-top-inner {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
-/* LEFT LOGO */
-.cta-left {
-  flex: 1;
-}
-
-.cta-left img {
+/* LOGO */
+.cta-top-inner img {
   height: 55px;
 }
 
-/* CENTER CONTENT */
-.cta-center {
-  flex: 2;
-  text-align: center;
-}
-
-.cta-center h2 {
-  font-size: 26px;
-  font-weight: 700;
+/* CENTER TEXT */
+.cta-text {
+  justify-self: center;
+  font-size: 22px;
+  font-weight: 600;
   color: #2d1f14;
-  margin-bottom: 6px;
-  line-height: 1.35;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.cta-center h2 span {
+.cta-text span {
   color: #b87333;
 }
 
-.cta-center p {
-  font-size: 14px;
-  color: #5a4638;
-  letter-spacing: 0.4px;
-}
-
-/* RIGHT SPACER (BALANCE) */
-.cta-right {
-  flex: 1;
+/* RIGHT EMPTY SPACE (BALANCE) */
+.cta-top-inner::after {
+  content: "";
 }
  
 /* WOODEN STRIP (NO OVERLAY) */
