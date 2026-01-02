@@ -173,8 +173,8 @@
 ========================= */
 .gallery-process {
   background: #f7f3ef;
-  padding: 70px 0;
-  margin-top: 70px;
+  padding: 60px 0;      /* reduced */
+  margin-top: 30px;    /* reduced to prevent footer gap */
 }
 
 .gallery-process .container {
@@ -214,7 +214,7 @@
    GALLERY CTA
 ========================= */
 .gallery-cta {
-  padding: 70px 0;
+  padding: 60px 0 40px; /* reduced bottom space */
   text-align: center;
 }
 
@@ -263,6 +263,14 @@
 .gallery-cta .cta-contact i {
   color: var(--gold);
   font-size: 15px;
+}
+
+/* =========================
+   FOOTER SAFETY FIX
+   (Gallery page only)
+========================= */
+.gallery-cta + .site-footer {
+  margin-top: 0;
 }
 
 /* =========================
