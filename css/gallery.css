@@ -265,43 +265,4 @@
   font-size: 15px;
 }
 
-/* =========================
-   FOOTER SAFETY FIX
-   (Gallery page only)
-========================= */
-.gallery-cta + .site-footer {
-  margin-top: 0;
-}
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-hero {
-    min-height: auto;
-    padding: 90px 0 70px;
-    text-align: center;
-  }
-
-  .gallery-hero h1 {
-    font-size: 30px;
-  }
-
-  .gallery-intro h2 {
-    font-size: 24px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-filters .container {
-    justify-content: center;
-  }
-}
