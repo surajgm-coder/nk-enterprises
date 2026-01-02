@@ -334,29 +334,48 @@
    CTA SECTION
 ========================= */
 
-.cta-section {
+..cta-section {
   width: 100%;
 }
 
 /* TOP CREAM STRIP */
 .cta-top {
   background: #f6efe7;
-  padding: 30px 0;
+  padding: 60px 20px; /* increased for breathing space */
+  text-align: center;
 }
 
 .cta-top-inner {
   width: 90%;
+  max-width: 900px;
   margin: auto;
 }
 
+/* LOGO */
 .cta-top img {
-  height: 55px;
+  height: 60px;
+  margin-bottom: 18px;
 }
 
+/* MAIN TAGLINE */
+.cta-top-inner h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d1f14;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+/* HIGHLIGHT WORD */
+.cta-top-inner h2 span {
+  color: #b87333;
+}
+
+/* SUBLINE */
 .cta-top p {
-  font-size: 13px;
-  margin-top: 5px;
+  font-size: 15px;
   color: #5a4638;
+  letter-spacing: 0.4px;
 }
 
 /* WOODEN STRIP (NO OVERLAY) */
