@@ -1,27 +1,23 @@
 /* ==================================================
    GALLERY PAGE STYLES
-   (Aligned with Home / About / Services)
+   (STRUCTURE MATCHES ABOUT / SERVICES)
 ================================================== */
 
 /* =========================
-   GALLERY HERO
+   HERO SECTION
 ========================= */
 .gallery-hero {
   min-height: 60vh;
   display: flex;
   align-items: center;
   background:
-    linear-gradient(
-      rgba(43, 29, 20, 0.65),
-      rgba(43, 29, 20, 0.65)
-    ),
+    linear-gradient(rgba(43, 29, 20, 0.65), rgba(43, 29, 20, 0.65)),
     url("../images/gallery-hero.jpg") center / cover no-repeat;
   color: #ffffff;
 }
 
 .gallery-hero .container {
-  width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .gallery-hero .breadcrumb {
@@ -32,27 +28,26 @@
 }
 
 .gallery-hero h1 {
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 700;
   margin: 12px 0;
 }
 
 .gallery-hero p {
-  font-size: 16.5px;
+  font-size: 16px;
   line-height: 1.7;
   max-width: 620px;
 }
 
 /* =========================
-   SHORT INTRO
+   INTRO SECTION
 ========================= */
 .gallery-intro {
   padding: 70px 0 40px;
 }
 
 .gallery-intro .container {
-  width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .gallery-intro h2 {
@@ -66,17 +61,17 @@
   font-size: 15px;
   line-height: 1.8;
   color: #555;
+  max-width: 900px;
 }
 
 /* =========================
-   FILTER BUTTONS
+   FILTERS
 ========================= */
 .gallery-filters {
-  padding: 30px 0 20px;
+  padding: 30px 0;
 }
 
 .gallery-filters .container {
-  width: 90%;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -103,12 +98,17 @@
 }
 
 /* =========================
-   GALLERY GRID
+   GALLERY GRID SECTION
 ========================= */
-.gallery-grid {
-  width: 90%;
+.gallery-section {
+  padding: 40px 0 70px;
+}
+
+.gallery-section .container {
   max-width: 1200px;
-  margin: 50px auto;
+}
+
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
@@ -116,12 +116,12 @@
 
 /* GALLERY ITEM */
 .gallery-item {
-  position: relative;
   background: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
 }
 
 .gallery-item:hover {
@@ -137,10 +137,9 @@
 }
 
 .gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-/* HOVER OVERLAY */
 .gallery-item::after {
   content: "View Project";
   position: absolute;
@@ -153,14 +152,13 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover::after {
   opacity: 1;
 }
 
-/* CAPTION */
 .gallery-item .caption {
   padding: 14px 16px;
   font-size: 14px;
@@ -173,13 +171,11 @@
 ========================= */
 .gallery-process {
   background: #f7f3ef;
-  padding: 60px 0;      /* reduced */
-  margin-top: 30px;    /* reduced to prevent footer gap */
+  padding: 60px 0;
 }
 
 .gallery-process .container {
-  width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .gallery-process h3 {
@@ -192,6 +188,7 @@
 .gallery-process ul {
   list-style: none;
   padding: 0;
+  max-width: 900px;
 }
 
 .gallery-process li {
@@ -211,17 +208,16 @@
 }
 
 /* =========================
-   GALLERY CTA (FINAL FIXED)
+   CTA SECTION
 ========================= */
 .gallery-cta {
-  padding: 40px 0 30px;      /* reduced height */
+  padding: 50px 0 40px;
+  background: #faf7f3;
   text-align: center;
-  background: #faf7f3;       /* connects visually to footer */
 }
 
 .gallery-cta .container {
-  width: 90%;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .gallery-cta h3 {
@@ -235,10 +231,10 @@
   font-size: 15px;
   line-height: 1.7;
   color: #555;
-  margin-bottom: 22px;
+  max-width: 900px;
+  margin: 0 auto 22px;
 }
 
-/* CTA BUTTON + CONTACT */
 .gallery-cta .cta-buttons {
   display: flex;
   flex-direction: column;
@@ -260,13 +256,36 @@
   color: #444;
 }
 
-/* Golden-brown professional icons */
 .gallery-cta .cta-contact i {
   color: var(--gold);
   font-size: 15px;
 }
 
-/* Ensure footer connects cleanly */
-.gallery-cta + .site-footer {
-  margin-top: 0;
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    min-height: auto;
+    padding: 90px 0 70px;
+    text-align: center;
+  }
+
+  .gallery-hero h1 {
+    font-size: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-filters .container {
+    justify-content: center;
+  }
 }
