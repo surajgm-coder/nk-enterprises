@@ -31,7 +31,7 @@
   margin-top: 6px;
 }
 
-/* ABOUT INTRO */
+/* ABOUT INTRO – WHO WE ARE */
 .about-intro {
   padding: 80px 0;
   background: #faf7f3;
@@ -41,21 +41,88 @@
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* LEFT text, RIGHT image */
+  gap: 50px;
+  align-items: center;
 }
 
+/* LEFT CONTENT */
 .about-content h2 {
+  font-size: 28px;
   margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .about-content p {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 14px;
+  color: #333;
+}
+
+.about-content .strength-title {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Strength List */
+.strength-list {
+  list-style: none;
+  padding: 0;
+}
+
+.strength-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14.5px;
+}
+
+.strength-list li i {
+  color: var(--gold);
+  font-size: 15px;
+}
+
+/* RIGHT IMAGE */
+.about-image {
+  position: relative;
 }
 
 .about-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Image Caption */
+.image-caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.image-caption i {
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .about-intro .container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    margin-top: 30px;
+  }
 }
 
 /* WHY CHOOSE */
