@@ -351,3 +351,30 @@
   display: block;
   margin: 0 auto 12px;
 }
+/* ==========================
+   FINAL SVG ICON FIX
+========================== */
+
+.section-title svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--gold);
+  position: relative;
+  top: 2px; /* aligns with text baseline */
+}
+
+.service-box svg {
+  width: 44px;
+  height: 44px;
+  fill: var(--gold);
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.why-box svg {
+  width: 42px;
+  height: 42px;
+  fill: var(--gold);
+  display: block;
+  margin: 0 auto 14px;
+}
