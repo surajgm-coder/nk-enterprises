@@ -179,72 +179,85 @@
 /* =========================
    PROCESS SECTION
 ========================= */
+/* =========================
+   PROCESS SECTION (COMPACT & FIXED)
+========================= */
+
 .gallery-process {
   background: #f7f3ef;
-  padding: 70px 0;
+  padding: 32px 0;   /* MUCH smaller */
 }
 
 .gallery-process .container {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: auto;
   text-align: center;
 }
 
 .gallery-process h3 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--espresso);
-  margin-bottom: 45px;
+  margin-bottom: 22px;
 }
 
-/* Grid */
+/* GRID – FORCE 3 PER ROW */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr); /* EXACTLY 3 */
+  gap: 18px;
 }
 
-/* Card */
+/* CARD – EQUAL HEIGHT */
 .process-card {
-  background: #fff;
-  padding: 38px 26px;
-  border-radius: 18px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
+  background: #ffffff;
+  padding: 22px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  display: flex;                 /* IMPORTANT */
+  flex-direction: column;
+  height: 100%;
 }
 
 .process-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 24px 45px rgba(0,0,0,0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
 }
 
-/* Icon */
+
+/* ICON — FIXED VISIBILITY */
 .process-card .icon {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 20px;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
   border-radius: 50%;
-  background: #fff;
-  border: 2px solid var(--gold);
+  border: 1.5px solid var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
   color: var(--gold);
 }
 
-/* Text */
+.process-card .icon i {
+  font-size: 20px;      /* IMPORTANT: fixes invisible icon */
+  line-height: 1;
+}
+
+/* TEXT */
 .process-card h4 {
-  font-size: 17px;
+  font-size: 14.8px;
   font-weight: 600;
   color: var(--espresso);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .process-card p {
-  font-size: 14.5px;
+  font-size: 13.5px;
+  line-height: 1.5;
   color: #555;
-  line-height: 1.6;
+  margin: 0;
 }
 
 /* =========================
