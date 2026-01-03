@@ -108,39 +108,125 @@
   text-decoration: none;
 }
 
-/* WHY CHOOSE */
-.why-choose {
+/* =====================================
+   WHY CHOOSE – 3D CARD SECTION
+===================================== */
+
+.why-choose-cards {
   background: #f7efe7;
-  padding: 80px 0;
+  padding: 90px 0;
 }
 
-.why-choose .container {
+.why-choose-cards .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
-.industries {
-  columns: 2;
+/* Card */
+.info-card {
+  background: #fbf7f3;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* RESPONSIVE */
+/* 3D Hover Effect */
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.card-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3d2b1f;
+}
+
+/* Icon */
+.card-icon {
+  width: 52px;
+  height: 52px;
+  background: #efe3d7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: #a56b2a;
+}
+
+/* List */
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  color: #5a4635;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Check icon */
+.card-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a56b2a;
+  font-weight: bold;
+}
+
+/* Button */
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: #a56b2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.card-btn:hover {
+  background: #8d5820;
+}
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 991px) {
-  .services-grid .container {
+  .why-choose-cards .container {
     grid-template-columns: 1fr;
-  }
-
-  .why-choose .container {
-    grid-template-columns: 1fr;
-  }
-
-  .industries {
-    columns: 1;
   }
 }
+
 /* =====================================
    SERVICE PAGE – FINAL CTA (FINAL FIX)
 ===================================== */
