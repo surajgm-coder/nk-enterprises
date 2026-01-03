@@ -222,16 +222,18 @@
 }
 
 /* =========================
-   CTA SECTION
+   GALLERY CTA
 ========================= */
+
 .gallery-cta {
-  padding: 60px 0 50px;
-  background: #faf7f3; /* unchanged */
+  background: #faf7f3;
+  padding: 40px 0;
 }
 
 .gallery-cta .container {
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 /* WRAPPER */
@@ -239,37 +241,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 }
 
 /* LEFT CONTENT */
 .gallery-cta-content {
-  flex: 1;
+  max-width: 520px;
 }
 
 .gallery-cta-content h3 {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 12px;
   color: var(--espresso);
+  margin-bottom: 12px;
 }
 
 .gallery-cta-content p {
   font-size: 15px;
   line-height: 1.7;
   color: #555;
-  max-width: 520px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
-/* ACTIONS */
-.cta-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 18px;
+  transition: background 0.3s ease;
 }
 
-/* CONTACT */
+.cta-btn:hover {
+  background: #b8872f;
+}
+
+/* CONTACT INFO */
 .cta-contact {
   display: flex;
   flex-direction: column;
@@ -290,31 +302,31 @@
 }
 
 /* RIGHT IMAGE */
-.gallery-cta-image {
-  flex: 1;
-  text-align: right;
-}
-
 .gallery-cta-image img {
-  max-width: 100%;
+  max-width: 340px;
+  width: 100%;
   height: auto;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 992px) {
+
+@media (max-width: 900px) {
   .gallery-cta-wrapper {
     flex-direction: column;
     text-align: center;
   }
 
-  .gallery-cta-content p {
+  .gallery-cta-content {
     max-width: 100%;
   }
 
-  .gallery-cta-image {
-    text-align: center;
-    margin-top: 30px;
+  .cta-contact span {
+    justify-content: center;
+  }
+
+  .gallery-cta-image img {
+    max-width: 260px;
   }
 }
