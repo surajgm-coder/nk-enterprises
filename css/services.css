@@ -141,4 +141,74 @@
     columns: 1;
   }
 }
+/* =====================================
+   SERVICE PAGE – FINAL CTA
+===================================== */
+
+.service-final-cta {
+  background-image: url("images/services-cta.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  margin-bottom: 80px; /* SAME GAP AS SCREENSHOT BEFORE FOOTER */
+}
+
+.service-final-cta-overlay {
+  background: rgba(60, 35, 20, 0.65);
+  padding: 90px 0;
+}
+
+.service-final-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta-text {
+  max-width: 620px;
+  color: #ffffff;
+}
+
+.cta-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cta-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f1f1f1;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background-color: #a56b2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #8d5820;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 768px) {
+  .service-final-cta-overlay {
+    padding: 60px 0;
+  }
+
+  .cta-text h2 {
+    font-size: 28px;
+  }
+}
 
