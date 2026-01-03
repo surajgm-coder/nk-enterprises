@@ -124,6 +124,72 @@
     margin-top: 30px;
   }
 }
+/* MISSION & VISION */
+
+.mission-vision {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.mission-vision .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* IMAGE LEFT | CONTENT RIGHT */
+  gap: 50px;
+  align-items: center;
+}
+
+/* IMAGE */
+.mission-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* CONTENT */
+.mission-content h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mission-content h2 i {
+  color: var(--gold);
+}
+
+.mission-content h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mission-content h4 i {
+  color: var(--gold);
+}
+
+.mission-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .mission-vision .container {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-image {
+    margin-bottom: 30px;
+  }
+}
 
 /* WHY CHOOSE */
 .about-why {
