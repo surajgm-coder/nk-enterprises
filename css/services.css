@@ -36,28 +36,43 @@
 ===================================== */
 
 .services-intro-feature {
-  background: #f7efe7; /* ORIGINAL BEIGE BACKGROUND */
+  background: #f7efe7; /* original beige */
   padding: 90px 0;
 }
 
+/* GRID */
 .services-intro-feature .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
-  align-items: center;
+
+  align-items: stretch; /* image = content height */
 }
 
 /* IMAGE */
+.services-intro-image {
+  display: flex;
+}
+
 .services-intro-image img {
   width: 100%;
+  height: auto;              /* content-driven height */
+  object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
 /* CONTENT */
+.services-intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .services-intro-content h2 {
   font-size: 32px;
   font-weight: 700;
@@ -83,45 +98,50 @@
   margin-bottom: 18px;
   padding-left: 26px;
   position: relative;
-  color: #444;
   line-height: 1.6;
+  color: #444;
 }
 
 .intro-points li::before {
   content: "◆";
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 4px;
   color: var(--bronze);
   font-size: 14px;
 }
 
-/* ACTIONS */
+/* CTA */
 .intro-actions {
-  display: flex;
-  gap: 22px;
+  margin-top: 10px;
+}
+
+.intro-cta {
+  display: inline-flex;
   align-items: center;
-}
-
-.intro-link {
-  color: #5a2ea6;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.intro-phone {
-  color: #0057ff;
+  padding: 12px 28px;
+  background-color: var(--bronze);
+  color: #ffffff;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+  border-radius: 999px; /* pill */
+  transition: all 0.3s ease;
 }
 
-.intro-phone i {
-  margin-right: 6px;
+.intro-cta:hover {
+  background-color: #8d5820;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
+  .services-intro-feature {
+    padding: 70px 0;
+  }
+
   .services-intro-feature .container {
     grid-template-columns: 1fr;
   }
