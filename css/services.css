@@ -31,28 +31,104 @@
   font-size: 14px;
 }
 
-/* INTRO */
-.services-intro {
-  padding: 80px 0;
-  background: #f7efe7;
+/* =====================================
+   SERVICES INTRO FEATURE
+===================================== */
+
+.services-intro-feature {
+  background: #f7efe7; /* ORIGINAL BEIGE BACKGROUND */
+  padding: 90px 0;
 }
 
-.services-intro .container {
+.services-intro-feature .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.subtitle {
-  max-width: 720px;
-  margin: 15px 0 30px;
-  color: #555;
+/* IMAGE */
+.services-intro-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
+/* CONTENT */
+.services-intro-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #2b1b10;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 26px;
+}
+
+/* POINTS */
+.intro-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.intro-points li {
+  margin-bottom: 18px;
+  padding-left: 26px;
+  position: relative;
+  color: #444;
+  line-height: 1.6;
+}
+
+.intro-points li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--bronze);
+  font-size: 14px;
+}
+
+/* ACTIONS */
 .intro-actions {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+}
+
+.intro-link {
+  color: #5a2ea6;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.intro-phone {
+  color: #0057ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.intro-phone i {
+  margin-right: 6px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .services-intro-feature .container {
+    grid-template-columns: 1fr;
+  }
+
+  .services-intro-content h2 {
+    font-size: 28px;
+  }
 }
 
 /* =========================
