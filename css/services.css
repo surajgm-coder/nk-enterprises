@@ -142,23 +142,22 @@
   }
 }
 /* =====================================
-   SERVICE PAGE – FINAL CTA (WORKING)
+   SERVICE PAGE – FINAL CTA (FINAL FIX)
 ===================================== */
 
 .service-final-cta {
-  background-image: url("/images/services/services-cta.png");
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-size: cover;
-
-  min-height: 420px;     /* CRITICAL */
-  margin-bottom: 80px;   /* GAP BEFORE FOOTER */
+  background: url("/images/services/services-cta.png") no-repeat center right / cover;
+  min-height: 420px;
+  margin-bottom: 80px;
+  position: relative;
 }
 
-/* Overlay exists but does NOT darken */
+/* FORCE overlay to be neutral */
 .service-final-cta-overlay {
-  min-height: 420px;     /* CRITICAL */
-  background: transparent;
+  background: transparent !important;  /* 🔴 OVERRIDES ALL */
+  min-height: 420px;
+  height: 100%;
+
   display: flex;
   align-items: center;
 }
@@ -190,7 +189,6 @@
 
 .cta-button {
   display: inline-flex;
-  align-items: center;
   padding: 14px 26px;
   background-color: #a56b2a;
   color: #ffffff;
@@ -198,7 +196,6 @@
   font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -217,4 +214,3 @@
     font-size: 28px;
   }
 }
-
