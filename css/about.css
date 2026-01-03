@@ -341,29 +341,22 @@
     grid-template-columns: 1fr;
   }
 }
-/* FORCE CONSISTENT ICON STYLE */
-.icon svg,
-.service-box svg,
-.why-box svg {
-  width: 40px;
-  height: 40px;
-  fill: #8b5a2b; /* your gold/brown */
-  display: block;
-  margin: 0 auto 12px;
-}
 /* ==========================
-   FINAL SVG ICON FIX
+   FINAL ICON SYSTEM (CLEAN)
 ========================== */
 
+/* Section title icons */
 .section-title svg {
   width: 28px;
   height: 28px;
   fill: var(--gold);
   position: relative;
-  top: 2px; /* aligns with text baseline */
+  top: 2px;
 }
 
-.service-box svg {
+/* Service & Why icons */
+.service-box svg,
+.why-box svg {
   width: 44px;
   height: 44px;
   fill: var(--gold);
@@ -371,10 +364,10 @@
   margin: 0 auto 16px;
 }
 
-.why-box svg {
-  width: 42px;
-  height: 42px;
-  fill: var(--gold);
-  display: block;
-  margin: 0 auto 14px;
+/* Center content perfectly */
+.service-box,
+.why-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
