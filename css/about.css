@@ -328,102 +328,90 @@
   }
 }
 
-/* ==========================
-   FINAL CTA SECTION
-========================== */
+/* =========================
+   FULL WIDTH CTA
+========================= */
 
-.cta-section {
-  background: url("../images/about/cta.png") center right / cover no-repeat;
+.cta-full {
   position: relative;
-  padding: 90px 0;
+  width: 100%;
+  min-height: 360px;
+
+  background: url("../images/about/cta.png") center center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  /* IMPORTANT: removes side gaps */
+  margin: 0;
+  padding: 0;
 }
 
-/* DARK OVERLAY */
+/* Dark overlay */
 .cta-overlay {
-  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* adjust darkness if needed */
+  z-index: 1;
 }
 
-/* CONTAINER */
-.cta-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 40px;
-}
-
-/* CONTENT */
+/* CTA content */
 .cta-content {
-  max-width: 520px;
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   color: #ffffff;
 }
 
-/* ICON */
+/* Icon */
 .cta-icon {
-  font-size: 36px;
-  color: #c08a3c; /* golden brown */
+  font-size: 34px;
+  color: #b07a3c; /* golden brown */
   margin-bottom: 18px;
-  display: inline-block;
+  display: block;
 }
 
-/* HEADING */
+/* Heading */
 .cta-content h2 {
   font-size: 42px;
   font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 30px;
+  line-height: 1.2;
+  margin-bottom: 22px;
 }
 
-/* BUTTON */
+/* Button */
 .cta-btn {
   display: inline-block;
-  background: #c08a3c;
+  background: #b07a3c;
   color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  padding: 14px 30px;
-  border-radius: 6px;
   text-decoration: none;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
-  background: #a8742e;
+  background: #8b5a2b;
   transform: translateY(-2px);
 }
 
-/* ==========================
+/* =========================
    RESPONSIVE
-========================== */
-
-@media (max-width: 991px) {
-  .cta-content h2 {
-    font-size: 34px;
-  }
-}
+========================= */
 
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 70px 0;
-  }
-
-  .cta-container {
-    text-align: center;
-  }
-
-  .cta-content {
-    max-width: 100%;
-  }
-
   .cta-content h2 {
     font-size: 30px;
   }
 }
 
-@media (max-width: 480px) {
-  .cta-content h2 {
-    font-size: 26px;
-  }
-}
 
 /* =====================================
    GOLDEN ICON COLOR – ABOUT PAGE
