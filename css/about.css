@@ -341,3 +341,13 @@
     grid-template-columns: 1fr;
   }
 }
+/* FORCE CONSISTENT ICON STYLE */
+.icon svg,
+.service-box svg,
+.why-box svg {
+  width: 40px;
+  height: 40px;
+  fill: #8b5a2b; /* your gold/brown */
+  display: block;
+  margin: 0 auto 12px;
+}
