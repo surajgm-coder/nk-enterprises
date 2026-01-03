@@ -341,3 +341,27 @@
     grid-template-columns: 1fr;
   }
 }
+/* =====================================
+   GOLDEN ICON COLOR – ABOUT PAGE
+===================================== */
+
+/* Section title icons */
+.section-title i {
+  color: #8b5a2b;
+}
+
+/* What We Do icons */
+.service-box i {
+  color: #8b5a2b;
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Why Choose icons */
+.why-box i {
+  color: #8b5a2b;
+  font-size: 26px;
+  margin-bottom: 10px;
+  display: block;
+}
