@@ -135,22 +135,6 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 991px) {
-  .services-intro-feature {
-    padding: 70px 0;
-  }
-
-  .services-intro-feature .container {
-    grid-template-columns: 1fr;
-  }
-
-  .services-intro-content h2 {
-    font-size: 28px;
-  }
-}
-
 /* =========================
    SERVICES GRID
 ========================= */
@@ -238,23 +222,6 @@
 .card-btn:hover {
   background: #8d5820;
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 991px) {
-  .services-grid .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 575px) {
-  .services-grid .container {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /* =====================================
    WHY CHOOSE – 3D CARD SECTION
@@ -359,14 +326,6 @@
 
 .card-btn:hover {
   background: #8d5820;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 991px) {
-  .why-choose-cards .container {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* =====================================
