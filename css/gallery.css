@@ -181,7 +181,7 @@
 ========================= */
 .gallery-process {
   background: #f7f3ef;
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
 .gallery-process .container {
@@ -191,35 +191,62 @@
 }
 
 .gallery-process h3 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 600;
   color: var(--espresso);
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
-.gallery-process ul {
-  list-style: none;
-  padding: 0;
-  max-width: 900px;
-  margin: auto;
-  text-align: left;
+/* Grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.gallery-process li {
-  position: relative;
-  padding-left: 22px;
-  margin-bottom: 12px;
-  font-size: 14.5px;
-  color: #444;
+/* Card */
+.process-card {
+  background: #fff;
+  padding: 38px 26px;
+  border-radius: 18px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
 }
 
-.gallery-process li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
+.process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 45px rgba(0,0,0,0.14);
+}
+
+/* Icon */
+.process-card .icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
   color: var(--gold);
-  font-weight: 700;
 }
+
+/* Text */
+.process-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--espresso);
+  margin-bottom: 10px;
+}
+
+.process-card p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
 
 /* =========================
    GALLERY CTA
