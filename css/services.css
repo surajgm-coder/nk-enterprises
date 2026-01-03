@@ -146,7 +146,7 @@
 ===================================== */
 
 .service-final-cta {
-  background: url("/images/services/services-cta.png") no-repeat center right / cover;
+  background-image: url("../images/services/services-cta.png");
   min-height: 420px;
   margin-bottom: 80px;
   position: relative;
