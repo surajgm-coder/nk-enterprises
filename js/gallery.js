@@ -100,12 +100,14 @@ function openModal(media) {
   currentMedia = media;
   currentMediaIndex = 0;
   modal.classList.add("active");
+  document.body.style.overflow = "hidden"; // lock background
   renderMedia();
 }
 
 function closeModal() {
   modal.classList.remove("active");
   modalContent.innerHTML = "";
+  document.body.style.overflow = ""; // unlock background
 }
 
 function renderMedia() {
