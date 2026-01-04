@@ -205,3 +205,12 @@ document.addEventListener("keydown", e => {
     renderMedia();
   }
 });
+function openModal(media) {
+  if (!media || !media.length) return;
+
+  currentMedia = media;
+  currentMediaIndex = 0;
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+  renderMedia();
+}
