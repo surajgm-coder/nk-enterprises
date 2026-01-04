@@ -3,17 +3,39 @@ let currentCategory = "all";
 let currentPage = 0;
 const itemsPerPage = 4;
 
-// Modal slider state
+// Modal state
 let currentMedia = [];
 let currentMediaIndex = 0;
 
+// Load JSON
 fetch("data/projects.json")
   .then(res => res.json())
   .then(data => {
-    projectsData = data;
+    projectsData = buildAllProjects(data);
     renderGallery();
   });
 
+/* --------------------------------
+   BUILD "ALL PROJECTS" AUTOMATICALLY
+---------------------------------- */
+function buildAllProjects(data) {
+  const allProjects = [];
+
+  Object.keys(data).forEach(category => {
+    data[category].forEach(project => {
+      allProjects.push(project);
+    });
+  });
+
+  return {
+    all: allProjects,
+    ...data
+  };
+}
+
+/* --------------------------------
+   RENDER GALLERY WITH PAGINATION
+---------------------------------- */
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
   grid.innerHTML = "";
@@ -40,7 +62,9 @@ function renderGallery() {
     start + itemsPerPage >= projects.length;
 }
 
-// Pagination
+/* --------------------------------
+   PAGINATION BUTTONS
+---------------------------------- */
 document.querySelector(".next").onclick = () => {
   currentPage++;
   renderGallery();
@@ -51,7 +75,9 @@ document.querySelector(".prev").onclick = () => {
   renderGallery();
 };
 
-// Filters
+/* --------------------------------
+   CATEGORY FILTERS
+---------------------------------- */
 document.querySelectorAll(".gallery-filters button").forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll(".gallery-filters button")
@@ -64,7 +90,9 @@ document.querySelectorAll(".gallery-filters button").forEach(btn => {
   };
 });
 
-// ---------- MODAL ----------
+/* --------------------------------
+   MODAL + SLIDER
+---------------------------------- */
 const modal = document.getElementById("projectModal");
 const modalContent = document.getElementById("modalContent");
 
