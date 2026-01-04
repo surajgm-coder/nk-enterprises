@@ -112,12 +112,12 @@ function openModal(media) {
 
 function closeModal() {
   modal.classList.remove("active");
-  modalContent.innerHTML = "";
+  modalContent.innerHTML = ""; modalContent.offsetHeight; // force reflow to reset animation
   document.body.style.overflow = ""; // UNLOCK SCROLL
 }
 
 function renderMedia() {
-  modalContent.innerHTML = "";
+  modalContent.innerHTML = ""; modalContent.offsetHeight; // force reflow to reset animation
   const src = currentMedia[currentMediaIndex];
 
   if (src.endsWith(".mp4")) {
