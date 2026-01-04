@@ -3,17 +3,15 @@
 ================================================== */
 
 /* =========================
-   GALLERY HERO – MATCH ABOUT
+   GALLERY HERO – COMPACT & LEFT ALIGNED
 ========================= */
 .gallery-hero {
-  min-height: 420px;              /* SMALL, SAME AS ABOUT */
+  min-height: 320px; /* SAME AS ABOUT PAGE */
   display: flex;
   align-items: center;
-
   background:
-    linear-gradient(rgba(43, 29, 20, 0.6), rgba(43, 29, 20, 0.6)),
+    linear-gradient(rgba(43, 29, 20, 0.65), rgba(43, 29, 20, 0.65)),
     url("../images/gallery/gallery-hero.png") center / cover no-repeat;
-
   color: #ffffff;
 }
 
@@ -22,7 +20,7 @@
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
-  text-align: left;              /* LEFT ALIGN */
+  text-align: left; /* ✅ KEY FIX */
 }
 
 /* BREADCRUMB */
@@ -31,22 +29,22 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--gold-soft);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* TITLE */
+/* HEADING */
 .gallery-hero h1 {
-  font-size: 36px;                /* SAME SCALE AS ABOUT */
+  font-size: 34px;   /* smaller, professional */
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-/* SUBTEXT */
+/* TEXT */
 .gallery-hero p {
-  font-size: 15px;
+  font-size: 14.5px;
   line-height: 1.6;
   max-width: 520px;
-  opacity: 0.95;
+  color: #f1f1f1;
 }
 
 /* =========================
