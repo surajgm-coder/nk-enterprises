@@ -23,7 +23,7 @@
 
   "customfabrication": [
     {
-      "id": "custom-1",
+      "id": "customfabrication-1",
       "title": "Custom Metal Furniture",
       "cover": "images/gallery/projects/customfabrication/project-1/cover.jpg",
       "media": [
@@ -71,7 +71,7 @@
 
   "maintenanceandrefurbishment": [
     {
-      "id": "maintenance-1",
+      "id": "maintenanceandrefurbishment-1",
       "title": "Office Renovation Project",
       "cover": "images/gallery/projects/maintenanceandrefurbishment/project-1/cover.jpg",
       "media": [
@@ -95,7 +95,7 @@
 
   "retailandmall": [
     {
-      "id": "retail-1",
+      "id": "retailandmall-1",
       "title": "Mall Fixture Installation",
       "cover": "images/gallery/projects/retailandmall/project-1/cover.jpg",
       "media": [
@@ -107,7 +107,7 @@
 
   "signageandbranding": [
     {
-      "id": "signage-1",
+      "id": "signageandbranding-1",
       "title": "Brand Signage Display",
       "cover": "images/gallery/projects/signageandbranding/project-1/cover.jpg",
       "media": [
@@ -119,7 +119,7 @@
 
   "turnkeyinterior": [
     {
-      "id": "turnkey-1",
+      "id": "turnkeyinterior-1",
       "title": "Turnkey Interior Solution",
       "cover": "images/gallery/projects/turnkeyinterior/project-1/cover.jpg",
       "media": [
@@ -129,4 +129,3 @@
     }
   ]
 }
-
