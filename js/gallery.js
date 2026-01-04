@@ -16,25 +16,18 @@ fetch("data/projects.json")
   });
 
 /* --------------------------------
-   BUILD "ALL PROJECTS" AUTOMATICALLY
+   BUILD "ALL PROJECTS"
 ---------------------------------- */
 function buildAllProjects(data) {
   const allProjects = [];
-
-  Object.keys(data).forEach(category => {
-    data[category].forEach(project => {
-      allProjects.push(project);
-    });
+  Object.keys(data).forEach(cat => {
+    data[cat].forEach(p => allProjects.push(p));
   });
-
-  return {
-    all: allProjects,
-    ...data
-  };
+  return { all: allProjects, ...data };
 }
 
 /* --------------------------------
-   RENDER GALLERY WITH PAGINATION
+   RENDER GALLERY
 ---------------------------------- */
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
@@ -49,44 +42,43 @@ function renderGallery() {
   visible.forEach(project => {
     const item = document.createElement("div");
     item.className = "gallery-item";
-
     item.innerHTML = `
       <img src="${project.cover}" alt="${project.title}" loading="lazy">
       <div class="caption">${project.title}</div>
     `;
-
     item.addEventListener("click", () => openModal(project.media));
     grid.appendChild(item);
   });
 
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".gallery-pagination-wrapper .prev");
+  const nextBtn = document.querySelector(".gallery-pagination-wrapper .next");
 
   if (prevBtn) prevBtn.disabled = currentPage === 0;
   if (nextBtn) nextBtn.disabled = start + itemsPerPage >= projects.length;
 }
 
 /* --------------------------------
-   PAGINATION BUTTONS
+   PAGINATION
 ---------------------------------- */
-document.querySelector(".next")?.addEventListener("click", () => {
-  currentPage++;
-  renderGallery();
-});
+document.querySelector(".gallery-pagination-wrapper .next")
+  ?.addEventListener("click", () => {
+    currentPage++;
+    renderGallery();
+  });
 
-document.querySelector(".prev")?.addEventListener("click", () => {
-  currentPage--;
-  renderGallery();
-});
+document.querySelector(".gallery-pagination-wrapper .prev")
+  ?.addEventListener("click", () => {
+    currentPage--;
+    renderGallery();
+  });
 
 /* --------------------------------
-   CATEGORY FILTERS
+   FILTERS
 ---------------------------------- */
 document.querySelectorAll(".gallery-filters button").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".gallery-filters button")
       .forEach(b => b.classList.remove("active"));
-
     btn.classList.add("active");
     currentCategory = btn.dataset.category;
     currentPage = 0;
@@ -95,29 +87,30 @@ document.querySelectorAll(".gallery-filters button").forEach(btn => {
 });
 
 /* --------------------------------
-   MODAL + SLIDER
+   MODAL
 ---------------------------------- */
 const modal = document.getElementById("projectModal");
 const modalContent = document.getElementById("modalContent");
 
 function openModal(media) {
-  if (!media || !media.length) return; // SAFETY
-
+  if (!media || !media.length) return;
   currentMedia = media;
   currentMediaIndex = 0;
   modal.classList.add("active");
-  document.body.style.overflow = "hidden"; // LOCK SCROLL
+  document.body.style.overflow = "hidden";
   renderMedia();
 }
 
 function closeModal() {
   modal.classList.remove("active");
-  modalContent.innerHTML = ""; modalContent.offsetHeight; // force reflow to reset animation
-  document.body.style.overflow = ""; // UNLOCK SCROLL
+  modalContent.innerHTML = "";
+  document.body.style.overflow = "";
 }
 
 function renderMedia() {
-  modalContent.innerHTML = ""; modalContent.offsetHeight; // force reflow to reset animation
+  modalContent.innerHTML = "";
+  modalContent.offsetHeight;
+
   const src = currentMedia[currentMediaIndex];
 
   if (src.endsWith(".mp4")) {
@@ -125,11 +118,11 @@ function renderMedia() {
     video.src = src;
     video.controls = true;
     video.autoplay = true;
+    video.playsInline = true;
     modalContent.appendChild(video);
   } else {
     const img = document.createElement("img");
     img.src = src;
-    img.alt = "";
     modalContent.appendChild(img);
   }
 
@@ -138,6 +131,12 @@ function renderMedia() {
 
   document.querySelector(".modal-nav.next").disabled =
     currentMediaIndex === currentMedia.length - 1;
+
+  const nextIndex = currentMediaIndex + 1;
+  if (currentMedia[nextIndex] && !currentMedia[nextIndex].endsWith(".mp4")) {
+    const preload = new Image();
+    preload.src = currentMedia[nextIndex];
+  }
 }
 
 document.querySelector(".modal-nav.next").onclick = () => {
@@ -161,7 +160,7 @@ modal.addEventListener("click", e => {
 });
 
 /* --------------------------------
-   MOBILE SWIPE SUPPORT
+   SWIPE
 ---------------------------------- */
 let touchStartX = 0;
 let touchEndX = 0;
@@ -172,37 +171,31 @@ modal.addEventListener("touchstart", e => {
 
 modal.addEventListener("touchend", e => {
   touchEndX = e.changedTouches[0].screenX;
-  handleSwipe();
-}, { passive: true });
+  const dist = touchEndX - touchStartX;
+  if (Math.abs(dist) < 50) return;
 
-function handleSwipe() {
-  const swipeDistance = touchEndX - touchStartX;
-  if (Math.abs(swipeDistance) < 50) return;
-
-  if (swipeDistance < 0 && currentMediaIndex < currentMedia.length - 1) {
+  if (dist < 0 && currentMediaIndex < currentMedia.length - 1) {
     currentMediaIndex++;
     renderMedia();
   }
 
-  if (swipeDistance > 0 && currentMediaIndex > 0) {
+  if (dist > 0 && currentMediaIndex > 0) {
     currentMediaIndex--;
     renderMedia();
   }
-}
+}, { passive: true });
 
 /* --------------------------------
-   KEYBOARD SUPPORT
+   KEYBOARD
 ---------------------------------- */
 document.addEventListener("keydown", e => {
   if (!modal.classList.contains("active")) return;
 
   if (e.key === "Escape") closeModal();
-
   if (e.key === "ArrowRight" && currentMediaIndex < currentMedia.length - 1) {
     currentMediaIndex++;
     renderMedia();
   }
-
   if (e.key === "ArrowLeft" && currentMediaIndex > 0) {
     currentMediaIndex--;
     renderMedia();
