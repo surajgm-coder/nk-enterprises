@@ -38,6 +38,8 @@ function buildAllProjects(data) {
 ---------------------------------- */
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
+  if (!grid) return;
+
   grid.innerHTML = "";
 
   const projects = projectsData[currentCategory] || [];
@@ -49,7 +51,7 @@ function renderGallery() {
     item.className = "gallery-item";
 
     item.innerHTML = `
-      <img src="${project.cover}" alt="${project.title}">
+      <img src="${project.cover}" alt="${project.title}" loading="lazy">
       <div class="caption">${project.title}</div>
     `;
 
@@ -57,29 +59,31 @@ function renderGallery() {
     grid.appendChild(item);
   });
 
-  document.querySelector(".prev").disabled = currentPage === 0;
-  document.querySelector(".next").disabled =
-    start + itemsPerPage >= projects.length;
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  if (prevBtn) prevBtn.disabled = currentPage === 0;
+  if (nextBtn) nextBtn.disabled = start + itemsPerPage >= projects.length;
 }
 
 /* --------------------------------
    PAGINATION BUTTONS
 ---------------------------------- */
-document.querySelector(".next").onclick = () => {
+document.querySelector(".next")?.addEventListener("click", () => {
   currentPage++;
   renderGallery();
-};
+});
 
-document.querySelector(".prev").onclick = () => {
+document.querySelector(".prev")?.addEventListener("click", () => {
   currentPage--;
   renderGallery();
-};
+});
 
 /* --------------------------------
    CATEGORY FILTERS
 ---------------------------------- */
 document.querySelectorAll(".gallery-filters button").forEach(btn => {
-  btn.onclick = () => {
+  btn.addEventListener("click", () => {
     document.querySelectorAll(".gallery-filters button")
       .forEach(b => b.classList.remove("active"));
 
@@ -87,7 +91,7 @@ document.querySelectorAll(".gallery-filters button").forEach(btn => {
     currentCategory = btn.dataset.category;
     currentPage = 0;
     renderGallery();
-  };
+  });
 });
 
 /* --------------------------------
@@ -97,17 +101,19 @@ const modal = document.getElementById("projectModal");
 const modalContent = document.getElementById("modalContent");
 
 function openModal(media) {
+  if (!media || !media.length) return; // SAFETY
+
   currentMedia = media;
   currentMediaIndex = 0;
   modal.classList.add("active");
-  document.body.style.overflow = "hidden"; // lock background
+  document.body.style.overflow = "hidden"; // LOCK SCROLL
   renderMedia();
 }
 
 function closeModal() {
   modal.classList.remove("active");
   modalContent.innerHTML = "";
-  document.body.style.overflow = ""; // unlock background
+  document.body.style.overflow = ""; // UNLOCK SCROLL
 }
 
 function renderMedia() {
@@ -123,6 +129,7 @@ function renderMedia() {
   } else {
     const img = document.createElement("img");
     img.src = src;
+    img.alt = "";
     modalContent.appendChild(img);
   }
 
@@ -134,13 +141,17 @@ function renderMedia() {
 }
 
 document.querySelector(".modal-nav.next").onclick = () => {
-  currentMediaIndex++;
-  renderMedia();
+  if (currentMediaIndex < currentMedia.length - 1) {
+    currentMediaIndex++;
+    renderMedia();
+  }
 };
 
 document.querySelector(".modal-nav.prev").onclick = () => {
-  currentMediaIndex--;
-  renderMedia();
+  if (currentMediaIndex > 0) {
+    currentMediaIndex--;
+    renderMedia();
+  }
 };
 
 document.querySelector(".modal-close").onclick = closeModal;
@@ -148,8 +159,9 @@ document.querySelector(".modal-close").onclick = closeModal;
 modal.addEventListener("click", e => {
   if (e.target === modal) closeModal();
 });
+
 /* --------------------------------
-   MOBILE SWIPE SUPPORT (MODAL)
+   MOBILE SWIPE SUPPORT
 ---------------------------------- */
 let touchStartX = 0;
 let touchEndX = 0;
@@ -165,52 +177,34 @@ modal.addEventListener("touchend", e => {
 
 function handleSwipe() {
   const swipeDistance = touchEndX - touchStartX;
-
-  // Minimum swipe distance (px)
   if (Math.abs(swipeDistance) < 50) return;
 
-  // Swipe left → next
   if (swipeDistance < 0 && currentMediaIndex < currentMedia.length - 1) {
     currentMediaIndex++;
     renderMedia();
   }
 
-  // Swipe right → prev
   if (swipeDistance > 0 && currentMediaIndex > 0) {
     currentMediaIndex--;
     renderMedia();
   }
 }
+
 /* --------------------------------
-   KEYBOARD SUPPORT (MODAL)
+   KEYBOARD SUPPORT
 ---------------------------------- */
 document.addEventListener("keydown", e => {
-  // Only work when modal is open
   if (!modal.classList.contains("active")) return;
 
-  // ESC → close modal
-  if (e.key === "Escape") {
-    closeModal();
-  }
+  if (e.key === "Escape") closeModal();
 
-  // RIGHT ARROW → next media
   if (e.key === "ArrowRight" && currentMediaIndex < currentMedia.length - 1) {
     currentMediaIndex++;
     renderMedia();
   }
 
-  // LEFT ARROW → previous media
   if (e.key === "ArrowLeft" && currentMediaIndex > 0) {
     currentMediaIndex--;
     renderMedia();
   }
 });
-function openModal(media) {
-  if (!media || !media.length) return;
-
-  currentMedia = media;
-  currentMediaIndex = 0;
-  modal.classList.add("active");
-  document.body.style.overflow = "hidden";
-  renderMedia();
-}
