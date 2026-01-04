@@ -179,3 +179,27 @@ function handleSwipe() {
     renderMedia();
   }
 }
+/* --------------------------------
+   KEYBOARD SUPPORT (MODAL)
+---------------------------------- */
+document.addEventListener("keydown", e => {
+  // Only work when modal is open
+  if (!modal.classList.contains("active")) return;
+
+  // ESC → close modal
+  if (e.key === "Escape") {
+    closeModal();
+  }
+
+  // RIGHT ARROW → next media
+  if (e.key === "ArrowRight" && currentMediaIndex < currentMedia.length - 1) {
+    currentMediaIndex++;
+    renderMedia();
+  }
+
+  // LEFT ARROW → previous media
+  if (e.key === "ArrowLeft" && currentMediaIndex > 0) {
+    currentMediaIndex--;
+    renderMedia();
+  }
+});
