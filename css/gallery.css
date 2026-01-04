@@ -104,6 +104,12 @@
   color: #ffffff;
   border-color: transparent;
 }
+.gallery-filters .container {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  gap: 12px;
+}
 
 /* =========================
    GALLERY GRID SECTION
@@ -176,9 +182,6 @@
   text-align: center;
 }
 
-/* =========================
-   PROCESS SECTION
-========================= */
 /* =========================
    PROCESS SECTION (COMPACT & FIXED)
 ========================= */
