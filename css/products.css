@@ -6,7 +6,7 @@
    HERO
 ========================= */
 .products-hero {
-  background: url("../images/products/products-hero.jpg") center / cover no-repeat;
+  background: url("../images/products/products-hero.png") center / cover no-repeat;
   height: 260px;
   position: relative;
   display: flex;
