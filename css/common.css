@@ -471,3 +471,9 @@ body {
     display: none;
   }
 }
+/* =========================
+   MODAL TOUCH SUPPORT (GLOBAL SAFE)
+========================= */
+.project-modal {
+  touch-action: pan-y; /* allow vertical scroll, block horizontal browser swipe */
+}
