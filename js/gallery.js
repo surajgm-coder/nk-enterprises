@@ -146,3 +146,36 @@ document.querySelector(".modal-close").onclick = closeModal;
 modal.addEventListener("click", e => {
   if (e.target === modal) closeModal();
 });
+/* --------------------------------
+   MOBILE SWIPE SUPPORT (MODAL)
+---------------------------------- */
+let touchStartX = 0;
+let touchEndX = 0;
+
+modal.addEventListener("touchstart", e => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+modal.addEventListener("touchend", e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDistance = touchEndX - touchStartX;
+
+  // Minimum swipe distance (px)
+  if (Math.abs(swipeDistance) < 50) return;
+
+  // Swipe left → next
+  if (swipeDistance < 0 && currentMediaIndex < currentMedia.length - 1) {
+    currentMediaIndex++;
+    renderMedia();
+  }
+
+  // Swipe right → prev
+  if (swipeDistance > 0 && currentMediaIndex > 0) {
+    currentMediaIndex--;
+    renderMedia();
+  }
+}
