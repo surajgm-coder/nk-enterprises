@@ -16,7 +16,6 @@
   <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/gallery.css">
-
 </head>
 
 <body>
@@ -71,7 +70,7 @@
   </header>
 
 </div>
-  
+
 <!-- =========================
      GALLERY HERO
 ========================= -->
@@ -105,17 +104,16 @@
 ========================= -->
 <section class="gallery-filters">
   <div class="container">
-    <button class="active" data-category="all">All Projects</button>
-    <button data-category="commercial">Commercial</button>
-    <button data-category="customfabrication">Custom Fabrication</button>
-    <button data-category="hospitality">Hospitality</button>
-    <button data-category="industrial">Industrial</button>
-
-    <button data-category="institutional">Institutional</button>
-    <button data-category="maintenanceandrefurbishment">Maintenance & Refurbishment</button>
-    <button data-category="residential">Residential</button>
-    <button data-category="retailandmall">Retail & Mall</button>
-    <button data-category="signageandbranding">Signage & Branding</button>
+    <button type="button" class="active" data-category="all">All Projects</button>
+    <button type="button" data-category="commercial">Commercial</button>
+    <button type="button" data-category="customfabrication">Custom Fabrication</button>
+    <button type="button" data-category="hospitality">Hospitality</button>
+    <button type="button" data-category="industrial">Industrial</button>
+    <button type="button" data-category="institutional">Institutional</button>
+    <button type="button" data-category="maintenanceandrefurbishment">Maintenance & Refurbishment</button>
+    <button type="button" data-category="residential">Residential</button>
+    <button type="button" data-category="retailandmall">Retail & Mall</button>
+    <button type="button" data-category="signageandbranding">Signage & Branding</button>
   </div>
 </section>
 
@@ -126,15 +124,13 @@
   <div class="container">
 
     <div class="gallery-pagination-wrapper">
-
-      <button class="nav-btn prev" disabled>‹</button>
+      <button type="button" class="nav-btn prev" disabled>‹</button>
 
       <div class="gallery-grid" id="galleryGrid">
         <!-- Cards injected by JS -->
       </div>
 
-      <button class="nav-btn next">›</button>
-
+      <button type="button" class="nav-btn next">›</button>
     </div>
 
   </div>
@@ -148,7 +144,6 @@
     <h3>From Design to Delivery</h3>
 
     <div class="process-grid">
-
       <div class="process-card">
         <span class="icon"><i class="fa-solid fa-clipboard-check"></i></span>
         <h4>Requirement Analysis & Design Planning</h4>
@@ -184,7 +179,6 @@
         <h4>Timely & Reliable Delivery</h4>
         <p>Ensuring projects are completed and delivered on schedule.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -194,45 +188,31 @@
 ========================= -->
 <section class="gallery-cta">
   <div class="container">
-
     <div class="gallery-cta-wrapper">
 
-      <!-- LEFT CONTENT -->
       <div class="gallery-cta-content">
         <h3>Want to Know More About Our Work?</h3>
-
         <p>
           If you have questions about any project shown here or wish to discuss
-          your specific requirements, our team is always ready to assist you
-          with expert guidance and customized solutions.
+          your specific requirements, our team is always ready to assist you.
         </p>
-
         <a href="contact.html" class="cta-link">Get In Touch</a>
 
         <div class="cta-contact">
-          <span>
-            <i class="fa-solid fa-phone"></i>
-            +91 63723 52301 | +91 96995 40314
-          </span>
-
-          <span>
-            <i class="fa-solid fa-envelope"></i>
-            support@nkenters.com
-          </span>
+          <span><i class="fa-solid fa-phone"></i> +91 63723 52301 | +91 96995 40314</span>
+          <span><i class="fa-solid fa-envelope"></i> support@nkenters.com</span>
         </div>
       </div>
 
-      <!-- RIGHT IMAGE -->
       <div class="gallery-cta-image">
         <img src="images/gallery/gallery-cta.png" alt="Customer Support Illustration">
       </div>
 
     </div>
-
   </div>
 </section>
-  
- <!-- =========================
+
+<!-- =========================
      FOOTER
 ========================= -->
 <footer class="site-footer">
@@ -259,25 +239,23 @@
 
   </div>
 </footer>
-  
+
 <!-- JS -->
 <script src="js/slider.js"></script>
 <script src="js/gallery.js"></script>
-  
+
 <!-- =========================
-     PROJECT MODAL
+     PROJECT MODAL (FIXED)
 ========================= -->
 <div class="project-modal" id="projectModal">
   <span class="modal-close">&times;</span>
 
   <button type="button" class="modal-nav prev">‹</button>
-  
-  <div class="modal-content" id="modalContent">
-    <!-- Media injected -->
-  </div>
+
+  <div class="modal-content" id="modalContent"></div>
 
   <button type="button" class="modal-nav next">›</button>
-</div>  
-  
+</div>
+
 </body>
 </html>
