@@ -1,6 +1,5 @@
 /* ==================================================
    GALLERY PAGE STYLES
-   (STRUCTURE MATCHES ABOUT / SERVICES)
 ================================================== */
 
 /* =========================
@@ -43,7 +42,7 @@
 }
 
 /* =========================
-   INTRO SECTION
+   INTRO
 ========================= */
 .gallery-intro {
   padding: 70px 0 40px;
@@ -71,7 +70,7 @@
 }
 
 /* =========================
-   FILTERS
+   FILTERS (5 PER ROW)
 ========================= */
 .gallery-filters {
   padding: 30px 0;
@@ -80,10 +79,10 @@
 .gallery-filters .container {
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
   justify-content: center;
+  gap: 12px;
 }
 
 .gallery-filters button {
@@ -104,15 +103,9 @@
   color: #ffffff;
   border-color: transparent;
 }
-.gallery-filters .container {
-  display: grid;
-  grid-template-columns: repeat(5, max-content);
-  justify-content: center;
-  gap: 12px;
-}
 
 /* =========================
-   GALLERY GRID SECTION
+   GALLERY GRID + PAGINATION
 ========================= */
 .gallery-section {
   padding: 40px 0 70px;
@@ -123,13 +116,19 @@
   margin: auto;
 }
 
+.gallery-pagination-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-/* GALLERY ITEM */
+/* CARD */
 .gallery-item {
   background: #ffffff;
   border-radius: 8px;
@@ -181,25 +180,24 @@
   color: var(--dark-brown);
   text-align: center;
 }
-.gallery-pagination-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
+/* PAGINATION BUTTONS */
 .nav-btn {
   font-size: 30px;
   background: none;
   border: none;
   cursor: pointer;
   color: var(--espresso);
-  transition: opacity 0.3s ease;
 }
 
 .nav-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+/* =========================
+   MODAL
+========================= */
 .project-modal {
   position: fixed;
   inset: 0;
@@ -207,7 +205,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 .project-modal.active {
@@ -219,6 +217,7 @@
   max-width: 80vw;
   max-height: 80vh;
   border-radius: 8px;
+  object-fit: contain;
 }
 
 .modal-close {
@@ -245,12 +244,11 @@
 }
 
 /* =========================
-   PROCESS SECTION (COMPACT & FIXED)
+   PROCESS SECTION
 ========================= */
-
 .gallery-process {
   background: #f7f3ef;
-  padding: 32px 0;   /* MUCH smaller */
+  padding: 32px 0;
 }
 
 .gallery-process .container {
@@ -266,33 +264,22 @@
   margin-bottom: 22px;
 }
 
-/* GRID – FORCE 3 PER ROW */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* EXACTLY 3 */
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
-/* CARD – EQUAL HEIGHT */
 .process-card {
   background: #ffffff;
   padding: 22px 18px;
   border-radius: 12px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  display: flex;                 /* IMPORTANT */
+  display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.process-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-}
-
-
-/* ICON — FIXED VISIBILITY */
 .process-card .icon {
   width: 48px;
   height: 48px;
@@ -306,11 +293,9 @@
 }
 
 .process-card .icon i {
-  font-size: 20px;      /* IMPORTANT: fixes invisible icon */
-  line-height: 1;
+  font-size: 20px;
 }
 
-/* TEXT */
 .process-card h4 {
   font-size: 14.8px;
   font-weight: 600;
@@ -322,31 +307,22 @@
   font-size: 13.5px;
   line-height: 1.5;
   color: #555;
-  margin: 0;
 }
 
 /* =========================
-   GALLERY CTA
+   CTA SECTION
 ========================= */
-
 .gallery-cta {
   position: relative;
-  background-image: url("../images/gallery/background-cta.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background: url("../images/gallery/background-cta.png") center / cover no-repeat;
   padding: 70px 0;
-  min-height: 340px;
 }
 
-/* DARK OVERLAY */
 .gallery-cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1;
+  background: rgba(0,0,0,0.55);
 }
 
 .gallery-cta .container {
@@ -354,12 +330,7 @@
   z-index: 2;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
 }
-
-/* =========================
-   LAYOUT
-========================= */
 
 .gallery-cta-wrapper {
   display: flex;
@@ -368,119 +339,57 @@
   gap: 40px;
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
-
 .gallery-cta-content {
   max-width: 520px;
 }
 
 .gallery-cta-content h3 {
   font-size: 26px;
-  font-weight: 600;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 12px;
 }
 
 .gallery-cta-content p {
   font-size: 15px;
-  line-height: 1.7;
   color: #eaeaea;
   margin-bottom: 16px;
 }
 
-/* =========================
-   CTA LINK
-========================= */
-
 .cta-link {
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 500;
   color: #ffcc66;
   text-decoration: none;
-  position: relative;
-  margin-bottom: 18px;
-}
-
-.cta-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: #ffcc66;
-  transition: width 0.3s ease;
-}
-
-.cta-link:hover::after {
-  width: 60%;
-}
-
-/* =========================
-   CONTACT INFO
-========================= */
-
-.cta-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  font-weight: 500;
 }
 
 .cta-contact span {
   display: flex;
-  align-items: center;
   gap: 10px;
+  color: #fff;
   font-size: 14.5px;
-  color: #f2f2f2;
-}
-
-.cta-contact i {
-  color: #ffcc66;
-  font-size: 15px;
-}
-
-/* =========================
-   RIGHT IMAGE
-========================= */
-
-.gallery-cta-image img {
-  max-width: 340px;
-  width: 100%;
-  height: auto;
-}
-
-/* =========================
-   TEXT SHADOW (READABILITY)
-========================= */
-
-.gallery-cta-content h3,
-.gallery-cta-content p,
-.cta-contact span {
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
+@media (max-width: 1100px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
 
 @media (max-width: 900px) {
-  .gallery-cta-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+  .gallery-filters .container { grid-template-columns: repeat(3, max-content); }
+  .gallery-cta-wrapper { flex-direction: column; text-align: center; }
+}
 
-  .gallery-cta-content {
-    max-width: 100%;
-  }
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
-  .cta-contact span {
-    justify-content: center;
-  }
+@media (max-width: 520px) {
+  .gallery-filters .container { grid-template-columns: repeat(2, max-content); }
+}
 
-  .gallery-cta-image img {
-    max-width: 260px;
-  }
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
 }
