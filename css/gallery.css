@@ -50,79 +50,71 @@
 }
 
 /* =========================
-   GALLERY INTRO – SPLIT DESIGN
+   GALLERY INTRO – COMPACT
 ========================= */
 .gallery-intro {
-  padding: 90px 0;
-  background:
-    linear-gradient(to bottom, #ffffff, #faf7f3);
-  position: relative;
+  padding: 50px 0;              /* REDUCED HEIGHT */
+  background: #fffdf9;
 }
 
-.gallery-intro-wrap {
+.gallery-intro .container {
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+}
+
+/* LAYOUT */
+.gallery-intro-wrapper {
+  display: flex;
   align-items: center;
   gap: 60px;
 }
 
-/* LEFT */
-.gallery-intro-text h2 {
-  font-size: 36px;
+/* LEFT CONTENT */
+.gallery-intro-content {
+  max-width: 560px;
+}
+
+.gallery-intro-content h2 {
+  font-size: 30px;              /* SMALLER TITLE */
   font-weight: 600;
   color: var(--espresso);
+  margin-bottom: 12px;
+}
+
+.gallery-intro-content p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #555;
   margin-bottom: 18px;
 }
 
-.gallery-intro-text p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 28px;
-  max-width: 520px;
-}
-
 /* CHECK LIST */
-.intro-features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.gallery-intro-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.intro-features li {
-  font-size: 15.5px;
-  color: var(--dark-brown);
-  margin-bottom: 14px;
-  padding-left: 36px;
-  position: relative;
-}
-
-.intro-features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
-  color: var(--gold);
+.gallery-intro-list span {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
   font-size: 14px;
-  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+.gallery-intro-list i {
+  color: var(--gold);
+  font-size: 16px;
 }
 
 /* RIGHT IMAGE */
 .gallery-intro-image img {
   width: 100%;
+  max-width: 360px;            /* KEY FIX */
   height: auto;
-  border-radius: 22px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
 }
 
 /* =========================
