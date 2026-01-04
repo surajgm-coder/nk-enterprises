@@ -3,50 +3,49 @@
 ================================================== */
 
 /* =========================
-   HERO SECTION (MATCH ABOUT)
+   GALLERY HERO – MATCH ABOUT
 ========================= */
 .gallery-hero {
-  min-height: 75vh; /* MATCH ABOUT HERO */
+  min-height: 420px;              /* SMALL, SAME AS ABOUT */
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 
   background:
-    linear-gradient(rgba(43, 29, 20, 0.65), rgba(43, 29, 20, 0.65)),
+    linear-gradient(rgba(43, 29, 20, 0.6), rgba(43, 29, 20, 0.6)),
     url("../images/gallery/gallery-hero.png") center / cover no-repeat;
 
   color: #ffffff;
-  padding: 80px 20px; /* IMPORTANT */
 }
 
+/* CONTAINER */
 .gallery-hero .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
+  text-align: left;              /* LEFT ALIGN */
 }
 
 /* BREADCRUMB */
 .gallery-hero .breadcrumb {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--gold-soft);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* MAIN TITLE */
+/* TITLE */
 .gallery-hero h1 {
-  font-size: 46px;  /* SAME SCALE AS ABOUT */
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-size: 36px;                /* SAME SCALE AS ABOUT */
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 /* SUBTEXT */
 .gallery-hero p {
-  font-size: 16.5px;
-  line-height: 1.8;
-  max-width: 640px;
-  margin: auto;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 520px;
   opacity: 0.95;
 }
 
