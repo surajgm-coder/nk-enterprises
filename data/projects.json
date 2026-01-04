@@ -1,1 +1,35 @@
+{
+  "all": [
+    {
+      "title": "Corporate Office Interior",
+      "cover": "images/gallery/projects/commercial/project-1/cover.jpg"
+    },
+    {
+      "title": "Industrial Fabrication Unit",
+      "cover": "images/gallery/projects/industrial/project-1/cover.jpg"
+    }
+  ],
+
+  "commercial": [
+    {
+      "title": "Corporate Office Interior",
+      "cover": "images/gallery/projects/commercial/project-1/cover.jpg"
+    }
+  ],
+
+  "customfabrication": [
+    {
+      "title": "Custom Furniture Project",
+      "cover": "images/gallery/projects/customfabrication/project-1/cover.jpg"
+    }
+  ],
+
+  "hospitality": [],
+  "industrial": [],
+  "institutional": [],
+  "maintenanceandrefurbishment": [],
+  "residential": [],
+  "retailandmall": [],
+  "signageandbranding": []
+}
 
