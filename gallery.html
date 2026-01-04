@@ -107,7 +107,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 ========================= -->
 <section class="gallery-filters">
   <div class="container">
-
     <button class="active" data-category="all">All Projects</button>
     <button data-category="commercial">Commercial</button>
     <button data-category="customfabrication">Custom Fabrication</button>
@@ -119,22 +118,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <button data-category="residential">Residential</button>
     <button data-category="retailandmall">Retail & Mall</button>
     <button data-category="signageandbranding">Signage & Branding</button>
-
   </div>
 </section>
 
 <!-- =========================
-     GALLERY GRID (DYNAMIC)
+     GALLERY GRID WITH PAGINATION
 ========================= -->
 <section class="gallery-section">
   <div class="container">
 
-    <div class="gallery-grid" id="galleryGrid">
-      <!-- Cards injected by JS -->
+    <div class="gallery-pagination-wrapper">
+
+      <button class="nav-btn prev" disabled>‹</button>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <button class="nav-btn next">›</button>
+
     </div>
 
   </div>
 </section>
+
+<script src="js/gallery.js"></script>
+
 
 <!-- =========================
      PROCESS
