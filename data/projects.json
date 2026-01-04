@@ -1,35 +1,132 @@
 {
-  "all": [
-    {
-      "title": "Corporate Office Interior",
-      "cover": "images/gallery/projects/commercial/project-1/cover.jpg"
-    },
-    {
-      "title": "Industrial Fabrication Unit",
-      "cover": "images/gallery/projects/industrial/project-1/cover.jpg"
-    }
-  ],
-
   "commercial": [
     {
+      "id": "commercial-1",
       "title": "Corporate Office Interior",
-      "cover": "images/gallery/projects/commercial/project-1/cover.jpg"
+      "cover": "images/gallery/projects/commercial/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/commercial/project-1/img1.jpg",
+        "images/gallery/projects/commercial/project-1/img2.jpg",
+        "images/gallery/projects/commercial/project-1/video.mp4"
+      ]
+    },
+    {
+      "id": "commercial-2",
+      "title": "Retail Showroom Setup",
+      "cover": "images/gallery/projects/commercial/project-2/cover.jpg",
+      "media": [
+        "images/gallery/projects/commercial/project-2/img1.jpg",
+        "images/gallery/projects/commercial/project-2/img2.jpg"
+      ]
     }
   ],
 
   "customfabrication": [
     {
-      "title": "Custom Furniture Project",
-      "cover": "images/gallery/projects/customfabrication/project-1/cover.jpg"
+      "id": "custom-1",
+      "title": "Custom Metal Furniture",
+      "cover": "images/gallery/projects/customfabrication/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/customfabrication/project-1/img1.jpg",
+        "images/gallery/projects/customfabrication/project-1/img2.jpg"
+      ]
     }
   ],
 
-  "hospitality": [],
-  "industrial": [],
-  "institutional": [],
-  "maintenanceandrefurbishment": [],
-  "residential": [],
-  "retailandmall": [],
-  "signageandbranding": []
+  "hospitality": [
+    {
+      "id": "hospitality-1",
+      "title": "Hotel Interior Works",
+      "cover": "images/gallery/projects/hospitality/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/hospitality/project-1/img1.jpg",
+        "images/gallery/projects/hospitality/project-1/img2.jpg"
+      ]
+    }
+  ],
+
+  "industrial": [
+    {
+      "id": "industrial-1",
+      "title": "Industrial Fabrication Unit",
+      "cover": "images/gallery/projects/industrial/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/industrial/project-1/img1.jpg",
+        "images/gallery/projects/industrial/project-1/img2.jpg",
+        "images/gallery/projects/industrial/project-1/video.mp4"
+      ]
+    }
+  ],
+
+  "institutional": [
+    {
+      "id": "institutional-1",
+      "title": "Educational Institution Furniture",
+      "cover": "images/gallery/projects/institutional/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/institutional/project-1/img1.jpg"
+      ]
+    }
+  ],
+
+  "maintenanceandrefurbishment": [
+    {
+      "id": "maintenance-1",
+      "title": "Office Renovation Project",
+      "cover": "images/gallery/projects/maintenanceandrefurbishment/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/maintenanceandrefurbishment/project-1/img1.jpg",
+        "images/gallery/projects/maintenanceandrefurbishment/project-1/img2.jpg"
+      ]
+    }
+  ],
+
+  "residential": [
+    {
+      "id": "residential-1",
+      "title": "Modern Residential Interior",
+      "cover": "images/gallery/projects/residential/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/residential/project-1/img1.jpg",
+        "images/gallery/projects/residential/project-1/img2.jpg"
+      ]
+    }
+  ],
+
+  "retailandmall": [
+    {
+      "id": "retail-1",
+      "title": "Mall Fixture Installation",
+      "cover": "images/gallery/projects/retailandmall/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/retailandmall/project-1/img1.jpg",
+        "images/gallery/projects/retailandmall/project-1/img2.jpg"
+      ]
+    }
+  ],
+
+  "signageandbranding": [
+    {
+      "id": "signage-1",
+      "title": "Brand Signage Display",
+      "cover": "images/gallery/projects/signageandbranding/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/signageandbranding/project-1/img1.jpg",
+        "images/gallery/projects/signageandbranding/project-1/img2.jpg"
+      ]
+    }
+  ],
+
+  "turnkeyinterior": [
+    {
+      "id": "turnkey-1",
+      "title": "Turnkey Interior Solution",
+      "cover": "images/gallery/projects/turnkeyinterior/project-1/cover.jpg",
+      "media": [
+        "images/gallery/projects/turnkeyinterior/project-1/img1.jpg",
+        "images/gallery/projects/turnkeyinterior/project-1/img2.jpg"
+      ]
+    }
+  ]
 }
 
