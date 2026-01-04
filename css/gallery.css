@@ -310,19 +310,27 @@
 }
 
 /* =========================
-   CTA SECTION
+   GALLERY CTA (FIXED)
 ========================= */
+
 .gallery-cta {
   position: relative;
-  background: url("../images/gallery/background-cta.png") center / cover no-repeat;
-  padding: 70px 0;
+  background-image: url("../images/gallery/background-cta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 60px 0;
+  min-height: 320px;
 }
 
+/* DARK OVERLAY */
 .gallery-cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
 .gallery-cta .container {
@@ -330,7 +338,12 @@
   z-index: 2;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
+
+/* =========================
+   LAYOUT
+========================= */
 
 .gallery-cta-wrapper {
   display: flex;
@@ -339,34 +352,103 @@
   gap: 40px;
 }
 
+/* =========================
+   LEFT CONTENT
+========================= */
+
 .gallery-cta-content {
   max-width: 520px;
 }
 
 .gallery-cta-content h3 {
   font-size: 26px;
-  color: #fff;
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .gallery-cta-content p {
   font-size: 15px;
+  line-height: 1.7;
   color: #eaeaea;
   margin-bottom: 16px;
 }
 
+/* =========================
+   CTA LINK
+========================= */
+
 .cta-link {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
   color: #ffcc66;
   text-decoration: none;
-  font-weight: 500;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.cta-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #ffcc66;
+  transition: width 0.3s ease;
+}
+
+.cta-link:hover::after {
+  width: 60%;
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.cta-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .cta-contact span {
   display: flex;
+  align-items: center;
   gap: 10px;
-  color: #fff;
   font-size: 14.5px;
+  color: #f2f2f2;
 }
+
+.cta-contact i {
+  color: #ffcc66;
+  font-size: 15px;
+}
+
+/* =========================
+   RIGHT IMAGE (FIXED SIZE)
+========================= */
+
+.gallery-cta-image {
+  align-self: center;
+}
+
+.gallery-cta-image img {
+  max-width: 320px;
+  max-height: 280px;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   TEXT SHADOW
+========================= */
+
+.gallery-cta-content h3,
+.gallery-cta-content p,
+.cta-contact span {
+  text-s
 
 /* =========================
    RESPONSIVE
