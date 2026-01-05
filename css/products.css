@@ -239,98 +239,71 @@
    HOW CUSTOM ORDERS WORK
 ========================= */
 
-.order-process-section {
-  background: #f6f3ef;
-  padding: 100px 0;
+.process-section {
+  padding: 100px 20px;
+  background: #faf7f3;
 }
 
-.order-process-wrapper {
+.process-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* HEADER */
-.order-process-header {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto 80px;
-}
-
-.order-process-header h2 {
-  font-size: 34px;
-  margin-bottom: 14px;
-}
-
-.order-process-header p {
-  font-size: 16px;
-  line-height: 1.7;
-  opacity: 0.85;
-}
-
-/* STEPS GRID */
-.order-process-steps {
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  align-items: center;
 }
 
-/* STEP CARD */
-.process-step {
-  background: #ffffff;
-  padding: 40px 28px;
-  border-radius: 22px;
+/* LEFT */
+.process-content h2 {
+  font-size: 42px;
+  color: #2b1d14;
+  margin-bottom: 15px;
+}
+
+.process-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* RIGHT */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.process-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-.process-step:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 80px rgba(0,0,0,0.14);
-}
-
-/* STEP NUMBER */
-.step-number {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 18px;
+.process-card span {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #8b5a2b;
   color: #fff;
-  font-weight: 600;
-  font-size: 18px;
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* TEXT */
-.process-step h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.process-step p {
-  font-size: 14.5px;
-  line-height: 1.6;
-  opacity: 0.85;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 /* RESPONSIVE */
-@media (max-width: 1100px) {
-  .order-process-steps {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .order-process-steps {
+@media (max-width: 768px) {
+  .process-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .order-process-header h2 {
-    font-size: 26px;
+  .process-steps {
+    grid-template-columns: 1fr;
   }
 }
 
