@@ -631,61 +631,70 @@
 }
 
 /* =========================
-   FINAL CTA SECTION
+   SPLIT CTA – PROFESSIONAL
 ========================= */
 
-.products-cta {
+.products-cta-split {
   position: relative;
   background: url("../images/products/products-cta.png") center / cover no-repeat;
-  padding: 120px 20px;
+  padding: 80px 20px;
   color: #ffffff;
-  text-align: center;
 }
 
-/* DARK OVERLAY */
+/* overlay */
 .products-cta-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* CONTENT */
-.products-cta-content {
+/* inner layout */
+.products-cta-inner {
   position: relative;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.products-cta-content h2 {
-  font-size: 38px;
-  margin-bottom: 18px;
+/* LEFT TEXT */
+.cta-left {
+  max-width: 650px;
 }
 
-.products-cta-content p {
-  font-size: 16px;
+.cta-left h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta-left p {
+  font-size: 15px;
   line-height: 1.7;
   opacity: 0.9;
-  margin-bottom: 40px;
 }
 
-/* BUTTONS */
-.cta-buttons {
+/* RIGHT BUTTONS */
+.cta-right {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
+/* BUTTONS */
 .cta-btn {
-  padding: 14px 34px;
-  border-radius: 32px;
+  padding: 12px 28px;
+  border-radius: 30px;
   font-size: 14px;
   text-decoration: none;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-/* PRIMARY */
+/* primary */
 .cta-btn.primary {
   background: #8b5a2b;
   color: #ffffff;
@@ -693,21 +702,15 @@
 
 .cta-btn.primary:hover {
   background: #6f4320;
-  transform: translateY(-2px);
 }
 
-/* SECONDARY */
+/* secondary */
 .cta-btn.secondary {
   background: #ffffff;
   color: #000000;
 }
 
-.cta-btn.secondary:hover {
-  background: #eaeaea;
-  transform: translateY(-2px);
-}
-
-/* OUTLINE */
+/* outline */
 .cta-btn.outline {
   border: 2px solid #ffffff;
   color: #ffffff;
@@ -719,13 +722,17 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .products-cta-content h2 {
-    font-size: 28px;
+@media (max-width: 900px) {
+  .products-cta-inner {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .products-cta {
-    padding: 90px 20px;
+  .cta-right {
+    justify-content: center;
+  }
+
+  .cta-left h2 {
+    font-size: 26px;
   }
 }
-
