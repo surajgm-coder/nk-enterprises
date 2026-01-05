@@ -553,80 +553,76 @@
 ========================= */
 
 .industries-section {
+  padding: 80px 20px;
   background: #ffffff;
-  padding: 100px 0;
 }
 
-.industries-wrapper {
+.industries-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
 }
 
-/* HEADER */
-.industries-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 70px;
+/* Left Content */
+.industries-content h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #2b1d14;
 }
 
-.industries-header h2 {
-  font-size: 34px;
-  margin-bottom: 14px;
-}
-
-.industries-header p {
+.industries-content p {
   font-size: 16px;
   line-height: 1.7;
-  opacity: 0.85;
+  color: #555;
+  max-width: 420px;
 }
 
-/* GRID */
-.industries-grid {
+/* Cards Grid */
+.industries-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
-/* CARD */
 .industry-card {
-  background: #f6f3ef;
-  padding: 40px 30px;
-  border-radius: 22px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
+  background: #faf6f2;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
 
 .industry-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 80px rgba(0,0,0,0.14);
+  transform: translateY(-6px);
 }
 
 .industry-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: #2b1d14;
 }
 
 .industry-card p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
-  opacity: 0.85;
+  color: #666;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  .industries-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .industries-grid {
+/* Responsive */
+@media (max-width: 900px) {
+  .industries-container {
     grid-template-columns: 1fr;
   }
 
-  .industries-header h2 {
-    font-size: 26px;
+  .industries-content {
+    text-align: center;
+  }
+
+  .industries-content p {
+    margin: auto;
   }
 }
 
