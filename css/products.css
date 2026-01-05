@@ -631,55 +631,101 @@
 }
 
 /* =========================
-   BOTTOM CTA
+   FINAL CTA SECTION
 ========================= */
-.bottom-cta {
+
+.products-cta {
+  position: relative;
   background: url("../images/products/products-cta.png") center / cover no-repeat;
-  padding: 50px 0;
-  color: #fff;
+  padding: 120px 20px;
+  color: #ffffff;
+  text-align: center;
 }
 
-.bottom-cta .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+/* DARK OVERLAY */
+.products-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.bottom-cta .cta-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+/* CONTENT */
+.products-cta-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
-.bottom-cta h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
+.products-cta-content h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
 }
 
-.bottom-cta p {
-  font-size: 14px;
+.products-cta-content p {
+  font-size: 16px;
+  line-height: 1.7;
   opacity: 0.9;
-  max-width: 500px;
+  margin-bottom: 40px;
 }
 
-/* =========================
-   RESPONSIVE (MATCH HOME)
-========================= */
-@media (max-width: 991px) {
+/* BUTTONS */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .products-grid .container,
-  .services-products .services-grid {
-    grid-template-columns: 1fr;
+.cta-btn {
+  padding: 14px 34px;
+  border-radius: 32px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+.cta-btn.primary {
+  background: #8b5a2b;
+  color: #ffffff;
+}
+
+.cta-btn.primary:hover {
+  background: #6f4320;
+  transform: translateY(-2px);
+}
+
+/* SECONDARY */
+.cta-btn.secondary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.cta-btn.secondary:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+
+/* OUTLINE */
+.cta-btn.outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.cta-btn.outline:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .products-cta-content h2 {
+    font-size: 28px;
   }
 
-  .products-cta .cta-flex,
-  .bottom-cta .cta-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .products-cta img {
-    max-width: 100%;
+  .products-cta {
+    padding: 90px 20px;
   }
 }
+
