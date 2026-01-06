@@ -11,12 +11,13 @@
 /* =========================
    TOP INFO BAR
 ========================= */
-..top-info-bar {
+.top-info-bar {
   background-image: url("images/wooden-strip.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
   background-position: center;
 }
+
 
 .info-container {
   max-width: 1200px;
