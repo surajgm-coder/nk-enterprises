@@ -11,10 +11,11 @@
 /* =========================
    TOP INFO BAR
 ========================= */
-.top-info-bar {
-  background: #7a4a1e;
-  color: #fff;
-  font-size: 14px;
+..top-info-bar {
+  background-image: url("images/wooden-strip.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
 }
 
 .info-container {
