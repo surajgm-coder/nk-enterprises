@@ -2,65 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About NK Enterprises | Fabricating Tomorrow’s Innovation</title>
-  <meta name="description" content="Learn about NK Enterprises – a trusted manufacturer of furniture, fixtures, metal fabrication and industrial solutions.">
+  <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
 
-<!-- ==================================================
-     FIXED HEADER
-================================================== -->
-<header class="site-header-wrap">
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
 
-  <!-- Top Info Bar -->
-  <div class="top-info-bar">
-    <div class="container">
-      <address>
-        <a href="mailto:support@nkenters.com">
-          <i class="fa-solid fa-envelope"></i> support@nkenters.com
-        </a>
-        &nbsp; | &nbsp;
-        <a href="tel:+916372352301">
-          <i class="fa-solid fa-phone"></i> +91 63723 52301
-        </a>
-        &nbsp; | &nbsp;
-        <a href="tel:+919699540314">+91 96995 40314</a>
-      </address>
+ <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="info-container">
+
+    <!-- RIGHT ALIGNED CONTENT -->
+    <div class="info-right">
+      <a href="mailto:support@nkenters.com">
+        <i class="fa-solid fa-envelope"></i> support@nkenters.com
+      </a>
+
+      <a href="tel:+916372352301">
+        <i class="fa-solid fa-phone"></i> +91 63723 52301
+      </a>
+
+      <a href="tel:+919699540314">
+        | +91 96995 40314
+      </a>
     </div>
-  </div>
 
-  <!-- Main Header -->
-  <div class="main-header">
+  </div>
+</div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
     <div class="header-container">
 
-      <!-- Logo -->
+      <!-- LOGO -->
       <div class="logo">
         <a href="index.html">
           <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
         </a>
       </div>
 
-      <!-- Mobile Toggle -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
+      <!-- MOBILE MENU TOGGLE -->
+      <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
       </button>
 
-      <!-- Navigation -->
-      <nav class="main-nav" aria-label="Primary Navigation">
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About Us</a></li>
@@ -71,47 +79,47 @@
         </ul>
       </nav>
 
-      <!-- CTA -->
-      <a href="contact.html" class="btn-primary">Get a Quote</a>
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
 
     </div>
+
     <div class="nav-divider"></div>
-  </div>
+  </header>
 
-</header>
-
-<!-- ==================================================
+</div>
+<!-- =========================
      PAGE HERO
-================================================== -->
+========================= -->
 <section class="page-hero">
   <div class="page-hero-overlay">
-    <div class="container page-hero-content">
+    <div class="page-hero-content">
       <h1>About NK Enterprises</h1>
       <p>Fabricating Tomorrow’s Innovation</p>
     </div>
   </div>
 </section>
 
-<!-- ==================================================
-     MAIN CONTENT
-================================================== -->
-<main>
-
 <!-- =========================
-     WHO WE ARE
+     ABOUT – WHO WE ARE
 ========================= -->
 <section class="about-intro">
   <div class="container grid-2">
 
     <!-- Content -->
-    <article class="about-content">
+    <div class="about-content">
       <h2 class="section-title">
-        <i class="fas fa-cube"></i> Who We Are
+        <span class="icon">
+          <i class="fas fa-cube"></i>
+        </span>
+        Who We Are
       </h2>
 
       <p>
         Established in 2023, <strong>NK Enterprises</strong> is a trusted name in
-        <strong>furniture, fixture, metal fabrication</strong>, and
+        <strong>furniture, fixture, metal fabrication,</strong> and
         <strong>industrial manufacturing solutions</strong>.
       </p>
 
@@ -124,19 +132,32 @@
       <h4 class="strength-title">Our strength lies in:</h4>
 
       <ul class="strength-list">
-        <li><i class="fas fa-check-circle"></i> Skilled & experienced manpower</li>
-        <li><i class="fas fa-check-circle"></i> Advanced fabrication techniques</li>
-        <li><i class="fas fa-check-circle"></i> Premium-quality, durable products</li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          Skilled and experienced manpower
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          Modern and advanced fabrication techniques
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          Commitment to durable, functional, and premium-quality products
+        </li>
       </ul>
-    </article>
+    </div>
 
     <!-- Image -->
-    <figure class="about-image">
-      <img src="images/about/about-intro.png" alt="NK Enterprises fabrication facility and skilled workforce">
-      <figcaption class="image-caption">
-        <i class="fas fa-industry"></i> NK Enterprises Fabrication Facility
-      </figcaption>
-    </figure>
+    <div class="about-image">
+      <img 
+        src="images/about/about-intro.png" 
+        alt="NK Enterprises Fabrication Facility – Skilled Team at Work"
+      >
+      <span class="image-caption">
+        <i class="fas fa-industry"></i>
+        NK Enterprises Fabrication Facility
+      </span>
+    </div>
 
   </div>
 </section>
@@ -147,34 +168,45 @@
 <section class="mission-vision">
   <div class="container grid-2">
 
-    <!-- Image -->
-    <figure class="mission-image">
-      <img src="images/about/mission-vision.png" alt="NK Enterprises mission and vision in advanced manufacturing">
-    </figure>
+    <!-- LEFT IMAGE -->
+    <div class="mission-image">
+      <img 
+        src="images/about/mission-vision.png" 
+        alt="NK Enterprises Mission and Vision – Advanced Manufacturing Process"
+      >
+    </div>
 
-    <!-- Content -->
-    <article class="mission-content">
+    <!-- RIGHT CONTENT -->
+    <div class="mission-content">
       <h2 class="section-title">
-        <i class="fas fa-bullseye"></i> Our Mission & Vision
+        <i class="fas fa-bullseye"></i>
+        Our Mission & Vision
       </h2>
 
       <div class="mission-block">
-        <h4><i class="fas fa-crosshairs"></i> Our Mission</h4>
+        <h4>
+          <i class="fas fa-crosshairs"></i>
+          Our Mission
+        </h4>
         <p>
-          To deliver <strong>high-quality, reliable</strong> and
-          cost-effective fabrication solutions through skilled craftsmanship,
-          modern technology, and a customer-first approach.
+          To deliver <strong>high-quality, reliable,</strong> and
+          cost-effective fabrication solutions by combining skilled
+          craftsmanship, advanced technology, and a customer-first approach.
         </p>
       </div>
 
       <div class="vision-block">
-        <h4><i class="fas fa-rocket"></i> Our Vision</h4>
+        <h4>
+          <i class="fas fa-rocket"></i>
+          Our Vision
+        </h4>
         <p>
-          To become a leading <strong>manufacturing and fabrication partner</strong>
-          recognised for innovation, quality excellence, and long-term client relationships.
+          To become a leading fabrication and <strong>manufacturing partner</strong>
+          recognized for innovation, quality excellence, and long-term client
+          relationships across industries.
         </p>
       </div>
-    </article>
+    </div>
 
   </div>
 </section>
@@ -186,78 +218,136 @@
   <div class="container">
 
     <h2 class="section-title center">
-      <i class="fas fa-briefcase"></i> What We Do
+      <i class="fas fa-briefcase"></i>
+      What We Do
     </h2>
 
     <div class="what-we-do-grid">
-      <a href="services.html" class="service-box"><i class="fas fa-handshake"></i><h4>Furniture & Fixtures Fabrication</h4></a>
-      <a href="services.html" class="service-box"><i class="fas fa-industry"></i><h4>Custom Metal Fabrication</h4></a>
-      <a href="services.html" class="service-box"><i class="fas fa-warehouse"></i><h4>Industrial Manufacturing Solutions</h4></a>
-      <a href="services.html" class="service-box"><i class="fas fa-tools"></i><h4>Structural & Precision Components</h4></a>
-      <a href="services.html" class="service-box"><i class="fas fa-project-diagram"></i><h4>Project-Based Fabrication</h4></a>
-    </div>
 
+      <a href="furniture-fixtures.html" class="service-box">
+        <i class="fas fa-handshake"></i>
+        <h4>Furniture & Fixtures Fabrication</h4>
+      </a>
+
+      <a href="metal-fabrication.html" class="service-box">
+        <i class="fas fa-industry"></i>
+        <h4>Custom Metal Fabrication</h4>
+      </a>
+
+      <a href="industrial-solutions.html" class="service-box">
+        <i class="fas fa-warehouse"></i>
+        <h4>Industrial Manufacturing Solutions</h4>
+      </a>
+
+      <a href="precision-components.html" class="service-box">
+        <i class="fas fa-tools"></i>
+        <h4>Structural & Precision Components</h4>
+      </a>
+
+      <a href="project-fabrication.html" class="service-box">
+        <i class="fas fa-project-diagram"></i>
+        <h4>Project-Based Fabrication Work</h4>
+      </a>
+
+    </div>
   </div>
 </section>
 
 <!-- =========================
-     WHY CHOOSE US
+     WHY CHOOSE NK ENTERPRISES
 ========================= -->
 <section class="why-choose">
   <div class="container">
 
     <h2 class="section-title center">
-      <i class="fas fa-truck"></i> Why Choose NK Enterprises
+      <i class="fas fa-truck"></i>
+      Why Choose NK Enterprises
     </h2>
 
     <div class="why-choose-grid">
-      <div class="why-box"><i class="fas fa-shield-alt"></i><h4>Quality First</h4><p>No compromise on standards</p></div>
-      <div class="why-box"><i class="fas fa-handshake"></i><h4>Integrity</h4><p>Transparent commitments</p></div>
-      <div class="why-box"><i class="fas fa-lightbulb"></i><h4>Innovation</h4><p>Modern methods</p></div>
-      <div class="why-box"><i class="fas fa-clock"></i><h4>Reliability</h4><p>On-time delivery</p></div>
-      <div class="why-box"><i class="fas fa-user-friends"></i><h4>Customer Focus</h4><p>Long-term partnerships</p></div>
-    </div>
 
+      <a href="quality.html" class="why-box">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Quality First</h4>
+        <p>No compromise on standards</p>
+      </a>
+
+      <a href="integrity.html" class="why-box">
+        <i class="fas fa-handshake"></i>
+        <h4>Integrity</h4>
+        <p>Transparent processes & commitments</p>
+      </a>
+
+      <a href="innovation.html" class="why-box">
+        <i class="fas fa-lightbulb"></i>
+        <h4>Innovation</h4>
+        <p>Modern methods & continuous improvement</p>
+      </a>
+
+      <a href="reliability.html" class="why-box">
+        <i class="fas fa-clock"></i>
+        <h4>Reliability</h4>
+        <p>On-time dependable execution</p>
+      </a>
+
+      <a href="customer-focus.html" class="why-box">
+        <i class="fas fa-user-friends"></i>
+        <h4>Customer Focus</h4>
+        <p>Long-term partnerships</p>
+      </a>
+
+    </div>
   </div>
 </section>
 
 <!-- =========================
-     FINAL CTA
+     FINAL CTA SECTION
 ========================= -->
 <section class="cta-full">
   <div class="cta-overlay"></div>
+
   <div class="cta-content">
     <i class="fas fa-cog cta-icon"></i>
+
     <h2>Let’s Build Something<br>Exceptional</h2>
-    <a href="contact.html" class="cta-btn">Get a Quote</a>
+
+    <a href="contact.html" class="cta-btn">
+      GET A QUOTE
+    </a>
   </div>
 </section>
 
-</main>
 
-<!-- ==================================================
+<!-- =========================
      FOOTER
-================================================== -->
+========================= -->
 <footer class="site-footer">
   <div class="footer-inner">
 
-    <p>© 2023 NK Enterprises. All Rights Reserved.</p>
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
 
-    <nav>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="sitemap.xml">Sitemap</a>
-    </nav>
+    <div class="footer-center">
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Service</a>
+      <span>|</span>
+      <a href="#">Sitemap</a>
+    </div>
 
     <div class="footer-right">
-      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.youtube.com/@spadhyfun" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
     </div>
 
   </div>
 </footer>
+
+<!-- JS -->
+<script src="js/slider.js"></script>
 
 </body>
 </html>
