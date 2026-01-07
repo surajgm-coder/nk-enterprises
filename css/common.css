@@ -23,16 +23,13 @@
 
 /* =========================
    GLOBAL BODY & FONT
-   (ONLY ONE OFFSET – FIXED)
 ========================= */
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: var(--dark-brown);
   background: #ffffff;
-
-  /* FIXED HEADER OFFSET */
-  padding-top: 110px;
+  padding-top: 110px; /* desktop fixed header offset */
 }
 
 /* =========================
@@ -44,33 +41,47 @@ body {
 }
 
 .info-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6px 20px;
+  width: 90%;
+  margin: auto;
+  padding: 6px 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
 .info-left {
   display: flex;
   gap: 22px;
+  color: var(--silver);
 }
 
-.top-info-bar a {
-  color: #cfcfcf;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.top-info-bar i {
+.info-left i {
   margin-right: 6px;
 }
 
 /* =========================
-   FIXED HEADER
+   CTA / GLOBAL BUTTON
+========================= */
+.btn-quote {
+  background: linear-gradient(to bottom, #b08a57, #6f421f);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   FIXED HEADER WRAPPER
 ========================= */
 .site-header-wrap {
   position: fixed;
@@ -81,25 +92,41 @@ body {
   background: var(--cream);
 }
 
+/* =========================
+   MAIN HEADER
+========================= */
 .main-header {
   background: var(--cream);
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .header-container {
-  max-width: 1200px;
+  width: 90%;
   margin: auto;
-  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
 }
 
 /* =========================
    LOGO
 ========================= */
+.logo {
+  position: relative;
+}
+
 .logo img {
   height: 68px;
+}
+
+.logo-underline {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, var(--gold), transparent);
 }
 
 /* =========================
@@ -112,11 +139,13 @@ body {
 }
 
 .main-nav a {
+  font-family: 'Poppins', Arial, sans-serif;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   color: var(--espresso);
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .main-nav a::after {
@@ -142,30 +171,30 @@ body {
 }
 
 /* =========================
-   CTA BUTTON
+   NAV DIVIDER
 ========================= */
-.btn-quote {
-  background: linear-gradient(to bottom, #b08a57, #6f421f);
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 11.5px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+.nav-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold),
+    var(--gold-soft),
+    var(--gold),
+    transparent
+  );
 }
 
 /* =========================
-   🚫 HERO / BANNER GAP FIX
-   (THIS SOLVES YOUR ISSUE)
+   HAMBURGER BUTTON
 ========================= */
-.page-banner,
-.inner-banner,
-.hero-section,
-.breadcrumb-area,
-section:first-of-type {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--espresso);
 }
 
 /* =========================
@@ -182,32 +211,108 @@ section:first-of-type {
   margin: auto;
   padding: 18px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* =========================
+/* LEFT */
+.footer-left {
+  white-space: nowrap;
+}
+
+/* CENTER */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-center a {
+  color: #d6d6d6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center span {
+  color: #bfbfbf;
+}
+
+.footer-center a:hover {
+  color: var(--gold);
+}
+
+/* RIGHT */
+.footer-right {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-right a {
+  color: #d6d6d6;
+  font-size: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   GLOBAL MOBILE SYSTEM – ALL PAGES
+================================================== */
+
+/* -------------------------
    MOBILE & TABLET
-========================= */
+------------------------- */
 @media (max-width: 991px) {
 
   body {
-    padding-top: 124px;
+    padding-top: 124px; /* calibrated mobile header height */
   }
 
+  /* TOP INFO BAR */
+  .top-info-bar {
+    font-size: 11px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px 0;
+    text-align: center;
+  }
+
+  .info-left {
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.3;
+  }
+
+  /* HEADER */
   .header-container {
     flex-wrap: wrap;
+    padding: 6px 0;
   }
 
+  .logo img {
+    height: 54px;
+  }
+
+  /* HAMBURGER */
   .nav-toggle {
     display: block;
   }
 
+  /* NAV (MOBILE) */
   .main-nav {
-    display: none;
     width: 100%;
-    margin-top: 8px;
+    display: none;
     background: var(--cream);
+    margin-top: 8px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    overflow: hidden;
   }
 
   .main-nav.active {
@@ -218,20 +323,151 @@ section:first-of-type {
     flex-direction: column;
   }
 
+  .main-nav li {
+    border-bottom: 1px solid #e6e0d9;
+  }
+
+  .main-nav li:last-child {
+    border-bottom: none;
+  }
+
   .main-nav a {
     padding: 14px;
+    font-size: 15px;
     text-align: center;
+  }
+
+  /* GLOBAL GRID STACKING */
+  .cta-grid,
+  .features-grid,
+  .services-grid,
+  .projects-grid,
+  .stats-grid,
+  .wcu-cards {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  /* FLEX STACKING */
+  .features-container,
+  .row,
+  .flex-row {
+    flex-direction: column;
+    gap: 24px;
   }
 }
 
-/* =========================
+/* -------------------------
    SMALL MOBILE
-========================= */
+------------------------- */
 @media (max-width: 768px) {
 
   .footer-inner {
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+
+  .footer-center span {
+    display: none;
+  }
+
+  .footer-right a {
+    font-size: 18px;
+  }
+}
+
+/* -------------------------
+   MOBILE FEATURE CARDS FIX
+------------------------- */
+@media (max-width: 768px) {
+
+  .features-section {
+    padding: 50px 0;
+  }
+
+  .features-container {
+    gap: 30px;
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 18px;
+    text-align: left;
+  }
+
+  .feature-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .feature-item h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .feature-item p {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+}
+/* ==================================================
+   CTA SECTION – MOBILE FIX (GLOBAL)
+   Applies to ALL pages
+================================================== */
+
+@media (max-width: 991px) {
+
+  /* Stack CTA cards */
+  .cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  /* Remove desktop overlap */
+  .cta-card {
+    margin-top: 0;
+    padding: 28px 22px;
+  }
+
+  /* Resize & center icon */
+  .cta-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Improve text readability */
+  .cta-card ul li {
+    font-size: 14px;
+  }
+
+  /* Full-width CTA button */
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Wooden heading strip fix */
+  .cta-headings {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .cta-headings .divider {
+    display: none;
   }
 }
