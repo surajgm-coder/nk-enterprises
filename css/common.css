@@ -48,7 +48,7 @@ body {
   padding: 6px 20px;
 
   display: flex;
-  justify-content: flex-end;   /* ✅ RIGHT ALIGN */
+  justify-content: flex-end;   /* RIGHT ALIGN */
   align-items: center;
 }
 
@@ -58,23 +58,27 @@ body {
   gap: 22px;
 }
 
-/* LINKS */
+/* LINKS – SILVER + BOLD */
 .info-left a {
-  color: var(--silver);
+  color: #cfcfcf;              /* Silver color */
+  font-weight: 700;            /* Bold */
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); /* Clarity on wood bg */
 }
 
+/* HOVER */
 .info-left a:hover {
-  color: var(--gold);
+  color: #f1d28a;              /* Gold hover */
 }
 
+/* ICONS */
 .info-left i {
+  color: #e0e0e0;              /* Light silver icons */
   margin-right: 6px;
 }
-
 
 /* =========================
    FIXED HEADER WRAPPER
