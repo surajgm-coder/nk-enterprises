@@ -1,30 +1,15 @@
-
-/* =========================
-   HERO SECTION
-========================= */
+/* ==================================================
+   HOME – HERO SECTION
+================================================== */
 .hero {
   position: relative;
-  width: 100%;
-  height: 60vh;
+  height: 70vh;
+  min-height: 480px;
   overflow: hidden;
 }
 
-/* SLIDES */
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.hero-slide.active {
-  opacity: 1;
-}
-
-/* OVERLAY */
-.hero-overlay {
+.hero::before {
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -33,23 +18,31 @@
     rgba(0,0,0,0.25) 60%,
     rgba(0,0,0,0) 100%
   );
-  display: flex;
-  align-items: flex-start;
+  z-index: 1;
 }
 
-/* CONTENT */
+.hero {
+  background: url("../images/home/hero-1.jpg") center/cover no-repeat;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .hero-content {
   max-width: 620px;
   color: #ffffff;
-  margin-top: 140px;
 }
-
 
 .hero-content h1 {
   font-size: 52px;
-  line-height: 1.1;
-  margin-bottom: 16px;
   font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 
 .hero-content h1 span {
@@ -59,36 +52,16 @@
 .hero-content p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
-/* BUTTONS */
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-}
-
-.btn-primary {
-  background: linear-gradient(to bottom, #9c6233, #6f421f);
-  color: #ffffff;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-}
-
-/* =========================
+/* ==================================================
    ABOUT INTRO
-========================= */
+================================================== */
 .about-intro {
   background: #f7f3ef;
-  padding: 80px 20px;
+  padding: 80px 0;
   text-align: center;
-}
-
-.about-container {
-  max-width: 900px;
-  margin: auto;
 }
 
 .about-intro h2 {
@@ -98,33 +71,26 @@
 }
 
 .about-intro p {
+  max-width: 900px;
+  margin: 0 auto 30px;
   font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 30px;
 }
 
-/* =========================
-   FEATURES SECTION (3D)
-========================= */
+/* ==================================================
+   FEATURES SECTION
+================================================== */
 .features-section {
   padding: 80px 0;
-  perspective: 1200px;
   background: #ffffff;
 }
 
-/* MAIN CONTAINER — aligned with header width */
 .features-container {
-  width: 90%;
-  max-width: 1200px; /* keeps alignment same as header/logo */
-  margin: auto;
   display: flex;
-  align-items: center;
   gap: 60px;
+  align-items: center;
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
 .features-left {
   flex: 1.2;
 }
@@ -133,7 +99,6 @@
   font-size: 34px;
   margin-bottom: 18px;
   font-weight: 600;
-  color: #2b1d14;
 }
 
 .features-left p {
@@ -143,66 +108,44 @@
   color: #555;
 }
 
-/* =========================
-   FEATURE CARDS LIST
-========================= */
+/* Feature Cards */
 .features-list {
   display: flex;
   gap: 25px;
 }
 
-/* =========================
-   CLICKABLE FEATURE CARD
-========================= */
 .feature-item {
-  display: block;                  /* IMPORTANT for <a> */
   flex: 1;
   background: #f7f3ef;
-  padding: 30px 22px;
+  padding: 28px 22px;
   border-radius: 12px;
   text-align: center;
-  text-decoration: none;           /* remove underline */
-  color: inherit;                  /* keep text color */
-  cursor: pointer;
-
-  transform-style: preserve-3d;
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
 .feature-item:hover {
-  transform: translateY(-14px) rotateX(6deg);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
-/* =========================
-   FEATURE ICON
-========================= */
-.feature-icon {
-  width: 60px;
-  height: 60px;
+.feature-item i {
+  width: 56px;
+  height: 56px;
   background: linear-gradient(to bottom, #9c6233, #6f421f);
   color: #f5e6d2;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin: 0 auto 15px;
   font-size: 22px;
-  transform: translateZ(30px);
+  margin-bottom: 14px;
 }
 
-/* =========================
-   FEATURE TEXT
-========================= */
-.feature-item h4 {
+.feature-item h3 {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 600;
-  color: #2b1d14;
 }
 
 .feature-item p {
@@ -211,22 +154,9 @@
   color: #555;
 }
 
-/* =========================
-   RIGHT IMAGE CARD
-========================= */
+/* Feature Image */
 .features-right {
   flex: 0.9;
-  position: relative;
-  transform-style: preserve-3d;
-  transition:
-    transform 0.6s ease,
-    box-shadow 0.6s ease;
-  border-radius: 14px;
-}
-
-.features-right:hover {
-  transform: rotateY(-6deg) rotateX(4deg) translateY(-10px);
-  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
 }
 
 .features-right img {
@@ -235,93 +165,9 @@
   display: block;
 }
 
-/* =========================
-   IMAGE OVERLAY DEPTH
-========================= */
-.features-right::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(0, 0, 0, 0.25)
-  );
-  pointer-events: none;
-}
-
-/* =========================
-   CTA OVER IMAGE
-========================= */
-.feature-cta {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 22px 26px;
-  border-radius: 8px;
-  color: #ffffff;
-  transform: translateZ(40px);
-  transition: transform 0.4s ease;
-}
-
-.features-right:hover .feature-cta {
-  transform: translateZ(70px);
-}
-
-.feature-cta h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.feature-cta span {
-  color: #c28a4b;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .features-container {
-    flex-direction: column;
-  }
-
-  .features-list {
-    flex-direction: column;
-  }
-
-  .features-right {
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 768px) {
-  .features-left h2 {
-    font-size: 26px;
-  }
-
-  .feature-cta {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 15px;
-  }
-}
-
-/* =========================
-   GLOBAL CONTAINER (IMPORTANT)
-========================= */
-.container {
-  max-width: 1200px;      /* same as header */
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* =========================
-   STATS STRIP
-========================= */
+/* ==================================================
+   STATS SECTION
+================================================== */
 .wcu-stats {
   background: url("../images/home/industrial.png") center/cover no-repeat;
 }
@@ -329,24 +175,25 @@
 .wcu-stats .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  text-align: center;
   padding: 40px 0;
+  text-align: center;
 }
 
-.wcu-stats h3 {
-  color: #fff;
+.wcu-stats strong {
+  display: block;
+  color: #ffffff;
   font-size: 32px;
   font-weight: 700;
 }
 
-.wcu-stats p {
-  color: #e6d6c4;
+.wcu-stats span {
   font-size: 13px;
+  color: #e6d6c4;
 }
 
-/* =========================
-   PRODUCTS SECTION
-========================= */
+/* ==================================================
+   PRODUCTS GRID
+================================================== */
 .wcu-cream {
   background: url("../images/home/cta-cream.png") center/cover no-repeat;
   padding: 70px 0;
@@ -359,20 +206,18 @@
   text-align: center;
 }
 
-/* GRID — FIXED WIDTH, NO ZOOM SHIFT */
 .wcu-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 26px;
 }
 
-/* CARD */
 .wcu-card {
   background: #fff;
   border-radius: 6px;
   padding: 14px;
   text-decoration: none;
-  color: #2b1d14;
+  color: inherit;
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -384,7 +229,6 @@
 
 .wcu-card img {
   width: 100%;
-  display: block;
   border-radius: 4px;
 }
 
@@ -395,166 +239,10 @@
   text-align: center;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 1024px) {
-  .wcu-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .wcu-stats .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  .wcu-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   GLOBAL CONTAINER (REUSE)
-========================= */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* =========================
+/* ==================================================
    CTA SECTION
-========================= */
+================================================== */
 .cta-section {
-  width: 100%;
-}
-
-/* TOP STRIP */
-.cta-top {
-  background: #f6efe7;
-  padding: 30px 0;
-}
-
-.cta-top-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-
-/* LOGO */
-.cta-top-inner img {
-  height: 55px;
-}
-
-/* CENTER TEXT */
-.cta-text {
-  justify-self: center;
-  font-size: 22px;
-  font-weight: 600;
-  color: #2d1f14;
-  margin: 0;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.cta-text span {
-  color: #b87333;
-}
-
-/* =========================
-   WOOD STRIP
-========================= */
-.cta-heading-strip {
-  background: url("../images/wooden-strip.png") center/cover no-repeat;
-  padding: 22px 0;
-}
-
-.cta-headings {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-}
-
-.cta-headings .divider {
-  width: 1px;
-  height: 22px;
-  background: rgba(255,255,255,0.4);
-}
-
-/* =========================
-   GLOBAL CONTAINER
-========================= */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-/* =========================
-   CTA SECTION
-========================= */
-.cta-section {
-  width: 100%;
-}
-
-/* =========================
-   TOP STRIP
-========================= */
-.cta-top {
-  background: #f6efe7;
-  padding: 30px 0;
-}
-
-.cta-top-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-
-.cta-top-inner img {
-  height: 55px;
-}
-
-.cta-text {
-  justify-self: center;
-  font-size: 22px;
-  font-weight: 600;
-  color: #2d1f14;
-  margin: 0;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.cta-text span {
-  color: #b87333;
-}
-
-/* =========================
-   HEADING STRIP
-========================= */
-.cta-heading-strip {
-  background: url("../images/wooden-strip.png") center/cover no-repeat;
-  padding: 22px 0;
-}
-
-.cta-headings {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-  color: #ffffff;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-}
-
-/* =========================
-   CTA CONTENT
-========================= */
-.cta-content {
   background: #f6efe7;
   padding: 70px 0;
 }
@@ -565,50 +253,41 @@
   gap: 28px;
 }
 
-/* =========================
-   CTA CARD
-========================= */
 .cta-card {
   background: #ffffff;
   padding: 30px 24px;
   border-radius: 16px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-10px);
   box-shadow: 0 22px 50px rgba(0,0,0,0.22);
 }
 
-/* =========================
-   ICON
-========================= */
 .cta-icon {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, #8b5a2b, #b87333);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 26px;
-  margin-bottom: 18px;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
-/* =========================
-   LIST
-========================= */
 .cta-card ul {
   list-style: none;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .cta-card ul li {
   font-size: 13.5px;
   margin-bottom: 10px;
-  padding-left: 16px;
+  padding-left: 14px;
   position: relative;
 }
 
@@ -616,70 +295,43 @@
   content: "■";
   position: absolute;
   left: 0;
-  top: 5px;
+  top: 4px;
   font-size: 8px;
   color: #b87333;
 }
 
-/* =========================
-   TEXT
-========================= */
-.about-text {
-  font-size: 13.5px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-}
-
-.contact-text {
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.contact-text i {
-  color: #b87333;
-  margin-right: 6px;
-}
-
-/* =========================
-   BUTTON
-========================= */
-.cta-btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 11px 26px;
-  background: linear-gradient(135deg, #b87333, #8b5a2b);
-  color: #ffffff;
-  font-size: 12.5px;
-  font-weight: 600;
-  border-radius: 22px;
-  text-decoration: none;
-}
-
-/* =========================
+/* ==================================================
    RESPONSIVE
-========================= */
+================================================== */
 @media (max-width: 1024px) {
+
+  .features-container {
+    flex-direction: column;
+  }
+
+  .features-list {
+    flex-direction: column;
+  }
+
+  .wcu-cards,
   .cta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cta-headings {
+  .wcu-stats .container {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
+    gap: 24px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .wcu-cards,
   .cta-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cta-headings {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-text {
-    font-size: 18px;
-    white-space: normal;
   }
 }
