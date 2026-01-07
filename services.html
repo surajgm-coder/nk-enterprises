@@ -2,56 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Services | NK Enterprises</title>
-  <meta name="description" content="NK Enterprises provides industrial fabrication, metal works, custom engineering, and commercial interior solutions.">
+  <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
 
-<!-- ==================================================
-     HEADER (SAME AS OTHER PAGES)
-================================================== -->
-<header class="site-header-wrap">
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
 
-  <div class="top-info-bar">
-    <div class="container">
-      <address>
-        <a href="mailto:support@nkenters.com"><i class="fa-solid fa-envelope"></i> support@nkenters.com</a>
-        &nbsp;|&nbsp;
-        <a href="tel:+916372352301"><i class="fa-solid fa-phone"></i> +91 63723 52301</a>
-        &nbsp;|&nbsp;
-        <a href="tel:+919699540314">+91 96995 40314</a>
-      </address>
+ <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="info-container">
+
+    <!-- RIGHT ALIGNED CONTENT -->
+    <div class="info-right">
+      <a href="mailto:support@nkenters.com">
+        <i class="fa-solid fa-envelope"></i> support@nkenters.com
+      </a>
+
+      <a href="tel:+916372352301">
+        <i class="fa-solid fa-phone"></i> +91 63723 52301
+      </a>
+
+      <a href="tel:+919699540314">
+        | +91 96995 40314
+      </a>
     </div>
-  </div>
 
-  <div class="main-header">
+  </div>
+</div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
     <div class="header-container">
 
+      <!-- LOGO -->
       <div class="logo">
         <a href="index.html">
           <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
         </a>
       </div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
+      <!-- MOBILE MENU TOGGLE -->
+      <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
       </button>
 
-      <nav class="main-nav" aria-label="Primary Navigation">
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -62,160 +79,226 @@
         </ul>
       </nav>
 
-      <a href="contact.html" class="btn-primary">Get a Quote</a>
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
 
     </div>
+
     <div class="nav-divider"></div>
-  </div>
+  </header>
 
-</header>
-
-<!-- ==================================================
-     PAGE HERO
-================================================== -->
+</div>
+  <!-- =========================
+   SERVICES HERO
+========================= -->
 <section class="services-hero">
   <div class="services-hero-overlay">
     <div class="container">
-      <h1>Our Services</h1>
+      <h1>Services</h1>
       <p>Home / Services</p>
     </div>
   </div>
 </section>
-
-<!-- ==================================================
-     MAIN CONTENT
-================================================== -->
-<main>
-
+  
 <!-- =========================
-     SERVICES INTRO
+   SERVICES INTRO SECTION
 ========================= -->
-<section class="services-intro">
-  <div class="container services-intro-grid">
+<section class="services-intro-feature">
+  <div class="container">
 
+    <!-- LEFT: IMAGE -->
     <div class="services-intro-image">
-      <img src="images/services/services-intro.png" alt="Furniture and fixture manufacturing by NK Enterprises">
+      <img
+        src="images/services/services-intro.png"
+        alt="Furniture & Fixture Manufacturing"
+      />
     </div>
 
-    <article class="services-intro-content">
-      <h2>Comprehensive Furniture & Fabrication Solutions</h2>
-      <p>
-        We deliver precision-driven furniture, fixture, and metal fabrication
-        solutions designed to meet industrial and commercial requirements.
+    <!-- RIGHT: CONTENT -->
+    <div class="services-intro-content">
+      <h2>Comprehensive Furniture & Fixture Manufacturing Solutions</h2>
+
+      <p class="intro-text">
+        Delivering quality, precision, and reliability in every project through
+        custom furniture, fixtures, and metal fabrication solutions.
       </p>
 
-      <ul>
-        <li><strong>Precision Manufacturing:</strong> Accurate, durable, and high-quality finishes.</li>
-        <li><strong>End-to-End Solutions:</strong> From design support to installation.</li>
+      <ul class="intro-points">
+        <li>
+          <strong>Precision Manufacturing</strong><br>
+          Advanced fabrication techniques ensuring accuracy, durability,
+          and superior finish across all projects.
+        </li>
+        <li>
+          <strong>End-to-End Solutions</strong><br>
+          From concept and design to production and installation, we deliver
+          complete manufacturing solutions.
+        </li>
       </ul>
 
-      <a href="contact.html" class="btn-primary">Get in Touch</a>
-    </article>
+      <div class="intro-actions">
+        <a href="contact.html" class="intro-cta">
+          Get in Touch
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <!-- =========================
-     SERVICES GRID
+   SERVICES GRID
 ========================= -->
 <section class="services-grid">
-  <div class="container services-grid-inner">
+  <div class="container">
 
-    <article class="service-card">
-      <img src="images/services/service1.png" alt="Industrial Fabrication">
+    <div class="service-card">
+      <img src="images/services/service1.png" alt="Service 1">
       <h3>Industrial Fabrication</h3>
-      <p>Precision-engineered fabrication for industrial projects.</p>
-    </article>
+      <p>
+        Precision-engineered industrial fabrication solutions for
+        manufacturing and infrastructure projects.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
 
-    <article class="service-card">
-      <img src="images/services/service2.png" alt="Metal Works">
+    <div class="service-card">
+      <img src="images/services/service2.png" alt="Service 2">
       <h3>Metal Works</h3>
-      <p>Custom welding, cutting, and assembly solutions.</p>
-    </article>
+      <p>
+        Custom metal works including welding, cutting, and assembly
+        with high durability standards.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
 
-    <article class="service-card">
-      <img src="images/services/service3.png" alt="Commercial Interiors">
+    <div class="service-card">
+      <img src="images/services/service3.png" alt="Service 3">
       <h3>Commercial Interiors</h3>
-      <p>Interior fabrication for offices and industrial spaces.</p>
-    </article>
+      <p>
+        Interior fabrication solutions for offices, warehouses,
+        and industrial spaces.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
 
-    <article class="service-card">
-      <img src="images/services/service4.png" alt="Custom Engineering">
+    <div class="service-card">
+      <img src="images/services/service4.png" alt="Service 4">
       <h3>Custom Engineering</h3>
-      <p>Tailored engineering for complex requirements.</p>
-    </article>
+      <p>
+        Tailored engineering solutions designed to meet
+        complex industrial requirements.
+      </p>
+      <a href="#" class="card-btn">Read More</a>
+    </div>
 
   </div>
 </section>
 
 <!-- =========================
-     WHY CHOOSE US
+   WHY CHOOSE – CARDS
 ========================= -->
-<section class="services-why">
-  <div class="container why-grid">
+<section class="why-choose-cards">
+  <div class="container">
 
-    <article class="why-card">
-      <i class="fa-solid fa-cogs"></i>
-      <h3>Why Choose NK Enterprises</h3>
-      <ul>
-        <li>Skilled Workforce</li>
-        <li>Precision Engineering</li>
-        <li>On-Time Delivery</li>
-      </ul>
-    </article>
+    <!-- Card 1 -->
+    <div class="info-card">
+      <div class="card-header">
+        <span class="card-icon">
+          <i class="fas fa-cogs"></i>
+        </span>
+        <h3>Why Choose NK Enterprises</h3>
+      </div>
 
-    <article class="why-card">
-      <i class="fa-solid fa-industry"></i>
-      <h3>Industries We Serve</h3>
-      <ul>
-        <li>Manufacturing Plants</li>
-        <li>Commercial Warehouses</li>
-        <li>Workshops & Offices</li>
+      <ul class="card-list">
+        <li>Expertise & Skilled Workforce</li>
+        <li>Precision Engineering & Craftsmanship</li>
+        <li>Fully Customized Solutions</li>
+        <li>On-Time Project Delivery</li>
       </ul>
-    </article>
+
+      <a href="about.html" class="card-btn">
+        Learn More About Us →
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="info-card">
+      <div class="card-header">
+        <span class="card-icon">
+          <i class="fas fa-industry"></i>
+        </span>
+        <h3>Industries We Serve</h3>
+      </div>
+
+      <ul class="card-list">
+        <li>Manufacturing & Industrial Plants</li>
+        <li>Chemical & Process Industry</li>
+        <li>Workshops & Tool Rooms</li>
+        <li>Commercial Offices & Warehouses</li>
+      </ul>
+
+      <a href="projects.html" class="card-btn">
+        View All Industries →
+      </a>
+    </div>
 
   </div>
 </section>
-
+  
 <!-- =========================
-     FINAL CTA
+   SERVICE PAGE FINAL CTA
 ========================= -->
-<section class="services-cta">
-  <div class="services-cta-content">
-    <h2>Get in Touch for Your Next Project</h2>
-    <p>
-      NK Enterprises delivers innovative furniture, fabrication,
-      and industrial solutions with precision and reliability.
-    </p>
-    <a href="contact.html" class="btn-primary">Get in Touch</a>
+<section class="service-final-cta">
+  <div class="service-final-cta-inner">
+    <div class="cta-text">
+      <h2>Get in Touch for Your Next Project</h2>
+
+      <p>
+        NK Enterprises can take your next project across the finish line.
+        We establish design processes for innovative furniture, interiors,
+        products, and metal fabrication.
+      </p>
+
+      <a href="contact.html" class="cta-button">
+       Get in Touch
+      </a>
+    </div>
   </div>
 </section>
-
-</main>
-
-<!-- ==================================================
+  
+<!-- =========================
      FOOTER
-================================================== -->
+========================= -->
 <footer class="site-footer">
   <div class="footer-inner">
 
-    <p>© 2023 NK Enterprises. All Rights Reserved.</p>
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
 
-    <nav>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="sitemap.xml">Sitemap</a>
-    </nav>
+    <div class="footer-center">
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Service</a>
+      <span>|</span>
+      <a href="#">Sitemap</a>
+    </div>
 
     <div class="footer-right">
-      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.youtube.com/@spadhyfun" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
     </div>
 
   </div>
 </footer>
+
+<!-- JS -->
+<script src="js/slider.js"></script>
 
 </body>
 </html>
