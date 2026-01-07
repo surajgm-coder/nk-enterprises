@@ -112,8 +112,10 @@
   background: #ffffff;
 }
 
+/* MAIN CONTAINER — aligned with header width */
 .features-container {
   width: 90%;
+  max-width: 1200px; /* keeps alignment same as header/logo */
   margin: auto;
   display: flex;
   align-items: center;
@@ -130,41 +132,55 @@
 .features-left h2 {
   font-size: 34px;
   margin-bottom: 18px;
+  font-weight: 600;
+  color: #2b1d14;
 }
 
 .features-left p {
   font-size: 15px;
   line-height: 1.7;
   margin-bottom: 35px;
+  color: #555;
 }
 
-/* FEATURE CARDS */
+/* =========================
+   FEATURE CARDS LIST
+========================= */
 .features-list {
   display: flex;
   gap: 25px;
 }
 
+/* =========================
+   CLICKABLE FEATURE CARD
+========================= */
 .feature-item {
+  display: block;                  /* IMPORTANT for <a> */
+  flex: 1;
   background: #f7f3ef;
   padding: 30px 22px;
   border-radius: 12px;
   text-align: center;
-  flex: 1;
+  text-decoration: none;           /* remove underline */
+  color: inherit;                  /* keep text color */
+  cursor: pointer;
+
   transform-style: preserve-3d;
   transition:
     transform 0.45s ease,
     box-shadow 0.45s ease;
-  box-shadow:
-    0 6px 15px rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .feature-item:hover {
   transform: translateY(-14px) rotateX(6deg);
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
 }
 
-/* ICON */
+/* =========================
+   FEATURE ICON
+========================= */
 .feature-icon {
   width: 60px;
   height: 60px;
@@ -179,16 +195,20 @@
   transform: translateZ(30px);
 }
 
-/* TEXT */
+/* =========================
+   FEATURE TEXT
+========================= */
 .feature-item h4 {
   font-size: 16px;
   margin-bottom: 10px;
   font-weight: 600;
+  color: #2b1d14;
 }
 
 .feature-item p {
   font-size: 14px;
   line-height: 1.6;
+  color: #555;
 }
 
 /* =========================
@@ -201,27 +221,28 @@
   transition:
     transform 0.6s ease,
     box-shadow 0.6s ease;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .features-right:hover {
   transform: rotateY(-6deg) rotateX(4deg) translateY(-10px);
-  box-shadow:
-    0 28px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
 }
 
 .features-right img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   display: block;
 }
 
-/* LIGHT OVERLAY FOR DEPTH */
+/* =========================
+   IMAGE OVERLAY DEPTH
+========================= */
 .features-right::after {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 12px;
+  border-radius: 14px;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.08),
@@ -229,6 +250,66 @@
   );
   pointer-events: none;
 }
+
+/* =========================
+   CTA OVER IMAGE
+========================= */
+.feature-cta {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 22px 26px;
+  border-radius: 8px;
+  color: #ffffff;
+  transform: translateZ(40px);
+  transition: transform 0.4s ease;
+}
+
+.features-right:hover .feature-cta {
+  transform: translateZ(70px);
+}
+
+.feature-cta h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.feature-cta span {
+  color: #c28a4b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+  }
+
+  .features-list {
+    flex-direction: column;
+  }
+
+  .features-right {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-left h2 {
+    font-size: 26px;
+  }
+
+  .feature-cta {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 15px;
+  }
+}
+
 
 /* =========================
    CTA OVER IMAGE
