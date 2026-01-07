@@ -40,16 +40,31 @@ body {
   font-size: 12px;
 }
 
+/* SAME WIDTH AS HEADER */
+.info-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px 20px;
+
+  display: flex;
+  justify-content: flex-end;   /* ✅ RIGHT ALIGN */
+  align-items: center;
+}
+
+/* RIGHT CONTENT */
 .info-left {
   display: flex;
   gap: 22px;
 }
 
+/* LINKS */
 .info-left a {
   color: var(--silver);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .info-left a:hover {
@@ -59,6 +74,7 @@ body {
 .info-left i {
   margin-right: 6px;
 }
+
 
 /* =========================
    FIXED HEADER WRAPPER
