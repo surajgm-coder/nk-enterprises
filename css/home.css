@@ -416,10 +416,18 @@
 }
 
 /* =========================
+   GLOBAL CONTAINER (REUSE)
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
    CTA SECTION
 ========================= */
-
-cta-section {
+.cta-section {
   width: 100%;
 }
 
@@ -429,11 +437,7 @@ cta-section {
   padding: 30px 0;
 }
 
-/* GRID LAYOUT */
 .cta-top-inner {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -459,20 +463,15 @@ cta-section {
   color: #b87333;
 }
 
-/* RIGHT EMPTY SPACE (BALANCE) */
-.cta-top-inner::after {
-  content: "";
-}
- 
-/* WOODEN STRIP (NO OVERLAY) */
+/* =========================
+   WOOD STRIP
+========================= */
 .cta-heading-strip {
   background: url("../images/wooden-strip.png") center/cover no-repeat;
   padding: 22px 0;
 }
 
 .cta-headings {
-  width: 90%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -488,49 +487,37 @@ cta-section {
 }
 
 /* =========================
-   CTA CONTENT SECTION (3D)
+   CTA CONTENT
 ========================= */
 .cta-content {
   background: #f6efe7;
   padding: 70px 0;
-  perspective: 1200px;
 }
 
 .cta-grid {
-  width: 90%;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
 
-/* =========================
-   CTA CARD (REDUCED SIZE + 3D)
-========================= */
+/* CARD */
 .cta-card {
   background: #ffffff;
-  padding: 30px 24px; /* ⬅ reduced size */
+  padding: 30px 24px;
   border-radius: 16px;
-  margin-top: -10px;
   transform-style: preserve-3d;
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-  box-shadow:
-    0 10px 26px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
 }
 
 .cta-card:hover {
-  transform: translateY(-14px) rotateX(6deg);
-  box-shadow:
-    0 22px 50px rgba(0,0,0,0.22);
+  transform: translateY(-12px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.22);
 }
 
-/* =========================
-   ICON (FLOATING LAYER)
-========================= */
+/* ICON */
 .cta-icon {
-  width: 60px;          /* ⬅ reduced */
+  width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #8b5a2b, #b87333);
   border-radius: 50%;
@@ -538,25 +525,21 @@ cta-section {
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 26px;      /* ⬅ reduced */
+  font-size: 26px;
   margin-bottom: 18px;
-  transform: translateZ(30px);
 }
 
-/* =========================
-   LIST
-========================= */
+/* LIST */
 .cta-card ul {
   list-style: none;
   margin-bottom: 22px;
 }
 
 .cta-card ul li {
-  font-size: 13.5px;   /* ⬅ slightly smaller */
+  font-size: 13.5px;
   margin-bottom: 10px;
   padding-left: 16px;
   position: relative;
-  line-height: 1.5;
 }
 
 .cta-card ul li::before {
@@ -568,18 +551,14 @@ cta-section {
   color: #b87333;
 }
 
-/* =========================
-   TEXT
-========================= */
+/* TEXT */
 .about-text {
   font-size: 13.5px;
   margin-bottom: 16px;
-  line-height: 1.6;
 }
 
 .contact-text {
   font-size: 13px;
-  line-height: 1.6;
 }
 
 .contact-text i {
@@ -587,83 +566,30 @@ cta-section {
   margin-right: 6px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 .cta-btn {
   display: inline-block;
   margin-top: 16px;
-  padding: 11px 26px; /* ⬅ reduced */
+  padding: 11px 26px;
   background: linear-gradient(135deg, #b87333, #8b5a2b);
   color: #ffffff;
   font-size: 12.5px;
   font-weight: 600;
   border-radius: 22px;
   text-decoration: none;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
-.cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
-}
 /* =========================
-   RESPONSIVE (HOME ONLY)
+   RESPONSIVE
 ========================= */
-
-/* TABLETS */
 @media (max-width: 1024px) {
-
-  .features-container {
-    flex-direction: column;
-  }
-
-  .features-list {
-    flex-direction: column;
-  }
-
-  .wcu-cards {
+  .cta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .hero {
-    height: auto;
-    min-height: 85vh;
-  }
-
-  .hero-content {
-    margin: 0 6%;
-  }
-
-  .hero-content h1 {
-    font-size: 34px;
-    line-height: 1.25;
-  }
-
-  .features-left h2 {
-    font-size: 26px;
-  }
-
-  /* CTA IMAGE CARD STACK */
-  .feature-cta {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 15px;
-  }
-
-  .wcu-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .wcu-cards {
+@media (max-width: 600px) {
+  .cta-grid {
     grid-template-columns: 1fr;
   }
 }
