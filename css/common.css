@@ -1,200 +1,52 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Sticky Header */
+.site-header-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
 }
 
-/* =========================
-   COLOR VARIABLES
-========================= */
-:root {
-  --bronze: #8b5a2b;
-  --gold: #b08a57;
-  --gold-soft: #d2b48c;
-  --dark-brown: #3b2a1f;
-  --espresso: #2b1d14;
-  --cream: #faf7f3;
-  --light-bg: #ffffff;
-  --silver: #d0d0d0;
-}
-
-/* =========================
-   GLOBAL BODY & FONT
-========================= */
-body {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  color: var(--dark-brown);
-  background: #ffffff;
-  padding-top: 110px; /* desktop fixed header offset */
-}
-
-/* =========================
-   TOP INFO BAR
-========================= */
-.top-info-bar {
-  background: url("../images/wooden-strip.png") repeat-x center/cover;
-  font-size: 12px;
-}
-
-.info-container {
-  width: 90%;
-  margin: auto;
-  padding: 6px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.info-left {
-  display: flex;
-  gap: 22px;
-  color: var(--silver);
-}
-
-.info-left i {
-  margin-right: 6px;
-}
-
-/* =========================
-   CTA / GLOBAL BUTTON
-========================= */
-.btn-quote {
-  background: linear-gradient(to bottom, #b08a57, #6f421f);
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 1px;
+/* Clickable top bar links */
+.top-info-bar a {
+  color: #fff;
   text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.top-info-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Logo size improvement */
+.logo img {
+  max-height: 65px;
+}
+
+/* CTA Button */
+.btn-quote {
+  background: #c47a2c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-quote:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  background: #a86421;
 }
 
-/* =========================
-   FIXED HEADER WRAPPER
-========================= */
-.site-header-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: var(--cream);
-}
-
-/* =========================
-   MAIN HEADER
-========================= */
-.main-header {
-  background: var(--cream);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.header-container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-/* =========================
-   LOGO
-========================= */
-.logo {
-  position: relative;
-}
-
-.logo img {
-  height: 68px;
-}
-
-.logo-underline {
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(to right, var(--gold), transparent);
-}
-
-/* =========================
-   NAVIGATION (DESKTOP)
-========================= */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 32px;
-}
-
-.main-nav a {
-  font-family: 'Poppins', Arial, sans-serif;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--espresso);
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -7px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(to right, var(--gold), var(--gold-soft));
-  transform: translateX(-50%);
-  transition: 0.35s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--gold);
-}
-
-.main-nav a:hover::after,
-.main-nav a.active::after {
-  width: 100%;
-}
-
-/* =========================
-   NAV DIVIDER
-========================= */
-.nav-divider {
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--gold),
-    var(--gold-soft),
-    var(--gold),
-    transparent
-  );
-}
-
-/* =========================
-   HAMBURGER BUTTON
-========================= */
-.nav-toggle {
+/* Mobile CTA visibility */
+.mobile-cta {
   display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--espresso);
+}
+
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 /* =========================
