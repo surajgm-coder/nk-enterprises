@@ -72,27 +72,6 @@ body {
 }
 
 /* =========================
-   CTA / GLOBAL BUTTON
-========================= */
-.btn-quote {
-  background: linear-gradient(to bottom, #b08a57, #6f421f);
-  color: #ffffff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-decoration: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-.btn-quote:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
-}
-
-/* =========================
    FIXED HEADER WRAPPER
 ========================= */
 .site-header-wrap {
@@ -218,7 +197,26 @@ body {
   cursor: pointer;
   color: var(--espresso);
 }
+/* =========================
+   CTA / GLOBAL BUTTON
+========================= */
+.btn-quote {
+  background: linear-gradient(to bottom, #b08a57, #6f421f);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
 
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
 
 /* =========================
    FOOTER
