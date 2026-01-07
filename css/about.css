@@ -195,11 +195,23 @@
    WHAT WE DO
 ========================== */
 
+/* ==========================
+   WHAT WE DO
+========================== */
+
 .what-we-do {
   padding: 70px 0 50px;
   background: #faf7f3;
 }
 
+/* CONTAINER ALIGNMENT (MATCH ABOVE SECTIONS) */
+.what-we-do .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* SECTION TITLE */
 .section-title {
   font-size: 26px;
   font-weight: 600;
@@ -211,18 +223,20 @@
   margin-bottom: 45px;
 }
 
-.section-title svg {
-  width: 26px;
-  height: 26px;
-  fill: var(--gold);
+/* FONT AWESOME ICON IN TITLE */
+.section-title i {
+  font-size: 26px;
+  color: var(--gold);
 }
 
+/* GRID */
 .what-we-do-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 22px;
 }
 
+/* SERVICE CARD (ANCHOR LINK) */
 .service-box {
   background: #ffffff;
   border-radius: 12px;
@@ -230,16 +244,23 @@
   text-align: center;
   box-shadow: 0 8px 22px rgba(0,0,0,0.06);
   transition: all 0.35s ease;
-  cursor: default;
+  cursor: pointer;
+
+  /* LINK FIX */
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-.service-box svg {
-  width: 42px;
-  height: 42px;
-  fill: var(--gold);
+/* ICON */
+.service-box i {
+  font-size: 42px;
+  color: var(--gold);
   margin-bottom: 15px;
+  display: block;
 }
 
+/* TEXT */
 .service-box h4 {
   font-size: 14.5px;
   font-weight: 600;
@@ -247,10 +268,16 @@
   color: #2b1d14;
 }
 
-/* HOVER */
+/* HOVER EFFECT */
 .service-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* OPTIONAL: HOVER COLOR ENHANCEMENT */
+.service-box:hover h4,
+.service-box:hover i {
+  color: var(--gold);
 }
 
 /* ==========================
