@@ -2,73 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
+  <title>Products & Solutions | NK Enterprises</title>
+  <meta name="description" content="Explore NK Enterprises products – residential, office, retail, industrial furniture, signage, fabrication and turnkey solutions.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FONT AWESOME -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- GLOBAL & PAGE CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/products.css">
 </head>
 
 <body>
 
-<!-- =========================
-     FIXED HEADER WRAPPER
-========================= -->
-<div class="site-header-wrap">
+<!-- ==================================================
+     HEADER (CONSISTENT)
+================================================== -->
+<header class="site-header-wrap">
 
- <!-- TOP INFO BAR -->
-<div class="top-info-bar">
-  <div class="info-container">
-
-    <!-- RIGHT ALIGNED CONTENT -->
-    <div class="info-right">
-      <a href="mailto:support@nkenters.com">
-        <i class="fa-solid fa-envelope"></i> support@nkenters.com
-      </a>
-
-      <a href="tel:+916372352301">
-        <i class="fa-solid fa-phone"></i> +91 63723 52301
-      </a>
-
-      <a href="tel:+919699540314">
-        | +91 96995 40314
-      </a>
+  <div class="top-info-bar">
+    <div class="container">
+      <address>
+        <a href="mailto:support@nkenters.com"><i class="fa-solid fa-envelope"></i> support@nkenters.com</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+916372352301"><i class="fa-solid fa-phone"></i> +91 63723 52301</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+919699540314">+91 96995 40314</a>
+      </address>
     </div>
-
   </div>
-</div>
 
-  <!-- MAIN HEADER -->
-  <header class="main-header">
+  <div class="main-header">
     <div class="header-container">
 
-      <!-- LOGO -->
       <div class="logo">
         <a href="index.html">
           <img src="images/logo.png" alt="NK Enterprises Logo">
-          <span class="logo-underline"></span>
         </a>
       </div>
 
-      <!-- MOBILE MENU TOGGLE -->
-      <button 
-        class="nav-toggle" 
-        aria-label="Toggle navigation menu" 
-        aria-expanded="false">
-        <span class="hamburger">&#9776;</span>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- NAVIGATION -->
-      <nav class="main-nav" aria-label="Main Navigation">
+      <nav class="main-nav" aria-label="Primary Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -79,574 +62,220 @@
         </ul>
       </nav>
 
-      <!-- CTA BUTTON -->
-      <div class="info-right">
-        <a href="contact.html" class="btn-quote">Get a Quote</a>
-      </div>
+      <a href="contact.html" class="btn-primary">Get a Quote</a>
 
     </div>
-
     <div class="nav-divider"></div>
-  </header>
+  </div>
 
-</div>
-  
-<!-- =========================
-   PRODUCTS HERO
-========================= -->
+</header>
+
+<!-- ==================================================
+     PRODUCTS HERO
+================================================== -->
 <section class="products-hero">
-  <div class="container">
-    <h1>Products & Solutions</h1>
-    <p>
-      Furniture Manufacturing • Interior Projects • Retail Fixtures •
-      Signage & Industrial Fabrication
-    </p>
+  <div class="products-hero-overlay">
+    <div class="container">
+      <h1>Products & Solutions</h1>
+      <p>
+        Furniture Manufacturing • Interior Projects • Retail Fixtures •
+        Signage & Industrial Fabrication
+      </p>
+    </div>
   </div>
 </section>
-  
+
+<!-- ==================================================
+     MAIN CONTENT
+================================================== -->
+<main>
+
 <!-- =========================
-   MAIN PRODUCT CATEGORIES
+     PRODUCT CATEGORIES
 ========================= -->
 <section class="main-product-section">
-  <div class="main-product-wrapper">
+  <div class="container main-product-wrapper">
 
-    <!-- 1. Residential -->
-    <div class="main-product-card">
-      <div class="mp-image">
-        <img src="images/products/residential.png" alt="Residential Furniture">
-      </div>
+    <!-- CARD (REPEAT STRUCTURE) -->
+    <article class="main-product-card">
+      <img src="images/products/residential.png" alt="Residential Furniture">
       <div class="mp-content">
-        <h2>Residential Furniture Products</h2>
-        <p>
-          Furniture and interior solutions designed for homes and
-          modern living spaces with complete customization.
-        </p>
+        <h2>Residential Furniture</h2>
+        <p>Custom furniture for modern homes and living spaces.</p>
         <ul>
           <li>Modular Kitchens & Wardrobes</li>
-          <li>Beds, Sofas, TV Units & Storage</li>
-          <li>Custom Home Furniture & Interiors</li>
+          <li>Beds, Sofas & Storage</li>
+          <li>Custom Home Interiors</li>
         </ul>
         <a href="products-residential.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 2. Office -->
-    <div class="main-product-card reverse">
-      <div class="mp-image">
-        <img src="images/products/office.png" alt="Office Furniture">
-      </div>
+    <article class="main-product-card reverse">
+      <img src="images/products/office.png" alt="Office Furniture">
       <div class="mp-content">
-        <h2>Office & Commercial Furniture Products</h2>
-        <p>
-          Functional and aesthetic furniture solutions for offices,
-          corporates, and commercial workspaces.
-        </p>
+        <h2>Office & Commercial Furniture</h2>
+        <p>Functional and aesthetic office furniture solutions.</p>
         <ul>
-          <li>Workstations, Office & Executive Tables</li>
-          <li>Conference Rooms & Reception Counters</li>
-          <li>Storage, Seating & Partitions</li>
+          <li>Workstations & Tables</li>
+          <li>Conference & Reception</li>
+          <li>Partitions & Storage</li>
         </ul>
         <a href="products-office.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 3. Retail -->
-    <div class="main-product-card">
-      <div class="mp-image">
-        <img src="images/products/retail.png" alt="Retail Fixtures">
-      </div>
+    <article class="main-product-card">
+      <img src="images/products/retail.png" alt="Retail Fixtures">
       <div class="mp-content">
-        <h2>Retail & Mall Fixture Products</h2>
-        <p>
-          Custom-manufactured retail fixtures and display systems
-          for malls, showrooms, and retail outlets.
-        </p>
+        <h2>Retail & Mall Fixtures</h2>
+        <p>Display and fixture solutions for retail spaces.</p>
         <ul>
-          <li>Display Units, Gondolas & Wall Racks</li>
-          <li>Cash Counters & Kiosks</li>
-          <li>Shop-in-Shop & Window Displays</li>
+          <li>Display Units & Gondolas</li>
+          <li>Kiosks & Counters</li>
+          <li>Window Displays</li>
         </ul>
         <a href="products-retail.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 4. Signage -->
-    <div class="main-product-card reverse">
-      <div class="mp-image">
-        <img src="images/products/signage.png" alt="Signage Solutions">
-      </div>
+    <article class="main-product-card reverse">
+      <img src="images/products/signage.png" alt="Signage Solutions">
       <div class="mp-content">
-        <h2>Signage & Branding Products</h2>
-        <p>
-          Visual branding and signage solutions designed to enhance
-          brand visibility across indoor and outdoor spaces.
-        </p>
+        <h2>Signage & Branding</h2>
+        <p>Indoor & outdoor branding and signage solutions.</p>
         <ul>
-          <li>Store Front & Browser Signage</li>
-          <li>LED, Acrylic & Metal Letter Signage</li>
-          <li>Directional & Wayfinding Signage</li>
+          <li>LED & Acrylic Signage</li>
+          <li>Metal Letters</li>
+          <li>Wayfinding Systems</li>
         </ul>
         <a href="products-signage.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 5. Institutional -->
-    <div class="main-product-card">
-      <div class="mp-image">
-        <img src="images/products/institutional.png" alt="Institutional Furniture">
-      </div>
+    <article class="main-product-card">
+      <img src="images/products/industrial.png" alt="Industrial Furniture">
       <div class="mp-content">
-        <h2>Institutional Furniture Products</h2>
-        <p>
-          Durable and functional furniture solutions for educational,
-          healthcare, and government institutions.
-        </p>
+        <h2>Industrial Furniture</h2>
+        <p>Heavy-duty furniture for factories and warehouses.</p>
         <ul>
-          <li>School, College & Classroom Furniture</li>
-          <li>Library, Hospital & Laboratory Furniture</li>
-          <li>Training & Government Office Furniture</li>
-        </ul>
-        <a href="products-institutional.html" class="mp-btn">Explore Category</a>
-      </div>
-    </div>
-
-    <!-- 6. Industrial -->
-    <div class="main-product-card reverse">
-      <div class="mp-image">
-        <img src="images/products/industrial.png" alt="Industrial Furniture">
-      </div>
-      <div class="mp-content">
-        <h2>Industrial & Factory Furniture Products</h2>
-        <p>
-          Heavy-duty industrial furniture engineered for factories,
-          warehouses, and industrial environments.
-        </p>
-        <ul>
-          <li>Industrial Workstations & Factory Tables</li>
-          <li>Racks, Shelving & Tool Storage</li>
-          <li>Control Panels & Safety Enclosures</li>
+          <li>Workstations & Tables</li>
+          <li>Racks & Shelving</li>
+          <li>Tool Storage</li>
         </ul>
         <a href="products-industrial.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 7. Fabrication -->
-    <div class="main-product-card">
-      <div class="mp-image">
-        <img src="images/products/fabrication.png" alt="Fabrication Products">
-      </div>
+    <article class="main-product-card reverse">
+      <img src="images/products/fabrication.png" alt="Fabrication Products">
       <div class="mp-content">
-        <h2>Fabrication Products (Custom & Structural)</h2>
-        <p>
-          Custom fabrication solutions across metal, wood,
-          glass, and acrylic for structural and functional use.
-        </p>
+        <h2>Fabrication Products</h2>
+        <p>Custom metal, wood, glass & acrylic fabrication.</p>
         <ul>
-          <li>MS / SS Structures & Laser Cut Panels</li>
-          <li>Railings, Staircases & Canopies</li>
-          <li>Wood, Glass & Acrylic Fabrication</li>
+          <li>MS / SS Structures</li>
+          <li>Railings & Canopies</li>
+          <li>Laser Cut Panels</li>
         </ul>
         <a href="products-fabrication.html" class="mp-btn">Explore Category</a>
       </div>
-    </div>
+    </article>
 
-    <!-- 8. Turnkey -->
-    <div class="main-product-card reverse">
-      <div class="mp-image">
-        <img src="images/products/turnkey.png" alt="Turnkey Projects">
-      </div>
+    <article class="main-product-card">
+      <img src="images/products/turnkey.png" alt="Turnkey Projects">
       <div class="mp-content">
-        <h2>Turnkey & Customized Products</h2>
-        <p>
-          End-to-end furniture, interior, and fabrication
-          solutions delivered on a turnkey project basis.
-        </p>
+        <h2>Turnkey & Customized Solutions</h2>
+        <p>End-to-end project-based solutions.</p>
         <ul>
-          <li>Customized Furniture Solutions</li>
-          <li>Turnkey Interior & Fit-Out Projects</li>
-          <li>Bespoke Furniture & Fixtures</li>
+          <li>Custom Furniture</li>
+          <li>Interior Fit-Outs</li>
+          <li>Bespoke Solutions</li>
         </ul>
         <a href="products-turnkey.html" class="mp-btn">Start Project</a>
       </div>
-    </div>
+    </article>
 
   </div>
 </section>
 
 <!-- =========================
-   WHY CHOOSE NK ENTERPRISES
+     WHY CHOOSE US
 ========================= -->
 <section class="why-choose">
-  <div class="why-container">
+  <div class="container why-container">
+    <h2>Why Choose NK Enterprises</h2>
 
-    <!-- Left Content -->
-    <div class="why-content">
-      <h2>Why Choose NK Enterprises</h2>
-      <p>
-        We combine skilled craftsmanship, advanced manufacturing,
-        and a customer-first approach to deliver reliable furniture,
-        interior, and fabrication solutions.
-      </p>
-    </div>
-
-    <!-- Right Cards -->
     <div class="why-cards">
-      <div class="why-card">
-        <h3>In-House Manufacturing</h3>
-        <p>
-          Complete in-house manufacturing ensures strict quality
-          control, faster turnaround, and consistent results.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>Custom-Built Solutions</h3>
-        <p>
-          Products are manufactured as per approved drawings,
-          exact dimensions, materials, and functions.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>Furniture & Fabrication Expertise</h3>
-        <p>
-          From furniture and interiors to heavy fabrication
-          and signage, we deliver complete solutions.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>Quality & Precision</h3>
-        <p>
-          Strict quality standards, skilled workmanship,
-          and precision processes ensure durability.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>Project-Oriented Execution</h3>
-        <p>
-          We understand timelines, coordination, and execution
-          challenges across projects.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>Reliable Support & Delivery</h3>
-        <p>
-          Transparent communication, timely delivery,
-          and dependable service from enquiry to installation.
-        </p>
-      </div>
+      <div class="why-card">In-house Manufacturing</div>
+      <div class="why-card">Custom-Built Solutions</div>
+      <div class="why-card">Furniture & Fabrication Expertise</div>
+      <div class="why-card">Quality & Precision</div>
+      <div class="why-card">Project-Oriented Execution</div>
+      <div class="why-card">Reliable Delivery & Support</div>
     </div>
-
   </div>
 </section>
 
 <!-- =========================
-   HOW CUSTOM ORDERS WORK
+     PROCESS
 ========================= -->
 <section class="process-section">
-  <div class="process-container">
+  <div class="container process-container">
+    <h2>How Custom Orders Work</h2>
 
-    <!-- Left Content -->
-    <div class="process-content">
-      <h2>How Custom Orders Work</h2>
-      <p>
-        Our streamlined process ensures clarity, quality,
-        and timely delivery for every custom furniture,
-        interior, and fabrication project.
-      </p>
-    </div>
-
-    <!-- Right Cards -->
     <div class="process-steps">
-
-      <div class="process-card">
-        <span>01</span>
-        <h4>Select Product Category</h4>
-        <p>Choose furniture, interior, or fabrication solutions.</p>
-      </div>
-
-      <div class="process-card">
-        <span>02</span>
-        <h4>Share Requirements</h4>
-        <p>Share drawings, dimensions, materials, and finishes.</p>
-      </div>
-
-      <div class="process-card">
-        <span>03</span>
-        <h4>Design & Approval</h4>
-        <p>Final design approval before production begins.</p>
-      </div>
-
-      <div class="process-card">
-        <span>04</span>
-        <h4>Manufacturing & Delivery</h4>
-        <p>In-house production and timely installation.</p>
-      </div>
-
+      <div class="process-card"><span>01</span>Select Category</div>
+      <div class="process-card"><span>02</span>Share Requirements</div>
+      <div class="process-card"><span>03</span>Design Approval</div>
+      <div class="process-card"><span>04</span>Manufacturing & Delivery</div>
     </div>
-  </div>
-</section>
-
-  <!-- =========================
-   PRODUCT CATEGORY QUICK NAVIGATION
-========================= -->
-<section class="category-nav-section">
-  <div class="category-nav-wrapper">
-
-    <div class="category-nav-header">
-      <h2>Explore Our Product Categories</h2>
-      <p>
-        Quickly navigate to the product category that matches
-        your project requirements.
-      </p>
-    </div>
-
-    <div class="category-nav-grid">
-
-      <a href="residential-furniture.html" class="category-nav-card">
-        Residential Furniture
-      </a>
-
-      <a href="office-furniture.html" class="category-nav-card">
-        Office & Commercial Furniture
-      </a>
-
-      <a href="retail-fixtures.html" class="category-nav-card">
-        Retail & Mall Fixtures
-      </a>
-
-      <a href="signage-branding.html" class="category-nav-card">
-        Signage & Branding
-      </a>
-
-      <a href="institutional-furniture.html" class="category-nav-card">
-        Institutional Furniture
-      </a>
-
-      <a href="industrial-furniture.html" class="category-nav-card">
-        Industrial & Factory Furniture
-      </a>
-
-      <a href="fabrication-products.html" class="category-nav-card">
-        Fabrication Products
-      </a>
-
-      <a href="turnkey-solutions.html" class="category-nav-card">
-        Turnkey & Customized Solutions
-      </a>
-
-    </div>
-
   </div>
 </section>
 
 <!-- =========================
-   FEATURED PRODUCTS
-========================= -->
-<section class="featured-products-section">
-  <div class="featured-products-wrapper">
-
-    <div class="featured-products-header">
-      <h2>Featured Products & Solutions</h2>
-      <p>
-        A glimpse of our most popular and frequently manufactured
-        furniture, fixture, and fabrication solutions.
-      </p>
-    </div>
-
-    <div class="featured-products-grid">
-
-      <!-- PRODUCT 1 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/modular-kitchen.jpg" alt="Modular Kitchen">
-        </div>
-        <div class="fp-content">
-          <h3>Modular Kitchen</h3>
-          <p>Custom-designed modular kitchens with optimized storage and premium finishes.</p>
-          <a href="products-residential.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/office-workstation.jpg" alt="Office Workstation">
-        </div>
-        <div class="fp-content">
-          <h3>Office Workstations</h3>
-          <p>Ergonomic and efficient workstation solutions for modern office environments.</p>
-          <a href="products-office.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/retail-display.jpg" alt="Retail Display Unit">
-        </div>
-        <div class="fp-content">
-          <h3>Retail Display Units</h3>
-          <p>Custom retail displays designed to enhance product visibility and branding.</p>
-          <a href="products-retail.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/led-signage.jpg" alt="LED Signage">
-        </div>
-        <div class="fp-content">
-          <h3>LED & Backlit Signage</h3>
-          <p>High-impact LED signage solutions for indoor and outdoor branding.</p>
-          <a href="products-signage.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 5 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/industrial-rack.jpg" alt="Industrial Storage Rack">
-        </div>
-        <div class="fp-content">
-          <h3>Industrial Storage Racks</h3>
-          <p>Heavy-duty industrial racks and shelving systems for factories and warehouses.</p>
-          <a href="products-industrial.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 6 -->
-      <div class="featured-product-card">
-        <div class="fp-image">
-          <img src="images/featured/custom-fabrication.jpg" alt="Custom Fabrication">
-        </div>
-        <div class="fp-content">
-          <h3>Custom Fabrication</h3>
-          <p>MS, SS, wood, glass, and acrylic fabrication tailored to project needs.</p>
-          <a href="products-fabrication.html" class="fp-btn">Enquire</a>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-  
-<section class="industries-section">
-  <div class="industries-container">
-
-    <!-- Left Content -->
-    <div class="industries-content">
-      <h2>Industries We Serve</h2>
-      <p>
-        Our manufacturing and fabrication solutions cater to a wide range
-        of industries with diverse functional and design needs.
-      </p>
-    </div>
-
-    <!-- Right Cards -->
-    <div class="industries-cards">
-      <div class="industry-card">
-        <h3>Residential Homes</h3>
-        <p>
-          Custom furniture and interior solutions for apartments,
-          villas, and modern residential spaces.
-        </p>
-      </div>
-
-      <div class="industry-card">
-        <h3>Corporate Offices</h3>
-        <p>
-          Office furniture and workspace solutions for IT offices
-          and commercial buildings.
-        </p>
-      </div>
-
-      <div class="industry-card">
-        <h3>Retail & Shopping Malls</h3>
-        <p>
-          Retail fixtures, kiosks, display units, and branding
-          solutions for stores.
-        </p>
-      </div>
-
-      <div class="industry-card">
-        <h3>Healthcare Facilities</h3>
-        <p>
-          Hospital and laboratory furniture designed for safety,
-          hygiene, and durability.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================
-   SPLIT CTA SECTION
+     FINAL CTA
 ========================= -->
 <section class="products-cta-split">
   <div class="products-cta-overlay"></div>
+  <div class="container products-cta-inner">
 
-  <div class="products-cta-inner">
-
-    <!-- LEFT CONTENT -->
     <div class="cta-left">
-      <h2>Looking for Custom Furniture or Fabrication Solutions?</h2>
-      <p>
-        Share your requirements with us and get reliable,
-        custom-manufactured furniture, interiors, and fabrication
-        solutions delivered with quality and precision.
-      </p>
+      <h2>Looking for Custom Furniture or Fabrication?</h2>
+      <p>Let’s discuss your project requirements.</p>
     </div>
 
-    <!-- RIGHT ACTIONS -->
     <div class="cta-right">
       <a href="contact.html" class="cta-btn primary">Get a Quote</a>
       <a href="tel:+919999999999" class="cta-btn secondary">Call Now</a>
-      <a href="https://wa.me/919999999999" target="_blank" class="cta-btn outline">
-        WhatsApp
-      </a>
+      <a href="https://wa.me/919999999999" class="cta-btn outline" target="_blank">WhatsApp</a>
     </div>
 
   </div>
 </section>
-  
- <!-- =========================
+
+</main>
+
+<!-- ==================================================
      FOOTER
-========================= -->
+================================================== -->
 <footer class="site-footer">
   <div class="footer-inner">
+    <p>© 2023 NK Enterprises. All Rights Reserved.</p>
 
-    <div class="footer-left">
-      © 2023 NK Enterprises. All Rights Reserved.
-    </div>
-
-    <div class="footer-center">
-      <a href="#">Privacy Policy</a>
-      <span>|</span>
-      <a href="#">Terms of Service</a>
-      <span>|</span>
-      <a href="#">Sitemap</a>
-    </div>
+    <nav>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="sitemap.xml">Sitemap</a>
+    </nav>
 
     <div class="footer-right">
-      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-
   </div>
 </footer>
-
-<!-- JS -->
-<script src="js/slider.js"></script>
 
 </body>
 </html>
