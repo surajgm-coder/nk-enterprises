@@ -25,28 +25,27 @@
 ========================= -->
 <div class="site-header-wrap">
 
-  <!-- TOP INFO BAR -->
-  <div class="top-info-bar">
-    <div class="info-container">
-     <div class="info-left">
-  <a href="mailto:support@nkenters.com">
-    <i class="fa-solid fa-envelope"></i> support@nkenters.com
-  </a>
+ <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="info-container">
 
-  <a href="tel:+916372352301">
-    <i class="fa-solid fa-phone"></i> +91 63723 52301
-  </a>
+    <!-- RIGHT ALIGNED CONTENT -->
+    <div class="info-right">
+      <a href="mailto:support@nkenters.com">
+        <i class="fa-solid fa-envelope"></i> support@nkenters.com
+      </a>
 
-  <a href="tel:+919699540314">
-    | +91 96995 40314
-  </a>
-</div>
+      <a href="tel:+916372352301">
+        <i class="fa-solid fa-phone"></i> +91 63723 52301
+      </a>
 
-      <div class="info-right">
-        <a href="contact.html" class="btn-quote">GET A QUOTE</a>
-      </div>
+      <a href="tel:+919699540314">
+        | +91 96995 40314
+      </a>
     </div>
+
   </div>
+</div>
 
   <!-- MAIN HEADER -->
   <header class="main-header">
@@ -54,17 +53,22 @@
 
       <!-- LOGO -->
       <div class="logo">
-        <img src="images/logo.png" alt="NK Enterprises Logo">
-        <span class="logo-underline"></span>
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
       </div>
 
-      <!-- MOBILE TOGGLE -->
-      <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
-        <span class="hamburger">☰</span>
+      <!-- MOBILE MENU TOGGLE -->
+      <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
       </button>
 
       <!-- NAVIGATION -->
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About Us</a></li>
@@ -75,7 +79,13 @@
         </ul>
       </nav>
 
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
     </div>
+
     <div class="nav-divider"></div>
   </header>
 
