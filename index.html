@@ -3,64 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>NK Enterprises | Fabricating Tomorrow’s Innovation</title>
-  <meta name="description" content="NK Enterprises specialises in furniture, fixture, fabrication and signage manufacturing as per client drawings and specifications.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- GLOBAL & PAGE CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- ==================================================
-     FIXED HEADER
-================================================== -->
-<header class="site-header-wrap">
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
 
-  <!-- Top Info Bar -->
-  <div class="top-info-bar">
-    <div class="container">
-      <address>
-        <a href="mailto:support@nkenters.com">
-          <i class="fa-solid fa-envelope"></i> support@nkenters.com
-        </a>
-        &nbsp; | &nbsp;
-        <a href="tel:+916372352301">
-          <i class="fa-solid fa-phone"></i> +91 63723 52301
-        </a>
-        &nbsp; | &nbsp;
-        <a href="tel:+919699540314">+91 96995 40314</a>
-      </address>
+ <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="info-container">
+
+    <!-- RIGHT ALIGNED CONTENT -->
+    <div class="info-right">
+      <a href="mailto:support@nkenters.com">
+        <i class="fa-solid fa-envelope"></i> support@nkenters.com
+      </a>
+
+      <a href="tel:+916372352301">
+        <i class="fa-solid fa-phone"></i> +91 63723 52301
+      </a>
+
+      <a href="tel:+919699540314">
+        | +91 96995 40314
+      </a>
     </div>
-  </div>
 
-  <!-- Main Header -->
-  <div class="main-header">
+  </div>
+</div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
     <div class="header-container">
 
-      <!-- Logo -->
+      <!-- LOGO -->
       <div class="logo">
         <a href="index.html">
           <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
         </a>
       </div>
 
-      <!-- Mobile Toggle -->
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
+      <!-- MOBILE MENU TOGGLE -->
+      <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
       </button>
 
-      <!-- Navigation -->
-      <nav class="main-nav" aria-label="Primary Navigation">
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -71,40 +79,49 @@
         </ul>
       </nav>
 
-      <!-- CTA -->
-      <a href="contact.html" class="btn-primary">Get a Quote</a>
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
 
     </div>
+
     <div class="nav-divider"></div>
-  </div>
+  </header>
 
-</header>
+</div>
 
-<!-- ==================================================
-     MAIN CONTENT
-================================================== -->
-<main>
 
 <!-- =========================
-     HERO SECTION (SLIDER)
+     HERO SECTION
 ========================= -->
 <section class="hero">
 
-  <div class="hero-slide active" style="background-image:url('images/home/hero1.png')"></div>
-  <div class="hero-slide" style="background-image:url('images/home/hero2.png')"></div>
-  <div class="hero-slide" style="background-image:url('images/home/hero3.png')"></div>
-  <div class="hero-slide" style="background-image:url('images/home/hero4.png')"></div>
+  <div class="hero-slide active" style="background-image: url('images/home/hero1.png');"></div>
+  <div class="hero-slide" style="background-image: url('images/home/hero2.png');"></div>
+  <div class="hero-slide" style="background-image: url('images/home/hero3.png');"></div>
+  <div class="hero-slide" style="background-image: url('images/home/hero4.png');"></div>
 
   <div class="hero-overlay">
-    <div class="container">
+    <!-- SAME CONTAINER AS HEADER -->
+    <div class="header-container">
+      
       <div class="hero-content">
-        <h1>Innovative <br><span>Furniture Solutions</span></h1>
+        <h1>
+          Innovative<br>
+          <span>Furniture Solutions</span>
+        </h1>
+
         <p>
           Custom Furniture, Fixture, Fabrication & Signage<br>
           Manufactured as per Client Drawings & Specifications
         </p>
-        <a href="services.html" class="btn-primary">Our Services</a>
+
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary">OUR SERVICES</a>
+        </div>
       </div>
+
     </div>
   </div>
 
@@ -114,56 +131,79 @@
      ABOUT INTRO
 ========================= -->
 <section class="about-intro">
-  <div class="container">
+  <div class="about-container">
     <h2>Welcome to NK Enterprises</h2>
     <p>
       Established in 2023, NK Enterprises specialises in furniture, fixtures,
-      fabrication and signage manufacturing strictly as per approved designs
-      and detailed specifications.
+      fabrication and signage manufacturing. We work strictly as per client
+      drawings, approved designs and detailed specifications.
     </p>
-    <a href="about.html" class="btn-primary">Read More</a>
+    <a href="about.html" class="btn-primary">READ MORE</a>
   </div>
 </section>
 
 <!-- =========================
-     FEATURES
+     FEATURES SECTION
 ========================= -->
 <section class="features-section">
-  <div class="container features-container">
+  <div class="features-container">
 
+    <!-- LEFT CONTENT -->
     <div class="features-left">
       <h2>Manufacturing Excellence</h2>
       <p>
-        Your trusted partner for premium fabrication, furniture
-        and signage solutions.
+        Your trusted partner for premium furniture, fixture, fabrication and
+        signage solutions — delivered with precision and consistency.
       </p>
 
       <div class="features-list">
-        <a href="services.html" class="feature-item">
-          <i class="fa-solid fa-gears"></i>
-          <h3>Expertise & Innovation</h3>
-          <p>Advanced fabrication techniques.</p>
+
+        <!-- CARD 1 -->
+        <a href="services.html#expertise" class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <h4>Expertise & Innovation</h4>
+          <p>
+            Advanced fabrication techniques with technical accuracy.
+          </p>
         </a>
 
-        <a href="services.html" class="feature-item">
-          <i class="fa-solid fa-industry"></i>
-          <h3>Quality Craftsmanship</h3>
-          <p>Premium materials and finishes.</p>
+        <!-- CARD 2 -->
+        <a href="services.html#quality" class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <h4>Quality Craftsmanship</h4>
+          <p>
+            High-quality materials, finish and durability.
+          </p>
         </a>
 
-        <a href="services.html" class="feature-item">
-          <i class="fa-solid fa-handshake"></i>
-          <h3>Client-Focused</h3>
-          <p>Execution as per drawings.</p>
+        <!-- CARD 3 -->
+        <a href="services.html#client" class="feature-item">
+          <div class="feature-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h4>Client-Focused</h4>
+          <p>
+            Execution strictly as per approved drawings.
+          </p>
         </a>
+
       </div>
     </div>
 
+    <!-- RIGHT IMAGE -->
     <div class="features-right">
-      <img src="images/home/about-home.png" alt="NK Enterprises fabrication work">
+      <img src="images/home/about-home.png" alt="NK Enterprises Fabrication">
+
       <div class="feature-cta">
-        <h3>Dedicated to <span>Tomorrow’s Innovation</span></h3>
-        <a href="contact.html" class="btn-primary">Get a Quote</a>
+        <h3>
+          Dedicated to Fabricating<br>
+          <span>Tomorrow’s Innovation</span>
+        </h3>
+        <a href="contact.html" class="btn-primary">GET A QUOTE</a>
       </div>
     </div>
 
@@ -171,38 +211,43 @@
 </section>
 
 <!-- =========================
-     STATS + PRODUCTS
+     PRODUCTS & STATS SECTION
 ========================= -->
 <section class="why-choose-wrapper">
 
+  <!-- FULL WIDTH BACKGROUND -->
   <div class="wcu-stats">
     <div class="container">
-      <div class="stat"><strong>2023</strong><span>Established</span></div>
-      <div class="stat"><strong>50+</strong><span>Projects</span></div>
-      <div class="stat"><strong>20+</strong><span>Workforce</span></div>
-      <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
+      <div class="stat"><h3>2023</h3><p>Established</p></div>
+      <div class="stat"><h3>50+</h3><p>Projects</p></div>
+      <div class="stat"><h3>20+</h3><p>Skilled Workforce</p></div>
+      <div class="stat"><h3>98%</h3><p>Satisfaction</p></div>
     </div>
   </div>
 
+  <!-- FULL WIDTH BACKGROUND -->
   <div class="wcu-cream">
     <div class="container">
       <h2 class="wcu-heading">Our Products</h2>
 
       <div class="wcu-cards">
-        <a href="products.html" class="wcu-card">
-          <img src="images/home/home-products1.png" alt="Modular Furniture">
+        <a href="#" class="wcu-card">
+          <img src="images/home/home-products1.png" alt="">
           <p>Modular Furniture</p>
         </a>
-        <a href="products.html" class="wcu-card">
-          <img src="images/home/home-products2.png" alt="Mall Fixture">
+
+        <a href="#" class="wcu-card">
+          <img src="images/home/home-products2.png" alt="">
           <p>Mall Fixture</p>
         </a>
-        <a href="products.html" class="wcu-card">
-          <img src="images/home/home-products3.png" alt="Brand Signage">
+
+        <a href="#" class="wcu-card">
+          <img src="images/home/home-products3.png" alt="">
           <p>Brand Signage Display</p>
         </a>
-        <a href="products.html" class="wcu-card">
-          <img src="images/home/home-products4.png" alt="Office Furniture">
+
+        <a href="#" class="wcu-card">
+          <img src="images/home/home-products4.png" alt="">
           <p>Modern Office</p>
         </a>
       </div>
@@ -216,22 +261,30 @@
 ========================= -->
 <section class="cta-section">
 
+  <!-- TOP STRIP -->
   <div class="cta-top">
     <div class="container cta-top-inner">
       <img src="images/logo.png" alt="NK Enterprises Logo">
-      <p>Precision Is Our Craft. <span>Excellence</span> Is Our Standard.</p>
+
+      <p class="cta-text">
+        Precision Is Our Craft. <span>Excellence</span> Is Our Standard.
+      </p>
     </div>
   </div>
 
+  <!-- HEADING STRIP -->
   <div class="cta-heading-strip">
-    <div class="container cta-headings">
-      <span>Our Services</span>
-      <span>Recent Projects</span>
-      <span>Why Choose Us</span>
-      <span>About NK Enterprises</span>
+    <div class="container">
+      <div class="cta-headings">
+        <span>Our Services</span>
+        <span>Recent Projects</span>
+        <span>Why Choose Us</span>
+        <span>About NK Enterprises</span>
+      </div>
     </div>
   </div>
 
+  <!-- CTA CONTENT -->
   <div class="cta-content">
     <div class="container">
       <div class="cta-grid">
@@ -245,42 +298,44 @@
             <li>Sheet Metal Work</li>
             <li>Welding & Assembly</li>
           </ul>
-          <a href="products.html" class="cta-btn">Read More</a>
+          <a href="products.html" class="cta-btn">READ MORE</a>
         </div>
 
         <div class="cta-card">
           <div class="cta-icon"><i class="fa-solid fa-industry"></i></div>
           <ul>
-            <li>Industrial Furniture</li>
-            <li>Office Interiors</li>
+            <li>Industrial Plant Furniture</li>
+            <li>Office & Commercial Interiors</li>
             <li>Architectural Fabrication</li>
-            <li>Custom Components</li>
+            <li>Equipment Fabrication</li>
+            <li>Custom Metal Components</li>
           </ul>
-          <a href="gallery.html" class="cta-btn">View Gallery</a>
+          <a href="gallery.html" class="cta-btn">VIEW GALLERY</a>
         </div>
 
         <div class="cta-card">
           <div class="cta-icon"><i class="fa-solid fa-clipboard-check"></i></div>
           <ul>
-            <li>Experienced Team</li>
-            <li>Premium Quality</li>
-            <li>On-Time Delivery</li>
+            <li>Experienced Fabrication Team</li>
+            <li>Premium-Quality Craftsmanship</li>
+            <li>Execution as per Drawings</li>
+            <li>Timely Delivery</li>
           </ul>
-          <a href="services.html" class="cta-btn">Read More</a>
+          <a href="services.html" class="cta-btn">READ MORE</a>
         </div>
 
         <div class="cta-card">
           <div class="cta-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <p>
-            Established in 2023, NK Enterprises specialises in
-            furniture, fabrication and signage manufacturing.
+          <p class="about-text">
+            Established in 2023, NK Enterprises specialises in furniture,
+            fixture, fabrication and signage manufacturing.
           </p>
-          <p>
+          <p class="contact-text">
             <i class="fa-solid fa-location-dot"></i> Bhiwandi, Maharashtra<br>
             <i class="fa-solid fa-phone"></i> +91 63723 52301 / +91 96995 40314<br>
             <i class="fa-solid fa-envelope"></i> support@nkenters.com
           </p>
-          <a href="contact.html" class="cta-btn">Get a Quote</a>
+          <a href="contact.html" class="cta-btn">GET A QUOTE</a>
         </div>
 
       </div>
@@ -289,27 +344,31 @@
 
 </section>
 
-</main>
-
-<!-- ==================================================
+<!-- =========================
      FOOTER
-================================================== -->
+========================= -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <p>© 2023 NK Enterprises. All Rights Reserved.</p>
 
-    <nav>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms</a> |
-      <a href="sitemap.xml">Sitemap</a>
-    </nav>
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Terms of Service</a>
+      <span>|</span>
+      <a href="#">Sitemap</a>
+    </div>
 
     <div class="footer-right">
-      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.youtube.com/@spadhyfun" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/@spadhyfun" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
     </div>
+
   </div>
 </footer>
 
