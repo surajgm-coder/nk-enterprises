@@ -315,7 +315,7 @@
 ========================= */
 .wcu-stats {
   background: url("../images/home/industrial.png") center/cover no-repeat;
-  padding: 40px 0;            /* ✅ vertical only */
+  padding: 40px 0;               /* ✅ vertical only */
 }
 
 .wcu-stats .container {
@@ -336,17 +336,18 @@
 }
 
 /* =========================
-   PRODUCTS & CAPABILITIES
+   PRODUCTS SECTION
 ========================= */
 .wcu-cream {
   background: url("../images/home/cta-cream.png") center/cover no-repeat;
-  padding: 60px 0 70px;       /* ✅ vertical only */
+  padding: 60px 0 70px;           /* ✅ vertical only */
 }
 
 .wcu-cream .container {
   text-align: center;
 }
 
+/* HEADING */
 .wcu-heading {
   font-size: 28px;
   margin-bottom: 40px;
@@ -404,12 +405,7 @@
   .wcu-cards {
     grid-template-columns: 1fr;
   }
-
-  .wcu-heading {
-    font-size: 24px;
-  }
 }
-
 
 /* =========================
    CTA SECTION
