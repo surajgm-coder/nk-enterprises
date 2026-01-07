@@ -58,27 +58,27 @@ body {
   gap: 22px;
 }
 
-/* LINKS – SILVER + BOLD */
-.info-left a {
-  color: #cfcfcf;              /* Silver color */
-  font-weight: 700;            /* Bold */
+/* FORCE SILVER + BOLD */
+.top-info-bar .info-right a {
+  color: #cfcfcf !important;   /* ✅ FORCE SILVER */
+  font-weight: 700 !important; /* ✅ FORCE BOLD */
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); /* Clarity on wood bg */
+}
+
+/* ICON COLOR */
+.top-info-bar .info-right i {
+  color: #e0e0e0 !important;
+  margin-right: 6px;
 }
 
 /* HOVER */
-.info-left a:hover {
-  color: #f1d28a;              /* Gold hover */
+.top-info-bar .info-right a:hover {
+  color: #f1d28a !important;
 }
 
-/* ICONS */
-.info-left i {
-  color: #e0e0e0;              /* Light silver icons */
-  margin-right: 6px;
-}
 
 /* =========================
    FIXED HEADER WRAPPER
