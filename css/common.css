@@ -40,22 +40,11 @@ body {
   font-size: 12px;
 }
 
-.info-container {
-  max-width: 1200px;          /* FIX */
-  width: 100%;                /* FIX */
-  margin: auto;
-  padding: 6px 20px;          /* FIX */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .info-left {
   display: flex;
   gap: 22px;
 }
 
-/* CLICKABLE TEXT FIX */
 .info-left a {
   color: var(--silver);
   text-decoration: none;
