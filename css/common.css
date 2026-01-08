@@ -8,28 +8,24 @@
 }
 
 /* =========================
-   COLOR VARIABLES
+   VARIABLES
 ========================= */
 :root {
-  --bronze: #8b5a2b;
   --gold: #b08a57;
   --gold-soft: #d2b48c;
-  --dark-brown: #3b2a1f;
   --espresso: #2b1d14;
   --cream: #faf7f3;
-  --light-bg: #ffffff;
   --silver: #d0d0d0;
 }
 
 /* =========================
-   GLOBAL BODY & FONT
+   BODY
 ========================= */
 body {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  color: var(--dark-brown);
+  font-family: 'Poppins', Arial, sans-serif;
   background: #ffffff;
-  padding-top: 140px; /* fixed header offset */
+  color: #333;
+  padding-top: 140px;
 }
 
 /* =========================
@@ -42,7 +38,7 @@ body {
 
 .info-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 6px 20px;
   display: flex;
   align-items: center;
@@ -57,28 +53,6 @@ body {
 
 .info-left i {
   margin-right: 6px;
-}
-
-.info-right {
-  margin-left: auto;
-}
-
-.top-info-bar .info-right a {
-  color: #cfcfcf;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.top-info-bar .info-right i {
-  color: #e0e0e0;
-  margin-right: 6px;
-}
-
-.top-info-bar .info-right a:hover {
-  color: #f1d28a;
 }
 
 /* =========================
@@ -104,10 +78,8 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 14px 20px;
-
   display: flex;
   align-items: center;
-  gap: 50px;                /* ✅ SPACE BETWEEN LOGO & NAV */
 }
 
 /* =========================
@@ -116,7 +88,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0;           /* ✅ PREVENT LOGO SHRINK */
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -124,16 +96,19 @@ body {
 }
 
 /* =========================
-   NAVIGATION
+   FLEX SPACER (KEY FIX)
 ========================= */
-.main-nav {
-  margin-left: 20px;        /* ✅ EXTRA SAFETY GAP */
+.header-spacer {
+  flex: 1;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 34px;
+  gap: 36px;
   align-items: center;
 }
 
@@ -171,7 +146,7 @@ body {
    CTA BUTTON
 ========================= */
 .header-cta {
-  margin-left: auto;        /* ✅ PUSH BUTTON TO RIGHT */
+  margin-left: 40px;
 }
 
 .btn-quote {
@@ -190,6 +165,18 @@ body {
 .btn-quote:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 /* =========================
@@ -260,8 +247,8 @@ body {
 
   .info-container {
     flex-direction: column;
-    gap: 4px;
     text-align: center;
+    gap: 4px;
   }
 
   .info-left {
@@ -273,8 +260,8 @@ body {
     flex-wrap: wrap;
   }
 
-  .logo img {
-    height: 54px;
+  .header-spacer {
+    display: none;
   }
 
   .nav-toggle {
@@ -284,8 +271,8 @@ body {
   .main-nav {
     width: 100%;
     display: none;
+    margin-top: 10px;
     background: var(--cream);
-    margin-top: 8px;
     border-radius: 12px;
     box-shadow: 0 12px 28px rgba(0,0,0,0.18);
   }
@@ -302,6 +289,10 @@ body {
     padding: 14px;
     text-align: center;
   }
+
+  .header-cta {
+    margin-left: 0;
+  }
 }
 
 /* =========================
@@ -313,9 +304,5 @@ body {
     flex-direction: column;
     gap: 12px;
     text-align: center;
-  }
-
-  .footer-center span {
-    display: none;
   }
 }
