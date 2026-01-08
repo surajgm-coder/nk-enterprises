@@ -40,45 +40,28 @@ body {
   font-size: 12px;
 }
 
-/* SAME WIDTH AS HEADER */
 .info-container {
-  max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   padding: 6px 20px;
-
   display: flex;
-  justify-content: flex-end;   /* RIGHT ALIGN */
   align-items: center;
 }
 
-/* RIGHT CONTENT */
 .info-left {
   display: flex;
   gap: 22px;
+  color: #ddd;
+  flex: 1;
 }
 
-/* FORCE SILVER + BOLD */
-.top-info-bar .info-right a {
-  color: #cfcfcf !important;   /* ✅ FORCE SILVER */
-  font-weight: 700 !important; /* ✅ FORCE BOLD */
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-/* ICON COLOR */
-.top-info-bar .info-right i {
-  color: #e0e0e0 !important;
+.info-left i {
   margin-right: 6px;
 }
 
-/* HOVER */
-.top-info-bar .info-right a:hover {
-  color: #f1d28a !important;
+.info-right {
+  margin-left: auto;
 }
-
 
 /* =========================
    FIXED HEADER WRAPPER
