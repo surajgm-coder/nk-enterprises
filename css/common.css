@@ -23,7 +23,7 @@
 ========================= */
 body {
   font-family: 'Poppins', Arial, sans-serif;
-  background: #ffffff;
+  background: #fff;
   color: #333;
   padding-top: 140px;
 }
@@ -55,6 +55,10 @@ body {
   margin-right: 6px;
 }
 
+.info-right {
+  margin-left: auto;
+}
+
 /* =========================
    FIXED HEADER WRAPPER
 ========================= */
@@ -78,8 +82,10 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 14px 20px;
+
   display: flex;
   align-items: center;
+  gap: 50px;                /* ✅ SPACE BETWEEN LOGO & NAV */
 }
 
 /* =========================
@@ -88,7 +94,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  flex-shrink: 0;           /* ✅ PREVENT LOGO SHRINK */
 }
 
 .logo img {
@@ -96,19 +102,16 @@ body {
 }
 
 /* =========================
-   FLEX SPACER (KEY FIX)
-========================= */
-.header-spacer {
-  flex: 1;
-}
-
-/* =========================
    NAVIGATION
 ========================= */
+.main-nav {
+  margin-left: 20px;        /* ✅ EXTRA SAFETY GAP */
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 36px;
+  gap: 34px;
   align-items: center;
 }
 
@@ -146,7 +149,7 @@ body {
    CTA BUTTON
 ========================= */
 .header-cta {
-  margin-left: 40px;
+  margin-left: auto;        /* ✅ PUSH BUTTON TO RIGHT */
 }
 
 .btn-quote {
@@ -168,76 +171,7 @@ body {
 }
 
 /* =========================
-   HAMBURGER
-========================= */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  margin-left: auto;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.site-footer {
-  background: url("../images/wooden-strip.png") repeat-x center/cover;
-  color: #d6d6d6;
-  font-size: 13px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-left {
-  white-space: nowrap;
-}
-
-.footer-center {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-center a {
-  color: #d6d6d6;
-  text-decoration: none;
-}
-
-.footer-center a:hover {
-  color: var(--gold);
-}
-
-.footer-center span {
-  color: #bfbfbf;
-}
-
-.footer-right {
-  display: flex;
-  gap: 14px;
-}
-
-.footer-right a {
-  color: #d6d6d6;
-  font-size: 15px;
-  transition: 0.3s ease;
-}
-
-.footer-right a:hover {
-  color: var(--gold);
-  transform: translateY(-2px);
-}
-
-/* =========================
-   MOBILE & TABLET
+   MOBILE
 ========================= */
 @media (max-width: 991px) {
 
@@ -247,8 +181,8 @@ body {
 
   .info-container {
     flex-direction: column;
-    text-align: center;
     gap: 4px;
+    text-align: center;
   }
 
   .info-left {
@@ -258,31 +192,17 @@ body {
 
   .header-container {
     flex-wrap: wrap;
-  }
-
-  .header-spacer {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
+    gap: 20px;
   }
 
   .main-nav {
     width: 100%;
-    display: none;
-    margin-top: 10px;
-    background: var(--cream);
-    border-radius: 12px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  }
-
-  .main-nav.active {
-    display: block;
+    margin-left: 0;
   }
 
   .main-nav ul {
     flex-direction: column;
+    gap: 0;
   }
 
   .main-nav a {
@@ -292,17 +212,5 @@ body {
 
   .header-cta {
     margin-left: 0;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
   }
 }
