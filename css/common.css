@@ -89,56 +89,52 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
   background: var(--cream);
+  z-index: 1000;
 }
 
 /* =========================
    MAIN HEADER
 ========================= */
 .main-header {
-  background: var(--cream);
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 10px 20px;
+  padding: 14px 20px;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 50px;                /* ✅ SPACE BETWEEN LOGO & NAV */
 }
 
 /* =========================
    LOGO
 ========================= */
 .logo {
-  position: relative;
   display: flex;
   align-items: center;
+  flex-shrink: 0;           /* ✅ PREVENT LOGO SHRINK */
 }
 
 .logo img {
   height: 68px;
 }
 
-.logo-underline {
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(to right, var(--gold), transparent);
+/* =========================
+   NAVIGATION
+========================= */
+.main-nav {
+  margin-left: 20px;        /* ✅ EXTRA SAFETY GAP */
 }
 
-/* =========================
-   NAVIGATION (DESKTOP)
-========================= */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 34px;
+  align-items: center;
 }
 
 .main-nav a {
@@ -147,19 +143,18 @@ body {
   font-weight: 500;
   color: var(--espresso);
   position: relative;
-  transition: color 0.3s ease;
 }
 
 .main-nav a::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -7px;
+  bottom: -6px;
   width: 0;
   height: 2px;
   background: linear-gradient(to right, var(--gold), var(--gold-soft));
   transform: translateX(-50%);
-  transition: 0.35s ease;
+  transition: 0.3s ease;
 }
 
 .main-nav a:hover,
@@ -173,46 +168,23 @@ body {
 }
 
 /* =========================
-   NAV DIVIDER
+   CTA BUTTON
 ========================= */
-.nav-divider {
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--gold),
-    var(--gold-soft),
-    var(--gold),
-    transparent
-  );
+.header-cta {
+  margin-left: auto;        /* ✅ PUSH BUTTON TO RIGHT */
 }
 
-/* =========================
-   HAMBURGER BUTTON
-========================= */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: var(--espresso);
-}
-
-/* =========================
-   CTA / GLOBAL BUTTON
-========================= */
 .btn-quote {
   background: linear-gradient(to bottom, #b08a57, #6f421f);
-  color: #ffffff;
-  padding: 8px 20px;
+  color: #fff;
+  padding: 9px 22px;
   border-radius: 30px;
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-quote:hover {
