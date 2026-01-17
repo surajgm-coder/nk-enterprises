@@ -10,9 +10,9 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(255,255,255,0.9),
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0.2)
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
   );
   display: flex;
   align-items: center;
@@ -42,6 +42,9 @@
 .contact-details {
   padding: 80px 0;
   background: #ffffff;
+
+  /* IMPORTANT: avoid scroll issues */
+  overflow: visible;
 }
 
 .contact-details .container {
@@ -50,6 +53,7 @@
   margin: auto;
   display: flex;
   gap: 40px;
+  align-items: flex-start;
 }
 
 /* LEFT CARDS */
@@ -64,7 +68,7 @@
   background: #fff;
   padding: 22px;
   border-radius: 6px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .info-card h4 {
@@ -107,7 +111,7 @@
   background: #fff;
   padding: 30px;
   border-radius: 6px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-right h3 {
@@ -128,10 +132,12 @@
   margin-bottom: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  outline: none;
 }
 
 .contact-right textarea {
   height: 100px;
+  resize: none;
 }
 
 .contact-right button {
@@ -146,10 +152,15 @@
 /* =========================
    MAP
 ========================= */
+.contact-map {
+  width: 100%;
+}
+
 .contact-map iframe {
   width: 100%;
   height: 320px;
   border: none;
+  display: block;
   margin-top: 40px;
 }
 
@@ -226,7 +237,6 @@
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-
   .contact-details .container {
     flex-direction: column;
   }
