@@ -1,0 +1,249 @@
+/* =========================
+   FULL PAGE FIX
+========================= */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #f6f2ec;
+}
+
+.sitemap-main {
+  flex: 1;
+}
+
+/* =========================
+   HERO AREA
+========================= */
+.sitemap-hero {
+  padding: 60px 15px 30px;
+  background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(246,242,236,1));
+  text-align: center;
+}
+
+.sitemap-hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.sitemap-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #3a2a20;
+  margin-bottom: 8px;
+}
+
+.sitemap-hero p {
+  font-size: 15px;
+  color: #6a5b4d;
+  margin-bottom: 22px;
+}
+
+/* Search Bar */
+.sitemap-search {
+  max-width: 680px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e0d0c1;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.10);
+}
+
+.sitemap-search i {
+  color: #8a6b4c;
+  font-size: 16px;
+}
+
+.sitemap-search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+}
+
+/* =========================
+   MAIN SITEMAP CARD
+========================= */
+.sitemap-section {
+  padding: 20px 15px 40px;
+}
+
+.sitemap-card {
+  max-width: 1050px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+}
+
+/* 2 cards */
+.sitemap-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* 3D Card Effect */
+.sitemap-box {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2d7cd;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.sitemap-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Wood Heading */
+.sitemap-box-head {
+  background: linear-gradient(90deg, #7b4a1e, #a66a2d);
+  padding: 15px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.55);
+}
+
+/* Body */
+.sitemap-box-body {
+  padding: 20px 22px 26px;
+}
+
+.sitemap-box-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitemap-box-body li {
+  margin: 12px 0;
+}
+
+.sitemap-box-body a {
+  color: #1a5fd0;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sitemap-box-body a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   QUICK CONTACT SECTION
+========================= */
+.quick-contact {
+  padding: 50px 15px 60px;
+  background: #f6f2ec;
+}
+
+.quick-contact-inner {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+.quick-contact-inner h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #3a2a20;
+  margin-bottom: 25px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.quick-box {
+  background: #ffffff;
+  border: 1px solid #e2d7cd;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: left;
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.10);
+  transition: 0.3s ease;
+}
+
+.quick-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 18px 35px rgba(0,0,0,0.14);
+}
+
+.quick-box h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #3a2a20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick-box h3 i {
+  color: #a66a2d;
+}
+
+.quick-box p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.quick-box a {
+  color: #1a5fd0;
+  text-decoration: none;
+}
+
+.quick-box a:hover {
+  text-decoration: underline;
+}
+
+/* Quote Button */
+.quick-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #7b4a1e, #a66a2d);
+  color: #ffffff !important;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.quick-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .sitemap-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sitemap-hero h1 {
+    font-size: 28px;
+  }
+}
