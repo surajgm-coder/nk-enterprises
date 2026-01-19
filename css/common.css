@@ -1106,6 +1106,39 @@ body {
   box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* Fix gap between content and footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f0ea;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main wrapper grows */
+.sitemap-main {
+  flex: 1;
+}
+
+/* section */
+.sitemap-section {
+  padding: 50px 15px 50px;
+  background: #f6f2ec;
+}
+
+/* main card */
+.sitemap-card {
+  max-width: 1050px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 28px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
+}
+
 /* title */
 .sitemap-title {
   text-align: center;
