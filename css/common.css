@@ -1079,23 +1079,23 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f3efe9;
+  background: #f4f0ea;
 }
 
-/* main sitemap section background */
+/* full page background */
 .sitemap-section {
-  padding: 50px 15px 70px;
+  padding: 55px 15px 70px;
   background: #f6f2ec;
 }
 
-/* big center card */
+/* main center card */
 .sitemap-card {
   max-width: 1100px;
   margin: auto;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 35px 25px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  padding: 40px 28px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
 }
 
 /* title */
@@ -1104,40 +1104,46 @@ body {
   font-size: 34px;
   font-weight: 700;
   color: #3a2a20;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
-/* grid */
-.sitemap-grid {
+/* grid for 2 cards */
+.sitemap-grid-2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
 }
 
-/* box */
+/* 3D card */
 .sitemap-box {
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   background: #fff;
   border: 1px solid #e2d7cd;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(0);
+  transition: all 0.3s ease;
 }
 
-/* wood head */
+/* hover 3d effect */
+.sitemap-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* card heading */
 .sitemap-box-head {
-  background-image: url("../images/wood.jpg"); /* change image path if needed */
-  background-size: cover;
-  background-position: center;
-  padding: 14px 16px;
+  background: linear-gradient(90deg, #7b4a1e, #a66a2d);
+  padding: 15px 18px;
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* box body */
+/* card body */
 .sitemap-box-body {
-  padding: 18px 18px 20px;
+  padding: 20px 20px 24px;
 }
 
 .sitemap-box-body ul {
@@ -1147,7 +1153,7 @@ body {
 }
 
 .sitemap-box-body li {
-  margin: 10px 0;
+  margin: 11px 0;
 }
 
 /* links */
@@ -1162,9 +1168,9 @@ body {
   text-decoration: underline;
 }
 
-/* responsive */
+/* responsive mobile */
 @media (max-width: 900px) {
-  .sitemap-grid {
+  .sitemap-grid-2 {
     grid-template-columns: 1fr;
   }
 
