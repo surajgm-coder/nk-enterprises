@@ -1,239 +1,116 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+/* Page Background */
+.policy-page{
   font-family: "Poppins", sans-serif;
-  background: #e9e3dc;
-  color: #3a2b22;
-  padding: 35px 15px;
-}
-
-.policy-page {
-  max-width: 980px;
-  margin: auto;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  font-size: 14px;
-  color: #6a5447;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.breadcrumb i {
-  color: #8b5a3c;
-}
-
-.breadcrumb .sep {
-  opacity: 0.6;
+  padding: 40px 20px;
+  background: #f7f3ee;
+  min-height: 100vh;
 }
 
 /* Title */
-.page-title {
-  text-align: left;
-  margin-bottom: 22px;
+.page-title{
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(140,100,70,0.25);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.10);
 }
 
-.page-title h1 {
-  font-size: 34px;
+.page-title h1{
+  font-size: 30px;
   font-weight: 700;
+  color: #3a2b22;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
 }
 
-.page-title .icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: #f3ece6;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(120, 86, 62, 0.25);
-}
-
-.page-title .icon i {
-  color: #8b5a3c;
-  font-size: 22px;
-}
-
-.page-title p {
-  max-width: 900px;
-  color: #5c473b;
+.page-title p{
+  margin-top: 12px;
+  color: #444;
+  font-size: 15px;
   line-height: 1.7;
 }
 
-.muted {
-  color: #8b6d5a;
-  font-weight: 600;
+.icon{
+  font-size: 28px;
+  color: #8b5a3c;
 }
 
-/* Cards */
-.policy-card {
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(140, 100, 70, 0.25);
-  border-radius: 14px;
-  padding: 18px;
-  margin-top: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+.muted{
+  color: #777;
+  font-weight: 500;
 }
 
-.card-head {
+/* Card */
+.policy-card{
+  max-width: 1100px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(140,100,70,0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* Card Header */
+.card-head{
+  background: rgba(139, 90, 60, 0.12);
+  padding: 18px 22px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 12px;
 }
 
-.tick {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: #f0e5db;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(120, 86, 62, 0.25);
-}
-
-.tick i {
-  color: #7a4b2e;
-  font-size: 14px;
-}
-
-.policy-card h2 {
+.card-head h2{
+  margin: 0;
   font-size: 20px;
+  color: #3a2b22;
   font-weight: 700;
 }
 
-/* Body */
-.card-body {
-  padding-top: 6px;
+.tick{
+  width: 36px;
+  height: 36px;
+  background: #8b5a3c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
-.lead {
+/* Card Body */
+.card-body{
+  padding: 22px;
+}
+
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.lead{
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.list {
+/* Lists */
+.list{
   padding-left: 18px;
-  margin-bottom: 10px;
-  line-height: 1.7;
-  color: #4e3a2f;
+  line-height: 1.8;
+  color: #444;
 }
 
-.list li {
-  margin: 6px 0;
-}
-
-/* Two column inside card */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.check-list {
+.check-list{
   list-style: none;
-  margin-top: 8px;
+  padding: 0;
+  margin: 0;
 }
 
-.check-list li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 6px 0;
-  color: #4e3a2f;
-}
-
-.check-list i {
-  margin-top: 4px;
-  color: #7a4b2e;
-}
-
-/* Note Box */
-.note-box {
-  margin-top: 14px;
-  background: rgba(139, 90, 60, 0.08);
-  border: 1px solid rgba(139, 90, 60, 0.25);
-  padding: 12px 14px;
-  border-radius: 12px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  color: #4e3a2f;
-}
-
-.note-box i {
-  margin-top: 3px;
-  color: #8b5a3c;
-}
-
-/* Bottom grid */
-.bottom-grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.mini-card {
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(140, 100, 70, 0.25);
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-}
-
-.mini-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.mini-card h3 {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.mini-card p {
-  color: #5c473b;
-  line-height: 1.7;
-  margin-bottom: 10px;
-}
-
-/* Contact box */
-.contact-card .contact-line {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 6px 0;
-  color: #4e3a2f;
-}
-
-.contact-card i {
-  color: #8b5a3c;
-}
-
-/* Responsive */
-@media (max-width: 850px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-
-  .bottom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-title h1 {
-    font-size: 26px;
-  }
-}
+.check-list li{
+  margin: 10px 0;
+  color: #444;
