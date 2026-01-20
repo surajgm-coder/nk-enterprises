@@ -1,286 +1,158 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.sitemap-page {
-  min-height: 100vh;
+body{
   font-family: "Poppins", sans-serif;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.55), transparent 60%),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.45), transparent 55%),
-    radial-gradient(circle at 40% 90%, rgba(255,255,255,0.35), transparent 60%),
-    linear-gradient(180deg, #efe7df, #e9e1d8);
-  padding-bottom: 60px;
+  background: #f5f0ea;
+  color: #3a2b22;
 }
 
-.wrap {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 15px;
-}
-
-/* Breadcrumb */
-.sitemap-breadcrumb-wrap {
-  padding: 25px 0 0;
-}
-
-.sitemap-breadcrumb {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  color: #6d5a4c;
-}
-
-.sitemap-breadcrumb a {
-  color: #6d5a4c;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sitemap-breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-/* Title */
-.sitemap-title {
-  padding: 20px 0 25px;
+/* HERO */
+.sm-hero{
+  padding: 40px 15px 25px;
+  background: #f3ece6;
   text-align: center;
 }
 
-.sitemap-title h1 {
-  font-size: 46px;
+.sm-hero-inner{
+  max-width: 1100px;
+  margin: auto;
+}
+
+.sm-title{
+  font-size: 42px;
   font-weight: 700;
-  color: #3a2418;
+  color: #4a2c1d;
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-.sitemap-icon {
-  display: inline-flex;
-  width: 54px;
-  height: 54px;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
-  color: #5c3b25;
+.sm-title-icon{
+  font-size: 36px;
+  color: #a36a3a;
 }
 
-.subtitle {
-  margin-top: 12px;
-  font-size: 15px;
-  color: #5f4c3f;
+.sm-subtitle{
+  max-width: 850px;
+  margin: 10px auto 0;
+  font-size: 14px;
   line-height: 1.7;
+  color: #5a4639;
 }
 
-/* Layout */
-.sitemap-area {
-  padding: 15px 0 0;
+/* MAIN WRAP */
+.sm-wrap{
+  padding: 25px 15px 70px;
 }
 
-.sitemap-layout {
+.sm-container{
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* GRID */
+.sm-grid{
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 22px;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
   align-items: start;
 }
 
-/* LEFT TOC CARD */
-.left-toc {
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0px 18px 35px rgba(0,0,0,0.14);
-  backdrop-filter: blur(8px);
-}
-
-.toc-head {
-  padding: 14px 16px;
-  font-weight: 700;
-  font-size: 16px;
-  background: rgba(255,255,255,0.45);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  color: #3b2a1f;
-}
-
-.toc-body {
-  padding: 14px 16px 18px;
-}
-
-.toc-group-title {
-  font-weight: 700;
-  font-size: 14px;
-  color: #3b2a1f;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.left-toc ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.left-toc a {
-  color: #2b5bbf;
-  text-decoration: none;
-  font-size: 13px;
-  padding-left: 14px;
-  position: relative;
-}
-
-.left-toc a::before {
-  content: "›";
-  position: absolute;
-  left: 0;
-  color: #b48a60;
-  font-weight: 700;
-}
-
-.left-toc a:hover {
-  text-decoration: underline;
-}
-
-.left-toc a.active {
-  font-weight: 700;
-  color: #1e3f8f;
-}
-
-/* RIGHT MAIN CARD */
-.right-card {
+/* CARD */
+.sm-card{
+  background: rgba(255,255,255,0.85);
   border-radius: 14px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.06);
   overflow: hidden;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0px 18px 45px rgba(0,0,0,0.18);
-  backdrop-filter: blur(8px);
 }
 
-.right-top {
+.sm-card-head{
   padding: 14px 18px;
-  font-size: 13px;
-  color: #5b4a3d;
-  background: rgba(255,255,255,0.45);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.70);
 }
 
-.right-inner {
-  padding: 20px 22px 26px;
-}
-
-.right-title {
+.sm-card-head h2{
+  font-size: 16px;
+  font-weight: 700;
+  color: #5b2e1d;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #3b2a1f;
 }
 
-.right-title i {
-  color: #b48a60;
+.sm-card-head i{
+  color: #b27644;
 }
 
-.right-sub {
-  text-align: center;
-  margin-top: 8px;
+.sm-card-head.center h2{
+  justify-content: center;
+}
+
+.sm-card-body{
+  padding: 16px 18px 18px;
   font-size: 13px;
-  color: #5b4a3d;
-  line-height: 1.7;
+  line-height: 1.75;
+  color: #4f3b30;
 }
 
-/* Columns */
-.columns {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 26px;
-}
-
-.col h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #3b2a1f;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 18px;
-}
-
-.col h3::before {
-  content: "▶";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 12px;
-  color: #b48a60;
-}
-
-.col ul {
+/* LIST */
+.sm-list{
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.sm-list li{
+  display: flex;
+  align-items: center;
   gap: 10px;
+  font-size: 14px;
 }
 
-.col a {
-  color: #2b5bbf;
+.sm-list i{
+  font-size: 8px;
+  color: #b27644;
+}
+
+.sm-list a{
   text-decoration: none;
-  font-size: 13px;
-  padding-left: 14px;
-  position: relative;
+  color: #4f3b30;
+  transition: 0.25s;
 }
 
-.col a::before {
-  content: "›";
-  position: absolute;
-  left: 0;
-  color: #b48a60;
-  font-weight: 700;
+.sm-list a:hover{
+  color: #b27644;
 }
 
-.col a:hover {
-  text-decoration: underline;
-}
-
-.mt {
+/* WIDE CARD */
+.sm-card-wide{
   margin-top: 18px;
 }
 
-.top-gap {
-  margin-top: 34px;
+.sm-wide-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
-/* Responsive */
-@media (max-width: 1000px) {
-  .sitemap-layout {
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .sm-grid{
     grid-template-columns: 1fr;
   }
 
-  .columns {
+  .sm-wide-grid{
     grid-template-columns: 1fr;
   }
 
-  .top-gap {
-    margin-top: 0;
-  }
-
-  .sitemap-title h1 {
-    font-size: 34px;
+  .sm-title{
+    font-size: 30px;
   }
 }
