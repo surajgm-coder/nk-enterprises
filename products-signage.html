@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signage & Branding Products | NK Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="css/products-signage.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com">
+          <i class="fa-solid fa-envelope"></i> support@nkenters.com
+        </a>
+
+        <a href="tel:+916372352301">
+          <i class="fa-solid fa-phone"></i> +91 63723 52301
+        </a>
+
+        <a href="tel:+919699540314">
+          | +91 96995 40314
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+
+<!-- =========================
+     SIGNAGE PRODUCTS PAGE
+========================= -->
+<main class="signage-wrap">
+
+  <!-- PAGE HEADER -->
+  <section class="signage-header">
+    <div class="signage-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Signage & Branding
+    </div>
+
+    <h1 class="signage-title">Signage & Branding Products</h1>
+
+    <p class="signage-subtitle">
+      Explore outdoor & indoor signage, LED displays, window branding, promotional banners,
+      safety signs, vehicle branding, and printing collateral. Use filters to find the right solution.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="signage-controls">
+      <input id="searchInput" class="signage-input" type="text"
+        placeholder="Search products (e.g. channel letter, LED board, banner)">
+
+      <select id="sortSelect" class="signage-select">
+        <option value="popular">Sort: Popular</option>
+        <option value="newest">Sort: Newest</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <button class="signage-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="signage-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="signage-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="signage-sidebar">
+      <div class="signage-panel">
+
+        <div class="signage-panel-head">
+          <h3>Filter by Category</h3>
+          <button class="signage-btn" id="applyBtn" type="button">Apply</button>
+        </div>
+
+        <div class="signage-panel-body">
+
+          <!-- Outdoor Signage -->
+          <details open>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-sign-hanging"></i></span>
+              Outdoor Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Channel Letter Signs (illuminated/non-illuminated)" data-filter="sub"> Channel Letter Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Pylon / Monument Signs" data-filter="sub"> Pylon / Monument Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Billboards & Hoardings" data-filter="sub"> Billboards & Hoardings</label>
+              <label class="signage-check"><input type="checkbox" value="Wayfinding Signs" data-filter="sub"> Wayfinding Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Directional Signs" data-filter="sub"> Directional Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Blade Signs" data-filter="sub"> Blade Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Outdoor Lightbox Signs" data-filter="sub"> Outdoor Lightbox Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Yard Signs" data-filter="sub"> Yard Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Construction Site Signs" data-filter="sub"> Construction Site Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Roadside Sign Boards" data-filter="sub"> Roadside Sign Boards</label>
+            </div>
+          </details>
+
+          <!-- Indoor Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-building"></i></span>
+              Indoor Signage
+            </summary>
+
+            <div class="signage-group">
+              <p class="signage-group-title">Identification & Direction</p>
+              <label class="signage-check"><input type="checkbox" value="Reception Signs" data-filter="sub"> Reception Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Office Door Signs" data-filter="sub"> Office Door Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Room Identification Signs" data-filter="sub"> Room Identification Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Directory Boards" data-filter="sub"> Directory Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Lobby Signage" data-filter="sub"> Lobby Signage</label>
+              <label class="signage-check"><input type="checkbox" value="ADA / Accessibility Compliant Signs" data-filter="sub"> ADA / Accessibility Signs</label>
+            </div>
+
+            <div class="signage-group">
+              <p class="signage-group-title">Branding & Decor</p>
+              <label class="signage-check"><input type="checkbox" value="Backlit Logo Signs" data-filter="sub"> Backlit Logo Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Acrylic Logo Boards" data-filter="sub"> Acrylic Logo Boards</label>
+              <label class="signage-check"><input type="checkbox" value="3D Signage" data-filter="sub"> 3D Signage</label>
+              <label class="signage-check"><input type="checkbox" value="Metal & Brass Lettering" data-filter="sub"> Metal & Brass Lettering</label>
+              <label class="signage-check"><input type="checkbox" value="Wooden Logo Plaques" data-filter="sub"> Wooden Logo Plaques</label>
+              <label class="signage-check"><input type="checkbox" value="Wall Decals / Graphics" data-filter="sub"> Wall Decals / Graphics</label>
+              <label class="signage-check"><input type="checkbox" value="Vinyl Wall Art" data-filter="sub"> Vinyl Wall Art</label>
+            </div>
+          </details>
+
+          <!-- Lighted & Digital Displays -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-bolt"></i></span>
+              Lighted & Digital Displays
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="LED Digital Sign Boards" data-filter="sub"> LED Digital Sign Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Digital Menu Boards" data-filter="sub"> Digital Menu Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Electronic Message Centers (EMC)" data-filter="sub"> Electronic Message Centers (EMC)</label>
+              <label class="signage-check"><input type="checkbox" value="LCD/LED Video Walls" data-filter="sub"> LCD/LED Video Walls</label>
+              <label class="signage-check"><input type="checkbox" value="Interactive Touchscreens" data-filter="sub"> Interactive Touchscreens</label>
+            </div>
+          </details>
+
+          <!-- Window & Glass Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-window-maximize"></i></span>
+              Window & Glass Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Vinyl Window Decals" data-filter="sub"> Vinyl Window Decals</label>
+              <label class="signage-check"><input type="checkbox" value="Etched / Frosted Glass Film" data-filter="sub"> Etched / Frosted Glass Film</label>
+              <label class="signage-check"><input type="checkbox" value="Perforated Window Graphics" data-filter="sub"> Perforated Window Graphics</label>
+              <label class="signage-check"><input type="checkbox" value="Retail Window Branding" data-filter="sub"> Retail Window Branding</label>
+            </div>
+          </details>
+
+          <!-- Promotional & Event Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-bullhorn"></i></span>
+              Promotional & Event Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Roll-Up / Retractable Banners" data-filter="sub"> Roll-Up / Retractable Banners</label>
+              <label class="signage-check"><input type="checkbox" value="X-Banner Stands" data-filter="sub"> X-Banner Stands</label>
+              <label class="signage-check"><input type="checkbox" value="Teardrop Flags" data-filter="sub"> Teardrop Flags</label>
+              <label class="signage-check"><input type="checkbox" value="Feather Flags" data-filter="sub"> Feather Flags</label>
+              <label class="signage-check"><input type="checkbox" value="Pop-Up Display Stands" data-filter="sub"> Pop-Up Display Stands</label>
+              <label class="signage-check"><input type="checkbox" value="Backdrop Banners" data-filter="sub"> Backdrop Banners</label>
+              <label class="signage-check"><input type="checkbox" value="Stage Branding Banners" data-filter="sub"> Stage Branding Banners</label>
+              <label class="signage-check"><input type="checkbox" value="Event Sign Boards" data-filter="sub"> Event Sign Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Floor Graphics" data-filter="sub"> Floor Graphics</label>
+            </div>
+          </details>
+
+          <!-- POS & Retail Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-store"></i></span>
+              POS & Retail Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Shelf Talkers & Wobblers" data-filter="sub"> Shelf Talkers & Wobblers</label>
+              <label class="signage-check"><input type="checkbox" value="Danglers" data-filter="sub"> Danglers</label>
+              <label class="signage-check"><input type="checkbox" value="Price Tags & Label Holders" data-filter="sub"> Price Tags & Label Holders</label>
+              <label class="signage-check"><input type="checkbox" value="A-Board / Sandwich Board Signs" data-filter="sub"> A-Board / Sandwich Board Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Countertop Sign Holders" data-filter="sub"> Countertop Sign Holders</label>
+              <label class="signage-check"><input type="checkbox" value="Product Display Graphics" data-filter="sub"> Product Display Graphics</label>
+              <label class="signage-check"><input type="checkbox" value="End-Cap Branding Displays" data-filter="sub"> End-Cap Branding Displays</label>
+            </div>
+          </details>
+
+          <!-- Portable & Temporary Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-flag"></i></span>
+              Portable & Temporary Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="A-Frame Signs" data-filter="sub"> A-Frame Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Corrugated Plastic Signs" data-filter="sub"> Corrugated Plastic Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Temporary Event Boards" data-filter="sub"> Temporary Event Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Handheld Signs" data-filter="sub"> Handheld Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Street Pole Banners" data-filter="sub"> Street Pole Banners</label>
+            </div>
+          </details>
+
+          <!-- Wayfinding & Safety Signage -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+              Wayfinding & Safety Signage
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Exit Signs" data-filter="sub"> Exit Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Fire Safety Signs" data-filter="sub"> Fire Safety Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Floor Markings" data-filter="sub"> Floor Markings</label>
+              <label class="signage-check"><input type="checkbox" value="Restroom Signs" data-filter="sub"> Restroom Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Emergency Directional Signs" data-filter="sub"> Emergency Directional Signs</label>
+              <label class="signage-check"><input type="checkbox" value="Caution / Warning Signs" data-filter="sub"> Caution / Warning Signs</label>
+            </div>
+          </details>
+
+          <!-- Vehicle & Outdoor Branding -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-car-side"></i></span>
+              Vehicle & Outdoor Branding
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Vehicle Wraps" data-filter="sub"> Vehicle Wraps</label>
+              <label class="signage-check"><input type="checkbox" value="Decals & Stickers for Cars" data-filter="sub"> Decals & Stickers for Cars</label>
+              <label class="signage-check"><input type="checkbox" value="Fleet Branding" data-filter="sub"> Fleet Branding</label>
+              <label class="signage-check"><input type="checkbox" value="Magnetic Signage" data-filter="sub"> Magnetic Signage</label>
+              <label class="signage-check"><input type="checkbox" value="Painted Signage" data-filter="sub"> Painted Signage</label>
+            </div>
+          </details>
+
+          <!-- Branded Merchandise & Promotional Items -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-gift"></i></span>
+              Branded Merchandise & Promotional Items
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Branded Flags" data-filter="sub"> Branded Flags</label>
+              <label class="signage-check"><input type="checkbox" value="Branded Tents / Canopies" data-filter="sub"> Branded Tents / Canopies</label>
+              <label class="signage-check"><input type="checkbox" value="Branded Umbrellas" data-filter="sub"> Branded Umbrellas</label>
+              <label class="signage-check"><input type="checkbox" value="Custom Promotional Sign Boards" data-filter="sub"> Custom Promotional Sign Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Branded Giveaways with Logo" data-filter="sub"> Branded Giveaways with Logo</label>
+            </div>
+          </details>
+
+          <!-- Sign Hardware & Accessories -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+              Sign Hardware & Accessories
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Standoffs & Mounting Hardware" data-filter="sub"> Standoffs & Mounting Hardware</label>
+              <label class="signage-check"><input type="checkbox" value="LED Modules" data-filter="sub"> LED Modules</label>
+              <label class="signage-check"><input type="checkbox" value="Light Boxes" data-filter="sub"> Light Boxes</label>
+              <label class="signage-check"><input type="checkbox" value="Channel Letter Components" data-filter="sub"> Channel Letter Components</label>
+              <label class="signage-check"><input type="checkbox" value="Frame Systems" data-filter="sub"> Frame Systems</label>
+              <label class="signage-check"><input type="checkbox" value="Banner Rails" data-filter="sub"> Banner Rails</label>
+              <label class="signage-check"><input type="checkbox" value="Snap Frames" data-filter="sub"> Snap Frames</label>
+              <label class="signage-check"><input type="checkbox" value="Cable Display Systems" data-filter="sub"> Cable Display Systems</label>
+            </div>
+          </details>
+
+          <!-- Materials Used -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-layer-group"></i></span>
+              Materials Used
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Acrylic / Perspex" data-filter="sub"> Acrylic / Perspex</label>
+              <label class="signage-check"><input type="checkbox" value="Aluminum Composite Panels (ACP)" data-filter="sub"> Aluminum Composite Panels (ACP)</label>
+              <label class="signage-check"><input type="checkbox" value="PVC Foam Board" data-filter="sub"> PVC Foam Board</label>
+              <label class="signage-check"><input type="checkbox" value="Flex Banners" data-filter="sub"> Flex Banners</label>
+              <label class="signage-check"><input type="checkbox" value="Vinyl" data-filter="sub"> Vinyl</label>
+              <label class="signage-check"><input type="checkbox" value="Coroplast / Correx" data-filter="sub"> Coroplast / Correx</label>
+              <label class="signage-check"><input type="checkbox" value="Foamex" data-filter="sub"> Foamex</label>
+              <label class="signage-check"><input type="checkbox" value="Backlit Film" data-filter="sub"> Backlit Film</label>
+              <label class="signage-check"><input type="checkbox" value="Metal (Aluminum, Brass, Stainless Steel)" data-filter="sub"> Metal</label>
+              <label class="signage-check"><input type="checkbox" value="Wood" data-filter="sub"> Wood</label>
+            </div>
+          </details>
+
+          <!-- Branding Collateral -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-print"></i></span>
+              Branding Collateral (Print & Visual)
+            </summary>
+
+            <div class="signage-group">
+              <label class="signage-check"><input type="checkbox" value="Business Cards" data-filter="sub"> Business Cards</label>
+              <label class="signage-check"><input type="checkbox" value="Flyers / Brochures" data-filter="sub"> Flyers / Brochures</label>
+              <label class="signage-check"><input type="checkbox" value="Posters" data-filter="sub"> Posters</label>
+              <label class="signage-check"><input type="checkbox" value="Catalogs" data-filter="sub"> Catalogs</label>
+              <label class="signage-check"><input type="checkbox" value="Brand Guidelines Boards" data-filter="sub"> Brand Guidelines Boards</label>
+              <label class="signage-check"><input type="checkbox" value="Stationery Branding" data-filter="sub"> Stationery Branding</label>
+              <label class="signage-check"><input type="checkbox" value="Branded Stickers & Labels" data-filter="sub"> Branded Stickers & Labels</label>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <section class="signage-main">
+
+      <div class="signage-tags" id="activeFilters"></div>
+
+      <div class="signage-meta">
+        <div id="resultsCount">Showing 0 products</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+      </div>
+
+      <div class="signage-grid" id="productGrid"></div>
+
+      <div class="signage-empty" id="emptyState">
+        No products found for selected filters. Try clearing filters.
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="youtube.com/@nkenterprises-y7l" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PAGE JS -->
+<script src="js/products-signage.js"></script>
+
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
+
+</body>
+</html>
