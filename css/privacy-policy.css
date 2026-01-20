@@ -1,3 +1,7 @@
+/* =========================
+   PRIVACY POLICY PAGE CSS
+========================= */
+
 *{
   margin: 0;
   padding: 0;
@@ -11,134 +15,90 @@ body{
 }
 
 /* =========================
-   HEADER
+   HERO SECTION
 ========================= */
-.site-header{
-  background: #fff;
-}
-
-.top-bar{
-  background: #7a4a22;
-  color: #fff;
+.pp-hero{
+  padding: 38px 15px 25px;
+  background: #f3ece6;
   text-align: center;
-  padding: 6px 10px;
-  font-size: 13px;
 }
 
-.top-bar i{
-  margin-right: 6px;
-}
-
-.main-header{
-  max-width: 1200px;
+.pp-hero-inner{
+  max-width: 980px;
   margin: auto;
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
 }
 
-.logo-area img{
-  height: 45px;
-}
-
-.menu{
-  display: flex;
-  gap: 22px;
-}
-
-.menu a{
-  text-decoration: none;
-  font-weight: 500;
-  color: #3a2b22;
-  font-size: 14px;
-}
-
-.menu a:hover{
-  color: #a36a3a;
-}
-
-.quote-btn{
-  background: #8b4f24;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.quote-btn:hover{
-  background: #6d3c1a;
-}
-
-/* =========================
-   PAGE TITLE
-========================= */
-.page-title{
-  text-align: center;
-  padding: 35px 15px 20px;
-}
-
-.page-title h1{
-  font-size: 38px;
+.pp-title{
+  font-size: 40px;
   font-weight: 700;
   color: #4a2c1d;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.page-title h1 i{
+.pp-title-icon{
+  font-size: 34px;
   color: #a36a3a;
 }
 
-.page-title p{
-  max-width: 900px;
+.pp-subtitle{
+  max-width: 850px;
   margin: 10px auto 0;
   font-size: 14px;
-  color: #5a4639;
   line-height: 1.7;
+  color: #5a4639;
 }
 
 /* =========================
-   MAIN GRID ALIGNMENT FIX
+   MAIN WRAP
 ========================= */
-.policy-wrapper{
-  padding: 20px 15px 60px;
+.pp-wrap{
+  padding: 22px 15px 55px;
 }
 
-.policy-grid{
-  max-width: 1100px;
+.pp-container{
+  max-width: 980px;  /* IMPORTANT: makes layout look like your screenshot */
   margin: auto;
+}
 
+/* =========================
+   GRID + COLUMN STACK
+========================= */
+.pp-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-
+  gap: 22px;
   align-items: start;
 }
 
+.pp-col{
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 /* =========================
-   CARD
+   CARD DESIGN
 ========================= */
-.card{
-  background: rgba(255,255,255,0.90);
+.pp-card{
+  width: 100%;
+  background: rgba(255,255,255,0.92);
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.15);
   overflow: hidden;
 }
 
-.card-head{
+/* CARD HEADER */
+.pp-card-head{
   padding: 14px 18px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   background: rgba(255,255,255,0.70);
 }
 
-.card-head h2{
-  font-size: 16px;
+.pp-card-head h2{
+  font-size: 15.5px;
   font-weight: 700;
   color: #5b2e1d;
   display: flex;
@@ -146,26 +106,30 @@ body{
   gap: 8px;
 }
 
-.num{
+.pp-num{
   color: #b27644;
   font-weight: 800;
 }
 
-.card-body{
+/* CARD BODY */
+.pp-card-body{
   padding: 16px 18px 18px;
-  font-size: 13px;
-  line-height: 1.75;
+  font-size: 12.8px;
+  line-height: 1.7;
   color: #4f3b30;
 }
 
-.card-body p{
+.pp-card-body p{
   margin-bottom: 10px;
 }
 
-.card-body h3{
-  margin-top: 12px;
+/* =========================
+   SUB HEADINGS
+========================= */
+.pp-card-body h3{
+  margin-top: 10px;
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #4a2c1d;
 }
@@ -173,28 +137,59 @@ body{
 /* =========================
    LISTS
 ========================= */
-.check-list,
-.dot-list,
-.icon-list{
+
+/* default icon list */
+.pp-list{
   list-style: none;
-  margin: 8px 0 12px;
+  margin-bottom: 12px;
 }
 
-.check-list li,
-.dot-list li,
-.icon-list li{
+.pp-list li{
   display: flex;
-  align-items: flex-start;
   gap: 10px;
+  align-items: flex-start;
   padding: 6px 0;
-  font-size: 13px;
+  font-size: 12.8px;
 }
 
-.check-list i,
-.icon-list i{
+.pp-list i{
   color: #b27644;
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 12px;
+}
+
+/* checklist */
+.pp-checklist{
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.pp-checklist li{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 6px 0;
+  font-size: 12.8px;
+}
+
+.pp-checklist i{
+  color: #b27644;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* dot list (usage data) */
+.pp-dotlist{
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.pp-dotlist li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 12.8px;
 }
 
 .dot{
@@ -202,89 +197,85 @@ body{
   height: 10px;
   border-radius: 50%;
   border: 3px solid #b27644;
-  margin-top: 4px;
+  display: inline-block;
 }
 
 /* =========================
-   NOTES
+   NOTES (INFO BOX)
 ========================= */
-.note{
+.pp-note{
   margin-top: 14px;
   padding: 10px 12px;
   border-radius: 10px;
-  font-size: 12.5px;
+  background: #fff3e8;
+  border: 1px solid rgba(179,118,68,0.35);
   display: flex;
   gap: 10px;
   align-items: flex-start;
+  font-size: 12.4px;
 }
 
-.note i{
+.pp-note i{
+  color: #b27644;
   margin-top: 2px;
 }
 
-.note-orange{
-  background: #fff3e8;
-  border: 1px solid rgba(179,118,68,0.35);
-}
-
-.note-orange i{
-  color: #b27644;
-}
-
-.note-red{
+/* warning note */
+.pp-note.warn{
   background: #fff1f1;
   border: 1px solid rgba(220,60,60,0.25);
 }
 
-.note-red i{
+.pp-note.warn i{
   color: #d65a5a;
 }
 
-.note-green{
+/* green note */
+.pp-note.green{
   background: #effff2;
   border: 1px solid rgba(40,160,80,0.25);
 }
 
-.note-green i{
+.pp-note.green i{
   color: #2a9b52;
 }
 
 /* =========================
-   CONTACT
+   CONTACT SECTION
 ========================= */
-.contact-line{
+.pp-card.contact .pp-card-head h2{
+  font-size: 15px;
+}
+
+.pp-contact-line{
   display: flex;
   gap: 10px;
   align-items: center;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 12.8px;
 }
 
-.contact-line i{
+.pp-contact-line i{
   color: #b27644;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.site-footer{
-  margin-top: 40px;
-  background: #7a4a22;
-  color: #fff;
-  text-align: center;
-  padding: 14px 10px;
-  font-size: 13px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
-@media(max-width: 950px){
-  .policy-grid{
+@media (max-width: 900px){
+  .pp-grid{
     grid-template-columns: 1fr;
   }
 
-  .menu{
-    display: none;
+  .pp-container{
+    max-width: 100%;
+  }
+
+  .pp-title{
+    font-size: 30px;
+  }
+
+  .pp-subtitle{
+    font-size: 13px;
   }
 }
