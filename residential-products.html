@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Residential Furniture Products | NK Enterprises</title>
+  <style>
+    :root{
+      --bg:#f7f3ef;
+      --card:#ffffff;
+      --text:#2b1f18;
+      --muted:#6b5b52;
+      --brand:#8b5a2b;
+      --brand2:#a06a34;
+      --border:#eadfd6;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:18px;
+    }
+
+    /* Top header (simple demo) */
+    .topbar{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .topbar-inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.4px;
+    }
+    .brand-badge{
+      width:40px;height:40px;border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),#c48a4a);
+      display:grid;place-items:center;
+      color:#fff;font-weight:900;
+      box-shadow: var(--shadow);
+    }
+    .nav{
+      display:flex; gap:14px; flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    .cta{
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      padding:10px 14px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+    }
+    .cta:hover{background:var(--brand2)}
+
+    /* Page header */
+    .page-header{
+      margin-top:18px;
+      background:rgba(255,255,255,.55);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .breadcrumb{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:8px;
+    }
+    .title-row{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      line-height:1.1;
+    }
+    .subtitle{
+      margin:8px 0 0;
+      color:var(--muted);
+      max-width:720px;
+      font-size:14px;
+    }
+
+    /* Controls */
+    .controls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:14px;
+    }
+    .input, .select{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:10px 12px;
+      outline:none;
+      min-width:220px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    }
+    .select{min-width:180px}
+    .btn{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:10px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      color:var(--text);
+      box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    }
+    .btn.primary{
+      background:var(--brand);
+      color:#fff;
+      border-color:transparent;
+    }
+    .btn.primary:hover{background:var(--brand2)}
+    .btn:hover{filter:brightness(.98)}
+
+    /* Layout */
+    .layout{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:18px;
+      margin-top:18px;
+      align-items:start;
+    }
+
+    /* Sidebar */
+    .sidebar{
+      position:sticky;
+      top:88px;
+    }
+    .panel{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-head{
+      padding:14px 14px 10px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .panel-head h3{
+      margin:0;
+      font-size:16px;
+    }
+    .panel-body{
+      padding:10px 14px 14px;
+    }
+
+    details{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px 12px;
+      margin-bottom:10px;
+      background:rgba(247,243,239,.6);
+    }
+    details[open]{background:#fff}
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--text);
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    .group{
+      margin-top:10px;
+      padding-top:8px;
+      border-top:1px dashed var(--border);
+    }
+    .group-title{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:800;
+      margin:0 0 6px;
+    }
+    .check{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:6px 0;
+      font-size:14px;
+      color:var(--text);
+    }
+    .check input{accent-color: var(--brand)}
+
+    /* Main content */
+    .main{
+      min-height:500px;
+    }
+    .active-filters{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:10px;
+    }
+    .tag{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.05);
+      font-weight:700;
+      font-size:13px;
+    }
+    .tag button{
+      border:none;
+      background:transparent;
+      cursor:pointer;
+      font-weight:900;
+      color:var(--muted);
+    }
+    .results-meta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+      margin:10px 0 14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .thumb{
+      height:160px;
+      background:linear-gradient(135deg, #fff, #efe5dc);
+      display:grid;
+      place-items:center;
+      font-size:40px;
+    }
+    .card-body{
+      padding:12px 12px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .name{
+      font-weight:900;
+      font-size:15px;
+      line-height:1.2;
+      margin:0;
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .price{
+      font-weight:900;
+      color:var(--text);
+      margin-top:4px;
+    }
+    .card-actions{
+      display:flex;
+      gap:8px;
+      margin-top:8px;
+    }
+    .small-btn{
+      flex:1;
+      border-radius:999px;
+      padding:10px 10px;
+      border:1px solid var(--border);
+      background:#fff;
+      cursor:pointer;
+      font-weight:800;
+      font-size:13px;
+    }
+    .small-btn.primary{
+      background:var(--brand);
+      color:#fff;
+      border-color:transparent;
+    }
+    .small-btn.primary:hover{background:var(--brand2)}
+
+    .empty{
+      background:#fff;
+      border:1px dashed var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      color:var(--muted);
+      box-shadow: var(--shadow);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .grid{grid-template-columns: repeat(2, minmax(0,1fr));}
+      .layout{grid-template-columns: 1fr;}
+      .sidebar{position:relative; top:auto;}
+    }
+    @media (max-width: 560px){
+      .grid{grid-template-columns: 1fr;}
+      .input{min-width:100%}
+      .select{min-width:100%}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">NK</div>
+        <div>
+          <div style="font-size:14px; font-weight:900;">NK ENTERPRISES</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Furniture & Interior Products</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" style="color:var(--text);">Products</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <button class="cta" onclick="alert('Connect WhatsApp / Contact Page')">Get in Touch</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <div class="breadcrumb">Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Residential Furniture</div>
+
+      <div class="title-row">
+        <div>
+          <h1>Residential Furniture Products</h1>
+          <p class="subtitle">
+            Explore premium residential furniture for living rooms, bedrooms, dining areas, home offices, and more.
+            Use filters to quickly find the right products.
+          </p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" class="input" type="text" placeholder="Search products (e.g. sofa, bed, wardrobe)" />
+        <select id="sortSelect" class="select">
+          <option value="popular">Sort: Popular</option>
+          <option value="newest">Sort: Newest</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+        </select>
+        <button class="btn" id="clearAllBtn">Clear All</button>
+        <button class="btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+      </div>
+    </section>
+
+    <section class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Filter by Category</h3>
+            <button class="btn" id="applyBtn" title="Filters apply instantly">Apply</button>
+          </div>
+          <div class="panel-body" id="filterPanel">
+
+            <!-- Living Room -->
+            <details open>
+              <summary>🛋️ Living Room Furniture</summary>
+
+              <div class="group">
+                <p class="group-title">Seating</p>
+                <label class="check"><input type="checkbox" value="Sofas" data-filter="sub"> Sofas</label>
+                <label class="check"><input type="checkbox" value="Sectionals" data-filter="sub"> Sectionals</label>
+                <label class="check"><input type="checkbox" value="Recliners" data-filter="sub"> Recliners</label>
+                <label class="check"><input type="checkbox" value="Armchairs / Accent chairs" data-filter="sub"> Armchairs / Accent chairs</label>
+                <label class="check"><input type="checkbox" value="Futons / Convertible sofas" data-filter="sub"> Futons / Convertible sofas</label>
+                <label class="check"><input type="checkbox" value="Bean bags" data-filter="sub"> Bean bags</label>
+              </div>
+
+              <div class="group">
+                <p class="group-title">Tables</p>
+                <label class="check"><input type="checkbox" value="Coffee tables" data-filter="sub"> Coffee tables</label>
+                <label class="check"><input type="checkbox" value="End / Side tables" data-filter="sub"> End / Side tables</label>
+                <label class="check"><input type="checkbox" value="Console tables" data-filter="sub"> Console tables</label>
+                <label class="check"><input type="checkbox" value="Nesting tables" data-filter="sub"> Nesting tables</label>
+              </div>
+
+              <div class="group">
+                <p class="group-title">Storage & Displays</p>
+                <label class="check"><input type="checkbox" value="TV stands / Media units" data-filter="sub"> TV stands / Media units</label>
+                <label class="check"><input type="checkbox" value="Bookcases / Shelving units" data-filter="sub"> Bookcases / Shelving units</label>
+                <label class="check"><input type="checkbox" value="Wall units / Display cabinets" data-filter="sub"> Wall units / Display cabinets</label>
+                <label class="check"><input type="checkbox" value="Storage ottomans" data-filter="sub"> Storage ottomans</label>
+              </div>
+            </details>
+
+            <!-- Dining -->
+            <details>
+              <summary>🍽️ Dining Room Furniture</summary>
+
+              <div class="group">
+                <p class="group-title">Dining Sets</p>
+                <label class="check"><input type="checkbox" value="Dining tables" data-filter="sub"> Dining tables</label>
+                <label class="check"><input type="checkbox" value="Dining chairs" data-filter="sub"> Dining chairs</label>
+                <label class="check"><input type="checkbox" value="Benches" data-filter="sub"> Benches</label>
+              </div>
+
+              <div class="group">
+                <p class="group-title">Storage</p>
+                <label class="check"><input type="checkbox" value="Buffets / Sideboards" data-filter="sub"> Buffets / Sideboards</label>
+                <label class="check"><input type="checkbox" value="China cabinets / Hutch" data-filter="sub"> China cabinets / Hutch</label>
+                <label class="check"><input type="checkbox" value="Bar carts / Beverage cabinets" data-filter="sub"> Bar carts / Beverage cabinets</label>
+              </div>
+            </details>
+
+            <!-- Bedroom -->
+            <details>
+              <summary>🛏️ Bedroom Furniture</summary>
+
+              <div class="group">
+                <p class="group-title">Beds</p>
+                <label class="check"><input type="checkbox" value="Bed frames" data-filter="sub"> Bed frames</label>
+                <label class="check"><input type="checkbox" value="Headboards" data-filter="sub"> Headboards</label>
+                <label class="check"><input type="checkbox" value="Platform beds" data-filter="sub"> Platform beds</label>
+                <label class="check"><input type="checkbox" value="Bunk beds / Loft beds" data-filter="sub"> Bunk beds / Loft beds</label>
+              </div>
+
+              <div class="group">
+                <p class="group-title">Support & Storage</p>
+                <label class="check"><input type="checkbox" value="Mattresses" data-filter="sub"> Mattresses</label>
+                <label class="check"><input type="checkbox" value="Nightstands" data-filter="sub"> Nightstands</label>
+                <label class="check"><input type="checkbox" value="Dressers / Chests of drawers" data-filter="sub"> Dressers / Chests of drawers</label>
+                <label class="check"><input type="checkbox" value="Wardrobes / Armoires" data-filter="sub"> Wardrobes / Armoires</label>
+                <label class="check"><input type="checkbox" value="Bedside tables" data-filter="sub"> Bedside tables</label>
+                <label class="check"><input type="checkbox" value="Under-bed storage" data-filter="sub"> Under-bed storage</label>
+              </div>
+
+              <div class="group">
+                <p class="group-title">Seating & Accessories</p>
+                <label class="check"><input type="checkbox" value="Bedroom benches" data-filter="sub"> Bedroom benches</label>
+                <label class="check"><input type="checkbox" value="Vanity tables & stools" data-filter="sub"> Vanity tables & stools</label>
+                <label class="check"><input type="checkbox" value="Mirrors" data-filter="sub"> Mirrors (floor / wall)</label>
+              </div>
+            </details>
+
+            <!-- Home Office -->
+            <details>
+              <summary>🧑‍💻 Home Office Furniture</summary>
+              <div class="group">
+                <label class="check"><input type="checkbox" value="Desks" data-filter="sub"> Desks</label>
+                <label class="check"><input type="checkbox" value="Office chairs / Task chairs" data-filter="sub"> Office chairs / Task chairs</label>
+                <label class="check"><input type="checkbox" value="Filing cabinets" data-filter="sub"> Filing cabinets</label>
+                <label class="check"><input type="checkbox" value="Desk hutch / Storage units" data-filter="sub"> Desk hutch / Storage units</label>
+                <label class="check"><input type="checkbox" value="Bookcases / Shelving units" data-filter="sub"> Bookcases / Shelving</label>
+              </div>
+            </details>
+
+            <!-- Entryway -->
+            <details>
+              <summary>🧼 Entryway & Hallway Furniture</summary>
+              <div class="group">
+                <label class="check"><input type="checkbox" value="Entryway benches" data-filter="sub"> Entryway benches</label>
+                <label class="check"><input type="checkbox" value="Shoe racks" data-filter="sub"> Shoe racks</label>
+                <label class="check"><input type="checkbox" value="Coat racks / Hall trees" data-filter="sub"> Coat racks / Hall trees</label>
+                <label class="check"><input type="checkbox" value="Console tables" data-filter="sub"> Console tables</label>
+                <label class="check"><input type="checkbox" value="Umbrella stands" data-filter="sub"> Umbrella stands</label>
+              </div>
+            </details>
+
+            <!-- Kids -->
+            <details>
+              <summary>🧒 Kids’ & Teen Furniture</summary>
+              <div class="group">
+                <label class="check"><input type="checkbox" value="Kids’ beds" data-filter="sub"> Kids’ beds</label>
+                <label class="check"><input type="checkbox" value="Study desks & chairs" data-filter="sub"> Study desks & chairs</label>
+                <label class="check"><input type="checkbox" value="Toy storage units" data-filter="sub"> Toy storage units</label>
+                <label class="check"><input type="checkbox" value="Kids’ wardrobes" data-filter="sub"> Kids’ wardrobes</label>
+              </div>
+            </details>
+
+            <!-- Outdoor -->
+            <details>
+              <summary>☀️ Outdoor & Patio Furniture</summary>
+              <div class="group">
+                <label class="check"><input type="checkbox" value="Patio dining sets" data-filter="sub"> Patio dining sets</label>
+                <label class="check"><input type="checkbox" value="Outdoor sofas / lounges" data-filter="sub"> Outdoor sofas / lounges</label>
+                <label class="check"><input type="checkbox" value="Adirondack chairs" data-filter="sub"> Adirondack chairs</label>
+                <label class="check"><input type="checkbox" value="Outdoor benches" data-filter="sub"> Outdoor benches</label>
+                <label class="check"><input type="checkbox" value="Hammocks" data-filter="sub"> Hammocks</label>
+                <label class="check"><input type="checkbox" value="Outdoor storage boxes" data-filter="sub"> Outdoor storage boxes</label>
+              </div>
+            </details>
+
+            <!-- Accent -->
+            <details>
+              <summary>🧰 Accent & Specialty Furniture</summary>
+              <div class="group">
+                <label class="check"><input type="checkbox" value="Ottomans / Poufs" data-filter="sub"> Ottomans / Poufs</label>
+                <label class="check"><input type="checkbox" value="Display cabinets" data-filter="sub"> Display cabinets</label>
+                <label class="check"><input type="checkbox" value="Room dividers / Screens" data-filter="sub"> Room dividers / Screens</label>
+                <label class="check"><input type="checkbox" value="Accent chests" data-filter="sub"> Accent chests</label>
+                <label class="check"><input type="checkbox" value="Trunks" data-filter="sub"> Trunks</label>
+              </div>
+            </details>
+
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <section class="main">
+        <div class="active-filters" id="activeFilters"></div>
+
+        <div class="results-meta">
+          <div id="resultsCount">Showing 0 products</div>
+          <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+
+        <div id="emptyState" class="empty" style="display:none; margin-top:14px;">
+          No products found for selected filters. Try clearing filters.
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    // ---------------------------
+    // 1) SAMPLE PRODUCT DATA
+    // Replace these with your real products from database later
+    // ---------------------------
+    const PRODUCTS = [
+      // Living Room
+      { id: 1, name: "Modern 3-Seater Sofa", category: "Living Room Furniture", sub: "Sofas", price: 25999, popular: 95, newest: 10, emoji:"🛋️" },
+      { id: 2, name: "Compact 2-Seater Sofa", category: "Living Room Furniture", sub: "Sofas", price: 18999, popular: 85, newest: 12, emoji:"🛋️" },
+      { id: 3, name: "L-Shape Sectional Sofa", category: "Living Room Furniture", sub: "Sectionals", price: 34999, popular: 92, newest: 9, emoji:"🛋️" },
+      { id: 4, name: "Comfort Recliner Chair", category: "Living Room Furniture", sub: "Recliners", price: 16999, popular: 80, newest: 8, emoji:"🪑" },
+      { id: 5, name: "Accent Armchair (Fabric)", category: "Living Room Furniture", sub: "Armchairs / Accent chairs", price: 9999, popular: 78, newest: 14, emoji:"🪑" },
+      { id: 6, name: "Round Coffee Table", category: "Living Room Furniture", sub: "Coffee tables", price: 4999, popular: 70, newest: 15, emoji:"🪵" },
+      { id: 7, name: "TV Media Unit (6ft)", category: "Living Room Furniture", sub: "TV stands / Media units", price: 12999, popular: 88, newest: 11, emoji:"📺" },
+      { id: 8, name: "Wall Display Cabinet", category: "Living Room Furniture", sub: "Wall units / Display cabinets", price: 14999, popular: 72, newest: 6, emoji:"🗄️" },
+
+      // Dining
+      { id: 9, name: "6-Seater Dining Table Set", category: "Dining Room Furniture", sub: "Dining tables", price: 29999, popular: 90, newest: 7, emoji:"🍽️" },
+      { id: 10, name: "4-Seater Round Dining Table", category: "Dining Room Furniture", sub: "Dining tables", price: 21999, popular: 76, newest: 13, emoji:"🍽️" },
+      { id: 11, name: "Dining Chairs (Set of 2)", category: "Dining Room Furniture", sub: "Dining chairs", price: 6999, popular: 73, newest: 16, emoji:"🪑" },
+      { id: 12, name: "Wooden Buffet Sideboard", category: "Dining Room Furniture", sub: "Buffets / Sideboards", price: 17999, popular: 79, newest: 5, emoji:"🗄️" },
+
+      // Bedroom
+      { id: 13, name: "Queen Size Bed Frame", category: "Bedroom Furniture", sub: "Bed frames", price: 24999, popular: 91, newest: 4, emoji:"🛏️" },
+      { id: 14, name: "Storage Platform Bed", category: "Bedroom Furniture", sub: "Platform beds", price: 28999, popular: 87, newest: 3, emoji:"🛏️" },
+      { id: 15, name: "Nightstand (2 Drawer)", category: "Bedroom Furniture", sub: "Nightstands", price: 3999, popular: 69, newest: 18, emoji:"🗄️" },
+      { id: 16, name: "3 Door Wardrobe", category: "Bedroom Furniture", sub: "Wardrobes / Armoires", price: 19999, popular: 84, newest: 2, emoji:"🚪" },
+
+      // Home Office
+      { id: 17, name: "Computer Desk with Storage", category: "Home Office Furniture", sub: "Desks", price: 8999, popular: 86, newest: 1, emoji:"💻" },
+      { id: 18, name: "Ergonomic Office Chair", category: "Home Office Furniture", sub: "Office chairs / Task chairs", price: 7499, popular: 89, newest: 17, emoji:"🪑" },
+
+      // Entryway
+      { id: 19, name: "Entryway Bench with Shelf", category: "Entryway & Hallway Furniture", sub: "Entryway benches", price: 5999, popular: 67, newest: 19, emoji:"🚪" },
+      { id: 20, name: "Shoe Rack (3 Tier)", category: "Entryway & Hallway Furniture", sub: "Shoe racks", price: 2499, popular: 60, newest: 20, emoji:"👟" },
+
+      // Kids
+      { id: 21, name: "Kids Bunk Bed", category: "Kids’ & Teen Furniture", sub: "Kids’ beds", price: 18999, popular: 74, newest: 21, emoji:"🧒" },
+      { id: 22, name: "Kids Study Desk Set", category: "Kids’ & Teen Furniture", sub: "Study desks & chairs", price: 6999, popular: 65, newest: 22, emoji:"📚" },
+
+      // Outdoor
+      { id: 23, name: "Outdoor Patio Dining Set", category: "Outdoor & Patio Furniture", sub: "Patio dining sets", price: 27999, popular: 71, newest: 23, emoji:"☀️" },
+      { id: 24, name: "Outdoor Bench", category: "Outdoor & Patio Furniture", sub: "Outdoor benches", price: 8999, popular: 62, newest: 24, emoji:"🌿" },
+
+      // Accent
+      { id: 25, name: "Storage Ottoman", category: "Accent & Specialty Furniture", sub: "Ottomans / Poufs", price: 2999, popular: 75, newest: 25, emoji:"🧰" },
+      { id: 26, name: "Room Divider Screen", category: "Accent & Specialty Furniture", sub: "Room dividers / Screens", price: 7999, popular: 64, newest: 26, emoji:"🧩" },
+    ];
+
+    // ---------------------------
+    // 2) DOM ELEMENTS
+    // ---------------------------
+    const grid = document.getElementById("productGrid");
+    const emptyState = document.getElementById("emptyState");
+    const resultsCount = document.getElementById("resultsCount");
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+    const clearAllBtn = document.getElementById("clearAllBtn");
+    const activeFiltersEl = document.getElementById("activeFilters");
+
+    // all checkboxes
+    const filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"][data-filter="sub"]'));
+
+    // ---------------------------
+    // 3) STATE
+    // ---------------------------
+    let selectedSubs = new Set();
+    let searchQuery = "";
+    let sortMode = "popular";
+
+    // ---------------------------
+    // 4) HELPERS
+    // ---------------------------
+    function formatINR(num){
+      // simple INR formatting
+      return "₹ " + num.toLocaleString("en-IN");
+    }
+
+    function getFilteredProducts(){
+      let list = [...PRODUCTS];
+
+      // filter by subcategories
+      if (selectedSubs.size > 0){
+        list = list.filter(p => selectedSubs.has(p.sub));
+      }
+
+      // search filter
+      if (searchQuery.trim().length > 0){
+        const q = searchQuery.toLowerCase();
+        list = list.filter(p =>
+          p.name.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.sub.toLowerCase().includes(q)
+        );
+      }
+
+      // sorting
+      if (sortMode === "popular"){
+        list.sort((a,b) => b.popular - a.popular);
+      } else if (sortMode === "newest"){
+        list.sort((a,b) => b.newest - a.newest);
+      } else if (sortMode === "priceLow"){
+        list.sort((a,b) => a.price - b.price);
+      } else if (sortMode === "priceHigh"){
+        list.sort((a,b) => b.price - a.price);
+      }
+
+      return list;
+    }
+
+    function renderActiveFilterTags(){
+      activeFiltersEl.innerHTML = "";
+
+      // subcategory tags
+      [...selectedSubs].forEach(sub => {
+        const tag = document.createElement("div");
+        tag.className = "tag";
+        tag.innerHTML = `
+          ${sub}
+          <button title="Remove">✕</button>
+        `;
+        tag.querySelector("button").addEventListener("click", () => {
+          selectedSubs.delete(sub);
+          // uncheck in UI
+          filterCheckboxes.forEach(cb => {
+            if (cb.value === sub) cb.checked = false;
+          });
+          render();
+        });
+        activeFiltersEl.appendChild(tag);
+      });
+
+      // search tag
+      if (searchQuery.trim()){
+        const tag = document.createElement("div");
+        tag.className = "tag";
+        tag.innerHTML = `
+          Search: "${searchQuery}"
+          <button title="Remove">✕</button>
+        `;
+        tag.querySelector("button").addEventListener("click", () => {
+          searchQuery = "";
+          searchInput.value = "";
+          render();
+        });
+        activeFiltersEl.appendChild(tag);
+      }
+    }
+
+    function renderProducts(list){
+      grid.innerHTML = "";
+
+      list.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        // WhatsApp link (replace with your number)
+        const whatsappNumber = "919999999999"; // <-- CHANGE
+        const msg = encodeURIComponent(`Hello NK Enterprises, I want enquiry for: ${p.name}`);
+        const waLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
+
+        card.innerHTML = `
+          <div class="thumb">${p.emoji}</div>
+          <div class="card-body">
+            <p class="name">${p.name}</p>
+            <div class="meta">
+              <span><b>Category:</b> ${p.category}</span>
+              <span><b>Type:</b> ${p.sub}</span>
+            </div>
+            <div class="price">${formatINR(p.price)}</div>
+
+            <div class="card-actions">
+              <button class="small-btn primary" data-view="${p.id}">View Details</button>
+              <a class="small-btn" href="${waLink}" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        `;
+
+        card.querySelector(`[data-view="${p.id}"]`).addEventListener("click", () => {
+          alert(`Open product details page for:\n\n${p.name}\n\n(You can link to: /product/${p.id})`);
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    function render(){
+      renderActiveFilterTags();
+
+      const list = getFilteredProducts();
+      resultsCount.textContent = `Showing ${list.length} product${list.length === 1 ? "" : "s"}`;
+
+      if (list.length === 0){
+        emptyState.style.display = "block";
+      } else {
+        emptyState.style.display = "none";
+      }
+
+      renderProducts(list);
+    }
+
+    // ---------------------------
+    // 5) EVENTS
+    // ---------------------------
+    filterCheckboxes.forEach(cb => {
+      cb.addEventListener("change", (e) => {
+        const val = e.target.value;
+        if (e.target.checked) selectedSubs.add(val);
+        else selectedSubs.delete(val);
+        render();
+      });
+    });
+
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      render();
+    });
+
+    sortSelect.addEventListener("change", (e) => {
+      sortMode = e.target.value;
+      render();
+    });
+
+    clearAllBtn.addEventListener("click", () => {
+      selectedSubs.clear();
+      searchQuery = "";
+      sortMode = "popular";
+
+      // reset UI
+      filterCheckboxes.forEach(cb => cb.checked = false);
+      searchInput.value = "";
+      sortSelect.value = "popular";
+
+      render();
+    });
+
+    // "Apply" button just re-renders (filters already instant)
+    document.getElementById("applyBtn").addEventListener("click", render);
+
+    // initial render
+    render();
+  </script>
+
+</body>
+</html>
