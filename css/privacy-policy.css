@@ -1,3 +1,4 @@
+/* RESET */
 *{
   margin: 0;
   padding: 0;
@@ -59,10 +60,19 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  align-items: start;   /* ✅ IMPORTANT */
+}
+
+/* COLUMN FIX (ALIGNMENT) */
+.pp-col{
+  display: flex;         /* ✅ IMPORTANT */
+  flex-direction: column;
+  gap: 18px;             /* ✅ SAME SPACE BETWEEN CARDS */
 }
 
 /* CARD */
 .pp-card{
+  width: 100%;           /* ✅ IMPORTANT */
   background: rgba(255,255,255,0.85);
   border-radius: 14px;
   box-shadow: 0 18px 35px rgba(0,0,0,0.18);
@@ -70,6 +80,7 @@ body{
   overflow: hidden;
 }
 
+/* CARD HEADER */
 .pp-card-head{
   padding: 14px 18px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -90,6 +101,7 @@ body{
   font-weight: 800;
 }
 
+/* CARD BODY */
 .pp-card-body{
   padding: 16px 18px 18px;
   font-size: 13px;
