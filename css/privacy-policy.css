@@ -10,81 +10,134 @@ body{
   color: #3a2b22;
 }
 
-/* HERO */
-.pp-hero{
-  padding: 40px 15px 25px;
-  background: #f3ece6;
+/* =========================
+   HEADER
+========================= */
+.site-header{
+  background: #fff;
+}
+
+.top-bar{
+  background: #7a4a22;
+  color: #fff;
   text-align: center;
+  padding: 6px 10px;
+  font-size: 13px;
 }
 
-.pp-hero-inner{
-  max-width: 1100px;
+.top-bar i{
+  margin-right: 6px;
+}
+
+.main-header{
+  max-width: 1200px;
   margin: auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-.pp-title{
-  font-size: 42px;
+.logo-area img{
+  height: 45px;
+}
+
+.menu{
+  display: flex;
+  gap: 22px;
+}
+
+.menu a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #3a2b22;
+  font-size: 14px;
+}
+
+.menu a:hover{
+  color: #a36a3a;
+}
+
+.quote-btn{
+  background: #8b4f24;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.quote-btn:hover{
+  background: #6d3c1a;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+.page-title{
+  text-align: center;
+  padding: 35px 15px 20px;
+}
+
+.page-title h1{
+  font-size: 38px;
   font-weight: 700;
   color: #4a2c1d;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.pp-title-icon{
-  font-size: 36px;
+.page-title h1 i{
   color: #a36a3a;
 }
 
-.pp-subtitle{
-  max-width: 850px;
+.page-title p{
+  max-width: 900px;
   margin: 10px auto 0;
   font-size: 14px;
-  line-height: 1.7;
   color: #5a4639;
+  line-height: 1.7;
 }
 
-/* MAIN WRAP */
-.pp-wrap{
-  padding: 25px 15px 70px;
+/* =========================
+   MAIN GRID ALIGNMENT FIX
+========================= */
+.policy-wrapper{
+  padding: 20px 15px 60px;
 }
 
-.pp-container{
+.policy-grid{
   max-width: 1100px;
   margin: auto;
-}
 
-/* MAIN GRID */
-.pp-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 20px;
+
   align-items: start;
 }
 
-/* IMPORTANT FIX FOR ALIGNMENT */
-.pp-col{
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-/* CARD */
-.pp-card{
-  background: rgba(255,255,255,0.85);
+/* =========================
+   CARD
+========================= */
+.card{
+  background: rgba(255,255,255,0.90);
   border-radius: 14px;
-  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
   border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
   overflow: hidden;
 }
 
-.pp-card-head{
+.card-head{
   padding: 14px 18px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   background: rgba(255,255,255,0.70);
 }
 
-.pp-card-head h2{
+.card-head h2{
   font-size: 16px;
   font-weight: 700;
   color: #5b2e1d;
@@ -93,82 +146,55 @@ body{
   gap: 8px;
 }
 
-.pp-num{
+.num{
   color: #b27644;
   font-weight: 800;
 }
 
-.pp-card-body{
+.card-body{
   padding: 16px 18px 18px;
   font-size: 13px;
   line-height: 1.75;
   color: #4f3b30;
 }
 
-.pp-card-body p{
+.card-body p{
   margin-bottom: 10px;
 }
 
-/* h3 */
-.pp-card-body h3{
-  margin-top: 10px;
+.card-body h3{
+  margin-top: 12px;
   margin-bottom: 6px;
   font-size: 14px;
   font-weight: 700;
   color: #4a2c1d;
 }
 
-/* LIST */
-.pp-list{
+/* =========================
+   LISTS
+========================= */
+.check-list,
+.dot-list,
+.icon-list{
   list-style: none;
-  margin-bottom: 12px;
+  margin: 8px 0 12px;
 }
 
-.pp-list li{
+.check-list li,
+.dot-list li,
+.icon-list li{
   display: flex;
-  gap: 10px;
   align-items: flex-start;
+  gap: 10px;
   padding: 6px 0;
   font-size: 13px;
 }
 
-.pp-list i{
+.check-list i,
+.icon-list i{
   color: #b27644;
-  margin-top: 4px;
+  margin-top: 3px;
   font-size: 12px;
-}
-
-/* CHECKLIST */
-.pp-checklist{
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.pp-checklist li{
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 6px 0;
-  font-size: 13px;
-}
-
-.pp-checklist i{
-  color: #b27644;
-  margin-top: 4px;
-  font-size: 12px;
-}
-
-/* DOT LIST */
-.pp-dotlist{
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.pp-dotlist li{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 0;
 }
 
 .dot{
@@ -176,47 +202,57 @@ body{
   height: 10px;
   border-radius: 50%;
   border: 3px solid #b27644;
-  display: inline-block;
+  margin-top: 4px;
 }
 
-/* NOTES */
-.pp-note{
+/* =========================
+   NOTES
+========================= */
+.note{
   margin-top: 14px;
   padding: 10px 12px;
   border-radius: 10px;
-  background: #fff3e8;
-  border: 1px solid rgba(179,118,68,0.35);
+  font-size: 12.5px;
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  font-size: 12.5px;
 }
 
-.pp-note i{
-  color: #b27644;
+.note i{
   margin-top: 2px;
 }
 
-.pp-note.warn{
+.note-orange{
+  background: #fff3e8;
+  border: 1px solid rgba(179,118,68,0.35);
+}
+
+.note-orange i{
+  color: #b27644;
+}
+
+.note-red{
   background: #fff1f1;
   border: 1px solid rgba(220,60,60,0.25);
 }
 
-.pp-note.warn i{
+.note-red i{
   color: #d65a5a;
 }
 
-.pp-note.green{
+.note-green{
   background: #effff2;
   border: 1px solid rgba(40,160,80,0.25);
 }
 
-.pp-note.green i{
+.note-green i{
   color: #2a9b52;
 }
 
-/* CONTACT */
-.pp-contact-line{
+/* =========================
+   CONTACT
+========================= */
+.contact-line{
   display: flex;
   gap: 10px;
   align-items: center;
@@ -224,17 +260,31 @@ body{
   font-size: 13px;
 }
 
-.pp-contact-line i{
+.contact-line i{
   color: #b27644;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px){
-  .pp-grid{
+/* =========================
+   FOOTER
+========================= */
+.site-footer{
+  margin-top: 40px;
+  background: #7a4a22;
+  color: #fff;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width: 950px){
+  .policy-grid{
     grid-template-columns: 1fr;
   }
 
-  .pp-title{
-    font-size: 30px;
+  .menu{
+    display: none;
   }
 }
