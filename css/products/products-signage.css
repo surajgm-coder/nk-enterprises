@@ -1,0 +1,419 @@
+/* ==========================================
+   Signage & Branding Products - NK Enterprises
+   File: css/products-signage.css
+   ========================================== */
+
+:root{
+  --bg: #f7f3ef;
+  --card: #ffffff;
+  --text: #2b1f18;
+  --muted: #6b5b52;
+
+  --gold: #d6a04a;
+  --gold2: #c88a2a;
+  --brown: #8b5a2b;
+  --brown2: #a06a34;
+
+  --border: #eadfd6;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius: 18px;
+}
+
+/* Page wrapper */
+.signage-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header section */
+.signage-header{
+  margin-top: 14px;
+  background: rgba(255,255,255,.70);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.signage-breadcrumb{
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.signage-title{
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.signage-subtitle{
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 900px;
+}
+
+/* Controls */
+.signage-controls{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.signage-input,
+.signage-select{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 11px 14px;
+  outline: none;
+  min-width: 240px;
+  font-size: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  transition: 0.2s ease;
+}
+
+.signage-input:focus,
+.signage-select:focus{
+  border-color: rgba(214,160,74,.55);
+  box-shadow: 0 0 0 4px rgba(214,160,74,.18);
+}
+
+.signage-btn{
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 11px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  transition: 0.2s ease;
+}
+
+.signage-btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(214,160,74,.55);
+}
+
+.signage-btn.primary{
+  background: linear-gradient(135deg, var(--brown), var(--gold));
+  color: #fff;
+  border: none;
+}
+
+.signage-btn.primary:hover{
+  filter: brightness(1.05);
+}
+
+/* Layout */
+.signage-layout{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+/* Sidebar */
+.signage-sidebar{
+  position: sticky;
+  top: 90px;
+}
+
+.signage-panel{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.signage-panel-head{
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.signage-panel-head h3{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.signage-panel-body{
+  padding: 12px 14px 14px;
+}
+
+/* Accordion filters */
+.signage-panel details{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: rgba(247,243,239,.65);
+  transition: 0.2s ease;
+}
+
+.signage-panel details[open]{
+  background: #fff;
+}
+
+.signage-panel summary{
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signage-panel summary::-webkit-details-marker{
+  display: none;
+}
+
+.cat-icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(139,90,43,.18), rgba(214,160,74,.25));
+  border: 1px solid rgba(214,160,74,.35);
+  color: var(--brown);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+.cat-icon i{
+  font-size: 14px;
+}
+
+/* Filter group */
+.signage-group{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.signage-group-title{
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.signage-check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.signage-check input{
+  accent-color: var(--gold2);
+}
+
+/* Main section */
+.signage-main{
+  min-height: 520px;
+}
+
+/* Active tags */
+.signage-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.signage-tag{
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.signage-tag button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+/* Meta row */
+.signage-meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 10px 0 14px;
+}
+
+/* Product Grid */
+.signage-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Product card */
+.signage-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease;
+}
+
+.signage-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(214,160,74,.55);
+}
+
+.signage-thumb{
+  height: 160px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #fff, #efe5dc);
+  position: relative;
+}
+
+.signage-thumb i{
+  font-size: 42px;
+  color: var(--brown);
+  opacity: 0.95;
+}
+
+.signage-card-body{
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signage-name{
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.signage-card-meta{
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.signage-price{
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+/* Card actions */
+.signage-actions{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.signage-small-btn{
+  flex: 1;
+  border-radius: 999px;
+  padding: 10px 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+.signage-small-btn:hover{
+  border-color: rgba(214,160,74,.55);
+  transform: translateY(-1px);
+}
+
+.signage-small-btn.primary{
+  background: linear-gradient(135deg, var(--brown), var(--gold));
+  color: #fff;
+  border: none;
+}
+
+.signage-small-btn.primary:hover{
+  filter: brightness(1.05);
+}
+
+/* Empty state */
+.signage-empty{
+  display: none;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  color: var(--muted);
+  box-shadow: var(--shadow);
+  margin-top: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .signage-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .signage-sidebar{
+    position: relative;
+    top: auto;
+  }
+
+  .signage-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .signage-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .signage-input,
+  .signage-select{
+    min-width: 100%;
+  }
+}
