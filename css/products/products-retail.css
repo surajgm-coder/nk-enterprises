@@ -1,0 +1,422 @@
+/* ==========================================
+   Retail Fixtures & Display Products - NK Enterprises
+   File: css/products-retail.css
+   ========================================== */
+
+:root{
+  --nk-brown:#7a4b21;
+  --nk-brown-dark:#5c3718;
+  --nk-gold:#c18b2f;
+  --nk-gold-light:#d7aa54;
+
+  --nk-bg:#f7f3ef;
+  --nk-card:#ffffff;
+  --nk-border:#eadfd6;
+
+  --nk-text:#2b1f18;
+  --nk-muted:#6b5b52;
+
+  --nk-shadow: 0 10px 30px rgba(0,0,0,.08);
+  --nk-radius:18px;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.retail-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+.retail-header{
+  margin-top: 20px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  padding: 18px;
+}
+
+.retail-breadcrumb{
+  font-size: 13px;
+  color: var(--nk-muted);
+  margin-bottom: 6px;
+}
+
+.retail-title{
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+.retail-subtitle{
+  margin: 8px 0 0;
+  color: var(--nk-muted);
+  font-size: 14px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+.retail-controls{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.retail-input,
+.retail-select{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  outline: none;
+  min-width: 240px;
+  font-family: inherit;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+}
+
+.retail-input:focus,
+.retail-select:focus{
+  border-color: rgba(193,139,47,.55);
+  box-shadow: 0 0 0 4px rgba(193,139,47,.18);
+}
+
+.retail-btn{
+  border: 1px solid var(--nk-border);
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+  transition: .2s ease;
+}
+
+.retail-btn:hover{
+  transform: translateY(-1px);
+}
+
+.retail-btn.primary{
+  background: var(--nk-brown);
+  color: #fff;
+  border-color: transparent;
+}
+
+.retail-btn.primary:hover{
+  background: var(--nk-brown-dark);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.retail-layout{
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+/* =========================
+   SIDEBAR FILTER
+========================= */
+.retail-sidebar{
+  position: sticky;
+  top: 120px;
+}
+
+.retail-panel{
+  background: var(--nk-card);
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  overflow: hidden;
+}
+
+.retail-panel-head{
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid var(--nk-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.retail-panel-head h3{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+.retail-panel-body{
+  padding: 12px 14px 14px;
+}
+
+/* Accordion */
+.retail-panel details{
+  border: 1px solid var(--nk-border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: rgba(247,243,239,.65);
+  transition: .2s ease;
+}
+
+.retail-panel details[open]{
+  background: #fff;
+}
+
+.retail-panel summary{
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--nk-text);
+}
+
+.retail-panel summary::-webkit-details-marker{
+  display: none;
+}
+
+/* Golden Brown Icon Badge */
+.cat-icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--nk-brown), var(--nk-gold));
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  flex: 0 0 auto;
+}
+
+.retail-group{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--nk-border);
+}
+
+.retail-group-title{
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--nk-muted);
+  font-weight: 700;
+}
+
+.retail-check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--nk-text);
+}
+
+.retail-check input{
+  accent-color: var(--nk-brown);
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+.retail-main{
+  min-height: 500px;
+}
+
+/* Active filter tags */
+.retail-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.retail-tag{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+}
+
+.retail-tag button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--nk-muted);
+}
+
+/* Meta row */
+.retail-meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 14px;
+  color: var(--nk-muted);
+  font-size: 13px;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.retail-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.retail-card{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease;
+}
+
+.retail-card:hover{
+  transform: translateY(-3px);
+}
+
+.retail-thumb{
+  height: 160px;
+  background: linear-gradient(135deg, #fff, #efe5dc);
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  color: var(--nk-brown);
+}
+
+.retail-card-body{
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.retail-name{
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--nk-text);
+}
+
+.retail-card-meta{
+  font-size: 13px;
+  color: var(--nk-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.retail-price{
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+/* Buttons */
+.retail-actions{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.retail-small-btn{
+  flex: 1;
+  border-radius: 999px;
+  padding: 10px 10px;
+  border: 1px solid var(--nk-border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  font-family: inherit;
+  transition: .2s ease;
+  color: var(--nk-text);
+}
+
+.retail-small-btn:hover{
+  transform: translateY(-1px);
+}
+
+.retail-small-btn.primary{
+  background: var(--nk-brown);
+  color: #fff;
+  border-color: transparent;
+}
+
+.retail-small-btn.primary:hover{
+  background: var(--nk-brown-dark);
+}
+
+/* Empty State */
+.retail-empty{
+  background: #fff;
+  border: 1px dashed var(--nk-border);
+  border-radius: var(--nk-radius);
+  padding: 18px;
+  color: var(--nk-muted);
+  box-shadow: var(--nk-shadow);
+  margin-top: 14px;
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px){
+  .retail-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .retail-sidebar{
+    position: relative;
+    top: auto;
+  }
+
+  .retail-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .retail-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .retail-input,
+  .retail-select{
+    min-width: 100%;
+  }
+}
