@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office & Commercial Furniture Products | NK Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="css/office-commercial-products.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com">
+          <i class="fa-solid fa-envelope"></i> support@nkenters.com
+        </a>
+
+        <a href="tel:+916372352301">
+          <i class="fa-solid fa-phone"></i> +91 63723 52301
+        </a>
+
+        <a href="tel:+919699540314">
+          | +91 96995 40314
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+
+<!-- =========================
+     OFFICE PRODUCTS PAGE
+========================= -->
+<main class="office-wrap">
+
+  <!-- PAGE HEADER -->
+  <section class="office-header">
+    <div class="office-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Office & Commercial Furniture
+    </div>
+
+    <h1 class="office-title">Office & Commercial Furniture Products</h1>
+
+    <p class="office-subtitle">
+      Explore office workstations, ergonomic seating, storage solutions, conference room furniture, reception setups,
+      partitions, technology furniture, and more. Use filters to quickly find what you need.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="office-controls">
+      <input id="searchInput" class="office-input" type="text"
+        placeholder="Search products (e.g. desk, chair, filing cabinet)">
+
+      <select id="sortSelect" class="office-select">
+        <option value="popular">Sort: Popular</option>
+        <option value="newest">Sort: Newest</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <button class="office-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="office-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="office-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="office-sidebar">
+      <div class="office-panel">
+
+        <div class="office-panel-head">
+          <h3>Filter by Category</h3>
+          <button class="office-btn" id="applyBtn" type="button">Apply</button>
+        </div>
+
+        <div class="office-panel-body">
+
+          <!-- Workstations & Desks -->
+          <details open>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-desktop"></i></span>
+              Workstations & Desks
+            </summary>
+
+            <div class="office-group">
+              <p class="office-group-title">Individual Workstations</p>
+              <label class="office-check"><input type="checkbox" value="Executive desks" data-filter="sub"> Executive desks</label>
+              <label class="office-check"><input type="checkbox" value="Writing desks" data-filter="sub"> Writing desks</label>
+              <label class="office-check"><input type="checkbox" value="Computer desks" data-filter="sub"> Computer desks</label>
+              <label class="office-check"><input type="checkbox" value="Standing / height-adjustable desks" data-filter="sub"> Standing / height-adjustable desks</label>
+              <label class="office-check"><input type="checkbox" value="Reception desks" data-filter="sub"> Reception desks</label>
+              <label class="office-check"><input type="checkbox" value="L-shaped / U-shaped desks" data-filter="sub"> L-shaped / U-shaped desks</label>
+              <label class="office-check"><input type="checkbox" value="Corner workstations" data-filter="sub"> Corner workstations</label>
+              <label class="office-check"><input type="checkbox" value="Modular workstations / benching systems" data-filter="sub"> Modular workstations / benching systems</label>
+            </div>
+          </details>
+
+          <!-- Seating -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-chair"></i></span>
+              Seating
+            </summary>
+
+            <div class="office-group">
+              <p class="office-group-title">Office Chairs</p>
+              <label class="office-check"><input type="checkbox" value="Ergonomic task chairs" data-filter="sub"> Ergonomic task chairs</label>
+              <label class="office-check"><input type="checkbox" value="Manager chairs" data-filter="sub"> Manager chairs</label>
+              <label class="office-check"><input type="checkbox" value="Executive chairs" data-filter="sub"> Executive chairs</label>
+              <label class="office-check"><input type="checkbox" value="Drafting chairs" data-filter="sub"> Drafting chairs</label>
+              <label class="office-check"><input type="checkbox" value="Conference / meeting chairs" data-filter="sub"> Conference / meeting chairs</label>
+              <label class="office-check"><input type="checkbox" value="Guest / visitor chairs" data-filter="sub"> Guest / visitor chairs</label>
+              <label class="office-check"><input type="checkbox" value="Stools (adjustable, reception)" data-filter="sub"> Stools (adjustable, reception)</label>
+              <label class="office-check"><input type="checkbox" value="Multipurpose stacking chairs" data-filter="sub"> Multipurpose stacking chairs</label>
+            </div>
+
+            <div class="office-group">
+              <p class="office-group-title">Lounge & Reception Seating</p>
+              <label class="office-check"><input type="checkbox" value="Sofas / loveseats (commercial grade)" data-filter="sub"> Sofas / loveseats (commercial grade)</label>
+              <label class="office-check"><input type="checkbox" value="Lounge chairs" data-filter="sub"> Lounge chairs</label>
+              <label class="office-check"><input type="checkbox" value="Waiting room seating" data-filter="sub"> Waiting room seating</label>
+              <label class="office-check"><input type="checkbox" value="Ottomans / benches" data-filter="sub"> Ottomans / benches</label>
+            </div>
+          </details>
+
+          <!-- Storage Solutions -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-box-archive"></i></span>
+              Storage Solutions
+            </summary>
+
+            <div class="office-group">
+              <label class="office-check"><input type="checkbox" value="Filing cabinets (vertical, lateral)" data-filter="sub"> Filing cabinets (vertical, lateral)</label>
+              <label class="office-check"><input type="checkbox" value="Mobile pedestal drawers" data-filter="sub"> Mobile pedestal drawers</label>
+              <label class="office-check"><input type="checkbox" value="Bookcases / shelving units" data-filter="sub"> Bookcases / shelving units</label>
+              <label class="office-check"><input type="checkbox" value="Wardrobes / lockers (employee storage)" data-filter="sub"> Wardrobes / lockers (employee storage)</label>
+              <label class="office-check"><input type="checkbox" value="Credenzas" data-filter="sub"> Credenzas</label>
+              <label class="office-check"><input type="checkbox" value="Hutches / overhead storage" data-filter="sub"> Hutches / overhead storage</label>
+              <label class="office-check"><input type="checkbox" value="Wall cabinets" data-filter="sub"> Wall cabinets</label>
+            </div>
+          </details>
+
+          <!-- Conference & Meeting -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-people-group"></i></span>
+              Conference & Meeting Room Furniture
+            </summary>
+
+            <div class="office-group">
+              <label class="office-check"><input type="checkbox" value="Conference tables (rectangular, boat-shape)" data-filter="sub"> Conference tables (rectangular, boat-shape)</label>
+              <label class="office-check"><input type="checkbox" value="Collaboration tables" data-filter="sub"> Collaboration tables</label>
+              <label class="office-check"><input type="checkbox" value="Meeting room chairs" data-filter="sub"> Meeting room chairs</label>
+              <label class="office-check"><input type="checkbox" value="Whiteboards / marker boards (mounted or mobile)" data-filter="sub"> Whiteboards / marker boards</label>
+              <label class="office-check"><input type="checkbox" value="AV credenzas / presentation stands" data-filter="sub"> AV credenzas / presentation stands</label>
+            </div>
+          </details>
+
+          <!-- Reception & Waiting Area -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-bell-concierge"></i></span>
+              Reception & Waiting Area
+            </summary>
+
+            <div class="office-group">
+              <label class="office-check"><input type="checkbox" value="Reception counters / kiosks" data-filter="sub"> Reception counters / kiosks</label>
+              <label class="office-check"><input type="checkbox" value="Waiting room chairs / sofas" data-filter="sub"> Waiting room chairs / sofas</label>
+              <label class="office-check"><input type="checkbox" value="Coffee / side tables" data-filter="sub"> Coffee / side tables</label>
+              <label class="office-check"><input type="checkbox" value="Display racks / brochure stands" data-filter="sub"> Display racks / brochure stands</label>
+            </div>
+          </details>
+
+          <!-- Partitions -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-border-all"></i></span>
+              Partitions & Space Dividers
+            </summary>
+
+            <div class="office-group">
+              <label class="office-check"><input type="checkbox" value="Cubicle panels" data-filter="sub"> Cubicle panels</label>
+              <label class="office-check"><input type="checkbox" value="Glass partitions" data-filter="sub"> Glass partitions</label>
+              <label class="office-check"><input type="checkbox" value="Moveable room dividers" data-filter="sub"> Moveable room dividers</label>
+              <label class="office-check"><input type="checkbox" value="Acoustic / sound-absorbing partitions" data-filter="sub"> Acoustic / sound-absorbing partitions</label>
+            </div>
+          </details>
+
+          <!-- Technology Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-server"></i></span>
+              Technology Furniture
+            </summary>
+
+            <div class="office-group">
+              <label class="office-check"><input type="checkbox" value="Server racks / IT cabinets" data-filter="sub"> Server racks / IT cabinets</label>
+              <label class="office-check"><input type="checkbox" value="AV racks" data-filter="sub"> AV racks</label>
+              <label class="office-check"><input type="checkbox" value="Charging stations / mobile device carts" data-filter="sub"> Charging stations / mobile device carts</label>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <section class="office-main">
+
+      <div class="office-tags" id="activeFilters"></div>
+
+      <div class="office-meta">
+        <div id="resultsCount">Showing 0 products</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+      </div>
+
+      <div class="office-grid" id="productGrid"></div>
+
+      <div class="office-empty" id="emptyState">
+        No products found for selected filters. Try clearing filters.
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="youtube.com/@nkenterprises-y7l" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PAGE JS -->
+<script src="js/office-commercial-products.js"></script>
+
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
+
+</body>
+</html>
