@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retail Fixtures & Display Products | NK Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="css/products-retail.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com">
+          <i class="fa-solid fa-envelope"></i> support@nkenters.com
+        </a>
+
+        <a href="tel:+916372352301">
+          <i class="fa-solid fa-phone"></i> +91 63723 52301
+        </a>
+
+        <a href="tel:+919699540314">
+          | +91 96995 40314
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+
+<!-- =========================
+     RETAIL PRODUCTS PAGE
+========================= -->
+<main class="retail-wrap">
+
+  <!-- PAGE HEADER -->
+  <section class="retail-header">
+    <div class="retail-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Retail Fixtures & Display Systems
+    </div>
+
+    <h1 class="retail-title">Retail Fixtures & Display Products</h1>
+
+    <p class="retail-subtitle">
+      Discover merchandising racks, shelving systems, POS counters, mannequins, signage fixtures,
+      fitting room setups, and custom retail display solutions. Use filters to quickly find the right fixtures.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="retail-controls">
+      <input id="searchInput" class="retail-input" type="text"
+        placeholder="Search products (e.g. gondola, rack, counter, mannequin)">
+
+      <select id="sortSelect" class="retail-select">
+        <option value="popular">Sort: Popular</option>
+        <option value="newest">Sort: Newest</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <button class="retail-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="retail-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="retail-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="retail-sidebar">
+      <div class="retail-panel">
+
+        <div class="retail-panel-head">
+          <h3>Filter by Category</h3>
+          <button class="retail-btn" id="applyBtn" type="button">Apply</button>
+        </div>
+
+        <div class="retail-panel-body">
+
+          <!-- Merchandising & Display Fixtures -->
+          <details open>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-store"></i></span>
+              Merchandising & Display Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <p class="retail-group-title">Shelving & Racks</p>
+              <label class="retail-check"><input type="checkbox" value="Gondola shelving (single- or double-faced)" data-filter="sub"> Gondola shelving (single- or double-faced)</label>
+              <label class="retail-check"><input type="checkbox" value="Wall-mounted shelves" data-filter="sub"> Wall-mounted shelves</label>
+              <label class="retail-check"><input type="checkbox" value="Gridwall panels" data-filter="sub"> Gridwall panels</label>
+              <label class="retail-check"><input type="checkbox" value="Slatwall panels" data-filter="sub"> Slatwall panels</label>
+              <label class="retail-check"><input type="checkbox" value="Pegboard panels" data-filter="sub"> Pegboard panels</label>
+              <label class="retail-check"><input type="checkbox" value="Adjustable merchandise shelving" data-filter="sub"> Adjustable merchandise shelving</label>
+            </div>
+
+            <div class="retail-group">
+              <p class="retail-group-title">Display Racks</p>
+              <label class="retail-check"><input type="checkbox" value="Clothing racks (straight, round, waterfall)" data-filter="sub"> Clothing racks (straight, round, waterfall)</label>
+              <label class="retail-check"><input type="checkbox" value="Brochure & literature racks" data-filter="sub"> Brochure & literature racks</label>
+              <label class="retail-check"><input type="checkbox" value="Shoe display racks" data-filter="sub"> Shoe display racks</label>
+              <label class="retail-check"><input type="checkbox" value="Accessory display stands" data-filter="sub"> Accessory display stands</label>
+              <label class="retail-check"><input type="checkbox" value="A-frame display racks" data-filter="sub"> A-frame display racks</label>
+              <label class="retail-check"><input type="checkbox" value="Tiered display tables" data-filter="sub"> Tiered display tables</label>
+            </div>
+
+            <div class="retail-group">
+              <p class="retail-group-title">Display Cases</p>
+              <label class="retail-check"><input type="checkbox" value="Glass display counters / showcases" data-filter="sub"> Glass display counters / showcases</label>
+              <label class="retail-check"><input type="checkbox" value="Lockable display cases" data-filter="sub"> Lockable display cases</label>
+              <label class="retail-check"><input type="checkbox" value="Jewelry display risers" data-filter="sub"> Jewelry display risers</label>
+              <label class="retail-check"><input type="checkbox" value="Watch display boxes" data-filter="sub"> Watch display boxes</label>
+              <label class="retail-check"><input type="checkbox" value="Countertop acrylic cases" data-filter="sub"> Countertop acrylic cases</label>
+            </div>
+          </details>
+
+          <!-- POS & Checkout -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-cash-register"></i></span>
+              Point-of-Sale (POS) & Checkout Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Checkout counters / POS desks" data-filter="sub"> Checkout counters / POS desks</label>
+              <label class="retail-check"><input type="checkbox" value="Cash wrap counters" data-filter="sub"> Cash wrap counters</label>
+              <label class="retail-check"><input type="checkbox" value="Bag drop counters" data-filter="sub"> Bag drop counters</label>
+              <label class="retail-check"><input type="checkbox" value="Queue stanchions / belt barriers" data-filter="sub"> Queue stanchions / belt barriers</label>
+              <label class="retail-check"><input type="checkbox" value="Receipt print stations" data-filter="sub"> Receipt print stations</label>
+            </div>
+          </details>
+
+          <!-- Storage & Back-of-House -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-warehouse"></i></span>
+              Storage & Back-of-House
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Stockroom shelving" data-filter="sub"> Stockroom shelving</label>
+              <label class="retail-check"><input type="checkbox" value="Storage cabinets" data-filter="sub"> Storage cabinets</label>
+              <label class="retail-check"><input type="checkbox" value="Mobile storage units" data-filter="sub"> Mobile storage units</label>
+              <label class="retail-check"><input type="checkbox" value="Backroom racks" data-filter="sub"> Backroom racks</label>
+            </div>
+          </details>
+
+          <!-- Apparel & Accessories Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-shirt"></i></span>
+              Apparel & Accessories Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <p class="retail-group-title">Clothing Displays</p>
+              <label class="retail-check"><input type="checkbox" value="Mannequins (full body, torso, dress form)" data-filter="sub"> Mannequins (full body, torso, dress form)</label>
+              <label class="retail-check"><input type="checkbox" value="Hangers & clips" data-filter="sub"> Hangers & clips</label>
+              <label class="retail-check"><input type="checkbox" value="Table displays for folded apparel" data-filter="sub"> Table displays for folded apparel</label>
+              <label class="retail-check"><input type="checkbox" value="Valet rails" data-filter="sub"> Valet rails</label>
+              <label class="retail-check"><input type="checkbox" value="Feature tables" data-filter="sub"> Feature tables</label>
+            </div>
+
+            <div class="retail-group">
+              <p class="retail-group-title">Accessories Displays</p>
+              <label class="retail-check"><input type="checkbox" value="Scarf & tie racks" data-filter="sub"> Scarf & tie racks</label>
+              <label class="retail-check"><input type="checkbox" value="Belt displays" data-filter="sub"> Belt displays</label>
+              <label class="retail-check"><input type="checkbox" value="Hat stands" data-filter="sub"> Hat stands</label>
+              <label class="retail-check"><input type="checkbox" value="Sunglasses/accent accessory stands" data-filter="sub"> Sunglasses/accent accessory stands</label>
+            </div>
+          </details>
+
+          <!-- Footwear & Specialty Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-shoe-prints"></i></span>
+              Footwear & Specialty Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Shoe display shelves" data-filter="sub"> Shoe display shelves</label>
+              <label class="retail-check"><input type="checkbox" value="Slanted shoe racks" data-filter="sub"> Slanted shoe racks</label>
+              <label class="retail-check"><input type="checkbox" value="Tiered shoe steps" data-filter="sub"> Tiered shoe steps</label>
+              <label class="retail-check"><input type="checkbox" value="Shoe gridwall hooks" data-filter="sub"> Shoe gridwall hooks</label>
+              <label class="retail-check"><input type="checkbox" value="Eyewear display cabinets" data-filter="sub"> Eyewear display cabinets</label>
+            </div>
+          </details>
+
+          <!-- Signage & Promotional Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-bullhorn"></i></span>
+              Signage & Promotional Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Price tag holders" data-filter="sub"> Price tag holders</label>
+              <label class="retail-check"><input type="checkbox" value="Shelf talkers & wobblers" data-filter="sub"> Shelf talkers & wobblers</label>
+              <label class="retail-check"><input type="checkbox" value="Floor standing sign holders" data-filter="sub"> Floor standing sign holders</label>
+              <label class="retail-check"><input type="checkbox" value="Hanging sign frames" data-filter="sub"> Hanging sign frames</label>
+              <label class="retail-check"><input type="checkbox" value="Lightbox displays" data-filter="sub"> Lightbox displays</label>
+              <label class="retail-check"><input type="checkbox" value="A-board sidewalk signs" data-filter="sub"> A-board sidewalk signs</label>
+            </div>
+          </details>
+
+          <!-- Fitting Room Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-person-booth"></i></span>
+              Fitting Room Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Fitting room stalls / curtains" data-filter="sub"> Fitting room stalls / curtains</label>
+              <label class="retail-check"><input type="checkbox" value="Mirrors (full-length, angled)" data-filter="sub"> Mirrors (full-length, angled)</label>
+              <label class="retail-check"><input type="checkbox" value="Hooks & hangers inside fitting rooms" data-filter="sub"> Hooks & hangers inside fitting rooms</label>
+              <label class="retail-check"><input type="checkbox" value="Benches / stools" data-filter="sub"> Benches / stools</label>
+            </div>
+          </details>
+
+          <!-- Shopping Aids -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+              Shopping Aids
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Shopping carts" data-filter="sub"> Shopping carts</label>
+              <label class="retail-check"><input type="checkbox" value="Hand baskets" data-filter="sub"> Hand baskets</label>
+              <label class="retail-check"><input type="checkbox" value="Basket stands" data-filter="sub"> Basket stands</label>
+            </div>
+          </details>
+
+          <!-- Security & Anti-Theft -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-shield-halved"></i></span>
+              Security & Anti-Theft Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Electronic Article Surveillance (EAS) pedestals" data-filter="sub"> Electronic Article Surveillance (EAS) pedestals</label>
+              <label class="retail-check"><input type="checkbox" value="Security mirrors" data-filter="sub"> Security mirrors</label>
+              <label class="retail-check"><input type="checkbox" value="Lockable display cases" data-filter="sub"> Lockable display cases</label>
+            </div>
+          </details>
+
+          <!-- Modular & Custom Retail Systems -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-cubes"></i></span>
+              Modular & Custom Retail Systems
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Modular fixture systems" data-filter="sub"> Modular fixture systems</label>
+              <label class="retail-check"><input type="checkbox" value="Custom branded POP (Point-of-Purchase) displays" data-filter="sub"> Custom branded POP (Point-of-Purchase) displays</label>
+              <label class="retail-check"><input type="checkbox" value="End-cap display units" data-filter="sub"> End-cap display units</label>
+              <label class="retail-check"><input type="checkbox" value="Island displays" data-filter="sub"> Island displays</label>
+            </div>
+          </details>
+
+          <!-- Kiosk & Mall Stand Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-store-alt"></i></span>
+              Kiosk & Mall Stand Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Product display kiosks" data-filter="sub"> Product display kiosks</label>
+              <label class="retail-check"><input type="checkbox" value="Service counters" data-filter="sub"> Service counters</label>
+              <label class="retail-check"><input type="checkbox" value="Demo tables" data-filter="sub"> Demo tables</label>
+              <label class="retail-check"><input type="checkbox" value="Brochure holders" data-filter="sub"> Brochure holders</label>
+            </div>
+          </details>
+
+          <!-- Decor & Ambience Fixtures -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-palette"></i></span>
+              Decor & Ambience Fixtures
+            </summary>
+
+            <div class="retail-group">
+              <label class="retail-check"><input type="checkbox" value="Wall art frames" data-filter="sub"> Wall art frames</label>
+              <label class="retail-check"><input type="checkbox" value="Planters & greenery stands" data-filter="sub"> Planters & greenery stands</label>
+              <label class="retail-check"><input type="checkbox" value="Decorative feature pillars" data-filter="sub"> Decorative feature pillars</label>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <section class="retail-main">
+
+      <div class="retail-tags" id="activeFilters"></div>
+
+      <div class="retail-meta">
+        <div id="resultsCount">Showing 0 products</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+      </div>
+
+      <div class="retail-grid" id="productGrid"></div>
+
+      <div class="retail-empty" id="emptyState">
+        No products found for selected filters. Try clearing filters.
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="youtube.com/@nkenterprises-y7l" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PAGE JS -->
+<script src="js/products-retail.js"></script>
+
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
+
+</body>
+</html>
