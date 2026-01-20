@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Industrial Furniture Products | NK Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="css/products/products-industrial.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com">
+          <i class="fa-solid fa-envelope"></i> support@nkenters.com
+        </a>
+
+        <a href="tel:+916372352301">
+          <i class="fa-solid fa-phone"></i> +91 63723 52301
+        </a>
+
+        <a href="tel:+919699540314">
+          | +91 96995 40314
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+
+<!-- =========================
+     INDUSTRIAL PRODUCTS PAGE
+========================= -->
+<main class="ind-wrap">
+
+  <!-- PAGE HEADER -->
+  <section class="ind-header">
+    <div class="ind-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Industrial Furniture
+    </div>
+
+    <h1 class="ind-title">Industrial Furniture Products</h1>
+
+    <p class="ind-subtitle">
+      Explore industrial furniture solutions including heavy-duty workbenches, industrial seating,
+      storage & racking, tool organization, material handling, packing stations, and utility furniture.
+      Use filters to quickly find what you need.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="ind-controls">
+      <input id="searchInput" class="ind-input" type="text"
+        placeholder="Search products (e.g. workbench, rack, tool cabinet)">
+
+      <select id="sortSelect" class="ind-select">
+        <option value="popular">Sort: Popular</option>
+        <option value="newest">Sort: Newest</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <button class="ind-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="ind-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="ind-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="ind-sidebar">
+      <div class="ind-panel">
+
+        <div class="ind-panel-head">
+          <h3>Filter by Category</h3>
+          <button class="ind-btn" id="applyBtn" type="button">Apply</button>
+        </div>
+
+        <div class="ind-panel-body">
+
+          <!-- Workbenches & Industrial Tables -->
+          <details open>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-table"></i></span>
+              Workbenches & Industrial Tables
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Heavy-duty workbenches" data-filter="sub"> Heavy-duty workbenches</label>
+              <label class="ind-check"><input type="checkbox" value="Adjustable height workbenches" data-filter="sub"> Adjustable height workbenches</label>
+              <label class="ind-check"><input type="checkbox" value="ESD/anti-static workbenches" data-filter="sub"> ESD/anti-static workbenches</label>
+              <label class="ind-check"><input type="checkbox" value="Welding benches" data-filter="sub"> Welding benches</label>
+              <label class="ind-check"><input type="checkbox" value="Assembly tables" data-filter="sub"> Assembly tables</label>
+              <label class="ind-check"><input type="checkbox" value="Modular table systems" data-filter="sub"> Modular table systems</label>
+              <label class="ind-check"><input type="checkbox" value="Adjustable tilt tables" data-filter="sub"> Adjustable tilt tables</label>
+            </div>
+          </details>
+
+          <!-- Industrial Seating -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-chair"></i></span>
+              Industrial Seating
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Operator stools (fixed / adjustable height)" data-filter="sub"> Operator stools (fixed / adjustable height)</label>
+              <label class="ind-check"><input type="checkbox" value="Ergonomic industrial chairs" data-filter="sub"> Ergonomic industrial chairs</label>
+              <label class="ind-check"><input type="checkbox" value="Mechanic chairs with casters" data-filter="sub"> Mechanic chairs with casters</label>
+              <label class="ind-check"><input type="checkbox" value="Anti-fatigue floor mats + stools" data-filter="sub"> Anti-fatigue floor mats + stools</label>
+              <label class="ind-check"><input type="checkbox" value="Heavy-duty benches" data-filter="sub"> Heavy-duty benches</label>
+            </div>
+          </details>
+
+          <!-- Industrial Storage & Racking -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-warehouse"></i></span>
+              Industrial Storage & Racking
+            </summary>
+
+            <div class="ind-group">
+              <p class="ind-group-title">Shelving & Racks</p>
+              <label class="ind-check"><input type="checkbox" value="Boltless shelving" data-filter="sub"> Boltless shelving</label>
+              <label class="ind-check"><input type="checkbox" value="Heavy-duty steel racks" data-filter="sub"> Heavy-duty steel racks</label>
+              <label class="ind-check"><input type="checkbox" value="Pallet racking systems" data-filter="sub"> Pallet racking systems</label>
+              <label class="ind-check"><input type="checkbox" value="Cantilever racks" data-filter="sub"> Cantilever racks</label>
+              <label class="ind-check"><input type="checkbox" value="Wire shelving" data-filter="sub"> Wire shelving</label>
+              <label class="ind-check"><input type="checkbox" value="Mobile shelving units" data-filter="sub"> Mobile shelving units</label>
+            </div>
+
+            <div class="ind-group">
+              <p class="ind-group-title">Cabinets & Lockers</p>
+              <label class="ind-check"><input type="checkbox" value="Tool storage cabinets" data-filter="sub"> Tool storage cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="Storage cabinets (steel / industrial grade)" data-filter="sub"> Storage cabinets (steel / industrial grade)</label>
+              <label class="ind-check"><input type="checkbox" value="Flammable cabinets" data-filter="sub"> Flammable cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="Safety storage lockers" data-filter="sub"> Safety storage lockers</label>
+              <label class="ind-check"><input type="checkbox" value="Parts bins / compartment cabinets" data-filter="sub"> Parts bins / compartment cabinets</label>
+            </div>
+          </details>
+
+          <!-- Tool & Parts Organization -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-toolbox"></i></span>
+              Tool & Parts Organization
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Rolling tool carts" data-filter="sub"> Rolling tool carts</label>
+              <label class="ind-check"><input type="checkbox" value="Tool chests & tool cabinets" data-filter="sub"> Tool chests & tool cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="Parts organizers (small parts bins)" data-filter="sub"> Parts organizers (small parts bins)</label>
+              <label class="ind-check"><input type="checkbox" value="Pegboard panels with hooks" data-filter="sub"> Pegboard panels with hooks</label>
+              <label class="ind-check"><input type="checkbox" value="Wall-mounted tool racks" data-filter="sub"> Wall-mounted tool racks</label>
+              <label class="ind-check"><input type="checkbox" value="Workstation drawer units" data-filter="sub"> Workstation drawer units</label>
+            </div>
+          </details>
+
+          <!-- Material Handling Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-truck-ramp-box"></i></span>
+              Material Handling Furniture
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Work platforms" data-filter="sub"> Work platforms</label>
+              <label class="ind-check"><input type="checkbox" value="Utility carts (flatbeds, bin carts)" data-filter="sub"> Utility carts (flatbeds, bin carts)</label>
+              <label class="ind-check"><input type="checkbox" value="Drum handling carts" data-filter="sub"> Drum handling carts</label>
+              <label class="ind-check"><input type="checkbox" value="Tilt trucks" data-filter="sub"> Tilt trucks</label>
+              <label class="ind-check"><input type="checkbox" value="Pallet jacks (manual / electric)" data-filter="sub"> Pallet jacks (manual / electric)</label>
+              <label class="ind-check"><input type="checkbox" value="Mobile work platforms / steps" data-filter="sub"> Mobile work platforms / steps</label>
+              <label class="ind-check"><input type="checkbox" value="Conveyor workstations" data-filter="sub"> Conveyor workstations</label>
+            </div>
+          </details>
+
+          <!-- Packing & Shipping Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-box"></i></span>
+              Packing & Shipping Furniture
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Packing tables with roll holders" data-filter="sub"> Packing tables with roll holders</label>
+              <label class="ind-check"><input type="checkbox" value="Carton sealing/packing stations" data-filter="sub"> Carton sealing/packing stations</label>
+              <label class="ind-check"><input type="checkbox" value="Labeling tables" data-filter="sub"> Labeling tables</label>
+              <label class="ind-check"><input type="checkbox" value="Shipping workstations" data-filter="sub"> Shipping workstations</label>
+              <label class="ind-check"><input type="checkbox" value="Conveyor feed tables" data-filter="sub"> Conveyor feed tables</label>
+            </div>
+          </details>
+
+          <!-- Maintenance & Utility Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+              Maintenance & Utility Furniture
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Industrial sinks / wash stations" data-filter="sub"> Industrial sinks / wash stations</label>
+              <label class="ind-check"><input type="checkbox" value="Janitorial storage cabinets" data-filter="sub"> Janitorial storage cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="Mop/drain racks" data-filter="sub"> Mop/drain racks</label>
+              <label class="ind-check"><input type="checkbox" value="Locker rooms / employee lockers" data-filter="sub"> Locker rooms / employee lockers</label>
+              <label class="ind-check"><input type="checkbox" value="Break room industrial tables & seating" data-filter="sub"> Break room industrial tables & seating</label>
+            </div>
+          </details>
+
+          <!-- Industrial Office Furniture (Shop Floor) -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-desktop"></i></span>
+              Industrial Office Furniture (Shop Floor)
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Industrial computer desks" data-filter="sub"> Industrial computer desks</label>
+              <label class="ind-check"><input type="checkbox" value="Operator consoles" data-filter="sub"> Operator consoles</label>
+              <label class="ind-check"><input type="checkbox" value="File cabinets (steel heavy-duty)" data-filter="sub"> File cabinets (steel heavy-duty)</label>
+              <label class="ind-check"><input type="checkbox" value="Workstation partitions" data-filter="sub"> Workstation partitions</label>
+              <label class="ind-check"><input type="checkbox" value="Standing desks with durable tops" data-filter="sub"> Standing desks with durable tops</label>
+            </div>
+          </details>
+
+          <!-- Safety & Compliance Add-ons -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-shield-halved"></i></span>
+              Safety & Compliance Add-ons
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Fire proof cabinets" data-filter="sub"> Fire proof cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="First aid station cabinets" data-filter="sub"> First aid station cabinets</label>
+              <label class="ind-check"><input type="checkbox" value="Eye-wash station benches" data-filter="sub"> Eye-wash station benches</label>
+              <label class="ind-check"><input type="checkbox" value="Safety signage mounts" data-filter="sub"> Safety signage mounts</label>
+            </div>
+          </details>
+
+          <!-- Outdoor / Yard Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-tree"></i></span>
+              Outdoor / Yard Furniture
+            </summary>
+
+            <div class="ind-group">
+              <label class="ind-check"><input type="checkbox" value="Heavy-duty benches (outdoor)" data-filter="sub"> Heavy-duty benches</label>
+              <label class="ind-check"><input type="checkbox" value="Outdoor industrial lockers" data-filter="sub"> Outdoor industrial lockers</label>
+              <label class="ind-check"><input type="checkbox" value="Canopy work tables" data-filter="sub"> Canopy work tables</label>
+              <label class="ind-check"><input type="checkbox" value="Weather-resistant storage" data-filter="sub"> Weather-resistant storage</label>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <section class="ind-main">
+
+      <div class="ind-tags" id="activeFilters"></div>
+
+      <div class="ind-meta">
+        <div id="resultsCount">Showing 0 products</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+      </div>
+
+      <div class="ind-grid" id="productGrid"></div>
+
+      <div class="ind-empty" id="emptyState">
+        No products found for selected filters. Try clearing filters.
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="youtube.com/@nkenterprises-y7l" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PAGE JS -->
+<script src="js/products-industrial.js"></script>
+
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
+
+</body>
+</html>
