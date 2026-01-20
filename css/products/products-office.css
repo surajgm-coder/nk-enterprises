@@ -1,0 +1,422 @@
+/* ==========================================
+   Office & Commercial Products Page - NK Enterprises
+   File: css/products-office.css
+   ========================================== */
+
+:root{
+  --nk-brown:#7a4b21;
+  --nk-brown-dark:#5c3718;
+  --nk-gold:#c18b2f;
+  --nk-gold-light:#d7aa54;
+
+  --nk-bg:#f7f3ef;
+  --nk-card:#ffffff;
+  --nk-border:#eadfd6;
+
+  --nk-text:#2b1f18;
+  --nk-muted:#6b5b52;
+
+  --nk-shadow: 0 10px 30px rgba(0,0,0,.08);
+  --nk-radius:18px;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.office-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+.office-header{
+  margin-top: 20px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  padding: 18px;
+}
+
+.office-breadcrumb{
+  font-size: 13px;
+  color: var(--nk-muted);
+  margin-bottom: 6px;
+}
+
+.office-title{
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+.office-subtitle{
+  margin: 8px 0 0;
+  color: var(--nk-muted);
+  font-size: 14px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+.office-controls{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.office-input,
+.office-select{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  outline: none;
+  min-width: 240px;
+  font-family: inherit;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+}
+
+.office-input:focus,
+.office-select:focus{
+  border-color: rgba(193,139,47,.55);
+  box-shadow: 0 0 0 4px rgba(193,139,47,.18);
+}
+
+.office-btn{
+  border: 1px solid var(--nk-border);
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+  transition: .2s ease;
+}
+
+.office-btn:hover{
+  transform: translateY(-1px);
+}
+
+.office-btn.primary{
+  background: var(--nk-brown);
+  color: #fff;
+  border-color: transparent;
+}
+
+.office-btn.primary:hover{
+  background: var(--nk-brown-dark);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.office-layout{
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 18px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+/* =========================
+   SIDEBAR FILTER
+========================= */
+.office-sidebar{
+  position: sticky;
+  top: 120px;
+}
+
+.office-panel{
+  background: var(--nk-card);
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  overflow: hidden;
+}
+
+.office-panel-head{
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid var(--nk-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.office-panel-head h3{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+.office-panel-body{
+  padding: 12px 14px 14px;
+}
+
+/* Accordion */
+.office-panel details{
+  border: 1px solid var(--nk-border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: rgba(247,243,239,.65);
+  transition: .2s ease;
+}
+
+.office-panel details[open]{
+  background: #fff;
+}
+
+.office-panel summary{
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--nk-text);
+}
+
+.office-panel summary::-webkit-details-marker{
+  display: none;
+}
+
+/* Golden Brown Icon Badge */
+.cat-icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--nk-brown), var(--nk-gold));
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  flex: 0 0 auto;
+}
+
+.office-group{
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--nk-border);
+}
+
+.office-group-title{
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--nk-muted);
+  font-weight: 700;
+}
+
+.office-check{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--nk-text);
+}
+
+.office-check input{
+  accent-color: var(--nk-brown);
+}
+
+/* =========================
+   MAIN AREA
+========================= */
+.office-main{
+  min-height: 500px;
+}
+
+/* Active filter tags */
+.office-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.office-tag{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  padding: 8px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.05);
+  color: var(--nk-text);
+}
+
+.office-tag button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--nk-muted);
+}
+
+/* Meta row */
+.office-meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 14px;
+  color: var(--nk-muted);
+  font-size: 13px;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+.office-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.office-card{
+  background: #fff;
+  border: 1px solid var(--nk-border);
+  border-radius: var(--nk-radius);
+  box-shadow: var(--nk-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .2s ease;
+}
+
+.office-card:hover{
+  transform: translateY(-3px);
+}
+
+.office-thumb{
+  height: 160px;
+  background: linear-gradient(135deg, #fff, #efe5dc);
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  color: var(--nk-brown);
+}
+
+.office-card-body{
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.office-name{
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--nk-text);
+}
+
+.office-card-meta{
+  font-size: 13px;
+  color: var(--nk-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.office-price{
+  font-weight: 700;
+  color: var(--nk-text);
+}
+
+/* Buttons */
+.office-actions{
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.office-small-btn{
+  flex: 1;
+  border-radius: 999px;
+  padding: 10px 10px;
+  border: 1px solid var(--nk-border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  font-family: inherit;
+  transition: .2s ease;
+  color: var(--nk-text);
+}
+
+.office-small-btn:hover{
+  transform: translateY(-1px);
+}
+
+.office-small-btn.primary{
+  background: var(--nk-brown);
+  color: #fff;
+  border-color: transparent;
+}
+
+.office-small-btn.primary:hover{
+  background: var(--nk-brown-dark);
+}
+
+/* Empty State */
+.office-empty{
+  background: #fff;
+  border: 1px dashed var(--nk-border);
+  border-radius: var(--nk-radius);
+  padding: 18px;
+  color: var(--nk-muted);
+  box-shadow: var(--nk-shadow);
+  margin-top: 14px;
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px){
+  .office-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .office-sidebar{
+    position: relative;
+    top: auto;
+  }
+
+  .office-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .office-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .office-input,
+  .office-select{
+    min-width: 100%;
+  }
+}
