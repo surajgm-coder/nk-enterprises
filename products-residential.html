@@ -5,7 +5,7 @@
   <title>Residential Furniture Products | NK Enterprises</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONT -->
+  <!-- GOOGLE FONT (GLOBAL BRAND FONT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,356 +17,8 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/products.css">
 
-  <!-- PAGE EXTRA CSS (Residential Page Only) -->
-  <style>
-    :root{
-      --nk-brown:#7a4b21;
-      --nk-gold:#c18b2f;
-      --nk-bg:#f7f3ef;
-      --nk-card:#ffffff;
-      --nk-border:#eadfd6;
-      --nk-text:#2b1f18;
-      --nk-muted:#6b5b52;
-      --nk-shadow: 0 10px 30px rgba(0,0,0,.08);
-      --nk-radius:18px;
-    }
-
-    body{
-      font-family: "Poppins", sans-serif;
-      background: var(--nk-bg);
-      color: var(--nk-text);
-    }
-
-    /* PAGE WRAP */
-    .residential-wrap{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px;
-    }
-
-    /* PAGE HEADER */
-    .res-header{
-      background: rgba(255,255,255,.75);
-      border: 1px solid var(--nk-border);
-      border-radius: var(--nk-radius);
-      box-shadow: var(--nk-shadow);
-      padding: 18px;
-      margin-top: 20px;
-    }
-
-    .res-breadcrumb{
-      font-size: 13px;
-      color: var(--nk-muted);
-      margin-bottom: 6px;
-    }
-
-    .res-title{
-      margin: 0;
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--nk-text);
-    }
-
-    .res-subtitle{
-      margin: 8px 0 0;
-      color: var(--nk-muted);
-      font-size: 14px;
-      max-width: 850px;
-      line-height: 1.6;
-    }
-
-    /* CONTROLS */
-    .res-controls{
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .res-input,
-    .res-select{
-      background: #fff;
-      border: 1px solid var(--nk-border);
-      border-radius: 999px;
-      padding: 10px 14px;
-      outline: none;
-      min-width: 240px;
-      font-family: inherit;
-      box-shadow: 0 6px 16px rgba(0,0,0,.05);
-    }
-
-    .res-btn{
-      border: 1px solid var(--nk-border);
-      background: #fff;
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 700;
-      font-family: inherit;
-      box-shadow: 0 6px 16px rgba(0,0,0,.05);
-      color: var(--nk-text);
-    }
-
-    .res-btn.primary{
-      background: var(--nk-brown);
-      color: #fff;
-      border-color: transparent;
-    }
-
-    .res-btn.primary:hover{
-      background: #8b5a2b;
-    }
-
-    /* LAYOUT */
-    .res-layout{
-      display: grid;
-      grid-template-columns: 330px 1fr;
-      gap: 18px;
-      margin-top: 18px;
-      align-items: start;
-    }
-
-    /* FILTER SIDEBAR */
-    .res-sidebar{
-      position: sticky;
-      top: 120px;
-    }
-
-    .res-panel{
-      background: var(--nk-card);
-      border: 1px solid var(--nk-border);
-      border-radius: var(--nk-radius);
-      box-shadow: var(--nk-shadow);
-      overflow: hidden;
-    }
-
-    .res-panel-head{
-      padding: 14px 14px 10px;
-      border-bottom: 1px solid var(--nk-border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .res-panel-head h3{
-      margin: 0;
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .res-panel-body{
-      padding: 12px 14px 14px;
-    }
-
-    details{
-      border: 1px solid var(--nk-border);
-      border-radius: 14px;
-      padding: 10px 12px;
-      margin-bottom: 10px;
-      background: rgba(247,243,239,.6);
-    }
-
-    details[open]{ background:#fff; }
-
-    summary{
-      cursor: pointer;
-      font-weight: 700;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    summary::-webkit-details-marker{ display:none; }
-
-    .cat-icon{
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--nk-brown), var(--nk-gold));
-      color: #fff;
-      box-shadow: 0 10px 22px rgba(0,0,0,.12);
-      flex: 0 0 auto;
-    }
-
-    .res-group{
-      margin-top: 10px;
-      padding-top: 8px;
-      border-top: 1px dashed var(--nk-border);
-    }
-
-    .res-group-title{
-      margin: 0 0 6px;
-      font-size: 13px;
-      color: var(--nk-muted);
-      font-weight: 700;
-    }
-
-    .res-check{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 6px 0;
-      font-size: 14px;
-      color: var(--nk-text);
-    }
-
-    .res-check input{
-      accent-color: var(--nk-brown);
-    }
-
-    /* MAIN */
-    .res-main{
-      min-height: 500px;
-    }
-
-    .res-tags{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-
-    .res-tag{
-      background: #fff;
-      border: 1px solid var(--nk-border);
-      padding: 8px 10px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 13px;
-      box-shadow: 0 6px 16px rgba(0,0,0,.05);
-    }
-
-    .res-tag button{
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-weight: 900;
-      color: var(--nk-muted);
-    }
-
-    .res-meta{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 14px;
-      color: var(--nk-muted);
-      font-size: 13px;
-    }
-
-    /* PRODUCT GRID */
-    .res-grid{
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
-    }
-
-    .res-card{
-      background: #fff;
-      border: 1px solid var(--nk-border);
-      border-radius: var(--nk-radius);
-      box-shadow: var(--nk-shadow);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .res-thumb{
-      height: 160px;
-      background: linear-gradient(135deg, #fff, #efe5dc);
-      display: grid;
-      place-items: center;
-      font-size: 34px;
-      color: var(--nk-brown);
-    }
-
-    .res-card-body{
-      padding: 12px 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .res-name{
-      margin: 0;
-      font-weight: 700;
-      font-size: 15px;
-      line-height: 1.2;
-      color: var(--nk-text);
-    }
-
-    .res-card-meta{
-      font-size: 13px;
-      color: var(--nk-muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .res-price{
-      font-weight: 700;
-      color: var(--nk-text);
-    }
-
-    .res-actions{
-      display: flex;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .res-small-btn{
-      flex: 1;
-      border-radius: 999px;
-      padding: 10px 10px;
-      border: 1px solid var(--nk-border);
-      background: #fff;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 13px;
-      text-align: center;
-      font-family: inherit;
-    }
-
-    .res-small-btn.primary{
-      background: var(--nk-brown);
-      color: #fff;
-      border-color: transparent;
-    }
-
-    .res-small-btn.primary:hover{
-      background: #8b5a2b;
-    }
-
-    .res-empty{
-      background: #fff;
-      border: 1px dashed var(--nk-border);
-      border-radius: var(--nk-radius);
-      padding: 18px;
-      color: var(--nk-muted);
-      box-shadow: var(--nk-shadow);
-      margin-top: 14px;
-      display: none;
-    }
-
-    @media (max-width: 1024px){
-      .res-layout{ grid-template-columns: 1fr; }
-      .res-sidebar{ position: relative; top: auto; }
-      .res-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-
-    @media (max-width: 560px){
-      .res-grid{ grid-template-columns: 1fr; }
-      .res-input, .res-select{ min-width: 100%; }
-    }
-  </style>
+  <!-- RESIDENTIAL PAGE CSS (CREATE THIS FILE) -->
+  <link rel="stylesheet" href="css/products-residential.css">
 </head>
 
 <body>
@@ -379,6 +31,8 @@
   <!-- TOP INFO BAR -->
   <div class="top-info-bar">
     <div class="info-container">
+
+      <!-- RIGHT ALIGNED CONTENT -->
       <div class="info-right">
         <a href="mailto:support@nkenters.com">
           <i class="fa-solid fa-envelope"></i> support@nkenters.com
@@ -392,6 +46,7 @@
           | +91 96995 40314
         </a>
       </div>
+
     </div>
   </div>
 
@@ -430,49 +85,66 @@
       </div>
 
     </div>
+
     <div class="nav-divider"></div>
   </header>
 
 </div>
 
 <!-- =========================
-     PAGE CONTENT
+     RESIDENTIAL PRODUCTS PAGE
 ========================= -->
-<div class="residential-wrap">
+<main class="residential-wrap">
 
+  <!-- PAGE HEADER -->
   <section class="res-header">
-    <div class="res-breadcrumb">Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Residential Furniture</div>
+    <div class="res-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Residential Furniture
+    </div>
+
     <h1 class="res-title">Residential Furniture Products</h1>
+
     <p class="res-subtitle">
       Furniture and interior solutions designed for homes and modern living spaces with complete customization.
       Apply filters to find sofas, beds, wardrobes, dining tables, office desks, outdoor furniture, and more.
     </p>
 
+    <!-- CONTROLS -->
     <div class="res-controls">
-      <input id="searchInput" class="res-input" type="text" placeholder="Search products (e.g. sofa, bed, wardrobe)">
+      <input id="searchInput" class="res-input" type="text"
+        placeholder="Search products (e.g. sofa, bed, wardrobe)">
+
       <select id="sortSelect" class="res-select">
         <option value="popular">Sort: Popular</option>
         <option value="newest">Sort: Newest</option>
         <option value="priceLow">Price: Low to High</option>
         <option value="priceHigh">Price: High to Low</option>
       </select>
-      <button class="res-btn" id="clearAllBtn">Clear All</button>
-      <button class="res-btn primary" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</button>
+
+      <button class="res-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="res-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
     </div>
   </section>
 
+  <!-- LAYOUT -->
   <section class="res-layout">
 
     <!-- FILTER SIDEBAR -->
     <aside class="res-sidebar">
       <div class="res-panel">
+
         <div class="res-panel-head">
           <h3>Filter by Category</h3>
-          <button class="res-btn" id="applyBtn" title="Filters apply instantly">Apply</button>
+          <button class="res-btn" id="applyBtn" type="button">Apply</button>
         </div>
 
         <div class="res-panel-body">
 
+          <!-- Living Room -->
           <details open>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-couch"></i></span>
@@ -506,6 +178,7 @@
             </div>
           </details>
 
+          <!-- Dining Room -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-utensils"></i></span>
@@ -527,6 +200,7 @@
             </div>
           </details>
 
+          <!-- Bedroom -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-bed"></i></span>
@@ -559,6 +233,7 @@
             </div>
           </details>
 
+          <!-- Home Office -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-laptop"></i></span>
@@ -574,6 +249,7 @@
             </div>
           </details>
 
+          <!-- Entryway -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-door-open"></i></span>
@@ -589,6 +265,7 @@
             </div>
           </details>
 
+          <!-- Kids -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-children"></i></span>
@@ -603,6 +280,7 @@
             </div>
           </details>
 
+          <!-- Outdoor -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-sun"></i></span>
@@ -619,6 +297,7 @@
             </div>
           </details>
 
+          <!-- Accent -->
           <details>
             <summary>
               <span class="cat-icon"><i class="fa-solid fa-box-archive"></i></span>
@@ -640,11 +319,12 @@
 
     <!-- MAIN PRODUCTS -->
     <section class="res-main">
+
       <div class="res-tags" id="activeFilters"></div>
 
       <div class="res-meta">
         <div id="resultsCount">Showing 0 products</div>
-        <div style="font-weight:700;">Filter products instantly</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
       </div>
 
       <div class="res-grid" id="productGrid"></div>
@@ -652,10 +332,11 @@
       <div class="res-empty" id="emptyState">
         No products found for selected filters. Try clearing filters.
       </div>
+
     </section>
 
   </section>
-</div>
+</main>
 
 <!-- =========================
      FOOTER
@@ -685,190 +366,11 @@
   </div>
 </footer>
 
-<script>
-  // PRODUCT DATA (Demo)
-  // Replace these with your real products later
-  const PRODUCTS = [
-    { id: 1, name: "Modern 3-Seater Sofa", category: "Living Room Furniture", sub: "Sofas", price: 25999, popular: 95, newest: 10, icon: "fa-couch" },
-    { id: 2, name: "Compact 2-Seater Sofa", category: "Living Room Furniture", sub: "Sofas", price: 18999, popular: 85, newest: 12, icon: "fa-couch" },
-    { id: 3, name: "L-Shape Sectional Sofa", category: "Living Room Furniture", sub: "Sectionals", price: 34999, popular: 92, newest: 9, icon: "fa-couch" },
-    { id: 4, name: "Comfort Recliner Chair", category: "Living Room Furniture", sub: "Recliners", price: 16999, popular: 80, newest: 8, icon: "fa-chair" },
-    { id: 5, name: "Round Coffee Table", category: "Living Room Furniture", sub: "Coffee tables", price: 4999, popular: 70, newest: 15, icon: "fa-table" },
-    { id: 6, name: "TV Media Unit (6ft)", category: "Living Room Furniture", sub: "TV stands / Media units", price: 12999, popular: 88, newest: 11, icon: "fa-tv" },
+<!-- PAGE JS (CREATE THIS FILE IN /js/) -->
+<script src="js/residential-products.js"></script>
 
-    { id: 7, name: "6-Seater Dining Table Set", category: "Dining Room Furniture", sub: "Dining tables", price: 29999, popular: 90, newest: 7, icon: "fa-utensils" },
-    { id: 8, name: "Dining Chairs (Set of 2)", category: "Dining Room Furniture", sub: "Dining chairs", price: 6999, popular: 73, newest: 16, icon: "fa-chair" },
-
-    { id: 9, name: "Queen Size Bed Frame", category: "Bedroom Furniture", sub: "Bed frames", price: 24999, popular: 91, newest: 4, icon: "fa-bed" },
-    { id: 10, name: "3 Door Wardrobe", category: "Bedroom Furniture", sub: "Wardrobes / Armoires", price: 19999, popular: 84, newest: 2, icon: "fa-warehouse" },
-
-    { id: 11, name: "Computer Desk with Storage", category: "Home Office Furniture", sub: "Desks", price: 8999, popular: 86, newest: 1, icon: "fa-laptop" },
-    { id: 12, name: "Ergonomic Office Chair", category: "Home Office Furniture", sub: "Office chairs / Task chairs", price: 7499, popular: 89, newest: 17, icon: "fa-chair" },
-
-    { id: 13, name: "Entryway Bench with Shelf", category: "Entryway & Hallway Furniture", sub: "Entryway benches", price: 5999, popular: 67, newest: 19, icon: "fa-door-open" },
-
-    { id: 14, name: "Outdoor Patio Dining Set", category: "Outdoor & Patio Furniture", sub: "Patio dining sets", price: 27999, popular: 71, newest: 23, icon: "fa-sun" },
-
-    { id: 15, name: "Storage Ottoman", category: "Accent & Specialty Furniture", sub: "Ottomans / Poufs", price: 2999, popular: 75, newest: 25, icon: "fa-box-archive" },
-  ];
-
-  const grid = document.getElementById("productGrid");
-  const emptyState = document.getElementById("emptyState");
-  const resultsCount = document.getElementById("resultsCount");
-  const searchInput = document.getElementById("searchInput");
-  const sortSelect = document.getElementById("sortSelect");
-  const clearAllBtn = document.getElementById("clearAllBtn");
-  const activeFiltersEl = document.getElementById("activeFilters");
-  const filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"][data-filter="sub"]'));
-
-  let selectedSubs = new Set();
-  let searchQuery = "";
-  let sortMode = "popular";
-
-  function formatINR(num){
-    return "₹ " + num.toLocaleString("en-IN");
-  }
-
-  function getFilteredProducts(){
-    let list = [...PRODUCTS];
-
-    if (selectedSubs.size > 0){
-      list = list.filter(p => selectedSubs.has(p.sub));
-    }
-
-    if (searchQuery.trim().length > 0){
-      const q = searchQuery.toLowerCase();
-      list = list.filter(p =>
-        p.name.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
-        p.sub.toLowerCase().includes(q)
-      );
-    }
-
-    if (sortMode === "popular") list.sort((a,b) => b.popular - a.popular);
-    if (sortMode === "newest") list.sort((a,b) => b.newest - a.newest);
-    if (sortMode === "priceLow") list.sort((a,b) => a.price - b.price);
-    if (sortMode === "priceHigh") list.sort((a,b) => b.price - a.price);
-
-    return list;
-  }
-
-  function renderActiveFilterTags(){
-    activeFiltersEl.innerHTML = "";
-
-    [...selectedSubs].forEach(sub => {
-      const tag = document.createElement("div");
-      tag.className = "res-tag";
-      tag.innerHTML = `${sub} <button title="Remove">✕</button>`;
-
-      tag.querySelector("button").addEventListener("click", () => {
-        selectedSubs.delete(sub);
-        filterCheckboxes.forEach(cb => {
-          if (cb.value === sub) cb.checked = false;
-        });
-        render();
-      });
-
-      activeFiltersEl.appendChild(tag);
-    });
-
-    if (searchQuery.trim()){
-      const tag = document.createElement("div");
-      tag.className = "res-tag";
-      tag.innerHTML = `Search: "${searchQuery}" <button title="Remove">✕</button>`;
-
-      tag.querySelector("button").addEventListener("click", () => {
-        searchQuery = "";
-        searchInput.value = "";
-        render();
-      });
-
-      activeFiltersEl.appendChild(tag);
-    }
-  }
-
-  function renderProducts(list){
-    grid.innerHTML = "";
-
-    const whatsappNumber = "916372352301"; // CHANGE IF REQUIRED
-
-    list.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "res-card";
-
-      const msg = encodeURIComponent(`Hello NK Enterprises, I want enquiry for: ${p.name}`);
-      const waLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
-
-      card.innerHTML = `
-        <div class="res-thumb">
-          <i class="fa-solid ${p.icon}"></i>
-        </div>
-
-        <div class="res-card-body">
-          <p class="res-name">${p.name}</p>
-
-          <div class="res-card-meta">
-            <span><b>Category:</b> ${p.category}</span>
-            <span><b>Type:</b> ${p.sub}</span>
-          </div>
-
-          <div class="res-price">${formatINR(p.price)}</div>
-
-          <div class="res-actions">
-            <button class="res-small-btn primary" type="button">View Details</button>
-            <a class="res-small-btn" href="${waLink}" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
-  }
-
-  function render(){
-    renderActiveFilterTags();
-
-    const list = getFilteredProducts();
-    resultsCount.textContent = `Showing ${list.length} product${list.length === 1 ? "" : "s"}`;
-
-    emptyState.style.display = list.length === 0 ? "block" : "none";
-    renderProducts(list);
-  }
-
-  filterCheckboxes.forEach(cb => {
-    cb.addEventListener("change", (e) => {
-      if (e.target.checked) selectedSubs.add(e.target.value);
-      else selectedSubs.delete(e.target.value);
-      render();
-    });
-  });
-
-  searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    render();
-  });
-
-  sortSelect.addEventListener("change", (e) => {
-    sortMode = e.target.value;
-    render();
-  });
-
-  clearAllBtn.addEventListener("click", () => {
-    selectedSubs.clear();
-    searchQuery = "";
-    sortMode = "popular";
-
-    filterCheckboxes.forEach(cb => cb.checked = false);
-    searchInput.value = "";
-    sortSelect.value = "popular";
-
-    render();
-  });
-
-  document.getElementById("applyBtn").addEventListener("click", render);
-
-  render();
-</script>
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
 
 </body>
 </html>
