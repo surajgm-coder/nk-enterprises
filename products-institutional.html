@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Institutional Furniture Products | NK Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+
+  <!-- PAGE CSS -->
+  <link rel="stylesheet" href="css/products-institutional.css">
+</head>
+
+<body>
+
+<!-- =========================
+     FIXED HEADER WRAPPER
+========================= -->
+<div class="site-header-wrap">
+
+  <!-- TOP INFO BAR -->
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com">
+          <i class="fa-solid fa-envelope"></i> support@nkenters.com
+        </a>
+
+        <a href="tel:+916372352301">
+          <i class="fa-solid fa-phone"></i> +91 63723 52301
+        </a>
+
+        <a href="tel:+919699540314">
+          | +91 96995 40314
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="header-container">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU TOGGLE -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
+      </button>
+
+      <!-- NAVIGATION -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
+    </div>
+    <div class="nav-divider"></div>
+  </header>
+
+</div>
+
+<!-- =========================
+     INSTITUTIONAL PRODUCTS PAGE
+========================= -->
+<main class="inst-wrap">
+
+  <!-- PAGE HEADER -->
+  <section class="inst-header">
+    <div class="inst-breadcrumb">
+      Home &nbsp;›&nbsp; Products &nbsp;›&nbsp; Institutional Furniture
+    </div>
+
+    <h1 class="inst-title">Institutional Furniture Products</h1>
+
+    <p class="inst-subtitle">
+      Explore institutional furniture solutions for schools, colleges, libraries, hospitals,
+      government offices, auditoriums, workshops, cafeterias, dormitories, and public spaces.
+      Use filters to quickly find the right furniture.
+    </p>
+
+    <!-- CONTROLS -->
+    <div class="inst-controls">
+      <input id="searchInput" class="inst-input" type="text"
+        placeholder="Search products (e.g. desk, chair, hospital bed, bookshelf)">
+
+      <select id="sortSelect" class="inst-select">
+        <option value="popular">Sort: Popular</option>
+        <option value="newest">Sort: Newest</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <button class="inst-btn" id="clearAllBtn" type="button">Clear All</button>
+
+      <button class="inst-btn primary" type="button"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        Back to Top
+      </button>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="inst-layout">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="inst-sidebar">
+      <div class="inst-panel">
+
+        <div class="inst-panel-head">
+          <h3>Filter by Category</h3>
+          <button class="inst-btn" id="applyBtn" type="button">Apply</button>
+        </div>
+
+        <div class="inst-panel-body">
+
+          <!-- Educational / Classroom Furniture -->
+          <details open>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-school"></i></span>
+              Educational / Classroom Furniture
+            </summary>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Student Seating & Tables</p>
+              <label class="inst-check"><input type="checkbox" value="Student desks (single / double)" data-filter="sub"> Student desks (single / double)</label>
+              <label class="inst-check"><input type="checkbox" value="Classroom chairs (fixed / stackable)" data-filter="sub"> Classroom chairs (fixed / stackable)</label>
+              <label class="inst-check"><input type="checkbox" value="Lab stools" data-filter="sub"> Lab stools</label>
+              <label class="inst-check"><input type="checkbox" value="Collaborative tables" data-filter="sub"> Collaborative tables</label>
+              <label class="inst-check"><input type="checkbox" value="Adjustable-height desks" data-filter="sub"> Adjustable-height desks</label>
+              <label class="inst-check"><input type="checkbox" value="Computer lab tables" data-filter="sub"> Computer lab tables</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Teacher / Instructor Furniture</p>
+              <label class="inst-check"><input type="checkbox" value="Teacher desks" data-filter="sub"> Teacher desks</label>
+              <label class="inst-check"><input type="checkbox" value="Instructor podiums / lecterns" data-filter="sub"> Instructor podiums / lecterns</label>
+              <label class="inst-check"><input type="checkbox" value="Chalkboard / whiteboard stands" data-filter="sub"> Chalkboard / whiteboard stands</label>
+              <label class="inst-check"><input type="checkbox" value="AV carts" data-filter="sub"> AV carts</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Storage & Organization</p>
+              <label class="inst-check"><input type="checkbox" value="Classroom cabinets" data-filter="sub"> Classroom cabinets</label>
+              <label class="inst-check"><input type="checkbox" value="Locker units" data-filter="sub"> Locker units</label>
+              <label class="inst-check"><input type="checkbox" value="Book racks" data-filter="sub"> Book racks</label>
+              <label class="inst-check"><input type="checkbox" value="School shelving" data-filter="sub"> School shelving</label>
+            </div>
+          </details>
+
+          <!-- Libraries & Reading Rooms -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-book"></i></span>
+              Libraries & Reading Rooms
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Study carrels" data-filter="sub"> Study carrels</label>
+              <label class="inst-check"><input type="checkbox" value="Reference desks" data-filter="sub"> Reference desks</label>
+              <label class="inst-check"><input type="checkbox" value="Reading chairs" data-filter="sub"> Reading chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Library shelving (high/low)" data-filter="sub"> Library shelving (high/low)</label>
+              <label class="inst-check"><input type="checkbox" value="Periodical racks" data-filter="sub"> Periodical racks</label>
+              <label class="inst-check"><input type="checkbox" value="Book trolleys" data-filter="sub"> Book trolleys</label>
+              <label class="inst-check"><input type="checkbox" value="Display units" data-filter="sub"> Display units</label>
+            </div>
+          </details>
+
+          <!-- Healthcare & Hospital Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-hospital"></i></span>
+              Healthcare & Hospital Furniture
+            </summary>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Patient Care</p>
+              <label class="inst-check"><input type="checkbox" value="Hospital beds (manual / electric)" data-filter="sub"> Hospital beds (manual / electric)</label>
+              <label class="inst-check"><input type="checkbox" value="Overbed tables" data-filter="sub"> Overbed tables</label>
+              <label class="inst-check"><input type="checkbox" value="Bedside lockers" data-filter="sub"> Bedside lockers</label>
+              <label class="inst-check"><input type="checkbox" value="Recliner chairs for patients / visitors" data-filter="sub"> Recliner chairs for patients / visitors</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Waiting & Reception</p>
+              <label class="inst-check"><input type="checkbox" value="Waiting room seating" data-filter="sub"> Waiting room seating</label>
+              <label class="inst-check"><input type="checkbox" value="Reception desks" data-filter="sub"> Reception desks</label>
+              <label class="inst-check"><input type="checkbox" value="Lounge chairs" data-filter="sub"> Lounge chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Magazine racks" data-filter="sub"> Magazine racks</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Support & Storage</p>
+              <label class="inst-check"><input type="checkbox" value="Medical carts" data-filter="sub"> Medical carts</label>
+              <label class="inst-check"><input type="checkbox" value="Instrument trolleys" data-filter="sub"> Instrument trolleys</label>
+              <label class="inst-check"><input type="checkbox" value="Medicine cabinets" data-filter="sub"> Medicine cabinets</label>
+              <label class="inst-check"><input type="checkbox" value="Utility trolleys" data-filter="sub"> Utility trolleys</label>
+            </div>
+          </details>
+
+          <!-- Office & Government Institutions -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-building-columns"></i></span>
+              Office & Government Institutions
+            </summary>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Workstations & Desks</p>
+              <label class="inst-check"><input type="checkbox" value="Executive desks" data-filter="sub"> Executive desks</label>
+              <label class="inst-check"><input type="checkbox" value="Workstations / cubicles" data-filter="sub"> Workstations / cubicles</label>
+              <label class="inst-check"><input type="checkbox" value="Filing cabinets" data-filter="sub"> Filing cabinets</label>
+              <label class="inst-check"><input type="checkbox" value="Conference tables" data-filter="sub"> Conference tables</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Seating</p>
+              <label class="inst-check"><input type="checkbox" value="Office chairs (ergonomic / visitor)" data-filter="sub"> Office chairs (ergonomic / visitor)</label>
+              <label class="inst-check"><input type="checkbox" value="Waiting area seating" data-filter="sub"> Waiting area seating</label>
+              <label class="inst-check"><input type="checkbox" value="Multipurpose chairs" data-filter="sub"> Multipurpose chairs</label>
+            </div>
+
+            <div class="inst-group">
+              <p class="inst-group-title">Storage & Filing</p>
+              <label class="inst-check"><input type="checkbox" value="Lateral / vertical storage units" data-filter="sub"> Lateral / vertical storage units</label>
+              <label class="inst-check"><input type="checkbox" value="File organizers" data-filter="sub"> File organizers</label>
+              <label class="inst-check"><input type="checkbox" value="Archive cabinets" data-filter="sub"> Archive cabinets</label>
+            </div>
+          </details>
+
+          <!-- Auditorium / Lecture Hall Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-microphone"></i></span>
+              Auditorium / Lecture Hall Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Auditorium seating (tiered / fixed)" data-filter="sub"> Auditorium seating (tiered / fixed)</label>
+              <label class="inst-check"><input type="checkbox" value="Folding chairs" data-filter="sub"> Folding chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Lecture podiums" data-filter="sub"> Lecture podiums</label>
+              <label class="inst-check"><input type="checkbox" value="Stage tables" data-filter="sub"> Stage tables</label>
+              <label class="inst-check"><input type="checkbox" value="AV / sound equipment stands" data-filter="sub"> AV / sound equipment stands</label>
+            </div>
+          </details>
+
+          <!-- Workshop & Technical Training Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+              Workshop & Technical Training Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Workbenches" data-filter="sub"> Workbenches</label>
+              <label class="inst-check"><input type="checkbox" value="Tool storage cabinets" data-filter="sub"> Tool storage cabinets</label>
+              <label class="inst-check"><input type="checkbox" value="Drafting tables" data-filter="sub"> Drafting tables</label>
+              <label class="inst-check"><input type="checkbox" value="Technical stools" data-filter="sub"> Technical stools</label>
+            </div>
+          </details>
+
+          <!-- Cafeteria / Dining Hall Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-utensils"></i></span>
+              Cafeteria / Dining Hall Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Dining tables (rectangular / round)" data-filter="sub"> Dining tables (rectangular / round)</label>
+              <label class="inst-check"><input type="checkbox" value="Cafeteria chairs / benches" data-filter="sub"> Cafeteria chairs / benches</label>
+              <label class="inst-check"><input type="checkbox" value="Tray stands" data-filter="sub"> Tray stands</label>
+              <label class="inst-check"><input type="checkbox" value="Service counters" data-filter="sub"> Service counters</label>
+            </div>
+          </details>
+
+          <!-- Daycare / Preschool Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-children"></i></span>
+              Daycare / Preschool Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Low-height tables & chairs" data-filter="sub"> Low-height tables & chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Activity stations" data-filter="sub"> Activity stations</label>
+              <label class="inst-check"><input type="checkbox" value="Playroom shelving" data-filter="sub"> Playroom shelving</label>
+              <label class="inst-check"><input type="checkbox" value="Napping cots" data-filter="sub"> Napping cots</label>
+              <label class="inst-check"><input type="checkbox" value="Storage bins" data-filter="sub"> Storage bins</label>
+            </div>
+          </details>
+
+          <!-- Conference & Meeting Rooms -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-people-group"></i></span>
+              Conference & Meeting Rooms
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Conference tables" data-filter="sub"> Conference tables</label>
+              <label class="inst-check"><input type="checkbox" value="Boardroom chairs" data-filter="sub"> Boardroom chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Display boards / whiteboards" data-filter="sub"> Display boards / whiteboards</label>
+              <label class="inst-check"><input type="checkbox" value="Modular meeting tables" data-filter="sub"> Modular meeting tables</label>
+              <label class="inst-check"><input type="checkbox" value="AV podiums" data-filter="sub"> AV podiums</label>
+            </div>
+          </details>
+
+          <!-- Hospitality & Institutional Housing -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-bed"></i></span>
+              Hospitality & Institutional Housing
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Dormitory beds" data-filter="sub"> Dormitory beds</label>
+              <label class="inst-check"><input type="checkbox" value="Wardrobe / closets" data-filter="sub"> Wardrobe / closets</label>
+              <label class="inst-check"><input type="checkbox" value="Study tables" data-filter="sub"> Study tables</label>
+              <label class="inst-check"><input type="checkbox" value="Mattresses" data-filter="sub"> Mattresses</label>
+              <label class="inst-check"><input type="checkbox" value="Lounge seating" data-filter="sub"> Lounge seating</label>
+            </div>
+          </details>
+
+          <!-- Industrial / Factory Offices -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-industry"></i></span>
+              Industrial / Factory Offices
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Industrial workstations" data-filter="sub"> Industrial workstations</label>
+              <label class="inst-check"><input type="checkbox" value="Ergonomic task seating" data-filter="sub"> Ergonomic task seating</label>
+              <label class="inst-check"><input type="checkbox" value="Stools" data-filter="sub"> Stools</label>
+              <label class="inst-check"><input type="checkbox" value="Breakroom tables & chairs" data-filter="sub"> Breakroom tables & chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Tool cabinets" data-filter="sub"> Tool cabinets</label>
+            </div>
+          </details>
+
+          <!-- Common Area & Public Space Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-tree-city"></i></span>
+              Common Area & Public Space Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Benches (indoor / outdoor)" data-filter="sub"> Benches (indoor / outdoor)</label>
+              <label class="inst-check"><input type="checkbox" value="Planters with seating" data-filter="sub"> Planters with seating</label>
+              <label class="inst-check"><input type="checkbox" value="Information kiosks" data-filter="sub"> Information kiosks</label>
+              <label class="inst-check"><input type="checkbox" value="Bulletin boards" data-filter="sub"> Bulletin boards</label>
+            </div>
+          </details>
+
+          <!-- Specialty Institutional Furniture -->
+          <details>
+            <summary>
+              <span class="cat-icon"><i class="fa-solid fa-chair"></i></span>
+              Specialty Institutional Furniture
+            </summary>
+
+            <div class="inst-group">
+              <label class="inst-check"><input type="checkbox" value="Folding / stacking chairs" data-filter="sub"> Folding / stacking chairs</label>
+              <label class="inst-check"><input type="checkbox" value="Mobile whiteboards / partitions" data-filter="sub"> Mobile whiteboards / partitions</label>
+              <label class="inst-check"><input type="checkbox" value="Portable stages" data-filter="sub"> Portable stages</label>
+              <label class="inst-check"><input type="checkbox" value="Storage trolleys" data-filter="sub"> Storage trolleys</label>
+              <label class="inst-check"><input type="checkbox" value="Coat stands" data-filter="sub"> Coat stands</label>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <section class="inst-main">
+
+      <div class="inst-tags" id="activeFilters"></div>
+
+      <div class="inst-meta">
+        <div id="resultsCount">Showing 0 products</div>
+        <div style="font-weight:700;">Tip: Select filters to narrow results</div>
+      </div>
+
+      <div class="inst-grid" id="productGrid"></div>
+
+      <div class="inst-empty" id="emptyState">
+        No products found for selected filters. Try clearing filters.
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://www.facebook.com/share/1CvirKdxZe/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nk.enterprises_23/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/nk-enterprises-63a415313" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="youtube.com/@nkenterprises-y7l" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- PAGE JS -->
+<script src="js/products-institutional.js"></script>
+
+<!-- YOUR EXISTING JS -->
+<script src="js/slider.js"></script>
+
+</body>
+</html>
