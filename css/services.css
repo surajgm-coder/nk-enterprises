@@ -32,107 +32,61 @@
 }
 
 /* =====================================
-   SERVICES INTRO FEATURE
+   WHAT WE DO – TURNKEY OVERVIEW
 ===================================== */
 
-.services-intro-feature {
-  background: #f7efe7; /* original beige */
-  padding: 90px 0;
+.services-overview {
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-/* GRID */
-.services-intro-feature .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-
-  align-items: stretch; /* image = content height */
+.section-header.center {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* IMAGE */
-.services-intro-image {
-  display: flex;
-}
-
-.services-intro-image img {
-  width: 100%;
-  height: auto;              /* content-driven height */
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
-
-/* CONTENT */
-.services-intro-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.services-intro-content h2 {
+.section-header h2 {
   font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #2b1b10;
+  margin-bottom: 10px;
 }
 
-.intro-text {
-  font-size: 16px;
-  line-height: 1.7;
+.section-subtitle {
+  color: #777;
+  font-size: 15px;
+}
+
+.services-overview-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-overview-content p {
+  line-height: 1.8;
+  margin-bottom: 25px;
   color: #444;
-  margin-bottom: 26px;
 }
 
-/* POINTS */
-.intro-points {
+.services-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px;
+  margin: 30px 0;
 }
 
-.intro-points li {
-  margin-bottom: 18px;
-  padding-left: 26px;
+.services-list li {
+  margin-bottom: 10px;
+  font-weight: 500;
   position: relative;
-  line-height: 1.6;
-  color: #444;
 }
 
-.intro-points li::before {
-  content: "◆";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  color: var(--bronze);
-  font-size: 14px;
+.services-list li::before {
+  content: "✔";
+  margin-right: 8px;
+  color: #a46a2a;
 }
 
-/* CTA */
-.intro-actions {
-  margin-top: 10px;
-}
-
-.intro-cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 28px;
-  background-color: var(--bronze);
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 999px; /* pill */
-  transition: all 0.3s ease;
-}
-
-.intro-cta:hover {
-  background-color: #8d5820;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+.services-note {
+  font-weight: 500;
 }
 
 /* =========================
