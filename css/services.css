@@ -43,23 +43,44 @@
 .what-we-do-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  justify-content: center;
+  gap: 80px;
 }
 
+/* LEFT CONTENT (CENTERED LIKE ABOUT PAGE) */
 .what-we-do-content {
   width: 50%;
+  max-width: 620px;              /* KEY: centers content */
+}
+
+.what-we-do-content .section-title {
+  font-size: 30px;
+  color: #3b2a1a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.what-we-do-content .section-title i {
+  color: #a46a2a;
+  font-size: 22px;
 }
 
 .what-we-do-content p {
+  font-size: 15px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  color: #444;
+  margin-bottom: 18px;
 }
 
 .what-we-do-content h4 {
-  margin: 25px 0 15px;
+  margin: 22px 0 15px;
+  font-size: 17px;
+  color: #3b2a1a;
 }
 
+/* LIST STYLE (MATCH ABOUT PAGE) */
 .what-we-do-list {
   list-style: none;
   padding: 0;
@@ -71,6 +92,8 @@
   padding-left: 26px;
   margin-bottom: 10px;
   font-weight: 500;
+  font-size: 14px;
+  color: #333;
 }
 
 .what-we-do-list li::before {
@@ -81,38 +104,64 @@
   font-weight: bold;
 }
 
-.highlight-text {
+/* HIGHLIGHT TEXT */
+.what-we-do-content .highlight-text {
   font-weight: 600;
+  color: #333;
+  margin-top: 10px;
 }
 
+/* RIGHT IMAGE */
 .what-we-do-image {
   width: 50%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .what-we-do-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
+/* IMAGE CAPTION (SAME AS ABOUT PAGE) */
 .image-caption {
-  display: block;
   margin-top: 10px;
   font-size: 13px;
   color: #7a5a3a;
+  text-align: center;
 }
 
-/* MOBILE FIX */
+/* =========================
+   RESPONSIVE (MOBILE & TAB)
+========================= */
+
+@media (max-width: 992px) {
+  .what-we-do-flex {
+    gap: 50px;
+  }
+}
+
 @media (max-width: 900px) {
   .what-we-do-flex {
     flex-direction: column;
+    text-align: center;
   }
 
   .what-we-do-content,
   .what-we-do-image {
     width: 100%;
+  }
+
+  .what-we-do-content {
+    max-width: 700px;
+  }
+
+  .what-we-do-list {
+    text-align: left;
+    display: inline-block;
   }
 }
 
