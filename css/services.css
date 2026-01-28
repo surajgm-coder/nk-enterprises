@@ -40,21 +40,24 @@
   padding: 90px 0;
 }
 
+/* Flex layout same as About page */
 .what-we-do-flex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 80px;
 }
 
-/* LEFT CONTENT (CENTERED LIKE ABOUT PAGE) */
+/* LEFT CONTENT */
 .what-we-do-content {
   width: 50%;
-  max-width: 620px;              /* KEY: centers content */
+  max-width: 620px;   /* SAME visual width as About page */
 }
 
+/* Section heading */
 .what-we-do-content .section-title {
   font-size: 30px;
+  font-weight: 600;
   color: #3b2a1a;
   margin-bottom: 20px;
   display: flex;
@@ -63,10 +66,11 @@
 }
 
 .what-we-do-content .section-title i {
-  color: #a46a2a;
   font-size: 22px;
+  color: #a46a2a;
 }
 
+/* Paragraphs */
 .what-we-do-content p {
   font-size: 15px;
   line-height: 1.8;
@@ -74,13 +78,15 @@
   margin-bottom: 18px;
 }
 
+/* Sub heading */
 .what-we-do-content h4 {
   margin: 22px 0 15px;
   font-size: 17px;
+  font-weight: 600;
   color: #3b2a1a;
 }
 
-/* LIST STYLE (MATCH ABOUT PAGE) */
+/* Services list */
 .what-we-do-list {
   list-style: none;
   padding: 0;
@@ -91,8 +97,8 @@
   position: relative;
   padding-left: 26px;
   margin-bottom: 10px;
-  font-weight: 500;
   font-size: 14px;
+  font-weight: 500;
   color: #333;
 }
 
@@ -100,11 +106,12 @@
   content: "✔";
   position: absolute;
   left: 0;
+  top: 0;
   color: #a46a2a;
   font-weight: bold;
 }
 
-/* HIGHLIGHT TEXT */
+/* Highlight line */
 .what-we-do-content .highlight-text {
   font-weight: 600;
   color: #333;
@@ -119,6 +126,7 @@
   align-items: center;
 }
 
+/* Image style (same as About page) */
 .what-we-do-image img {
   width: 100%;
   max-width: 520px;
@@ -126,7 +134,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
-/* IMAGE CAPTION (SAME AS ABOUT PAGE) */
+/* Image caption */
 .image-caption {
   margin-top: 10px;
   font-size: 13px;
@@ -135,7 +143,7 @@
 }
 
 /* =========================
-   RESPONSIVE (MOBILE & TAB)
+   RESPONSIVE (TABLET)
 ========================= */
 
 @media (max-width: 992px) {
@@ -143,6 +151,10 @@
     gap: 50px;
   }
 }
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
 
 @media (max-width: 900px) {
   .what-we-do-flex {
@@ -164,7 +176,6 @@
     display: inline-block;
   }
 }
-
 /* =========================
    SERVICES GRID
 ========================= */
