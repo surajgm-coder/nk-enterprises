@@ -35,58 +35,45 @@
    WHAT WE DO – TURNKEY OVERVIEW
 ===================================== */
 
-.what-we-do-feature {
+.what-we-do-section {
   background: #f7f2ec;
   padding: 90px 0;
 }
 
-.feature-flex {
+.what-we-do-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
 }
 
-.feature-content {
-  flex: 1;
+.what-we-do-content {
+  width: 50%;
 }
 
-.feature-title {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #3b2a1a;
-}
-
-.feature-title i {
-  color: #a46a2a;
-  margin-right: 10px;
-}
-
-.feature-content p {
+.what-we-do-content p {
   line-height: 1.8;
-  color: #444;
   margin-bottom: 20px;
 }
 
-.feature-subtitle {
+.what-we-do-content h4 {
   margin: 25px 0 15px;
-  font-size: 18px;
-  color: #3b2a1a;
 }
 
-.feature-list {
+.what-we-do-list {
   list-style: none;
   padding: 0;
   margin-bottom: 25px;
 }
 
-.feature-list li {
+.what-we-do-list li {
   position: relative;
   padding-left: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
-.feature-list li::before {
+.what-we-do-list li::before {
   content: "✔";
   position: absolute;
   left: 0;
@@ -94,17 +81,16 @@
   font-weight: bold;
 }
 
-.feature-note {
-  font-weight: 500;
-  color: #333;
+.highlight-text {
+  font-weight: 600;
 }
 
-.feature-image {
-  flex: 1;
+.what-we-do-image {
+  width: 50%;
   text-align: center;
 }
 
-.feature-image img {
+.what-we-do-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
@@ -118,16 +104,15 @@
   color: #7a5a3a;
 }
 
-/* Responsive */
+/* MOBILE FIX */
 @media (max-width: 900px) {
-  .feature-flex {
+  .what-we-do-flex {
     flex-direction: column;
-    text-align: center;
   }
 
-  .feature-list {
-    text-align: left;
-    display: inline-block;
+  .what-we-do-content,
+  .what-we-do-image {
+    width: 100%;
   }
 }
 
