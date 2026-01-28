@@ -31,9 +31,21 @@
   font-size: 14px;
 }
 
-/* =====================================
-   WHAT WE DO – TURNKEY OVERVIEW
-===================================== */
+/* =========================
+   GLOBAL CONTAINER FIX
+   (Ensures header + sections align)
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* =========================
+   WHAT WE DO – TURNKEY SECTION
+========================= */
 
 .what-we-do-section {
   background: #f7f2ec;
