@@ -388,33 +388,34 @@
 }
 
 /* =====================================
-   SERVICE PAGE – FINAL CTA (FINAL FIX)
+   FINAL CTA – FIXED SINGLE BACKGROUND
 ===================================== */
 
 .service-final-cta {
-  background-image: url("../images/services/services-cta.png");
-  min-height: 420px;
-  margin-bottom: 80px;
   position: relative;
-}
 
-/* FORCE overlay to be neutral */
-.service-final-cta-overlay {
-  background: transparent !important;  /* 🔴 OVERRIDES ALL */
+  background-image: url("../images/services/services-cta.png");
+  background-repeat: no-repeat;   /* ⭐ stops duplication */
+  background-size: cover;        /* fill full width */
+  background-position: center;   /* center image */
+
   min-height: 420px;
-  height: 100%;
-
   display: flex;
   align-items: center;
 }
 
-.service-final-cta-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+
+/* overlay (optional soft dark effect) */
+.service-final-cta-overlay {
   width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45); /* nicer readability */
+  display: flex;
+  align-items: center;
 }
 
+
+/* text */
 .cta-text {
   max-width: 620px;
   color: #ffffff;
@@ -429,24 +430,23 @@
 .cta-text p {
   font-size: 16px;
   line-height: 1.8;
-  color: #f1f1f1;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .cta-button {
-  display: inline-flex;
+  display: inline-block;
+  background: #a56b2a;
+  color: #fff;
   padding: 14px 26px;
-  background-color: #a56b2a;
-  color: #ffffff;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 16px;
   font-weight: 600;
-  border-radius: 4px;
 }
 
 .cta-button:hover {
-  background-color: #8d5820;
+  background: #8d5820;
 }
+
 
 /* ================= MOBILE ================= */
 
