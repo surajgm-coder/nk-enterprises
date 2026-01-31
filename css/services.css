@@ -1,27 +1,10 @@
 /* ==================================================
-   SERVICES PAGE – COMPLETE FINAL CSS
-   Clean • Aligned • Safe • Production Ready
+   SERVICES PAGE – ALIGNED WITH HOME
 ================================================== */
 
-
-/* ==================================================
-   GLOBAL CONTAINER (align with header)
-================================================== */
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-
-
-/* ==================================================
-   HERO
-================================================== */
-
+/* HERO */
 .services-hero {
-  background: url("../images/services/services-hero.png") center/cover no-repeat;
+  background: url("../images/services/services-hero.png") center / cover no-repeat;
   height: 260px;
 }
 
@@ -30,6 +13,12 @@
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.services-hero .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .services-hero h1 {
@@ -42,17 +31,28 @@
   font-size: 14px;
 }
 
+/* =========================
+   GLOBAL CONTAINER FIX
+   (Ensures header + sections align)
+========================= */
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-/* ==================================================
-   WHAT WE DO SECTION
-================================================== */
+/* =========================
+   WHAT WE DO – TURNKEY SECTION
+========================= */
 
 .what-we-do-section {
   background: #f7f2ec;
   padding: 90px 0;
 }
 
+/* Flex layout same as About page */
 .what-we-do-flex {
   display: flex;
   align-items: center;
@@ -60,24 +60,99 @@
   gap: 80px;
 }
 
-.what-we-do-content,
+/* LEFT CONTENT */
+.what-we-do-content {
+  width: 50%;
+  max-width: 620px;   /* SAME visual width as About page */
+}
+
+/* Section heading */
+.what-we-do-content .section-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #3b2a1a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.what-we-do-content .section-title i {
+  font-size: 22px;
+  color: #a46a2a;
+}
+
+/* Paragraphs */
+.what-we-do-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* Sub heading */
+.what-we-do-content h4 {
+  margin: 22px 0 15px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #3b2a1a;
+}
+
+/* Services list */
+.what-we-do-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.what-we-do-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.what-we-do-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a46a2a;
+  font-weight: bold;
+}
+
+/* Highlight line */
+.what-we-do-content .highlight-text {
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* RIGHT IMAGE */
 .what-we-do-image {
   width: 50%;
-}
-
-.what-we-do-image {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Image style (same as About page) */
 .what-we-do-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
-
+/* Image caption */
+.image-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #7a5a3a;
+  text-align: center;
+}
 
 /* ==================================================
    SERVICES SPLIT SECTIONS
@@ -254,16 +329,67 @@
 
 
 
-/* ==================================================
-   FINAL CTA (single background fix)
-================================================== */
+/* =====================================
+   SERVICE PAGE – FINAL CTA (FINAL FIX)
+===================================== */
 
 .service-final-cta {
-  background: url("../images/services/services-cta.png") center/cover no-repeat;
+  background-image: url("../images/services/services-cta.png");
   min-height: 420px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* FORCE overlay to be neutral */
+.service-final-cta-overlay {
+  background: transparent !important;  /* 🔴 OVERRIDES ALL */
+  min-height: 420px;
+  height: 100%;
+
   display: flex;
   align-items: center;
 }
+
+.service-final-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.cta-text {
+  max-width: 620px;
+  color: #ffffff;
+}
+
+.cta-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.cta-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f1f1f1;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-flex;
+  padding: 14px 26px;
+  background-color: #a56b2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  background-color: #8d5820;
+}
+
 
 
 
