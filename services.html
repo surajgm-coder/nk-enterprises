@@ -25,18 +25,27 @@
 ========================= -->
 <div class="site-header-wrap">
 
-  <!-- TOP INFO BAR -->
-  <div class="top-info-bar">
-    <div class="info-container">
-      <div class="info-left">
-        <span><i class="fa-solid fa-envelope"></i> support@nkenters.com</span>
-        <span><i class="fa-solid fa-phone"></i> +91 63723 52301 | +91 96995 40314</span>
-      </div>
-      <div class="info-right">
-        <a href="contact.html" class="btn-quote">GET A QUOTE</a>
-      </div>
+ <!-- TOP INFO BAR -->
+<div class="top-info-bar">
+  <div class="info-container">
+
+    <!-- RIGHT ALIGNED CONTENT -->
+    <div class="info-right">
+      <a href="mailto:support@nkenters.com">
+        <i class="fa-solid fa-envelope"></i> support@nkenters.com
+      </a>
+
+      <a href="tel:+916372352301">
+        <i class="fa-solid fa-phone"></i> +91 63723 52301
+      </a>
+
+      <a href="tel:+919699540314">
+        | +91 96995 40314
+      </a>
     </div>
+
   </div>
+</div>
 
   <!-- MAIN HEADER -->
   <header class="main-header">
@@ -44,17 +53,22 @@
 
       <!-- LOGO -->
       <div class="logo">
-        <img src="images/logo.png" alt="NK Enterprises Logo">
-        <span class="logo-underline"></span>
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+          <span class="logo-underline"></span>
+        </a>
       </div>
 
-      <!-- MOBILE TOGGLE -->
-      <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
-        <span class="hamburger">☰</span>
+      <!-- MOBILE MENU TOGGLE -->
+      <button 
+        class="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false">
+        <span class="hamburger">&#9776;</span>
       </button>
 
       <!-- NAVIGATION -->
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -65,7 +79,13 @@
         </ul>
       </nav>
 
+      <!-- CTA BUTTON -->
+      <div class="info-right">
+        <a href="contact.html" class="btn-quote">Get a Quote</a>
+      </div>
+
     </div>
+
     <div class="nav-divider"></div>
   </header>
 
@@ -84,150 +104,222 @@
 </section>
   
 <!-- =========================
-   SERVICES INTRO SECTION
+   WHAT WE DO (TURNKEY)
 ========================= -->
-<section class="services-intro-feature">
-  <div class="container">
+<section class="what-we-do-section">
+  <div class="container what-we-do-flex">
 
-    <!-- LEFT: IMAGE -->
-    <div class="services-intro-image">
-      <img
-        src="images/services/services-intro.png"
-        alt="Furniture & Fixture Manufacturing"
-      />
-    </div>
+    <div class="what-we-do-content">
+      <h2 class="section-title">
+        <i class="fas fa-cube"></i> What We Do
+      </h2>
 
-    <!-- RIGHT: CONTENT -->
-    <div class="services-intro-content">
-      <h2>Comprehensive Furniture & Fixture Manufacturing Solutions</h2>
-
-      <p class="intro-text">
-        Delivering quality, precision, and reliability in every project through
-        custom furniture, fixtures, and metal fabrication solutions.
+      <p>
+        NK Enterprises provides complete turnkey solutions under one roof,
+        delivering thoughtfully designed, functional, and durable spaces across
+        residential, commercial, retail, and industrial sectors.
       </p>
 
-      <ul class="intro-points">
-        <li>
-          <strong>Precision Manufacturing</strong><br>
-          Advanced fabrication techniques ensuring accuracy, durability,
-          and superior finish across all projects.
-        </li>
-        <li>
-          <strong>End-to-End Solutions</strong><br>
-          From concept and design to production and installation, we deliver
-          complete manufacturing solutions.
-        </li>
+      <h4>Our core services include:</h4>
+
+      <ul class="what-we-do-list">
+        <li>Interior Designing</li>
+        <li>Furniture Manufacturing</li>
+        <li>Retail & Shop Fittings</li>
+        <li>Metal & Wood Fabrication</li>
+        <li>Civil & Renovation Works</li>
+        <li>Electrical, Plumbing, Signage & Branding</li>
       </ul>
 
-      <div class="intro-actions">
-        <a href="contact.html" class="intro-cta">
-          Get in Touch
-        </a>
-      </div>
+      <p class="highlight-text">
+        We focus on precision execution, premium finishes, and future-ready designs.
+      </p>
+    </div>
+
+    <div class="what-we-do-image">
+      <img src="images/services/turnkey-services.png" alt="">
+      <span class="image-caption">NK Enterprises – Turnkey Project Execution</span>
     </div>
 
   </div>
 </section>
 
+  <!-- =========================
+      Wooden Services
+========================= -->
+<section class="service-split-section">
+  <div class="container service-split-flex">
+
+    <div class="service-image">
+      <img src="images/services/wooden-service.png" alt="">
+    </div>
+
+    <div class="service-content">
+      <h2>Wooden Services</h2>
+
+      <p>
+        High-quality custom furniture and interior wood solutions crafted
+        with precision, durability, and premium materials.
+      </p>
+
+      <ul>
+        <li>Custom Furniture Manufacturing</li>
+        <li>Office & Commercial Interiors</li>
+        <li>Modular Cabinets & Storage</li>
+        <li>Retail Displays & Fixtures</li>
+        <li>End-to-End Installation</li>
+      </ul>
+
+      <a href="#" class="btn-primary">View Services</a>
+    </div>
+
+  </div>
+</section>
 <!-- =========================
-   SERVICES GRID
+      Wooden Machinery
 ========================= -->
-<section class="services-grid">
+<section class="machinery-products">
   <div class="container">
 
-    <div class="service-card">
-      <img src="images/services/service1.png" alt="Service 1">
-      <h3>Industrial Fabrication</h3>
-      <p>
-        Precision-engineered industrial fabrication solutions for
-        manufacturing and infrastructure projects.
-      </p>
-      <a href="#" class="card-btn">Read More</a>
+    <div class="section-header center">
+      <h2>Wood Facility & Machinery</h2>
+      <p>Advanced equipment that ensures precision & production capability</p>
     </div>
 
-    <div class="service-card">
-      <img src="images/services/service2.png" alt="Service 2">
-      <h3>Metal Works</h3>
-      <p>
-        Custom metal works including welding, cutting, and assembly
-        with high durability standards.
-      </p>
-      <a href="#" class="card-btn">Read More</a>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/machinery/hand-press.jpg">
+        <h4>Hand Press Machine</h4>
+        <p>Manual pressing & shaping</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/multi-borer.jpg">
+        <h4>Multi-Borer Machine</h4>
+        <p>Precision drilling</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/power-press.jpg">
+        <h4>Power Press</h4>
+        <p>Heavy duty pressing</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/edge-banding.jpg">
+        <h4>Edge Bending</h4>
+        <p>Perfect laminate finishing</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/cold-press.jpg">
+        <h4>Cold Press</h4>
+        <p>Laminate bonding</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/drill.jpg">
+        <h4>Stand Drilling</h4>
+        <p>Accurate drilling</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/panel-saw.jpg">
+        <h4>Panel Saw</h4>
+        <p>Precision cutting</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- =========================
+      Fabrication Services
+========================= -->
+<section class="service-split-section alt-bg">
+  <div class="container service-split-flex reverse">
+
+    <div class="service-image">
+      <img src="images/services/fabrication-service.png" alt="">
     </div>
 
-    <div class="service-card">
-      <img src="images/services/service3.png" alt="Service 3">
-      <h3>Commercial Interiors</h3>
-      <p>
-        Interior fabrication solutions for offices, warehouses,
-        and industrial spaces.
-      </p>
-      <a href="#" class="card-btn">Read More</a>
-    </div>
+    <div class="service-content">
+      <h2>Fabrication Services</h2>
 
-    <div class="service-card">
-      <img src="images/services/service4.png" alt="Service 4">
-      <h3>Custom Engineering</h3>
       <p>
-        Tailored engineering solutions designed to meet
-        complex industrial requirements.
+        Advanced metal and industrial fabrication solutions engineered
+        for strength, durability, and precision performance.
       </p>
-      <a href="#" class="card-btn">Read More</a>
+
+      <ul>
+        <li>Custom Metal Fabrication</li>
+        <li>Structural Components</li>
+        <li>Industrial Manufacturing</li>
+        <li>Welding, Cutting & Assembly</li>
+        <li>Project-Based Engineering Works</li>
+      </ul>
+
+      <a href="#" class="btn-primary">View Services</a>
     </div>
 
   </div>
 </section>
 
-<!-- =========================
-   WHY CHOOSE – CARDS
+  <!-- =========================
+  Fabrication Machinery
 ========================= -->
-<section class="why-choose-cards">
+
+<section class="machinery-products fabrication-machinery">
   <div class="container">
 
-    <!-- Card 1 -->
-    <div class="info-card">
-      <div class="card-header">
-        <span class="card-icon">
-          <i class="fas fa-cogs"></i>
-        </span>
-        <h3>Why Choose NK Enterprises</h3>
-      </div>
-
-      <ul class="card-list">
-        <li>Expertise & Skilled Workforce</li>
-        <li>Precision Engineering & Craftsmanship</li>
-        <li>Fully Customized Solutions</li>
-        <li>On-Time Project Delivery</li>
-      </ul>
-
-      <a href="about.html" class="card-btn">
-        Learn More About Us →
-      </a>
+    <div class="section-header center">
+      <h2>Fabrication Facility & Machinery</h2>
+      <p>Heavy-duty equipment for precision metal fabrication</p>
     </div>
 
-    <!-- Card 2 -->
-    <div class="info-card">
-      <div class="card-header">
-        <span class="card-icon">
-          <i class="fas fa-industry"></i>
-        </span>
-        <h3>Industries We Serve</h3>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/machinery/welding-1.jpg">
+        <h4>Welding Machines</h4>
+        <p>MIG / TIG / Arc welding</p>
       </div>
 
-      <ul class="card-list">
-        <li>Manufacturing & Industrial Plants</li>
-        <li>Chemical & Process Industry</li>
-        <li>Workshops & Tool Rooms</li>
-        <li>Commercial Offices & Warehouses</li>
-      </ul>
+      <div class="product-card">
+        <img src="images/machinery/spot-welding.jpg">
+        <h4>Spot Welding</h4>
+        <p>Sheet metal joining</p>
+      </div>
 
-      <a href="projects.html" class="card-btn">
-        View All Industries →
-      </a>
+      <div class="product-card">
+        <img src="images/machinery/buffing.jpg">
+        <h4>Buffing Machine</h4>
+        <p>Surface finishing</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/grinder.jpg">
+        <h4>Stand Grinder</h4>
+        <p>Grinding & shaping</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/power-press-metal.jpg">
+        <h4>Power Press</h4>
+        <p>Heavy fabrication</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/machinery/tube-rounder.jpg">
+        <h4>Tube Rounder</h4>
+        <p>Pipe bending</p>
+      </div>
+
     </div>
-
   </div>
 </section>
+
   
 <!-- =========================
    SERVICE PAGE FINAL CTA
