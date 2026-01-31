@@ -441,6 +441,10 @@
     </div>
   </div>
 </section>
+/* Fabrication section style */
+.fabrication-machinery {
+  background: #ffffff; /* alternate white */
+}
 
 /* =====================================
    SERVICE PAGE – FINAL CTA (FINAL FIX)
