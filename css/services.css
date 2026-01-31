@@ -154,43 +154,16 @@
   text-align: center;
 }
 
-/* =========================
-   RESPONSIVE (TABLET)
-========================= */
+/* ==================================================
+   SERVICES PAGE – SPLIT SECTIONS (WOOD + FABRICATION)
+   SAFE CSS – DOES NOT AFFECT OTHER PAGES
+================================================== */
 
-@media (max-width: 992px) {
-  .what-we-do-flex {
-    gap: 50px;
-  }
-}
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
-
-@media (max-width: 900px) {
-  .what-we-do-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .what-we-do-content,
-  .what-we-do-image {
-    width: 100%;
-  }
-
-  .what-we-do-content {
-    max-width: 700px;
-  }
-
-  .what-we-do-list {
-    text-align: left;
-    display: inline-block;
-  }
-}
-/* =========================
-   SPLIT SERVICE SECTIONS
-========================= */
+/* ==================================================
+   1️⃣ WOODEN / FABRICATION SERVICE SPLIT LAYOUT
+   (Text left | Image right OR reverse)
+================================================== */
 
 .service-split-section {
   padding: 90px 0;
@@ -198,41 +171,45 @@
 }
 
 .service-split-section.alt-bg {
-  background: #f7f2ec;
+  background: #f7f2ec; /* light beige */
 }
 
-/* layout */
+/* FLEX LAYOUT */
 .service-split-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 80px;
 }
 
+/* reverse layout for alternate section */
 .service-split-flex.reverse {
   flex-direction: row-reverse;
 }
 
-/* image */
+/* IMAGE SIDE */
 .service-image {
   width: 50%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .service-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
-/* content */
+/* CONTENT SIDE */
 .service-content {
   width: 50%;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .service-content h2 {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 600;
   color: #3b2a1a;
   margin-bottom: 18px;
 }
@@ -241,9 +218,10 @@
   font-size: 15px;
   line-height: 1.8;
   color: #444;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
+/* LIST */
 .service-content ul {
   list-style: none;
   padding: 0;
@@ -254,6 +232,8 @@
   position: relative;
   padding-left: 26px;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .service-content ul li::before {
@@ -264,14 +244,15 @@
   font-weight: bold;
 }
 
-/* button */
+/* BUTTON */
 .btn-primary {
+  display: inline-block;
   background: #a46a2a;
   color: #fff;
-  padding: 10px 22px;
+  padding: 11px 24px;
   border-radius: 6px;
-  text-decoration: none;
   font-size: 14px;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -279,12 +260,105 @@
   background: #8b5a2b;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
+
+/* ==================================================
+   2️⃣ MACHINERY PRODUCT GRID (WOOD + FABRICATION)
+================================================== */
+
+.machinery-products {
+  padding: 90px 0;
+  background: #f7f3ee;
+}
+
+.fabrication-machinery {
+  background: #ffffff; /* alternate */
+}
+
+/* HEADER */
+.section-header.center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #3b2a1a;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 15px;
+}
+
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+
+/* CARD */
+.product-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.product-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #3b2a1a;
+  margin-bottom: 6px;
+}
+
+/* DESC */
+.product-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile split sections */
 @media (max-width: 900px) {
-  .service-split-flex {
+
+  .service-split-flex,
+  .service-split-flex.reverse {
     flex-direction: column;
     text-align: center;
   }
@@ -299,79 +373,8 @@
     display: inline-block;
   }
 }
-/* =========================
-   MACHINERY PRODUCTS GRID
-========================= */
 
-.machinery-products {
-  padding: 80px 0;
-  background: #f7f3ee; /* same beige theme */
-}
-
-.section-header.center {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.section-header p {
-  color: #666;
-  font-size: 16px;
-}
-
-/* grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-/* card */
-.product-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
-}
-
-.product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.product-card h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.product-card p {
-  font-size: 14px;
-  color: #666;
-}
-
-/* responsive */
-@media (max-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* Small mobile grid */
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -382,68 +385,6 @@
   .product-grid {
     grid-template-columns: 1fr;
   }
-}
-<!-- =========================
-   FABRICATION MACHINERY
-========================= -->
-<section class="machinery-products fabrication-machinery">
-  <div class="container">
-
-    <div class="section-header center">
-      <h2>Fabrication Facility & Machinery</h2>
-      <p>Heavy-duty equipment for precision metal fabrication & engineering</p>
-    </div>
-
-    <div class="product-grid">
-
-      <!-- 1 -->
-      <div class="product-card">
-        <img src="images/machinery/welding-1.jpg" alt="">
-        <h4>Industrial Welding Machines</h4>
-        <p>All types of arc, MIG & TIG welding operations</p>
-      </div>
-
-      <!-- 2 -->
-      <div class="product-card">
-        <img src="images/machinery/spot-welding.jpg" alt="">
-        <h4>Spot Welding Machine</h4>
-        <p>Fast and strong sheet metal joining</p>
-      </div>
-
-      <!-- 3 -->
-      <div class="product-card">
-        <img src="images/machinery/buffing.jpg" alt="">
-        <h4>Buffing Machine</h4>
-        <p>Surface polishing and finishing</p>
-      </div>
-
-      <!-- 4 -->
-      <div class="product-card">
-        <img src="images/machinery/grinder.jpg" alt="">
-        <h4>Stand Grinder</h4>
-        <p>Precision grinding & shaping</p>
-      </div>
-
-      <!-- 5 -->
-      <div class="product-card">
-        <img src="images/machinery/tube-rounder.jpg" alt="">
-        <h4>Metal Tube Rounder</h4>
-        <p>Pipe bending and round forming</p>
-      </div>
-
-      <!-- 6 -->
-      <div class="product-card">
-        <img src="images/machinery/power-press-metal.jpg" alt="">
-        <h4>Heavy Duty Power Press</h4>
-        <p>Pressing, forming & structural fabrication</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-/* Fabrication section style */
-.fabrication-machinery {
-  background: #ffffff; /* alternate white */
 }
 
 /* =====================================
