@@ -251,18 +251,19 @@
 }
 
 
-
 /* ==================================================
-   MACHINERY PRODUCTS SECTION
-   3 PER ROW + LAST ROW CENTER
+   MACHINERY SECTIONS
+   (BOTH CREAM BACKGROUND)
 ================================================== */
 
-.machinery-products {
+.machinery-products,
+.fabrication-machinery {
   padding: 90px 0;
-  background: #f7f3ee; /* creamy background */
+  background: #f7f3ee; /* ✅ SAME cream for both */
 }
 
-/* header */
+
+/* HEADER */
 .section-header.center {
   text-align: center;
   margin-bottom: 50px;
@@ -281,31 +282,20 @@
 }
 
 
-/* ==================================================
-   FLEX GRID (IMPORTANT CHANGE)
-================================================== */
-
+/* GRID */
 .product-grid {
-  display: flex;                /* ⭐ change from grid to flex */
-  flex-wrap: wrap;
-  justify-content: center;      /* ⭐ centers last row automatically */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
 
-/* ==================================================
-   CARD
-================================================== */
-
+/* CARD */
 .product-card {
-  width: 31%;                  /* ⭐ 3 per row */
-  min-width: 280px;
-
   background: #ffffff;
   border-radius: 14px;
   padding: 18px;
   text-align: center;
-
   box-shadow: 0 8px 25px rgba(0,0,0,0.06);
   transition: 0.3s ease;
   cursor: pointer;
@@ -316,8 +306,6 @@
   box-shadow: 0 14px 40px rgba(0,0,0,0.12);
 }
 
-
-/* image */
 .product-card img {
   width: 100%;
   height: 180px;
@@ -326,8 +314,6 @@
   margin-bottom: 15px;
 }
 
-
-/* title */
 .product-card h4 {
   font-size: 17px;
   font-weight: 600;
@@ -335,30 +321,9 @@
   margin-bottom: 6px;
 }
 
-
-/* description */
 .product-card p {
   font-size: 13px;
   color: #666;
-}
-
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-/* Tablet → 2 cards */
-@media (max-width: 992px) {
-  .product-card {
-    width: 45%;
-  }
-}
-
-/* Mobile → 1 card */
-@media (max-width: 600px) {
-  .product-card {
-    width: 100%;
-  }
 }
 
 /* =====================================
