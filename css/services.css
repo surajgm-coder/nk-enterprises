@@ -252,21 +252,25 @@
 
 
 /* ==================================================
-   MACHINERY SECTIONS
-   (BOTH CREAM BACKGROUND)
+   MACHINERY SECTIONS – FINAL PROFESSIONAL LAYOUT
+   (Wood = 4+3 centered | Fabrication = 3 each row)
+   SAFE – affects only machinery sections
 ================================================== */
 
-.machinery-products,
-.fabrication-machinery {
+
+/* COMMON BACKGROUND */
+.machinery-products {
   padding: 90px 0;
-  background: #f7f3ee; /* ✅ SAME cream for both */
+  background: #f7f3ee; /* creamy background */
 }
 
 
-/* HEADER */
+/* ===============================
+   SECTION HEADER
+================================ */
 .section-header.center {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .section-header h2 {
@@ -277,43 +281,69 @@
 }
 
 .section-header p {
-  font-size: 15px;
   color: #666;
+  font-size: 15px;
 }
 
 
-/* GRID */
-.product-grid {
+/* ==================================================
+   WOOD MACHINERY
+   Row 1 = 4 cards
+   Row 2 = 3 cards CENTERED
+================================================== */
+
+.wood-machinery .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 260px); /* fixed width cards */
   gap: 30px;
+
+  justify-content: center; /* ⭐ centers last row automatically */
 }
 
 
-/* CARD */
+/* ==================================================
+   FABRICATION MACHINERY
+   ALWAYS 3 PER ROW CENTERED
+================================================== */
+
+.fabrication-machinery .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  gap: 30px;
+
+  justify-content: center;
+}
+
+
+/* ==================================================
+   CARD DESIGN
+================================================== */
+
 .product-card {
   background: #ffffff;
   border-radius: 14px;
   padding: 18px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
-  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
 }
 
+/* IMAGE */
 .product-card img {
   width: 100%;
-  height: 180px;
+  height: 170px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
+/* TITLE */
 .product-card h4 {
   font-size: 17px;
   font-weight: 600;
@@ -321,10 +351,35 @@
   margin-bottom: 6px;
 }
 
+/* TEXT */
 .product-card p {
   font-size: 13px;
   color: #666;
 }
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+/* Tablet */
+@media (max-width: 1100px) {
+
+  .wood-machinery .product-grid,
+  .fabrication-machinery .product-grid {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .wood-machinery .product-grid,
+  .fabrication-machinery .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* =====================================
    SERVICE PAGE – FINAL CTA (FIXED PROPER)
