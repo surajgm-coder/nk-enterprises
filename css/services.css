@@ -1,10 +1,27 @@
 /* ==================================================
-   SERVICES PAGE – ALIGNED WITH HOME
+   SERVICES PAGE – COMPLETE FINAL CSS
+   Clean • Aligned • Safe • Production Ready
 ================================================== */
 
-/* HERO */
+
+/* ==================================================
+   GLOBAL CONTAINER (align with header)
+================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+
+/* ==================================================
+   HERO
+================================================== */
+
 .services-hero {
-  background: url("../images/services/services-hero.png") center / cover no-repeat;
+  background: url("../images/services/services-hero.png") center/cover no-repeat;
   height: 260px;
 }
 
@@ -13,12 +30,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-.services-hero .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .services-hero h1 {
@@ -31,28 +42,17 @@
   font-size: 14px;
 }
 
-/* =========================
-   GLOBAL CONTAINER FIX
-   (Ensures header + sections align)
-========================= */
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
-/* =========================
-   WHAT WE DO – TURNKEY SECTION
-========================= */
+/* ==================================================
+   WHAT WE DO SECTION
+================================================== */
 
 .what-we-do-section {
   background: #f7f2ec;
   padding: 90px 0;
 }
 
-/* Flex layout same as About page */
 .what-we-do-flex {
   display: flex;
   align-items: center;
@@ -60,116 +60,35 @@
   gap: 80px;
 }
 
-/* LEFT CONTENT */
-.what-we-do-content {
-  width: 50%;
-  max-width: 620px;   /* SAME visual width as About page */
-}
-
-/* Section heading */
-.what-we-do-content .section-title {
-  font-size: 30px;
-  font-weight: 600;
-  color: #3b2a1a;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.what-we-do-content .section-title i {
-  font-size: 22px;
-  color: #a46a2a;
-}
-
-/* Paragraphs */
-.what-we-do-content p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 18px;
-}
-
-/* Sub heading */
-.what-we-do-content h4 {
-  margin: 22px 0 15px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #3b2a1a;
-}
-
-/* Services list */
-.what-we-do-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.what-we-do-list li {
-  position: relative;
-  padding-left: 26px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-}
-
-.what-we-do-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #a46a2a;
-  font-weight: bold;
-}
-
-/* Highlight line */
-.what-we-do-content .highlight-text {
-  font-weight: 600;
-  color: #333;
-  margin-top: 10px;
-}
-
-/* RIGHT IMAGE */
+.what-we-do-content,
 .what-we-do-image {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-/* Image style (same as About page) */
+.what-we-do-image {
+  display: flex;
+  justify-content: center;
+}
+
 .what-we-do-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
-/* Image caption */
-.image-caption {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #7a5a3a;
-  text-align: center;
-}
+
 
 /* ==================================================
-   SPLIT SERVICE SECTIONS (Wood / Fabrication text-image)
+   SERVICES SPLIT SECTIONS
+   (Wood + Fabrication BOTH WHITE)
 ================================================== */
 
 .service-split-section {
   padding: 90px 0;
-  background: #ffffff;
+  background: #ffffff; /* ✅ BOTH white */
 }
 
-/* alternate background (beige) */
-.service-split-section.alt-bg {
-  background: #f7f2ec;
-}
-
-
-/* layout */
 .service-split-flex {
   display: flex;
   align-items: center;
@@ -182,7 +101,7 @@
 }
 
 
-/* image */
+/* IMAGE */
 .service-image {
   width: 50%;
   display: flex;
@@ -197,7 +116,7 @@
 }
 
 
-/* content */
+/* CONTENT */
 .service-content {
   width: 50%;
   max-width: 620px;
@@ -218,7 +137,7 @@
 }
 
 
-/* list */
+/* LIST */
 .service-content ul {
   list-style: none;
   padding: 0;
@@ -241,7 +160,7 @@
 }
 
 
-/* button */
+/* BUTTON */
 .btn-primary {
   display: inline-block;
   background: #a46a2a;
@@ -249,7 +168,6 @@
   padding: 11px 24px;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -260,23 +178,18 @@
 
 
 /* ==================================================
-   MACHINERY PRODUCT GRIDS
+   MACHINERY SECTIONS
+   (BOTH CREAM BACKGROUND)
 ================================================== */
 
-/* 🔹 WOOD MACHINERY (NOW WHITE) */
-.machinery-products {
-  padding: 90px 0;
-  background: #ffffff;   /* ✅ reversed */
-}
-
-
-/* 🔹 FABRICATION MACHINERY (NOW BEIGE) */
+.machinery-products,
 .fabrication-machinery {
-  background: #f7f3ee;   /* ✅ reversed */
+  padding: 90px 0;
+  background: #f7f3ee; /* ✅ SAME cream for both */
 }
 
 
-/* header */
+/* HEADER */
 .section-header.center {
   text-align: center;
   margin-bottom: 50px;
@@ -295,7 +208,7 @@
 }
 
 
-/* grid */
+/* GRID */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -303,7 +216,7 @@
 }
 
 
-/* card */
+/* CARD */
 .product-card {
   background: #ffffff;
   border-radius: 14px;
@@ -342,6 +255,19 @@
 
 
 /* ==================================================
+   FINAL CTA (single background fix)
+================================================== */
+
+.service-final-cta {
+  background: url("../images/services/services-cta.png") center/cover no-repeat;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* ==================================================
    RESPONSIVE
 ================================================== */
 
@@ -354,13 +280,16 @@
 @media (max-width: 900px) {
 
   .service-split-flex,
-  .service-split-flex.reverse {
+  .service-split-flex.reverse,
+  .what-we-do-flex {
     flex-direction: column;
     text-align: center;
   }
 
   .service-image,
-  .service-content {
+  .service-content,
+  .what-we-do-content,
+  .what-we-do-image {
     width: 100%;
   }
 
@@ -379,78 +308,5 @@
 @media (max-width: 480px) {
   .product-grid {
     grid-template-columns: 1fr;
-  }
-}
-/* =====================================
-   FINAL CTA – FIXED SINGLE BACKGROUND
-===================================== */
-
-.service-final-cta {
-  position: relative;
-
-  background-image: url("../images/services/services-cta.png");
-  background-repeat: no-repeat;   /* ⭐ stops duplication */
-  background-size: cover;        /* fill full width */
-  background-position: center;   /* center image */
-
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-}
-
-
-/* overlay (optional soft dark effect) */
-.service-final-cta-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.45); /* nicer readability */
-  display: flex;
-  align-items: center;
-}
-
-
-/* text */
-.cta-text {
-  max-width: 620px;
-  color: #ffffff;
-}
-
-.cta-text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.cta-text p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 28px;
-}
-
-.cta-button {
-  display: inline-block;
-  background: #a56b2a;
-  color: #fff;
-  padding: 14px 26px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.cta-button:hover {
-  background: #8d5820;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-  .service-final-cta,
-  .service-final-cta-overlay {
-    min-height: 360px;
-  }
-
-  .cta-text h2 {
-    font-size: 28px;
   }
 }
