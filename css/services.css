@@ -383,6 +383,64 @@
     grid-template-columns: 1fr;
   }
 }
+<!-- =========================
+   FABRICATION MACHINERY
+========================= -->
+<section class="machinery-products fabrication-machinery">
+  <div class="container">
+
+    <div class="section-header center">
+      <h2>Fabrication Facility & Machinery</h2>
+      <p>Heavy-duty equipment for precision metal fabrication & engineering</p>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- 1 -->
+      <div class="product-card">
+        <img src="images/machinery/welding-1.jpg" alt="">
+        <h4>Industrial Welding Machines</h4>
+        <p>All types of arc, MIG & TIG welding operations</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card">
+        <img src="images/machinery/spot-welding.jpg" alt="">
+        <h4>Spot Welding Machine</h4>
+        <p>Fast and strong sheet metal joining</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <img src="images/machinery/buffing.jpg" alt="">
+        <h4>Buffing Machine</h4>
+        <p>Surface polishing and finishing</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <img src="images/machinery/grinder.jpg" alt="">
+        <h4>Stand Grinder</h4>
+        <p>Precision grinding & shaping</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <img src="images/machinery/tube-rounder.jpg" alt="">
+        <h4>Metal Tube Rounder</h4>
+        <p>Pipe bending and round forming</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <img src="images/machinery/power-press-metal.jpg" alt="">
+        <h4>Heavy Duty Power Press</h4>
+        <p>Pressing, forming & structural fabrication</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 /* =====================================
    SERVICE PAGE – FINAL CTA (FINAL FIX)
