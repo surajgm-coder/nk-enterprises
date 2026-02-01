@@ -251,139 +251,149 @@
 }
 
 
-/* ===============================
-   WOOD MACHINERY GRID
-   4 + 3 CENTER
-=============================== */
+/* ==================================================
+   SECTION HEADINGS (CENTER FOR BOTH)
+================================================== */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3b2a1a;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 15px;
+  color: #666;
+}
+
+
+
+/* ==================================================
+   COMMON CARD STYLE (same for both sections)
+================================================== */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+
+  height: 240px;              /* ⭐ SAME HEIGHT */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #3b2a1a;
+}
+
+.product-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+
+/* ==================================================
+   WOOD MACHINERY SECTION
+   4 CARDS + 3 CENTERED
+================================================== */
 
 .wood-machinery {
   background: #f7f3ee;
   padding: 90px 0;
 }
 
+/* GRID */
 .wood-machinery .product-grid {
   display: grid;
+
+  /* 4 per row */
   grid-template-columns: repeat(4, 1fr);
+
   gap: 30px;
+
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* cards */
-.product-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: .3s;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-/* images */
-.product-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* center last 3 */
+/* ⭐ CENTER SECOND ROW (3 CARDS) */
 .wood-machinery .product-card:nth-child(5),
 .wood-machinery .product-card:nth-child(6),
 .wood-machinery .product-card:nth-child(7) {
   justify-self: center;
 }
 
-/* responsive */
-@media(max-width:1024px){
-  .wood-machinery .product-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-  .wood-machinery .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
 /* ==================================================
-   FABRICATION MACHINERY GRID
-   3 PER ROW (CENTERED)
-   SAFE — ONLY THIS SECTION
+   FABRICATION MACHINERY SECTION
+   3 PER ROW
 ================================================== */
 
 .fabrication-machinery {
-  background: #f7f3ee; /* creamy bg */
+  background: #f7f3ee;
   padding: 90px 0;
 }
 
-/* GRID */
 .fabrication-machinery .product-grid {
   display: grid;
 
-  /* exactly 3 cards */
+  /* 3 per row */
   grid-template-columns: repeat(3, 1fr);
 
   gap: 30px;
 
-  max-width: 1000px;   /* keeps centered like your design */
-  margin: 0 auto;      /* center whole grid */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* CARD */
-.fabrication-machinery .product-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
-}
-
-.fabrication-machinery .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
-}
-
-/* IMAGE */
-.fabrication-machinery .product-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* TEXT */
-.fabrication-machinery .product-card h4 {
-  font-size: 17px;
-  font-weight: 600;
-  color: #3b2a1a;
-  margin-bottom: 6px;
-}
-
-.fabrication-machinery .product-card p {
-  font-size: 13px;
-  color: #666;
-}
 
 
 /* ==================================================
    RESPONSIVE
 ================================================== */
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
+
+  .wood-machinery .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .fabrication-machinery .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
+
+  .wood-machinery .product-grid,
   .fabrication-machinery .product-grid {
     grid-template-columns: 1fr;
   }
