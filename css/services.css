@@ -318,39 +318,33 @@
   color: #666;
 }
 
-
-
-/* ==================================================
-   WOOD MACHINERY SECTION
-   4 CARDS + 3 CENTERED
-================================================== */
+/* =====================================
+   WOOD MACHINERY – PERFECT LAYOUT
+===================================== */
 
 .wood-machinery {
   background: #f7f3ee;
   padding: 90px 0;
 }
 
-/* GRID */
+/* shared grid */
 .wood-machinery .product-grid {
   display: grid;
-
-  /* 4 per row */
-  grid-template-columns: repeat(4, 1fr);
-
   gap: 30px;
+  margin-bottom: 30px;
+}
 
-  max-width: 1200px;
+/* row 1 */
+.wood-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* row 2 centered */
+.wood-row-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
   margin: 0 auto;
 }
-
-/* ⭐ CENTER SECOND ROW (3 CARDS) */
-.wood-machinery .product-card:nth-child(5),
-.wood-machinery .product-card:nth-child(6),
-.wood-machinery .product-card:nth-child(7) {
-  justify-self: center;
-}
-
-
 
 /* ==================================================
    FABRICATION MACHINERY SECTION
