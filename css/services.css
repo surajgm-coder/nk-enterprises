@@ -252,16 +252,20 @@
 
 
 /* ==================================================
-   WOOD MACHINERY GRID (FINAL FIXED)
-   4 + 3 CENTERED
+   WOOD MACHINERY GRID
+   4 FIRST ROW + 3 CENTER SECOND ROW
+   FINAL FIXED VERSION
 ================================================== */
 
+.wood-machinery {
+  background: #f7f3ee; /* creamy bg same as design */
+  padding: 90px 0;
+}
+
+/* GRID */
 .wood-machinery .product-grid {
   display: grid;
-
-  /* 4 columns */
   grid-template-columns: repeat(4, 1fr);
-
   gap: 30px;
 
   max-width: 1200px;
@@ -269,24 +273,61 @@
 }
 
 
-/* NORMAL cards size */
+/* ⭐⭐⭐ IMPORTANT — CARD STYLE (THIS WAS MISSING) */
 .wood-machinery .product-card {
-  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+
+  width: 100%;   /* prevents stretch bug */
+}
+
+/* hover */
+.wood-machinery .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
 }
 
 
-/* CENTER last 3 cards */
+/* IMAGE */
+.wood-machinery .product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* TEXT */
+.wood-machinery .product-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #3b2a1a;
+  margin-bottom: 6px;
+}
+
+.wood-machinery .product-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* ⭐ center last 3 */
 .wood-machinery .product-card:nth-child(5),
 .wood-machinery .product-card:nth-child(6),
 .wood-machinery .product-card:nth-child(7) {
-  grid-column: span 1;
   justify-self: center;
 }
 
 
-/* ==================================================
+/* =========================
    RESPONSIVE
-================================================== */
+========================= */
 
 @media (max-width: 1024px) {
   .wood-machinery .product-grid {
@@ -299,6 +340,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* ==================================================
    FABRICATION MACHINERY GRID
    3 PER ROW (CENTERED)
