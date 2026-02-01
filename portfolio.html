@@ -1,86 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Company Brochure</title>
+  <meta charset="UTF-8" />
+  <title>NK Enterprises | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Turn.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- PDF.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body {
-      background:#f5f5f5;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      margin:0;
-      font-family:Arial;
-    }
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/common.css">
 
-    #flipbook {
-      width:900px;
-      height:600px;
-    }
-
-    .page {
-      background:white;
-    }
-
-    canvas {
-      width:100%;
-      height:100%;
-    }
-  </style>
+  <!-- Portfolio CSS -->
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
+
 <body>
 
-<div id="flipbook"></div>
+<!-- =========================
+     HEADER (Same as yours)
+========================= -->
+<div class="site-header-wrap">
 
-<script>
-const url = "pdf/nk-enterprises.pdf"; // your pdf path
+  <div class="top-info-bar">
+    <div class="info-container">
+      <div class="info-right">
+        <a href="mailto:support@nkenters.com"><i class="fa-solid fa-envelope"></i> support@nkenters.com</a>
+        <a href="tel:+916372352301"><i class="fa-solid fa-phone"></i> +91 63723 52301</a>
+        <a href="tel:+919699540314">| +91 96995 40314</a>
+      </div>
+    </div>
+  </div>
 
-const pdfjsLib = window['pdfjs-dist/build/pdf'];
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  <header class="main-header">
+    <div class="header-container">
 
-pdfjsLib.getDocument(url).promise.then(function(pdf) {
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="NK Enterprises Logo">
+        </a>
+      </div>
 
-  const flipbook = document.getElementById("flipbook");
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
 
-  for(let i=1; i<=pdf.numPages; i++){
-    const div = document.createElement("div");
-    div.className = "page";
-    const canvas = document.createElement("canvas");
-    div.appendChild(canvas);
-    flipbook.appendChild(div);
+      <a href="contact.html" class="btn-quote">Get a Quote</a>
 
-    pdf.getPage(i).then(function(page){
-      const viewport = page.getViewport({scale:1.5});
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
+    </div>
+  </header>
+</div>
 
-      page.render({
-        canvasContext: canvas.getContext("2d"),
-        viewport: viewport
-      });
-    });
-  }
 
-  setTimeout(()=>{
-    $("#flipbook").turn({
-      width: 900,
-      height: 600,
-      autoCenter: true,
-      elevation: 50,
-      gradients: true
-    });
-  }, 1000);
+<!-- =========================
+     PORTFOLIO SECTION
+========================= -->
+<section class="portfolio">
 
-});
-</script>
+  <div class="container">
+
+    <h1 class="portfolio-title">Our Company Brochure</h1>
+    <p class="portfolio-subtitle">
+      Explore our complete portfolio, projects & services
+    </p>
+
+    <div class="pdf-wrapper">
+      <iframe
+        src="pdf/nk-enterprises.pdf"
+        title="NK Enterprises Portfolio">
+      </iframe>
+    </div>
+
+    <div class="portfolio-actions">
+      <a href="pdf/nk-enterprises.pdf" download class="btn-download">
+        <i class="fa fa-download"></i> Download PDF
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-left">
+      © 2023 NK Enterprises. All Rights Reserved.
+    </div>
+
+    <div class="footer-center">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <span>|</span>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="js/portfolio.js"></script>
+<script src="js/slider.js"></script>
 
 </body>
 </html>
